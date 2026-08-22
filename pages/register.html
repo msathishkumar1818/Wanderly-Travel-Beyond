@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account — Wanderly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { ink: "#17211B", coral: "#E77B5D", night: "#0D1511" }, fontFamily: { display: ["DM Serif Display", "serif"], sans: ["Manrope", "sans-serif"] } } } };</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-[#FBF8F2] font-sans text-ink transition-colors duration-300 dark:bg-night dark:text-white">
+    <main class="grid min-h-screen lg:grid-cols-2">
+        <section class="relative order-2 flex items-center justify-center px-5 py-10 sm:px-8 lg:order-1">
+            <div class="absolute right-5 top-5 flex items-center gap-2.5 sm:right-8 sm:top-8">
+                <a href="../index.html" class="mr-1 text-sm font-bold hover:text-coral">← Back home</a>
+                <button id="rtlToggle" type="button" aria-label="Toggle RTL direction" class="flex h-11 items-center gap-1.5 rounded-full border border-black/10 px-3.5 text-xs font-bold transition hover:bg-ink hover:text-white dark:border-white/15 dark:hover:bg-white dark:hover:text-ink"><span id="rtlArrow" class="text-sm">→</span><span>RTL</span></button>
+                <button id="authThemeToggle" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-black/10 text-lg transition hover:bg-ink hover:text-white dark:border-white/15 dark:hover:bg-white dark:hover:text-ink" aria-label="Toggle color theme">◐</button>
+            </div>
+            <div class="w-full max-w-md pt-10 lg:pt-0">
+                <a href="../index.html" class="mb-10 flex items-center gap-2 lg:hidden"><span class="relative grid h-10 w-10 place-items-center rounded-full bg-ink text-white"><i data-lucide="compass" class="h-5 w-5"></i><span class="absolute right-2 top-2 h-1.5 w-1.5 rounded-full bg-coral"></span></span><span><strong class="block font-display text-3xl leading-none">Wanderly</strong><span class="mt-1 block text-[9px] font-semibold uppercase tracking-[.25em]">Travel Beyond</span></span></a>
+                <p class="text-sm font-bold uppercase tracking-[.2em] text-coral">Start exploring</p>
+                <h1 class="mt-3 font-display text-5xl">Create your account</h1>
+                <p class="mt-3 text-sm leading-6 text-black/60 dark:text-white/60">Save inspiring places and shape a trip that feels like yours.</p>
+                <form id="registerForm" class="mt-7 space-y-4" novalidate>
+                    <label class="block text-sm font-bold">Full name<input name="name" type="text" autocomplete="name" required placeholder="Your name" class="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 outline-none transition focus:border-coral dark:border-white/15 dark:bg-white/5"></label>
+                    <label class="block text-sm font-bold">Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 outline-none transition focus:border-coral dark:border-white/15 dark:bg-white/5"></label>
+                    <label class="block text-sm font-bold">Create password<input name="password" type="password" autocomplete="new-password" required minlength="6" placeholder="At least 6 characters" class="mt-2 w-full rounded-xl border border-black/10 bg-white px-4 py-3.5 outline-none transition focus:border-coral dark:border-white/15 dark:bg-white/5"></label>
+                    <label class="flex items-start gap-2 pt-1 text-sm leading-5 text-black/65 dark:text-white/65"><input type="checkbox" required class="mt-1 accent-[#E77B5D]">I agree to Wanderly's terms and privacy policy.</label>
+                    <button type="submit" class="w-full rounded-xl bg-coral px-5 py-4 font-bold text-white shadow-lg shadow-coral/25 transition hover:brightness-95">Create my account →</button>
+                    <p id="registerMessage" class="hidden rounded-xl bg-green-100 px-4 py-3 text-sm font-semibold text-green-800" role="status"></p>
+                </form>
+                <p class="mt-6 text-center text-sm text-black/60 dark:text-white/60">Already have an account? <a href="login.html" class="font-bold text-coral">Login</a></p>
+            </div>
+        </section>
+        <section class="relative order-1 hidden overflow-hidden bg-ink p-12 text-white lg:order-2 lg:flex lg:flex-col lg:justify-between">
+            <img src="../assets/images/p89.jpg" alt="Peaceful travel destination" class="absolute inset-0 h-full w-full object-cover opacity-15">
+            <div class="absolute inset-0 bg-gradient-to-tl from-[#17211B]/20 via-[#17211B]/20 to-[#E77B5D]/20"></div>
+            <a href="../index.html" class="relative z-10 flex w-fit items-center gap-3"><span class="relative grid h-12 w-12 place-items-center rounded-full bg-white text-ink"><i data-lucide="compass" class="h-6 w-6"></i><span class="absolute right-2 top-2 h-1.5 w-1.5 rounded-full bg-coral"></span></span><span><strong class="font-display text-3xl">Wanderly</strong><span class="block text-[10px] font-bold tracking-[.28em]">TRAVEL BEYOND</span></span></a>
+            <div class="relative z-10 max-w-md"><p class="text-sm font-bold uppercase tracking-[.24em] text-white/70">Travel your way</p><h2 class="mt-4 font-display text-6xl leading-[.95]">A world of journeys, saved for you.</h2><p class="mt-6 max-w-sm leading-7 text-white/75">Build a personal travel space for every place you dream of visiting.</p></div>
+            <p class="relative z-10 text-sm text-white/65">Personalized trips. Unforgettable stories.</p>
+        </section>
+    </main>
+    <script>
+        lucide.createIcons();
+        const authTheme = document.getElementById('authThemeToggle'); const savedTheme = localStorage.getItem('wanderly-theme'); if (savedTheme === 'dark') document.documentElement.classList.add('dark'); authTheme.addEventListener('click', () => { document.documentElement.classList.toggle('dark'); localStorage.setItem('wanderly-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); });
+
+        const rtlToggle = document.getElementById('rtlToggle'); const rtlArrow = document.getElementById('rtlArrow'); const applyDir = dir => { document.documentElement.setAttribute('dir', dir); rtlArrow.textContent = dir === 'rtl' ? '←' : '→'; }; applyDir(localStorage.getItem('wanderly-dir') === 'rtl' ? 'rtl' : 'ltr'); rtlToggle.addEventListener('click', () => { const next = document.documentElement.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl'; applyDir(next); localStorage.setItem('wanderly-dir', next); }); document.getElementById('registerForm').addEventListener('submit', event => { event.preventDefault(); const form = event.currentTarget; const message = document.getElementById('registerMessage'); if (!form.checkValidity()) { form.reportValidity(); return; } message.textContent = 'Account details received. Connect this form to your backend to complete registration.'; message.classList.remove('hidden'); });
+    </script>
+</body>
+</html>

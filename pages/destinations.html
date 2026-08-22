@@ -1,0 +1,7108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Wanderly — Travel Agency</title>
+
+<link 
+    rel="icon" 
+    type="image/svg+xml" 
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23E77B5D'/%3E%3Cpath d='M65 30L55 55L30 65L40 40Z' fill='white'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E">
+
+    <!-- ========================================================= -->
+    <!-- TAILWIND CSS -->
+    <!-- ========================================================= -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+
+        tailwind.config = {
+
+            darkMode: "class",
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        ink: "#17211B",
+                        moss: "#49634F",
+                        sand: "#F4EBDD",
+                        coral: "#E77B5D",
+                        night: "#0D1511"
+
+                    },
+
+                    fontFamily: {
+
+                        display: [
+                            '"DM Serif Display"',
+                            "serif"
+                        ],
+
+                        sans: [
+                            '"Manrope"',
+                            "sans-serif"
+                        ]
+
+                    }
+
+                }
+
+            }
+
+        };
+
+    </script>
+
+
+    <!-- ========================================================= -->
+    <!-- GOOGLE FONTS -->
+    <!-- ========================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- ========================================================= -->
+    <!-- LUCIDE ICONS -->
+    <!-- ========================================================= -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <!-- ========================================================= -->
+    <!-- CUSTOM CSS -->
+    <!-- ========================================================= -->
+
+    
+</head>
+
+
+<body
+    class="bg-[#FBF8F2]
+           text-ink
+
+           dark:bg-night
+           dark:text-white
+
+           transition-colors
+           duration-300">
+
+
+           <!-- ========================================================= -->
+<!-- WANDERLY PAGE LOADER -->
+<!-- ========================================================= -->
+
+<div
+    id="pageLoader"
+    class="fixed
+           inset-0
+           z-[99999]
+
+           flex
+           items-center
+           justify-center
+
+           bg-[#E77B5D]
+
+           transition-opacity
+           duration-700">
+
+    <div class="text-center">
+
+        <!-- LOGO -->
+        <div
+            class="relative
+                   mx-auto
+                   w-20
+                   h-20
+
+                   rounded-full
+
+                   bg-white
+                   text-[#17211B]
+
+                   flex
+                   items-center
+                   justify-center
+
+                   shadow-2xl">
+
+            <i
+                data-lucide="compass"
+                class="w-9
+                       h-9
+                       animate-spin">
+            </i>
+
+        </div>
+
+
+        <!-- BRAND -->
+        <h1
+            class="font-display
+                   text-4xl
+                   text-white
+
+                   mt-6">
+
+            Wanderly
+
+        </h1>
+
+
+        <!-- LOADING TEXT -->
+        <p
+            class="mt-2
+
+                   text-[10px]
+
+                   uppercase
+                   tracking-[.35em]
+
+                   text-white/70">
+
+            Travel Beyond
+
+        </p>
+
+
+        <!-- LOADING LINE -->
+        <div
+            class="mt-7
+                   w-40
+                   h-[2px]
+
+                   mx-auto
+
+                   bg-white/20
+                   overflow-hidden
+                   rounded-full">
+
+            <span
+                class="block
+                       h-full
+                       w-1/2
+
+                       bg-white
+
+                       rounded-full
+
+                       animate-loader">
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- ========================================================= -->
+    <!-- HEADER -->
+    <!-- ========================================================= -->
+
+    <header
+        id="siteHeader"
+
+        class="fixed
+               top-0
+               left-0
+               right-0
+
+               z-[1000]
+
+               px-4
+               sm:px-6
+               lg:px-8
+
+               py-4
+               lg:py-5
+
+               bg-[#FBF8F2]/95
+               dark:bg-night/95
+
+               backdrop-blur-xl
+
+               border-b
+               border-black/[0.06]
+               dark:border-white/[0.08]">
+
+
+        <div
+            class="max-w-[1500px]
+                   mx-auto
+
+                   flex
+                   items-center
+                   justify-between
+
+                   gap-3
+                   sm:gap-4
+                   lg:gap-6">
+
+
+            <!-- ================================================= -->
+            <!-- LOGO -->
+            <!-- ================================================= -->
+
+            <a
+                href="../index.html"
+
+                class="group
+                       flex
+                       items-center
+                       gap-2.5
+                       sm:gap-3
+
+                       shrink-0">
+
+
+                <!-- LOGO ICON -->
+
+                <span
+                    class="relative
+
+                           flex
+                           items-center
+                           justify-center
+
+                           w-10
+                           h-10
+                           sm:w-11
+                           sm:h-11
+
+                           rounded-full
+
+                           bg-ink
+                           dark:bg-sand
+
+                           text-white
+                           dark:text-ink
+
+                           overflow-hidden
+                           shrink-0">
+
+                    <i
+                        data-lucide="compass"
+
+                        class="w-5
+                               h-5
+
+                               transition-transform
+                               duration-500
+
+                               group-hover:rotate-180">
+                    </i>
+
+                    <span
+                        class="absolute
+
+                               w-1.5
+                               h-1.5
+
+                               rounded-full
+
+                               bg-coral
+
+                               top-2
+                               right-2">
+                    </span>
+
+                </span>
+
+
+                <!-- LOGO TEXT -->
+
+                <span
+                    class="mobile-logo-text
+                           block">
+
+                    <span
+                        class="block
+
+                               font-display
+
+                               text-[21px]
+                               sm:text-2xl
+
+                               tracking-tight
+
+                               leading-none
+
+                               whitespace-nowrap">
+
+                        Wanderly
+
+                    </span>
+
+
+                    <span
+                        class="block
+
+                               text-[9px]
+                               sm:text-[10px]
+
+                               uppercase
+
+                               tracking-[.25em]
+
+                               text-ink/90
+                               dark:text-white
+
+                               font-semibold
+
+                               mt-1
+
+                               whitespace-nowrap">
+
+                        Travel Beyond
+
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <!-- ================================================= -->
+            <!-- DESKTOP NAV -->
+            <!-- ================================================= -->
+
+            <nav
+                class="hidden
+                       xl:flex
+
+                       items-center
+                       justify-center
+
+                       gap-0.5">
+
+
+                <!-- HOME -->
+
+                <div
+                    class="home-dropdown-wrapper
+                           relative">
+
+                    <button
+                        type="button"
+
+                        class="nav-link
+                               active
+
+                               relative
+
+                               flex
+                               items-center
+                               gap-1
+
+                               px-4
+                               py-2.5
+
+                               text-[13px]
+                               font-semibold
+
+                               tracking-wide
+
+                               hover:text-coral
+
+                               transition-colors
+                               duration-300">
+
+                        Home
+
+                        <i
+                            data-lucide="chevron-down"
+
+                            class="w-3.5
+                                   h-3.5">
+                        </i>
+
+                    </button>
+
+
+                    <!-- HOME DROPDOWN -->
+
+                    <div
+                        class="home-dropdown
+
+                               absolute
+
+                               top-full
+
+                               start-1/2
+
+                               mt-4
+
+                               w-[520px]
+
+                               p-4
+
+                               rounded-[1.75rem]
+
+                               bg-white
+                               dark:bg-[#152019]
+
+                               border
+                               border-black/[0.07]
+                               dark:border-white/[0.08]
+
+                               shadow-[0_25px_80px_rgba(0,0,0,.15)]">
+
+                        <div
+                            class="grid
+                                   grid-cols-2
+
+                                   gap-3">
+
+
+                            <!-- HOME 1 -->
+
+                            <a
+                                href="../index.html"
+
+                                class="group
+
+                                       relative
+
+                                       h-64
+
+                                       overflow-hidden
+
+                                       rounded-[1.35rem]
+
+                                       bg-ink">
+
+                                <img
+                                    src="../assets/images/p1.jpg"
+
+                                    alt="Home 1"
+
+                                    class="absolute
+                                           inset-0
+
+                                           w-full
+                                           h-full
+
+                                           object-cover
+
+                                           transition
+                                           duration-700
+
+                                           group-hover:scale-110">
+
+                                <div
+                                    class="absolute
+                                           inset-0
+
+                                           bg-gradient-to-t
+                                           from-black/85
+                                           via-black/20
+                                           to-transparent">
+                                </div>
+
+
+                                <div
+                                    class="absolute
+                                           top-4
+                                           start-4">
+
+                                    <span
+                                        class="px-2.5
+                                               py-1
+
+                                               rounded-full
+
+                                               bg-white/15
+
+                                               backdrop-blur-md
+
+                                               text-white
+
+                                               text-[9px]
+
+                                               uppercase
+
+                                               tracking-[.18em]">
+
+                                        Version 01
+
+                                    </span>
+
+                                </div>
+
+
+                                <div
+                                    class="absolute
+
+                                           bottom-5
+                                           start-5
+                                           end-5
+
+                                           text-white">
+
+                                    <p
+                                        class="text-[10px]
+
+                                               uppercase
+
+                                               tracking-[.2em]
+
+                                               opacity-60">
+
+                                        Cinematic
+
+                                    </p>
+
+
+                                    <div
+                                        class="flex
+                                               items-end
+                                               justify-between
+                                               gap-3">
+
+                                        <h3
+                                            class="font-display
+                                                   text-2xl">
+
+                                            Home 1
+
+                                        </h3>
+
+
+                                        <span
+                                            class="w-9
+                                                   h-9
+
+                                                   rounded-full
+
+                                                   bg-white
+                                                   text-ink
+
+                                                   flex
+                                                   items-center
+                                                   justify-center
+
+                                                   transition-transform
+                                                   duration-300
+
+                                                   group-hover:-translate-y-1
+                                                   group-hover:translate-x-1">
+
+                                            <i
+                                                data-lucide="arrow-up-right"
+
+                                                class="w-4
+                                                       h-4">
+                                            </i>
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </a>
+
+
+                            <!-- HOME 2 -->
+
+                            <a
+                                href="home2.html"
+
+                                class="group
+
+                                       relative
+
+                                       h-64
+
+                                       overflow-hidden
+
+                                       rounded-[1.35rem]
+
+                                       bg-moss">
+
+                                <img
+                                    src="../assets/images/p2.jpg"
+
+                                    alt="Home 2"
+
+                                    class="absolute
+                                           inset-0
+
+                                           w-full
+                                           h-full
+
+                                           object-cover
+
+                                           transition
+                                           duration-700
+
+                                           group-hover:scale-110">
+
+
+                                <div
+                                    class="absolute
+                                           inset-0
+
+                                           bg-gradient-to-t
+                                           from-black/85
+                                           via-black/20
+                                           to-transparent">
+                                </div>
+
+
+                                <div
+                                    class="absolute
+                                           top-4
+                                           start-4">
+
+                                    <span
+                                        class="px-2.5
+                                               py-1
+
+                                               rounded-full
+
+                                               bg-white/15
+
+                                               backdrop-blur-md
+
+                                               text-white
+
+                                               text-[9px]
+
+                                               uppercase
+
+                                               tracking-[.18em]">
+
+                                        Version 02
+
+                                    </span>
+
+                                </div>
+
+
+                                <div
+                                    class="absolute
+
+                                           bottom-5
+                                           start-5
+                                           end-5
+
+                                           text-white">
+
+                                    <p
+                                        class="text-[10px]
+
+                                               uppercase
+
+                                               tracking-[.2em]
+
+                                               opacity-60">
+
+                                        Editorial
+
+                                    </p>
+
+
+                                    <div
+                                        class="flex
+                                               items-end
+                                               justify-between
+                                               gap-3">
+
+                                        <h3
+                                            class="font-display
+                                                   text-2xl">
+
+                                            Home 2
+
+                                        </h3>
+
+
+                                        <span
+                                            class="w-9
+                                                   h-9
+
+                                                   rounded-full
+
+                                                   bg-white
+                                                   text-ink
+
+                                                   flex
+                                                   items-center
+                                                   justify-center
+
+                                                   transition-transform
+                                                   duration-300
+
+                                                   group-hover:-translate-y-1
+                                                   group-hover:translate-x-1">
+
+                                            <i
+                                                data-lucide="arrow-up-right"
+
+                                                class="w-4
+                                                       h-4">
+                                            </i>
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESTINATIONS -->
+
+                <a
+                    href="destinations.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Destinations
+
+                </a>
+
+
+                <!-- PACKAGES -->
+
+                <a
+                    href="packages.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Packages
+
+                </a>
+
+
+                <!-- CUSTOMIZE -->
+
+                <a
+                    href="customize-trip.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Customize Trip
+
+                </a>
+
+
+                <!-- VISA -->
+
+                <a
+                    href="visa-assistance.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Visa Assistance
+
+                </a>
+
+
+                <!-- INSURANCE -->
+
+                <a
+                    href="contact.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                   Contact
+                </a>
+
+            </nav>
+
+
+            <!-- ================================================= -->
+            <!-- DESKTOP ACTIONS -->
+            <!-- ================================================= -->
+
+            <div
+                class="hidden
+                       xl:flex
+
+                       items-center
+                       gap-2">
+
+
+                <!-- MY TRIPS -->
+
+                <a
+                    href="dashboard.html"
+
+                    class="group
+
+                           flex
+                           items-center
+                           gap-2
+
+                           px-3.5
+                           py-2.5
+
+                           rounded-full
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           hover:border-coral
+
+                           transition-all">
+
+                    <i
+                        data-lucide="briefcase-business"
+
+                        class="w-4
+                               h-4
+
+                               group-hover:text-coral">
+                    </i>
+
+                    <span
+                        class="text-xs
+                               font-semibold">
+
+                        My Trips
+
+                    </span>
+
+                </a>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+
+                    class="px-4
+                           py-2.5
+
+                           text-xs
+                           font-bold
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Login
+
+                </a>
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    id="themeToggle"
+                    type="button"
+
+                    aria-label="Toggle dark mode"
+
+                    class="w-10
+                           h-10
+
+                           rounded-full
+
+                           flex
+                           items-center
+                           justify-center
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           hover:bg-ink
+                           hover:text-white
+
+                           dark:hover:bg-sand
+                           dark:hover:text-ink
+
+                           transition-all">
+
+                    <i
+                        id="themeIcon"
+                        data-lucide="moon"
+
+                        class="w-4
+                               h-4">
+                    </i>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    id="rtlToggle"
+                    type="button"
+
+                    aria-label="Toggle RTL direction"
+
+                    class="h-10
+                           px-3
+
+                           rounded-full
+
+                           flex
+                           items-center
+                           justify-center
+
+                           gap-1.5
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           hover:bg-ink
+                           hover:text-white
+
+                           dark:hover:bg-sand
+                           dark:hover:text-ink
+
+                           transition-all">
+
+                    <span
+                        id="rtlArrow"
+
+                        class="text-sm
+                               font-bold">
+
+                        →
+
+                    </span>
+
+                    <span
+                        class="text-[11px]
+                               font-bold">
+
+                        RTL
+
+                    </span>
+
+                </button>
+
+
+                <!-- CTA -->
+
+                <a
+                    href="customize-trip.html"
+
+                    class="group
+
+                           relative
+                           overflow-hidden
+
+                           flex
+                           items-center
+                           gap-2
+
+                           px-5
+                           py-3
+
+                           rounded-full
+
+                           bg-coral
+
+                           text-white
+
+                           text-xs
+                           font-bold
+
+                           shadow-lg
+                           shadow-coral/20
+
+                           hover:-translate-y-0.5
+
+                           transition-all">
+
+                    <span
+                        class="relative z-10">
+
+                        Plan My Trip
+
+                    </span>
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="relative
+                               z-10
+
+                               w-4
+                               h-4
+
+                               transition-transform
+
+                               group-hover:translate-x-1
+                               group-hover:-translate-y-1">
+                    </i>
+
+                    <span
+                        class="absolute
+                               inset-0
+
+                               bg-ink
+
+                               translate-y-full
+
+                               group-hover:translate-y-0
+
+                               transition-transform
+                               duration-500">
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE MENU BUTTON -->
+            <!-- ================================================= -->
+
+            <div
+                class="flex
+                       xl:hidden
+
+                       items-center
+
+                       shrink-0">
+
+                <button
+                    id="menuToggle"
+                    type="button"
+
+                    aria-label="Open menu"
+                    aria-expanded="false"
+
+                    class="w-10
+                           h-10
+                           sm:w-11
+                           sm:h-11
+
+                           rounded-full
+
+                           flex
+                           items-center
+                           justify-center
+
+                           bg-ink
+                           dark:bg-sand
+
+                           text-white
+                           dark:text-ink
+
+                           shrink-0
+
+                           transition-transform
+                           duration-300
+
+                           active:scale-95">
+
+                    <i
+                        id="menuIcon"
+                        data-lucide="menu"
+
+                        class="w-5
+                               h-5">
+                    </i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================================= -->
+    <!-- MOBILE MENU -->
+    <!-- ========================================================= -->
+
+    <div
+        id="mobileMenu"
+
+        class="fixed
+               inset-0
+
+               z-[950]
+
+               bg-[#FBF8F2]
+               dark:bg-night
+
+               overflow-y-auto">
+
+
+        <div
+            class="min-h-full
+
+                   max-w-3xl
+                   mx-auto
+
+                   px-5
+                   sm:px-8
+
+                   pt-[92px]
+                   sm:pt-[100px]
+
+                   pb-8">
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE NAV -->
+            <!-- ================================================= -->
+
+            <nav
+                class="mt-1">
+
+
+                <!-- HOME -->
+
+                <button
+                    id="mobileHomeToggle"
+                    type="button"
+
+                    class="mobile-link
+
+                           w-full
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           text-start">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]">
+
+                        Home
+
+                    </span>
+
+
+                    <span
+                        class="w-9
+                               h-9
+
+                               rounded-full
+
+                               border
+                               border-black/10
+                               dark:border-white/10
+
+                               flex
+                               items-center
+                               justify-center">
+
+                        <i
+                            id="homeChevron"
+                            data-lucide="plus"
+
+                            class="w-4
+                                   h-4">
+                        </i>
+
+                    </span>
+
+                </button>
+
+
+                <!-- HOME CHILDREN -->
+
+                <div
+                    id="mobileHomePanel"
+
+                    class="ps-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10">
+
+
+                    <!-- HOME 1 -->
+
+                    <a
+                        href="..//index.html"
+
+                        class="flex
+                               items-center
+                               justify-between
+
+                               py-3.5">
+
+                        <span
+                            class="flex
+                                   items-center
+                                   gap-3">
+
+                            <span
+                                class="w-1.5
+                                       h-1.5
+
+                                       rounded-full
+
+                                       bg-coral">
+                            </span>
+
+                            <span
+                                class="text-sm
+                                       font-semibold">
+
+                                Home 1
+
+                            </span>
+
+                        </span>
+
+                        <i
+                            data-lucide="arrow-up-right"
+
+                            class="w-4
+                                   h-4
+                                   text-coral">
+                        </i>
+
+                    </a>
+
+
+                    <!-- HOME 2 -->
+
+                    <a
+                        href="home2.html"
+
+                        class="flex
+                               items-center
+                               justify-between
+
+                               py-3.5">
+
+                        <span
+                            class="flex
+                                   items-center
+                                   gap-3">
+
+                            <span
+                                class="w-1.5
+                                       h-1.5
+
+                                       rounded-full
+
+                                       bg-coral">
+                            </span>
+
+                            <span
+                                class="text-sm
+                                       font-semibold">
+
+                                Home 2
+
+                            </span>
+
+                        </span>
+
+                        <i
+                            data-lucide="arrow-up-right"
+
+                            class="w-4
+                                   h-4
+                                   text-coral">
+                        </i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- DESTINATIONS -->
+
+                <a
+                    href="destinations.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Destinations
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral
+
+                               transition-transform
+
+                               group-hover:-translate-y-1
+                               group-hover:translate-x-1">
+                    </i>
+
+                </a>
+
+
+                <!-- PACKAGES -->
+
+                <a
+                    href="packages.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Packages
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral">
+                    </i>
+
+                </a>
+
+
+                <!-- CUSTOMIZE -->
+
+                <a
+                    href="customize-trip.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Customize Trip
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral">
+                    </i>
+
+                </a>
+
+
+                <!-- VISA -->
+
+                <a
+                    href="visa-assistance.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Visa Assistance
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral">
+                    </i>
+
+                </a>
+
+
+                <!-- TRAVEL INSURANCE -->
+
+                <a
+                    href="contact.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                       Contact
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral">
+                    </i>
+
+                </a>
+
+            </nav>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE SETTINGS -->
+            <!-- ================================================= -->
+
+            <div
+                class="mt-6
+
+                       grid
+                       grid-cols-1
+                       sm:grid-cols-2
+
+                       gap-3">
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    id="mobileThemeToggle"
+                    type="button"
+
+                    class="mobile-setting
+                           group
+
+                           min-h-[58px]
+
+                           flex
+                           items-center
+                           justify-between
+
+                           px-4
+
+                           rounded-2xl
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           bg-white/50
+                           dark:bg-white/[0.03]
+
+                           hover:bg-ink
+                           hover:text-white
+
+                           dark:hover:bg-sand
+                           dark:hover:text-ink">
+
+
+                    <span
+                        class="flex
+                               items-center
+                               gap-3">
+
+                        <span
+                            class="w-8
+                                   h-8
+
+                                   rounded-full
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   bg-ink/5
+                                   dark:bg-white/10">
+
+                            <i
+                                id="mobileThemeIcon"
+                                data-lucide="moon"
+
+                                class="w-4
+                                       h-4">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-[11px]
+                                   font-bold
+
+                                   uppercase
+
+                                   tracking-[.12em]">
+
+                            Theme
+
+                        </span>
+
+                    </span>
+
+
+                    <span
+                        class="text-[9px]
+
+                               uppercase
+
+                               tracking-[.1em]
+
+                               opacity-50">
+
+                        Dark / Light
+
+                    </span>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    id="mobileRtlToggle"
+                    type="button"
+
+                    class="mobile-setting
+                           group
+
+                           min-h-[58px]
+
+                           flex
+                           items-center
+                           justify-between
+
+                           px-4
+
+                           rounded-2xl
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           bg-white/50
+                           dark:bg-white/[0.03]
+
+                           hover:bg-ink
+                           hover:text-white
+
+                           dark:hover:bg-sand
+                           dark:hover:text-ink">
+
+
+                    <span
+                        class="flex
+                               items-center
+                               gap-3">
+
+                        <span
+                            class="w-8
+                                   h-8
+
+                                   rounded-full
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   bg-ink/5
+                                   dark:bg-white/10">
+
+                            <span
+                                id="mobileRtlArrow"
+
+                                class="text-base
+                                       font-bold
+                                       leading-none">
+
+                                →
+
+                            </span>
+
+                        </span>
+
+
+                        <span
+                            class="text-[11px]
+                                   font-bold
+
+                                   uppercase
+
+                                   tracking-[.12em]">
+
+                            RTL
+
+                        </span>
+
+                    </span>
+
+
+                    <span
+                        class="text-[9px]
+
+                               uppercase
+
+                               tracking-[.1em]
+
+                               opacity-50">
+
+                        Direction
+
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE ACTIONS -->
+            <!-- ================================================= -->
+
+            <div
+                class="mt-3
+
+                       grid
+                       grid-cols-2
+
+                       gap-3">
+
+
+                <!-- MY TRIPS -->
+
+                <a
+                    href="dashboard.html"
+
+                    class="flex
+                           items-center
+                           justify-center
+                           gap-2
+
+                           rounded-2xl
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           py-3.5
+
+                           text-xs
+                           font-bold
+
+                           hover:border-coral
+
+                           transition-colors">
+
+                    <i
+                        data-lucide="briefcase-business"
+
+                        class="w-4
+                               h-4">
+                    </i>
+
+                    My Trips
+
+                </a>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+
+                    class="flex
+                           items-center
+                           justify-center
+                           gap-2
+
+                           rounded-2xl
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           py-3.5
+
+                           text-xs
+                           font-bold
+
+                           hover:border-coral
+
+                           transition-colors">
+
+                    <i
+                        data-lucide="user-round"
+
+                        class="w-4
+                               h-4">
+                    </i>
+
+                    Login
+
+                </a>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE CTA -->
+            <!-- ================================================= -->
+
+            <a
+                href="customize-trip.html"
+
+                class="mt-3
+
+                       flex
+                       items-center
+                       justify-between
+
+                       rounded-2xl
+
+                       bg-coral
+
+                       text-white
+
+                       p-4
+
+                       group
+
+                       overflow-hidden
+
+                       relative">
+
+
+                <div
+                    class="relative z-10">
+
+                    <p
+                        class="text-[9px]
+
+                               uppercase
+
+                               tracking-[.22em]
+
+                               opacity-70">
+
+                        Start planning
+
+                    </p>
+
+
+                    <p
+                        class="font-display
+
+                               text-xl
+                               sm:text-2xl
+
+                               mt-1">
+
+                        Plan My Trip
+
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="relative z-10
+
+                           w-10
+                           h-10
+
+                           rounded-full
+
+                           bg-white/15
+
+                           flex
+                           items-center
+                           justify-center">
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5">
+                    </i>
+
+                </span>
+
+
+                <span
+                    class="absolute
+                           inset-0
+
+                           bg-ink
+
+                           translate-y-full
+
+                           group-hover:translate-y-0
+
+                           transition-transform
+                           duration-500">
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- DEMO CONTENT -->
+    <!-- ========================================================= -->
+
+    <main
+        class="pt-24">
+
+        
+
+
+<!-- ========================================================= -->
+<!-- DESTINATIONS PAGE — SECTION 01 -->
+<!-- DESTINATION INTRO -->
+<!-- ========================================================= -->
+
+<section
+    class="relative
+           min-h-[720px]
+           overflow-hidden
+           bg-[#E9E1D5]
+           text-[#181716]
+           dark:bg-[#121110]
+           dark:text-white">
+
+    <!-- ===================================================== -->
+    <!-- DECORATIVE ORBIT -->
+    <!-- ===================================================== -->
+
+    <div
+        class="pointer-events-none
+               absolute
+               right-[-180px]
+               top-1/2
+               h-[520px]
+               w-[520px]
+               -translate-y-1/2
+               rounded-full
+               border
+               border-[#A7613F]/15
+               animate-[spin_30s_linear_infinite]">
+
+        <div
+            class="absolute
+                   left-1/2
+                   top-[-5px]
+                   h-2
+                   w-2
+                   -translate-x-1/2
+                   rounded-full
+                   bg-[#A7613F]">
+        </div>
+
+    </div>
+
+
+    <div
+        class="pointer-events-none
+               absolute
+               right-[-100px]
+               top-1/2
+               h-[350px]
+               w-[350px]
+               -translate-y-1/2
+               rounded-full
+               border
+               border-black/10
+               dark:border-white/10
+               animate-[spin_20s_linear_infinite_reverse]">
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- CONTENT -->
+    <!-- ===================================================== -->
+
+    <div
+        class="relative z-10
+               mx-auto
+               flex
+               min-h-[720px]
+               max-w-[1500px]
+               items-center
+               px-5
+               py-24
+               sm:px-8
+               lg:px-12">
+
+        <div
+            class="grid
+                   w-full
+                   grid-cols-1
+                   gap-14
+                   lg:grid-cols-12
+                   lg:items-center">
+
+
+            <!-- ================================================= -->
+            <!-- LEFT -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-8">
+
+                <p
+                    class="mb-6
+                           translate-y-4
+                           text-[10px]
+                           font-medium
+                           uppercase
+                           tracking-[0.35em]
+                           text-[#A7613F]
+                           opacity-0
+                           animate-[fadeUp_0.8s_ease-out_0.1s_forwards]">
+
+                    Destinations / 01
+
+                </p>
+
+
+                <h1
+                    class="max-w-5xl
+                           text-6xl
+                           font-medium
+                           leading-[0.88]
+                           tracking-[-0.06em]
+                           sm:text-7xl
+                           lg:text-[9rem]">
+
+                    <span
+                        class="block
+                               translate-y-8
+                               opacity-0
+                               animate-[fadeUp_1s_ease-out_0.2s_forwards]">
+
+                        Go
+
+                    </span>
+
+                    <span
+                        class="ml-[12%]
+                               block
+                               translate-y-8
+                               font-serif
+                               font-normal
+                               italic
+                               text-[#A7613F]
+                               opacity-0
+                               animate-[fadeUp_1s_ease-out_0.4s_forwards]">
+
+                        somewhere.
+
+                    </span>
+
+                </h1>
+
+
+                <p
+                    class="mt-8
+                           max-w-lg
+                           translate-y-5
+                           text-sm
+                           leading-7
+                           text-black
+                           opacity-0
+                           animate-[fadeUp_0.9s_ease-out_0.6s_forwards]
+                           dark:text-white">
+
+                    Discover places worth slowing down for,
+                    getting lost in, and remembering long
+                    after you've returned home.
+
+                </p>
+
+
+                <!-- Scroll indicator -->
+
+                <div
+                    class="mt-12
+                           flex
+                           items-center
+                           gap-4
+                           opacity-0
+                           animate-[fadeUp_0.8s_ease-out_0.8s_forwards]">
+
+                    <div
+                        class="flex
+                               h-10
+                               w-10
+                               items-center
+                               justify-center
+                               rounded-full
+                               border
+                               border-black/15
+                               dark:border-white/15">
+
+                        <span
+                            class="animate-bounce
+                                   text-sm">
+
+                            ↓
+
+                        </span>
+
+                    </div>
+
+                    <span
+                        class="text-[9px]
+                               uppercase
+                               tracking-[0.25em]
+                               text-black
+                               dark:text-white">
+
+                        Explore below
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- RIGHT DESTINATION INDEX -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-4">
+
+                <div
+                    class="border-t
+                           border-black/10
+                           pt-5
+                           dark:border-white/10">
+
+                    <div
+                        class="flex
+                               items-center
+                               justify-between">
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.25em]
+                                   text-black
+                                   dark:text-white">
+
+                            The world
+
+                        </span>
+
+                        <span
+                            class="font-serif
+                                   text-sm
+                                   italic
+                                   text-black
+                                   dark:text-white">
+
+                            01—06
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- Destination mini index -->
+
+                    <div class="mt-7 space-y-0">
+
+                        <div
+                            class="group
+                                   flex
+                                   items-center
+                                   justify-between
+                                   border-b
+                                   border-black/10
+                                   py-4
+                                   dark:border-white/10">
+
+                            <span
+                                class="text-sm
+                                       transition-all
+                                       duration-300
+                                       group-hover:translate-x-2
+                                       group-hover:text-[#A7613F]">
+
+                                Europe
+
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       text-black
+                                       dark:text-white">
+
+                                18
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="group
+                                   flex
+                                   items-center
+                                   justify-between
+                                   border-b
+                                   border-black/10
+                                   py-4
+                                   dark:border-white/10">
+
+                            <span
+                                class="text-sm
+                                       transition-all
+                                       duration-300
+                                       group-hover:translate-x-2
+                                       group-hover:text-[#A7613F]">
+
+                                Asia
+
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       text-black/30
+                                       dark:text-white">
+
+                                24
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="group
+                                   flex
+                                   items-center
+                                   justify-between
+                                   border-b
+                                   border-black/10
+                                   py-4
+                                   dark:border-white/10">
+
+                            <span
+                                class="text-sm
+                                       transition-all
+                                       duration-300
+                                       group-hover:translate-x-2
+                                       group-hover:text-[#A7613F]">
+
+                                Africa
+
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       text-black
+                                       dark:text-white">
+
+                                12
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="group
+                                   flex
+                                   items-center
+                                   justify-between
+                                   border-b
+                                   border-black/10
+                                   py-4
+                                   dark:border-white/10">
+
+                            <span
+                                class="text-sm
+                                       transition-all
+                                       duration-300
+                                       group-hover:translate-x-2
+                                       group-hover:text-[#A7613F]">
+
+                                Americas
+
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       text-black
+                                       dark:text-white">
+
+                                16
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="group
+                                   flex
+                                   items-center
+                                   justify-between
+                                   border-b
+                                   border-black/10
+                                   py-4
+                                   dark:border-white/10">
+
+                            <span
+                                class="text-sm
+                                       transition-all
+                                       duration-300
+                                       group-hover:translate-x-2
+                                       group-hover:text-[#A7613F]">
+
+                                Middle East
+
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       text-black
+                                       dark:text-white">
+
+                                09
+
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="group
+                                   flex
+                                   items-center
+                                   justify-between
+                                   py-4">
+
+                            <span
+                                class="text-sm
+                                       transition-all
+                                       duration-300
+                                       group-hover:translate-x-2
+                                       group-hover:text-[#A7613F]">
+
+                                Oceania
+
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       text-black
+                                       dark:text-white">
+
+                                11
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- ANIMATION KEYFRAMES -->
+    <!-- ===================================================== -->
+
+    <style>
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+    </style>
+
+</section>
+
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- DESTINATIONS — SECTION 02 -->
+<!-- PREMIUM DESTINATION FILM STRIP -->
+<!-- ========================================================= -->
+
+<section
+    class="relative overflow-hidden
+           bg-[#F1ECE4]
+           py-24 sm:py-28 lg:py-36
+           text-[#171615]
+           dark:bg-[#0D0D0C]
+           dark:text-white">
+
+    <div
+        class="mx-auto
+               max-w-[1500px]
+               px-5 sm:px-8 lg:px-12">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+
+        <div
+            class="grid
+                   grid-cols-1
+                   gap-8
+                   lg:grid-cols-12
+                   lg:items-end">
+
+            <div class="lg:col-span-8">
+
+                <p
+                    class="mb-5
+                           translate-y-5
+                           text-[10px]
+                           font-medium
+                           uppercase
+                           tracking-[0.35em]
+                           text-[#A7613F]
+                           opacity-0
+                           animate-[destFade_0.9s_ease-out_forwards]">
+
+                    02 / Places worth going
+
+                </p>
+
+
+                <h2
+                    class="max-w-5xl
+                           text-5xl
+                           font-light
+                           leading-[0.9]
+                           tracking-[-0.055em]
+                           sm:text-6xl
+                           lg:text-8xl">
+
+                    <span
+                        class="inline-block
+                               translate-y-10
+                               opacity-0
+                               animate-[destReveal_1s_ease-out_0.15s_forwards]">
+
+                        Find your
+
+                    </span>
+
+                    <br>
+
+                    <span
+                        class="ml-[8%]
+                               inline-block
+                               translate-y-10
+                               font-serif
+                               italic
+                               text-[#A7613F]
+                               opacity-0
+                               animate-[destReveal_1s_ease-out_0.35s_forwards]">
+
+                        somewhere.
+
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="lg:col-span-4">
+
+                <p
+                    class="max-w-sm
+                           text-sm
+                           leading-7
+                           text-black
+                           dark:text-white">
+
+                    Not just famous places.
+                    These are destinations with a
+                    story, a rhythm, and a reason
+                    to stay a little longer.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- DESTINATION HORIZONTAL SLIDER -->
+        <!-- ================================================= -->
+
+        <div
+            id="destinationSlider"
+            class="destination-slider
+                   mt-16
+                   flex
+                   gap-4
+                   overflow-x-auto
+                   overflow-y-hidden
+                   pb-8
+                   snap-x
+                   snap-mandatory
+                   lg:gap-6
+                   cursor-grab
+                   active:cursor-grabbing
+                   select-none"
+            style="
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+            ">
+
+
+            <!-- ================================================= -->
+            <!-- CARD 01 -->
+            <!-- ================================================= -->
+
+            <article
+                class="destination-card
+                       group
+                       relative
+                       min-w-[82vw]
+                       snap-center
+                       overflow-hidden
+                       sm:min-w-[55vw]
+                       lg:min-w-[390px]
+                       xl:min-w-[420px]">
+
+                <div
+                    class="relative
+                           h-[520px]
+                           overflow-hidden
+                           bg-[#D8CBB9]">
+
+                    <img
+                        src="../assets/images/p34.jpg"
+                        alt="Amalfi Coast"
+                        draggable="false"
+                        class="h-full
+                               w-full
+                               object-cover
+                               transition-transform
+                               duration-[1400ms]
+                               ease-out
+                               group-hover:scale-110">
+
+
+                    <!-- Overlay -->
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-gradient-to-t
+                               from-black/80
+                               via-black/15
+                               to-transparent">
+                    </div>
+
+
+                    <!-- Number -->
+
+                    <span
+                        class="absolute
+                               left-5
+                               top-5
+                               text-[9px]
+                               tracking-[0.25em]
+                               text-white">
+
+                        01
+
+                    </span>
+
+
+                    <!-- Content -->
+
+                    <div
+                        class="absolute
+                               bottom-0
+                               left-0
+                               right-0
+                               p-6
+                               sm:p-8">
+
+                        <p
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.25em]
+                                   text-white">
+
+                            Italy
+
+                        </p>
+
+
+                        <h3
+                            class="mt-2
+                                   font-serif
+                                   text-4xl
+                                   italic
+                                   text-white
+                                   sm:text-5xl">
+
+                            Amalfi Coast
+
+                        </h3>
+
+
+                        <div
+                            class="mt-5
+                                   flex
+                                   max-h-0
+                                   translate-y-4
+                                   items-center
+                                   gap-3
+                                   overflow-hidden
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:max-h-20
+                                   group-hover:translate-y-0
+                                   group-hover:opacity-100">
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-white/60">
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[0.2em]
+                                       text-white">
+
+                                Mediterranean escape
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- CARD 02 -->
+            <!-- ================================================= -->
+
+            <article
+                class="destination-card
+                       group
+                       relative
+                       min-w-[82vw]
+                       snap-center
+                       overflow-hidden
+                       sm:min-w-[55vw]
+                       lg:min-w-[390px]
+                       xl:min-w-[420px]">
+
+                <div
+                    class="relative
+                           h-[520px]
+                           overflow-hidden
+                           bg-[#CFC7B8]">
+
+                    <img
+                        src="../assets/images/p35.jpg"
+                        alt="Kyoto Japan"
+                        draggable="false"
+                        class="h-full
+                               w-full
+                               object-cover
+                               transition-transform
+                               duration-[1400ms]
+                               ease-out
+                               group-hover:scale-110">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-gradient-to-t
+                               from-black/80
+                               via-black/15
+                               to-transparent">
+                    </div>
+
+
+                    <span
+                        class="absolute
+                               left-5
+                               top-5
+                               text-[9px]
+                               tracking-[0.25em]
+                               text-white">
+
+                        02
+
+                    </span>
+
+
+                    <div
+                        class="absolute
+                               bottom-0
+                               left-0
+                               right-0
+                               p-6
+                               sm:p-8">
+
+                        <p
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.25em]
+                                   text-white">
+
+                            Japan
+
+                        </p>
+
+
+                        <h3
+                            class="mt-2
+                                   font-serif
+                                   text-4xl
+                                   italic
+                                   text-white
+                                   sm:text-5xl">
+
+                            Kyoto
+
+                        </h3>
+
+
+                        <div
+                            class="mt-5
+                                   flex
+                                   max-h-0
+                                   translate-y-4
+                                   items-center
+                                   gap-3
+                                   overflow-hidden
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:max-h-20
+                                   group-hover:translate-y-0
+                                   group-hover:opacity-100">
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-white/60">
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[0.2em]
+                                       text-white">
+
+                                Quietly unforgettable
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- CARD 03 -->
+            <!-- ================================================= -->
+
+            <article
+                class="destination-card
+                       group
+                       relative
+                       min-w-[82vw]
+                       snap-center
+                       overflow-hidden
+                       sm:min-w-[55vw]
+                       lg:min-w-[390px]
+                       xl:min-w-[420px]">
+
+                <div
+                    class="relative
+                           h-[520px]
+                           overflow-hidden
+                           bg-[#B8C1B5]">
+
+                    <img
+                        src="../assets/images/p36.jpg"
+                        alt="Patagonia Chile"
+                        draggable="false"
+                        class="h-full
+                               w-full
+                               object-cover
+                               transition-transform
+                               duration-[1400ms]
+                               ease-out
+                               group-hover:scale-110">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-gradient-to-t
+                               from-black/80
+                               via-black/15
+                               to-transparent">
+                    </div>
+
+
+                    <span
+                        class="absolute
+                               left-5
+                               top-5
+                               text-[9px]
+                               tracking-[0.25em]
+                               text-white">
+
+                        03
+
+                    </span>
+
+
+                    <div
+                        class="absolute
+                               bottom-0
+                               left-0
+                               right-0
+                               p-6
+                               sm:p-8">
+
+                        <p
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.25em]
+                                   text-white">
+
+                            Chile
+
+                        </p>
+
+
+                        <h3
+                            class="mt-2
+                                   font-serif
+                                   text-4xl
+                                   italic
+                                   text-white
+                                   sm:text-5xl">
+
+                            Patagonia
+
+                        </h3>
+
+
+                        <div
+                            class="mt-5
+                                   flex
+                                   max-h-0
+                                   translate-y-4
+                                   items-center
+                                   gap-3
+                                   overflow-hidden
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:max-h-20
+                                   group-hover:translate-y-0
+                                   group-hover:opacity-100">
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-white/60">
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[0.2em]
+                                       text-white">
+
+                                Wild at heart
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- CARD 04 -->
+            <!-- ================================================= -->
+
+            <article
+                class="destination-card
+                       group
+                       relative
+                       min-w-[82vw]
+                       snap-center
+                       overflow-hidden
+                       sm:min-w-[55vw]
+                       lg:min-w-[390px]
+                       xl:min-w-[420px]">
+
+                <div
+                    class="relative
+                           h-[520px]
+                           overflow-hidden
+                           bg-[#D6C4AF]">
+
+                    <img
+                        src="../assets/images/p37.jpg"
+                        alt="Marrakech Morocco"
+                        draggable="false"
+                        class="h-full
+                               w-full
+                               object-cover
+                               transition-transform
+                               duration-[1400ms]
+                               ease-out
+                               group-hover:scale-110">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-gradient-to-t
+                               from-black/80
+                               via-black/15
+                               to-transparent">
+                    </div>
+
+
+                    <span
+                        class="absolute
+                               left-5
+                               top-5
+                               text-[9px]
+                               tracking-[0.25em]
+                               text-white">
+
+                        04
+
+                    </span>
+
+
+                    <div
+                        class="absolute
+                               bottom-0
+                               left-0
+                               right-0
+                               p-6
+                               sm:p-8">
+
+                        <p
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.25em]
+                                   text-white">
+
+                            Morocco
+
+                        </p>
+
+
+                        <h3
+                            class="mt-2
+                                   font-serif
+                                   text-4xl
+                                   italic
+                                   text-white
+                                   sm:text-5xl">
+
+                            Marrakech
+
+                        </h3>
+
+
+                        <div
+                            class="mt-5
+                                   flex
+                                   max-h-0
+                                   translate-y-4
+                                   items-center
+                                   gap-3
+                                   overflow-hidden
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:max-h-20
+                                   group-hover:translate-y-0
+                                   group-hover:opacity-100">
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-white/60">
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[0.2em]
+                                       text-white">
+
+                                Colour and culture
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- ================================================= -->
+            <!-- CARD 05 -->
+            <!-- ================================================= -->
+
+            <article
+                class="destination-card
+                       group
+                       relative
+                       min-w-[82vw]
+                       snap-center
+                       overflow-hidden
+                       sm:min-w-[55vw]
+                       lg:min-w-[390px]
+                       xl:min-w-[420px]">
+
+                <div
+                    class="relative
+                           h-[520px]
+                           overflow-hidden
+                           bg-[#BFC8C0]">
+
+                    <img
+                        src="../assets/images/p38.jpg"
+                        alt="Iceland"
+                        draggable="false"
+                        class="h-full
+                               w-full
+                               object-cover
+                               transition-transform
+                               duration-[1400ms]
+                               ease-out
+                               group-hover:scale-110">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-gradient-to-t
+                               from-black/80
+                               via-black/15
+                               to-transparent">
+                    </div>
+
+
+                    <span
+                        class="absolute
+                               left-5
+                               top-5
+                               text-[9px]
+                               tracking-[0.25em]
+                               text-white">
+
+                        05
+
+                    </span>
+
+
+                    <div
+                        class="absolute
+                               bottom-0
+                               left-0
+                               right-0
+                               p-6
+                               sm:p-8">
+
+                        <p
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.25em]
+                                   text-white">
+
+                            Iceland
+
+                        </p>
+
+
+                        <h3
+                            class="mt-2
+                                   font-serif
+                                   text-4xl
+                                   italic
+                                   text-white
+                                   sm:text-5xl">
+
+                            Iceland
+
+                        </h3>
+
+
+                        <div
+                            class="mt-5
+                                   flex
+                                   max-h-0
+                                   translate-y-4
+                                   items-center
+                                   gap-3
+                                   overflow-hidden
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:max-h-20
+                                   group-hover:translate-y-0
+                                   group-hover:opacity-100">
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-white/60">
+                            </span>
+
+                            <span
+                                class="text-[9px]
+                                       uppercase
+                                       tracking-[0.2em]
+                                       text-white">
+
+                                Edge of the world
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- SCROLL INDICATOR -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-4
+                   flex
+                   items-center
+                   justify-between">
+
+            <div
+                class="flex
+                       items-center
+                       gap-3">
+
+                <span
+                    class="text-[9px]
+                           uppercase
+                           tracking-[0.25em]
+                           text-black
+                           dark:text-white">
+
+                    Drag to explore
+
+                </span>
+
+                <span
+                    class="animate-pulse
+                           text-sm
+                           text-[#A7613F]">
+
+                    →
+
+                </span>
+
+            </div>
+
+
+            <span
+                class="font-serif
+                       text-lg
+                       italic
+                       text-black
+                       dark:text-white">
+
+                05 / 12
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    
+
+</section>
+
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- DESTINATIONS PAGE — SECTION 04 -->
+<!-- IMMERSIVE DESTINATION STORY -->
+<!-- ========================================================= -->
+
+<section
+    class="relative overflow-hidden
+           bg-[#E7DED0]
+           py-24 sm:py-28 lg:py-36
+           text-[#1C1A17]
+           dark:bg-[#11110F]
+           dark:text-white">
+
+    <div
+        class="mx-auto
+               max-w-[1500px]
+               px-5 sm:px-8 lg:px-12">
+
+
+        <!-- ================================================= -->
+        <!-- TOP LABEL -->
+        <!-- ================================================= -->
+
+        <div
+            class="flex
+                   items-center
+                   justify-between
+                   gap-5">
+
+            <p
+                class="text-[10px]
+                       uppercase
+                       tracking-[0.35em]
+                       text-[#1C1A17]
+                       dark:text-white">
+
+                04 / The feeling of a place
+
+            </p>
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-3
+                       text-[9px]
+                       uppercase
+                       tracking-[0.25em]
+                       text-[#1C1A17]
+                       dark:text-white">
+
+                <span
+                    class="h-px
+                           w-10
+                           bg-[#1C1A17]
+                           dark:bg-white">
+                </span>
+
+                Wander further
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- MAIN STORY -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-14
+                   grid
+                   grid-cols-1
+                   gap-12
+                   lg:grid-cols-12
+                   lg:gap-16">
+
+
+            <!-- ================================================= -->
+            <!-- IMAGE -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-7">
+
+                <div
+                    class="destination-story-image
+                           group
+                           relative
+                           h-[500px]
+                           overflow-hidden
+                           bg-[#C9B9A5]
+                           sm:h-[620px]
+                           lg:h-[720px]">
+
+
+                    <img
+                        src="../assets/images/p39.jpg"
+                        alt="Mountain destination"
+                        draggable="false"
+                        class="h-full
+                               w-full
+                               object-cover
+                               transition-transform
+                               duration-[1800ms]
+                               ease-out
+                               group-hover:scale-105">
+
+
+                    <!-- Image Overlay -->
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-gradient-to-t
+                               from-black/70
+                               via-black/10
+                               to-transparent">
+                    </div>
+
+
+                    <!-- Animated Vertical Line -->
+
+                    <div
+                        class="absolute
+                               left-0
+                               top-0
+                               h-full
+                               w-px
+                               origin-top
+                               scale-y-0
+                               bg-white/60
+                               animate-[lineReveal_1.4s_ease-out_0.4s_forwards]">
+                    </div>
+
+
+                    <!-- Location -->
+
+                    <div
+                        class="absolute
+                               bottom-7
+                               left-7
+                               sm:bottom-10
+                               sm:left-10">
+
+                        <p
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.3em]
+                                   text-white">
+
+                            46° 49′ N / 9° 50′ E
+
+                        </p>
+
+                        <p
+                            class="mt-2
+                                   text-sm
+                                   text-white">
+
+                            Swiss Alps
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- CONTENT -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       flex
+                       flex-col
+                       justify-center
+                       lg:col-span-5">
+
+
+                <!-- ================================================= -->
+                <!-- ROTATING COMPASS -->
+                <!-- ================================================= -->
+
+                <div
+                    class="absolute
+                           right-0
+                           top-0
+                           hidden
+                           h-20
+                           w-20
+                           items-center
+                           justify-center
+                           rounded-full
+                           border
+                           border-[#1C1A17]/10
+                           lg:flex
+                           dark:border-white/10">
+
+
+                    <div
+                        class="absolute
+                               inset-2
+                               rounded-full
+                               border
+                               border-dashed
+                               border-[#1C1A17]/10
+                               animate-[spin_18s_linear_infinite]
+                               dark:border-white/10">
+                    </div>
+
+
+                    <span
+                        class="text-[8px]
+                               tracking-[0.2em]
+                               text-[#1C1A17]
+                               dark:text-white">
+
+                        N
+
+                    </span>
+
+                </div>
+
+
+                <!-- ================================================= -->
+                <!-- SMALL TITLE -->
+                <!-- ================================================= -->
+
+                <p
+                    class="translate-y-6
+                           text-[10px]
+                           uppercase
+                           tracking-[0.3em]
+                           text-[#A7613F]
+                           opacity-0
+                           animate-[storyFade_0.8s_ease-out_0.2s_forwards]">
+
+                    A different kind of escape
+
+                </p>
+
+
+                <!-- ================================================= -->
+                <!-- MAIN TITLE -->
+                <!-- ================================================= -->
+
+                <h2
+                    class="mt-6
+                           max-w-xl
+                           text-5xl
+                           font-light
+                           leading-[0.92]
+                           tracking-[-0.05em]
+                           sm:text-6xl
+                           lg:text-7xl">
+
+
+                    <span
+                        class="inline-block
+                               translate-y-12
+                               opacity-0
+                               animate-[storyReveal_1s_ease-out_0.35s_forwards]">
+
+                        Go where
+
+                    </span>
+
+
+                    <br>
+
+
+                    <span
+                        class="ml-[7%]
+                               inline-block
+                               translate-y-12
+                               font-serif
+                               italic
+                               text-[#A7613F]
+                               opacity-0
+                               animate-[storyReveal_1s_ease-out_0.55s_forwards]">
+
+                        silence lives.
+
+                    </span>
+
+                </h2>
+
+
+                <!-- ================================================= -->
+                <!-- DESCRIPTION -->
+                <!-- ================================================= -->
+
+                <p
+                    class="mt-8
+                           max-w-md
+                           text-sm
+                           leading-8
+                           text-[#1C1A17]
+                           opacity-0
+                           animate-[storyFade_1s_ease-out_0.8s_forwards]
+                           dark:text-white">
+
+                    Some destinations don't ask for your
+                    attention. They simply slow everything
+                    down — the noise, the rush, the clock —
+                    until all that remains is the place
+                    itself.
+
+                </p>
+
+
+                <!-- ================================================= -->
+                <!-- STATS -->
+                <!-- ================================================= -->
+
+                <div
+                    class="mt-12
+                           grid
+                           grid-cols-3
+                           border-y
+                           border-[#1C1A17]/10
+                           py-7
+                           opacity-0
+                           animate-[storyFade_1s_ease-out_1s_forwards]
+                           dark:border-white/10">
+
+
+                    <!-- STAT 01 -->
+
+                    <div>
+
+                        <p
+                            class="font-serif
+                                   text-3xl
+                                   text-[#1C1A17]
+                                   dark:text-white">
+
+                            2,800
+
+                        </p>
+
+                        <p
+                            class="mt-2
+                                   text-[11px]
+                                   uppercase
+                                   tracking-[0.2em]
+                                   text-[#1C1A17]
+                                   dark:text-white">
+
+                            meters high
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- STAT 02 -->
+
+                    <div
+                        class="border-l
+                               border-[#1C1A17]/10
+                               pl-5
+                               dark:border-white/10">
+
+                        <p
+                            class="font-serif
+                                   text-3xl
+                                   text-[#1C1A17]
+                                   dark:text-white">
+
+                            14
+
+                        </p>
+
+                        <p
+                            class="mt-2
+                                   text-[11px]
+                                   uppercase
+                                   tracking-[0.2em]
+                                   text-[#1C1A17]
+                                   dark:text-white">
+
+                            hidden trails
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- STAT 03 -->
+
+                    <div
+                        class="border-l
+                               border-[#1C1A17]
+                               pl-5
+                               dark:border-white">
+
+                        <p
+                            class="font-serif
+                                   text-3xl
+                                   text-[#1C1A17]
+                                   dark:text-white">
+
+                            ∞
+
+                        </p>
+
+                        <p
+                            class="mt-2
+                                   text-[11px]
+                                   uppercase
+                                   tracking-[0.2em]
+                                   text-[#1C1A17]
+                                   dark:text-white">
+
+                            fresh air
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================================= -->
+                <!-- BOTTOM LOCATION -->
+                <!-- ================================================= -->
+
+                <div
+                    class="mt-8
+                           flex
+                           items-center
+                           gap-4
+                           opacity-0
+                           animate-[storyFade_1s_ease-out_1.2s_forwards]">
+
+
+                    <span
+                        class="flex
+                               h-10
+                               w-10
+                               items-center
+                               justify-center
+                               rounded-full
+                               border
+                               border-[#1C1A17]/15
+                               text-sm
+                               transition-all
+                               duration-500
+                               hover:rotate-45
+                               hover:bg-[#A7613F]
+                               hover:text-white
+                               dark:border-white/15">
+
+                        ↗
+
+                    </span>
+
+
+                    <div>
+
+                        <p
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.25em]
+                                   text-[#1C1A17]
+                                   dark:text-white">
+
+                            Next feeling
+
+                        </p>
+
+                        <p
+                            class="mt-1
+                                   font-serif
+                                   text-sm
+                                   italic
+                                   text-[#1C1A17]
+                                   dark:text-white">
+
+                            Somewhere quiet
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM MARQUEE -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-20
+                   overflow-hidden
+                   border-t
+                   border-[#1C1A17]
+                   pt-7
+                   dark:border-white">
+
+            <div
+                class="flex
+                       w-max
+                       items-center
+                       gap-8
+                       whitespace-nowrap
+                       animate-[storyMarquee_24s_linear_infinite]">
+
+
+                <span
+                    class="font-serif
+                           text-3xl
+                           italic
+                           text-[#1C1A17]
+                           dark:text-white">
+
+                    Mountains
+
+                </span>
+
+                <span
+                    class="text-[#1C1A17]
+                           dark:text-white">
+
+                    ✦
+
+                </span>
+
+
+                <span
+                    class="font-serif
+                           text-3xl
+                           italic
+                           text-text-black
+                           dark:text-white">
+
+                    Silence
+
+                </span>
+
+                <span
+                    class="text-black
+                           dark:text-white">
+
+                    ✦
+
+                </span>
+
+
+                <span
+                    class="font-serif
+                           text-3xl
+                           italic
+                           text-text-black
+                           dark:text-white">
+
+                    Slow mornings
+
+                </span>
+
+                <span
+                    class="text-black
+                           dark:text-white">
+
+                    ✦
+
+                </span>
+
+
+                <span
+                    class="font-serif
+                           text-3xl
+                           italic
+                           text-text-black
+                           dark:text-white">
+
+                    Wild places
+
+                </span>
+
+                <span
+                    class="text-black
+                           dark:text-white">
+
+                    ✦
+
+                </span>
+
+
+                <!-- DUPLICATE -->
+
+                <span
+                    class="font-serif
+                           text-3xl
+                           italic
+                           text-black
+                           dark:text-white">
+
+                    Mountains
+
+                </span>
+
+                <span
+                    class="text-black
+                           dark:text-white">
+
+                    ✦
+
+                </span>
+
+
+                <span
+                    class="font-serif
+                           text-3xl
+                           italic
+                           text-black
+                           dark:text-white">
+
+                    Silence
+
+                </span>
+
+                <span
+                    class="text-[#1C1A17]
+                           dark:text-white">
+
+                    ✦
+
+                </span>
+
+
+                <span
+                    class="font-serif
+                           text-3xl
+                           italic
+                           text-[#1C1A17]
+                           dark:text-white">
+
+                    Slow mornings
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- DESTINATIONS PAGE — SECTION 06 -->
+<!-- INTERACTIVE DESTINATION WALL -->
+<!-- ========================================================= -->
+
+<section
+    id="destinationWall"
+    class="relative overflow-hidden
+           bg-[#EFE5D6]
+           py-24 sm:py-32 lg:py-20
+           text-[#211C18]
+           dark:bg-[#171310]
+           dark:text-white">
+
+
+    <!-- ===================================================== -->
+    <!-- BACKGROUND GLOW -->
+    <!-- ===================================================== -->
+
+    <div
+        class="pointer-events-none
+               absolute
+               left-1/2
+               top-1/2
+               h-[500px]
+               w-[500px]
+               -translate-x-1/2
+               -translate-y-1/2
+               rounded-full
+               bg-[#B86F4B]/10
+               blur-[120px]">
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- MAIN CONTAINER -->
+    <!-- ===================================================== -->
+
+    <div
+        class="relative
+               mx-auto
+               max-w-[1500px]
+               px-5 sm:px-8 lg:px-12">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+
+        <div
+            class="flex
+                   flex-col
+                   gap-6
+                   lg:flex-row
+                   lg:items-end
+                   lg:justify-between">
+
+
+            <!-- LEFT -->
+
+            <div>
+
+                <p
+                    class="mb-5
+                           text-[9px]
+                           uppercase
+                           tracking-[0.4em]
+                           text-[#211C18]
+                           dark:text-white">
+
+                    06 / Move your cursor
+
+                </p>
+
+
+                <h2
+                    class="max-w-5xl
+                           text-5xl
+                           font-light
+                           leading-[0.88]
+                           tracking-[-0.06em]
+                           sm:text-7xl
+                           lg:text-9xl">
+
+                    Let the world
+
+                    <span
+                        class="font-serif
+                               italic
+                               text-[#B86F4B]">
+
+                        move you.
+
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <p
+                class="max-w-xs
+                       text-xs
+                       leading-7
+                       text-[#211C18]
+                       dark:text-white">
+
+                Explore without following
+                a straight line.
+
+            </p>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- DESTINATION WALL -->
+        <!-- ================================================= -->
+
+        <div
+            id="destinationWallItems"
+            class="relative
+                   mt-20
+                   min-h-[700px]">
+
+
+            <!-- ================================================= -->
+            <!-- DESTINATION 01 -->
+            <!-- ================================================= -->
+
+            <div
+                class="wall-item
+                       group
+                       absolute
+                       left-[4%]
+                       top-0
+                       w-[230px]
+                       sm:w-[280px]
+                       lg:w-[330px]"
+                data-x="35"
+                data-y="20">
+
+
+                <div
+                    class="relative
+                           overflow-hidden
+                           bg-[#CDBDA9]">
+
+
+                    <img
+                        src="../assets/images/p40.jpg"
+                        alt="Santorini"
+                        draggable="false"
+                        class="wall-image
+                               h-[330px]
+                               w-full
+                               object-cover
+                               grayscale
+                               transition-all
+                               duration-700
+                               group-hover:scale-110
+                               group-hover:grayscale-0
+                               sm:h-[400px]
+                               lg:h-[450px]">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-black/15
+                               transition-opacity
+                               duration-500
+                               group-hover:opacity-0">
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="mt-4
+                           flex
+                           items-end
+                           justify-between">
+
+
+                    <div>
+
+                        <p
+                            class="text-[8px]
+                                   uppercase
+                                   tracking-[0.3em]
+                                   text-[#211C18]
+                                   dark:text-white">
+
+                            Greece
+
+                        </p>
+
+
+                        <h3
+                            class="mt-1
+                                   font-serif
+                                   text-3xl
+                                   italic
+                                   transition-transform
+                                   duration-500
+                                   group-hover:translate-x-3">
+
+                            Santorini
+
+                        </h3>
+
+                    </div>
+
+
+                    <span
+                        class="text-xs
+                               text-[#B86F4B]">
+
+                        01
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- DESTINATION 02 -->
+            <!-- ================================================= -->
+
+            <div
+                class="wall-item
+                       group
+                       absolute
+                       right-[5%]
+                       top-[80px]
+                       w-[210px]
+                       sm:w-[260px]
+                       lg:w-[300px]"
+                data-x="-30"
+                data-y="30">
+
+
+                <div
+                    class="relative
+                           overflow-hidden
+                           bg-[#C6B8A6]">
+
+
+                    <img
+                        src="../assets/images/p41.jpg"
+                        alt="Bali"
+                        draggable="false"
+                        class="wall-image
+                               h-[300px]
+                               w-full
+                               object-cover
+                               grayscale
+                               transition-all
+                               duration-700
+                               group-hover:scale-110
+                               group-hover:grayscale-0
+                               sm:h-[360px]
+                               lg:h-[410px]">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-black/15
+                               transition-opacity
+                               duration-500
+                               group-hover:opacity-0">
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="mt-4
+                           flex
+                           items-end
+                           justify-between">
+
+
+                    <div>
+
+                        <p
+                            class="text-[8px]
+                                   uppercase
+                                   tracking-[0.3em]
+                                   text-[#211C18]
+                                   dark:text-white">
+
+                            Indonesia
+
+                        </p>
+
+
+                        <h3
+                            class="mt-1
+                                   font-serif
+                                   text-3xl
+                                   italic
+                                   transition-transform
+                                   duration-500
+                                   group-hover:translate-x-3">
+
+                            Bali
+
+                        </h3>
+
+                    </div>
+
+
+                    <span
+                        class="text-xs
+                               text-[#B86F4B]">
+
+                        02
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- DESTINATION 03 -->
+            <!-- ================================================= -->
+
+            <div
+                class="wall-item
+                       group
+                       absolute
+                       left-[30%]
+                       top-[280px]
+                       w-[240px]
+                       sm:w-[300px]
+                       lg:w-[350px]"
+                data-x="20"
+                data-y="-25">
+
+
+                <div
+                    class="relative
+                           overflow-hidden
+                           bg-[#C1B8A9]">
+
+
+                    <img
+                        src="../assets/images/p42.jpg"
+                        alt="Dolomites"
+                        draggable="false"
+                        class="wall-image
+                               h-[350px]
+                               w-full
+                               object-cover
+                               grayscale
+                               transition-all
+                               duration-700
+                               group-hover:scale-110
+                               group-hover:grayscale-0
+                               sm:h-[420px]
+                               lg:h-[480px]">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-black/15
+                               transition-opacity
+                               duration-500
+                               group-hover:opacity-0">
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="mt-4
+                           flex
+                           items-end
+                           justify-between">
+
+
+                    <div>
+
+                        <p
+                            class="text-[8px]
+                                   uppercase
+                                   tracking-[0.3em]
+                                   text-[#211C18]
+                                   dark:text-white">
+
+                            Italy
+
+                        </p>
+
+
+                        <h3
+                            class="mt-1
+                                   font-serif
+                                   text-3xl
+                                   italic
+                                   transition-transform
+                                   duration-500
+                                   group-hover:translate-x-3">
+
+                            Dolomites
+
+                        </h3>
+
+                    </div>
+
+
+                    <span
+                        class="text-xs
+                               text-[#B86F4B]">
+
+                        03
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- DESTINATION 04 -->
+            <!-- ================================================= -->
+
+            <div
+                class="wall-item
+                       group
+                       absolute
+                       right-[22%]
+                       top-[390px]
+                       w-[190px]
+                       sm:w-[230px]
+                       lg:w-[270px]"
+                data-x="-20"
+                data-y="-15">
+
+
+                <div
+                    class="relative
+                           overflow-hidden
+                           bg-[#CBB9A5]">
+
+
+                    <img
+                        src="../assets/images/p43.jpg"
+                        alt="Marrakech"
+                        draggable="false"
+                        class="wall-image
+                               h-[270px]
+                               w-full
+                               object-cover
+                               grayscale
+                               transition-all
+                               duration-700
+                               group-hover:scale-110
+                               group-hover:grayscale-0
+                               sm:h-[330px]
+                               lg:h-[380px]">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-black/15
+                               transition-opacity
+                               duration-500
+                               group-hover:opacity-0">
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="mt-4
+                           flex
+                           items-end
+                           justify-between">
+
+
+                    <div>
+
+                        <p
+                            class="text-[8px]
+                                   uppercase
+                                   tracking-[0.3em]
+                                   text-[#211C18]
+                                   dark:text-white">
+
+                            Morocco
+
+                        </p>
+
+
+                        <h3
+                            class="mt-1
+                                   font-serif
+                                   text-3xl
+                                   italic
+                                   transition-transform
+                                   duration-500
+                                   group-hover:translate-x-3">
+
+                            Marrakech
+
+                        </h3>
+
+                    </div>
+
+
+                    <span
+                        class="text-xs
+                               text-[#B86F4B]">
+
+                        04
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- CENTER TEXT -->
+            <!-- ================================================= -->
+
+            <div
+                class="absolute
+                       left-1/2
+                       top-[180px]
+                       hidden
+                       -translate-x-1/2
+                       text-center
+                       lg:block">
+
+
+                <span
+                    class="block
+                           text-[9px]
+                           uppercase
+                           tracking-[0.4em]
+                           text-[#211C18]
+                           dark:text-white">
+
+                    Scroll / Move / Discover
+
+                </span>
+
+
+                <div
+                    class="mx-auto
+                           mt-5
+                           h-20
+                           w-px
+                           bg-gradient-to-b
+                           from-transparent
+                           via-[#B86F4B]
+                           to-transparent
+                           animate-pulse">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- FOOTER -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-10
+                   flex
+                   items-center
+                   justify-between
+                   border-t
+                   border-[#211C18]/10
+                   pt-7
+                   dark:border-white/10">
+
+
+            <span
+                class="text-[9px]
+                       uppercase
+                       tracking-[0.3em]
+                       text-[#211C18]
+                       dark:text-white">
+
+                Four places. Infinite directions.
+
+            </span>
+
+
+            <span
+                class="font-serif
+                       text-xl
+                       italic
+                       text-[#B86F4B]">
+
+                Keep wandering →
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+   
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- DESTINATIONS PAGE — SECTION 05 -->
+<!-- CHOOSE YOUR ESCAPE -->
+<!-- ========================================================= -->
+
+<section 
+    id="chooseEscape" 
+    class="relative overflow-hidden 
+           bg-[#F1EEE7] 
+           py-24 sm:py-32 lg:py-40 
+           text-[#182126] 
+           dark:bg-[#0C0D0C] 
+           dark:text-white"> 
+
+    <div 
+        class="mx-auto 
+               max-w-[1500px] 
+               px-5 sm:px-8 lg:px-12"> 
+
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+
+        <div 
+            class="grid 
+                   grid-cols-1 
+                   gap-8 
+                   lg:grid-cols-12 
+                   lg:items-end"> 
+
+            <div 
+                class="lg:col-span-8"> 
+
+                <p 
+                    class="text-[9px] 
+                           uppercase 
+                           tracking-[0.4em] 
+                           text-[#182126] 
+                           dark:text-white"> 
+
+                    07 / Choose your escape 
+
+                </p> 
+
+                <h2 
+                    class="mt-6 
+                           max-w-5xl 
+                           text-5xl 
+                           font-light 
+                           leading-[0.88] 
+                           tracking-[-0.06em] 
+                           sm:text-7xl 
+                           lg:text-[8.5rem]"> 
+
+                    Travel for the
+
+                    <span 
+                        class="font-serif 
+                               italic 
+                               text-[#8A7762] 
+                               dark:text-[#C8B9A4]"> 
+
+                        feeling.
+
+                    </span> 
+
+                </h2> 
+
+            </div> 
+
+
+            <div 
+                class="lg:col-span-4 
+                       lg:pb-3"> 
+
+                <p 
+                    class="max-w-sm 
+                           text-sm 
+                           leading-7 
+                           text-[#182126]
+                           dark:text-white"> 
+
+                    Don't choose a destination. 
+                    Choose how you want the journey 
+                    to feel. 
+
+                </p> 
+
+            </div> 
+
+        </div> 
+
+
+        <!-- ================================================= -->
+        <!-- ESCAPE OPTIONS -->
+        <!-- ================================================= -->
+
+        <div 
+            class="escape-grid 
+                   mt-20 
+                   grid 
+                   grid-cols-1 
+                   gap-4 
+                   md:grid-cols-3"> 
+
+
+            <!-- ================================================= -->
+            <!-- 01 — SLOW -->
+            <!-- ================================================= -->
+
+            <article 
+                class="escape-card 
+                       group 
+                       relative 
+                       overflow-hidden 
+                       bg-[#D8D0C4] 
+                       transition-all 
+                       duration-700 
+                       md:h-[600px] 
+                       lg:h-[680px]"> 
+
+
+                <img 
+                    src="../assets/images/p44.jpg" 
+                    alt="Slow travel" 
+                    draggable="false" 
+                    class="h-[500px] 
+                           w-full 
+                           object-cover 
+                           transition-transform 
+                           duration-[1400ms] 
+                           ease-out 
+                           group-hover:scale-110 
+                           md:h-full"> 
+
+
+                <div 
+                    class="absolute 
+                           inset-0 
+                           bg-gradient-to-t 
+                           from-black/75 
+                           via-black/10 
+                           to-transparent"> 
+                </div> 
+
+
+                <!-- NUMBER -->
+
+                <span 
+                    class="absolute 
+                           left-6 
+                           top-6 
+                           font-serif 
+                           text-3xl 
+                           italic 
+                           text-white"> 
+
+                    01 
+
+                </span> 
+
+
+                <!-- CONTENT -->
+
+                <div 
+                    class="absolute 
+                           bottom-0 
+                           left-0 
+                           right-0 
+                           p-7 
+                           sm:p-9"> 
+
+
+                    <p 
+                        class="text-[8px] 
+                               uppercase 
+                               tracking-[0.3em] 
+                               text-white"> 
+
+                        For the quiet ones 
+
+                    </p> 
+
+
+                    <h3 
+                        class="mt-3 
+                               font-serif 
+                               text-4xl 
+                               italic 
+                               text-white 
+                               sm:text-5xl"> 
+
+                        Slow 
+
+                    </h3> 
+
+
+                    <p 
+                        class="mt-4 
+                               max-w-xs 
+                               text-xs 
+                               leading-6 
+                               text-white 
+                               transition-all 
+                               duration-700 
+                               md:max-h-0 
+                               md:translate-y-4 
+                               md:overflow-hidden 
+                               md:opacity-0 
+                               md:group-hover:max-h-24 
+                               md:group-hover:translate-y-0 
+                               md:group-hover:opacity-100"> 
+
+                        Long mornings, quiet villages 
+                        and nowhere you need to be. 
+
+                    </p> 
+
+
+                    <div 
+                        class="mt-6 
+                               h-px 
+                               w-12 
+                               bg-white/50 
+                               transition-all 
+                               duration-700 
+                               group-hover:w-28"> 
+                    </div> 
+
+                </div> 
+
+            </article> 
+
+
+            <!-- ================================================= -->
+            <!-- 02 — WILD -->
+            <!-- ================================================= -->
+
+            <article 
+                class="escape-card 
+                       group 
+                       relative 
+                       overflow-hidden 
+                       bg-[#CEC7BC] 
+                       transition-all 
+                       duration-700 
+                       md:h-[600px] 
+                       lg:h-[680px] 
+                       md:translate-y-16"> 
+
+
+                <img 
+                    src="../assets/images/p45.jpg" 
+                    alt="Wild travel" 
+                    draggable="false" 
+                    class="h-[500px] 
+                           w-full 
+                           object-cover 
+                           object-center 
+                           transition-transform 
+                           duration-[1400ms] 
+                           ease-out 
+                           group-hover:scale-110 
+                           md:h-full"> 
+
+
+                <div 
+                    class="absolute 
+                           inset-0 
+                           bg-gradient-to-t 
+                           from-black/80 
+                           via-black/15 
+                           to-transparent"> 
+                </div> 
+
+
+                <span 
+                    class="absolute 
+                           left-6 
+                           top-6 
+                           font-serif 
+                           text-3xl 
+                           italic 
+                           text-white"> 
+
+                    02 
+
+                </span> 
+
+
+                <div 
+                    class="absolute 
+                           bottom-0 
+                           left-0 
+                           right-0 
+                           p-7 
+                           sm:p-9"> 
+
+
+                    <p 
+                        class="text-[8px] 
+                               uppercase 
+                               tracking-[0.3em] 
+                               text-white"> 
+
+                        For the restless 
+
+                    </p> 
+
+
+                    <h3 
+                        class="mt-3 
+                               font-serif 
+                               text-4xl 
+                               italic 
+                               text-white 
+                               sm:text-5xl"> 
+
+                        Wild 
+
+                    </h3> 
+
+
+                    <p 
+                        class="mt-4 
+                               max-w-xs 
+                               text-xs 
+                               leading-6 
+                               text-white 
+                               transition-all 
+                               duration-700 
+                               md:max-h-0 
+                               md:translate-y-4 
+                               md:overflow-hidden 
+                               md:opacity-0 
+                               md:group-hover:max-h-24 
+                               md:group-hover:translate-y-0 
+                               md:group-hover:opacity-100"> 
+
+                        Open roads, mountain air 
+                        and stories worth getting lost for. 
+
+                    </p> 
+
+
+                    <div 
+                        class="mt-6 
+                               h-px 
+                               w-12 
+                               bg-white 
+                               transition-all 
+                               duration-700 
+                               group-hover:w-28"> 
+                    </div> 
+
+                </div> 
+
+            </article> 
+
+
+            <!-- ================================================= -->
+            <!-- 03 — SOUL -->
+            <!-- ================================================= -->
+
+            <article 
+                class="escape-card 
+                       group 
+                       relative 
+                       overflow-hidden 
+                       bg-[#D4CDC2] 
+                       transition-all 
+                       duration-700 
+                       md:h-[600px] 
+                       lg:h-[680px]"> 
+
+
+                <img 
+                    src="../assets/images/p46.jpg" 
+                    alt="Soulful travel" 
+                    draggable="false" 
+                    class="h-[500px] 
+                           w-full 
+                           object-cover 
+                           transition-transform 
+                           duration-[1400ms] 
+                           ease-out 
+                           group-hover:scale-110 
+                           md:h-full"> 
+
+
+                <div 
+                    class="absolute 
+                           inset-0 
+                           bg-gradient-to-t 
+                           from-black/80 
+                           via-black/10 
+                           to-transparent"> 
+                </div> 
+
+
+                <span 
+                    class="absolute 
+                           left-6 
+                           top-6 
+                           font-serif 
+                           text-3xl 
+                           italic 
+                           text-white"> 
+
+                    03 
+
+                </span> 
+
+
+                <div 
+                    class="absolute 
+                           bottom-0 
+                           left-0 
+                           right-0 
+                           p-7 
+                           sm:p-9"> 
+
+
+                    <p 
+                        class="text-[8px] 
+                               uppercase 
+                               tracking-[0.3em] 
+                               text-white"> 
+
+                        For the curious 
+
+                    </p> 
+
+
+                    <h3 
+                        class="mt-3 
+                               font-serif 
+                               text-4xl 
+                               italic 
+                               text-white 
+                               sm:text-5xl"> 
+
+                        Soul 
+
+                    </h3> 
+
+
+                    <p 
+                        class="mt-4 
+                               max-w-xs 
+                               text-xs 
+                               leading-6 
+                               text-white 
+                               transition-all 
+                               duration-700 
+                               md:max-h-0 
+                               md:translate-y-4 
+                               md:overflow-hidden 
+                               md:opacity-0 
+                               md:group-hover:max-h-24 
+                               md:group-hover:translate-y-0 
+                               md:group-hover:opacity-100"> 
+
+                        Ancient streets, local flavours 
+                        and places that stay with you. 
+
+                    </p> 
+
+
+                    <div 
+                        class="mt-6 
+                               h-px 
+                               w-12 
+                               bg-white
+                               transition-all 
+                               duration-700 
+                               group-hover:w-28"> 
+                    </div> 
+
+                </div> 
+
+            </article> 
+
+        </div> 
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM STATEMENT -->
+        <!-- ================================================= -->
+
+        <div 
+            class="mt-28 
+                   flex 
+                   flex-col 
+                   gap-6 
+                   border-t 
+                   border-[#182126]/10 
+                   pt-8 
+                   sm:flex-row 
+                   sm:items-center 
+                   sm:justify-between 
+                   dark:border-white/10"> 
+
+
+            <p 
+                class="text-[9px] 
+                       uppercase 
+                       tracking-[0.35em] 
+                       text-black 
+                       dark:text-white"> 
+
+                Your next chapter starts somewhere. 
+
+            </p> 
+
+
+            <div 
+                class="flex 
+                       items-center 
+                       gap-4"> 
+
+
+                <span 
+                    class="h-px 
+                           w-12 
+                           bg-[#8A7762] 
+                           dark:bg-[#C8B9A4]"> 
+                </span> 
+
+
+                <span 
+                    class="font-serif 
+                           text-xl 
+                           italic 
+                           text-[#8A7762] 
+                           dark:text-[#C8B9A4]"> 
+
+                    Find your feeling →
+
+                </span> 
+
+            </div> 
+
+        </div> 
+
+    </div> 
+
+
+    <!-- ================================================= -->
+    <!-- SOFT BACKGROUND DECORATION -->
+    <!-- ================================================= -->
+
+    <div
+        class="pointer-events-none
+               absolute
+               -right-40
+               top-1/3
+               h-[500px]
+               w-[500px]
+               rounded-full
+               bg-[#D8CFC0]/30
+               blur-[120px]
+               dark:bg-white/[0.02]">
+    </div>
+
+
+    <div
+        class="pointer-events-none
+               absolute
+               -left-40
+               bottom-0
+               h-[400px]
+               w-[400px]
+               rounded-full
+               bg-[#C9D0C8]
+               blur-[110px]
+               dark:bg-white/[0.015]">
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- DESTINATIONS PAGE — SECTION 06 -->
+<!-- THE WORLD IS WAITING -->
+<!-- ========================================================= -->
+
+<section
+    id="worldWaiting"
+    class="relative overflow-hidden
+           bg-[#F6F3EC]
+           py-24 sm:py-32 lg:py-40
+           text-[#171B19]
+           dark:bg-[#0B0D0C]
+           dark:text-white">
+
+    <div
+        class="mx-auto
+               max-w-[1500px]
+               px-5 sm:px-8 lg:px-12">
+
+
+        <!-- ================================================= -->
+        <!-- TOP LABEL -->
+        <!-- ================================================= -->
+
+        <div
+            class="world-intro
+                   flex
+                   items-center
+                   gap-3">
+
+            <span
+                class="h-px
+                       w-10
+                       bg-[#8B7965]
+                       dark:bg-[#C7B79F]">
+            </span>
+
+            <p
+                class="text-[9px]
+                       uppercase
+                       tracking-[0.4em]
+                       text-[#68706A]
+                       dark:text-white">
+
+                08 / The world is waiting
+
+            </p>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- MAIN HEADING -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-7
+                   max-w-6xl">
+
+            <h2
+                class="world-title
+                       text-5xl
+                       font-light
+                       leading-[0.86]
+                       tracking-[-0.065em]
+                       sm:text-7xl
+                       lg:text-[9rem]">
+
+                Go where the
+                <span
+                    class="font-serif
+                           italic
+                           text-[#8B7965]
+                           dark:text-[#C7B79F]">
+
+                    story
+
+                </span>
+
+                takes you.
+
+            </h2>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- MAIN EXPERIENCE -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-20
+                   grid
+                   grid-cols-1
+                   gap-14
+                   lg:grid-cols-12
+                   lg:items-center">
+
+
+            <!-- ================================================= -->
+            <!-- LEFT DESTINATION LIST -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-5
+                       order-2
+                       lg:order-1">
+
+
+                <div
+                    class="destination-selector
+                           border-t
+                           border-[#171B19]/10
+                           dark:border-white">
+
+
+                    <!-- DESTINATION 01 -->
+
+                    <button
+                        type="button"
+                        data-image="../assets/images/p47.jpg"
+                        data-place="Amalfi Coast"
+                        data-country="Italy"
+                        data-number="01"
+                        class="world-destination
+                               active
+                               group
+                               flex
+                               w-full
+                               items-center
+                               justify-between
+                               border-b
+                               border-[#171B19]/10
+                               py-6
+                               text-left
+                               dark:border-white/10">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+                            <span
+                                class="destination-number
+                                       font-serif
+                                       text-lg
+                                       italic
+                                       text-[#8B7965]
+                                       dark:text-[#C7B79F]">
+
+                                01
+
+                            </span>
+
+                            <span
+                                class="destination-name
+                                       text-2xl
+                                       font-light
+                                       tracking-[-0.03em]
+                                       sm:text-3xl">
+
+                                Amalfi Coast
+
+                            </span>
+
+                        </div>
+
+                        <span
+                            class="destination-arrow
+                                   text-xl
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-1
+                                   group-hover:opacity-100">
+
+                            ↗
+
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- DESTINATION 02 -->
+
+                    <button
+                        type="button"
+                        data-image="../assets/images/p48.jpg"
+                        data-place="Kyoto"
+                        data-country="Japan"
+                        data-number="02"
+                        class="world-destination
+                               group
+                               flex
+                               w-full
+                               items-center
+                               justify-between
+                               border-b
+                               border-[#171B19]/10
+                               py-6
+                               text-left
+                               dark:border-white/10">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+                            <span
+                                class="destination-number
+                                       font-serif
+                                       text-lg
+                                       italic
+                                       text-[#8B7965]
+                                       dark:text-[#C7B79F]">
+
+                                02
+
+                            </span>
+
+                            <span
+                                class="destination-name
+                                       text-2xl
+                                       font-light
+                                       tracking-[-0.03em]
+                                       sm:text-3xl">
+
+                                Kyoto
+
+                            </span>
+
+                        </div>
+
+                        <span
+                            class="destination-arrow
+                                   text-xl
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-1
+                                   group-hover:opacity-100">
+
+                            ↗
+
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- DESTINATION 03 -->
+
+                    <button
+                        type="button"
+                        data-image="../assets/images/p49.jpg"
+                        data-place="Marrakech"
+                        data-country="Morocco"
+                        data-number="03"
+                        class="world-destination
+                               group
+                               flex
+                               w-full
+                               items-center
+                               justify-between
+                               border-b
+                               border-[#171B19]/10
+                               py-6
+                               text-left
+                               dark:border-white/10">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+                            <span
+                                class="destination-number
+                                       font-serif
+                                       text-lg
+                                       italic
+                                       text-[#8B7965]
+                                       dark:text-[#C7B79F]">
+
+                                03
+
+                            </span>
+
+                            <span
+                                class="destination-name
+                                       text-2xl
+                                       font-light
+                                       tracking-[-0.03em]
+                                       sm:text-3xl">
+
+                                Marrakech
+
+                            </span>
+
+                        </div>
+
+                        <span
+                            class="destination-arrow
+                                   text-xl
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-1
+                                   group-hover:opacity-100">
+
+                            ↗
+
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- DESTINATION 04 -->
+
+                    <button
+                        type="button"
+                        data-image="../assets/images/p50.jpg"
+                        data-place="Santorini"
+                        data-country="Greece"
+                        data-number="04"
+                        class="world-destination
+                               group
+                               flex
+                               w-full
+                               items-center
+                               justify-between
+                               border-b
+                               border-[#171B19]/10
+                               py-6
+                               text-left
+                               dark:border-white/10">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+                            <span
+                                class="destination-number
+                                       font-serif
+                                       text-lg
+                                       italic
+                                       text-[#8B7965]
+                                       dark:text-[#C7B79F]">
+
+                                04
+
+                            </span>
+
+                            <span
+                                class="destination-name
+                                       text-2xl
+                                       font-light
+                                       tracking-[-0.03em]
+                                       sm:text-3xl">
+
+                                Santorini
+
+                            </span>
+
+                        </div>
+
+                        <span
+                            class="destination-arrow
+                                   text-xl
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-1
+                                   group-hover:opacity-100">
+
+                            ↗
+
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- DESTINATION 05 -->
+
+                    <button
+                        type="button"
+                        data-image="../assets/images/p51.jpg"
+                        data-place="Cape Town"
+                        data-country="South Africa"
+                        data-number="05"
+                        class="world-destination
+                               group
+                               flex
+                               w-full
+                               items-center
+                               justify-between
+                               border-b
+                               border-[#171B19]/10
+                               py-6
+                               text-left
+                               dark:border-white/10">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-5">
+
+                            <span
+                                class="destination-number
+                                       font-serif
+                                       text-lg
+                                       italic
+                                       text-[#8B7965]
+                                       dark:text-[#C7B79F]">
+
+                                05
+
+                            </span>
+
+                            <span
+                                class="destination-name
+                                       text-2xl
+                                       font-light
+                                       tracking-[-0.03em]
+                                       sm:text-3xl">
+
+                                Cape Town
+
+                            </span>
+
+                        </div>
+
+                        <span
+                            class="destination-arrow
+                                   text-xl
+                                   opacity-0
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-1
+                                   group-hover:opacity-100">
+
+                            ↗
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- SMALL NOTE -->
+
+                <div
+                    class="mt-8
+                           flex
+                           items-center
+                           gap-4">
+
+                    <span
+                        class="h-1.5
+                               w-1.5
+                               rounded-full
+                               bg-[#8B7965]
+                               dark:bg-[#C7B79F]">
+                    </span>
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[0.25em]
+                               text-[#7A807B]
+                               dark:text-white">
+
+                        Hover to explore
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================================================= -->
+            <!-- RIGHT IMAGE -->
+            <!-- ================================================= -->
+
+            <div
+                class="world-visual
+                       order-1
+                       lg:order-2
+                       lg:col-span-7
+                       relative
+                       flex
+                       min-h-[480px]
+                       items-center
+                       justify-center
+                       sm:min-h-[600px]">
+
+
+                <!-- Decorative Circle -->
+
+                <div
+                    class="absolute
+                           h-[330px]
+                           w-[330px]
+                           rounded-full
+                           border
+                           border-[#171B19]/10
+                           sm:h-[500px]
+                           sm:w-[500px]
+                           lg:h-[620px]
+                           lg:w-[620px]
+                           dark:border-white/10">
+                </div>
+
+
+                <!-- Image -->
+
+                <div
+                    class="relative
+                           h-[300px]
+                           w-[300px]
+                           overflow-hidden
+                           rounded-full
+                           shadow-2xl
+                           sm:h-[430px]
+                           sm:w-[430px]
+                           lg:h-[520px]
+                           lg:w-[520px]">
+
+                    <img
+                        id="worldDestinationImage"
+                        src="../assets/images/p52.jpg"
+                        alt="Amalfi Coast"
+                        draggable="false"
+                        class="h-full
+                               w-full
+                               object-cover
+                               transition-all
+                               duration-700">
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-black/10">
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION INFO -->
+
+                <div
+                    class="absolute
+                           bottom-4
+                           left-0
+                           right-0
+                           flex
+                           justify-center
+                           sm:bottom-10">
+
+                    <div
+                        class="flex
+                               items-center
+                               gap-5
+                               rounded-full
+                               border
+                               border-white/30
+                               bg-black/45
+                               px-5
+                               py-3
+                               backdrop-blur-xl
+                               sm:px-7
+                               sm:py-4">
+
+                        <span
+                            id="worldDestinationNumber"
+                            class="font-serif
+                                   text-sm
+                                   italic
+                                   text-white">
+
+                            01
+
+                        </span>
+
+                        <span
+                            class="h-5
+                                   w-px
+                                   bg-white/20">
+                        </span>
+
+                        <div>
+
+                            <p
+                                id="worldDestinationPlace"
+                                class="text-sm
+                                       font-medium
+                                       text-white
+                                       sm:text-base">
+
+                                Amalfi Coast
+
+                            </p>
+
+                            <p
+                                id="worldDestinationCountry"
+                                class="mt-0.5
+                                       text-[8px]
+                                       uppercase
+                                       tracking-[0.25em]
+                                       text-white">
+
+                                Italy
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COORDINATES -->
+
+                <span
+                    class="absolute
+                           right-2
+                           top-8
+                           hidden
+                           rotate-90
+                           text-[8px]
+                           uppercase
+                           tracking-[0.35em]
+                           text-[#7B817C]
+                           sm:block
+                           dark:text-white">
+
+                    40° 38' N / 14° 36' E
+
+                </span>
+
+
+                <!-- Floating Dot -->
+
+                <span
+                    class="absolute
+                           left-[10%]
+                           top-[20%]
+                           h-2
+                           w-2
+                           rounded-full
+                           bg-[#8B7965]
+                           shadow-[0_0_0_8px_rgba(139,121,101,0.12)]
+                           dark:bg-[#C7B79F]">
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM LINE -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-20
+                   flex
+                   flex-col
+                   gap-5
+                   border-t
+                   border-[#171B19]/10
+                   pt-7
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   dark:border-white/10">
+
+            <p
+                class="text-[9px]
+                       uppercase
+                       tracking-[0.35em]
+                       text-[#68706A]
+                       dark:text-white">
+
+                05 places · countless stories
+
+            </p>
+
+            <p
+                class="font-serif
+                       text-xl
+                       italic
+                       text-black
+                       dark:text-[#C7B79F]">
+
+                Where will you go next?
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- FONT AWESOME -->
+<!-- ========================================================= -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<!-- ========================================================= -->
+<!-- WANDERLY FOOTER -->
+<!-- ========================================================= -->
+
+<!-- FONT AWESOME -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<!-- ========================================================= -->
+<!-- WANDERLY FOOTER -->
+<!-- ========================================================= -->
+
+<footer
+    class="relative
+           overflow-hidden
+
+           bg-[#E77B5D]
+           dark:bg-black
+
+           text-white
+           dark:text-white
+
+           transition-colors
+           duration-500">
+
+
+    <!-- ===================================================== -->
+    <!-- DECORATIVE BACKGROUND -->
+    <!-- ===================================================== -->
+
+    <div
+        class="absolute
+               -top-32
+               -right-32
+               w-80
+               h-80
+               rounded-full
+
+               bg-white/10
+               dark:bg-white/5
+
+               pointer-events-none">
+    </div>
+
+
+    <div
+        class="absolute
+               -bottom-40
+               -left-40
+               w-96
+               h-96
+               rounded-full
+
+               bg-black/10
+               dark:bg-white/5
+
+               pointer-events-none">
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- MAIN CONTAINER -->
+    <!-- ===================================================== -->
+
+    <div
+        class="relative
+               max-w-[1500px]
+               mx-auto
+
+               px-5
+               sm:px-8
+               lg:px-12
+
+               pt-14
+               sm:pt-16
+               lg:pt-20
+
+               pb-0">
+
+
+        <!-- ================================================= -->
+        <!-- FOOTER TOP GRID -->
+        <!-- ================================================= -->
+
+        <div
+            class="grid
+                   grid-cols-1
+                   sm:grid-cols-2
+                   lg:grid-cols-12
+
+                   gap-10
+                   lg:gap-12">
+
+
+            <!-- ================================================= -->
+            <!-- BRAND -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-5">
+
+
+                <!-- LOGO -->
+
+                <a
+                    href="../index.html"
+
+                    class="inline-flex
+                           items-center
+                           gap-3
+                           group">
+
+
+                    <!-- LOGO ICON -->
+
+                    <span
+                        class="relative w-12
+                               h-12
+                               rounded-full
+
+                               bg-black
+                               dark:bg-ink
+
+                               text-white
+                               dark:text-black
+                               dark:bg-white
+
+                               flex
+                               items-center
+                               justify-center
+
+                               shrink-0
+
+                               transition-transform
+                               duration-500
+
+                               group-hover:rotate-180">
+
+                        <i data-lucide="compass" class="w-5 h-5"></i>
+                        <span class="absolute top-2 right-2 h-1.5 w-1.5 rounded-full bg-coral"></span>
+
+                    </span>
+
+
+                    <!-- LOGO TEXT -->
+
+                    <span>
+
+                        <span
+                            class="block
+                                   font-display
+                                   text-3xl
+                                   leading-none
+
+                                   text-white
+                                   dark:text-white">
+
+                            Wanderly
+
+                        </span>
+
+
+                        <span
+                            class="block
+                                   text-[9px]
+                                   uppercase
+                                   tracking-[.28em]
+                                   font-bold
+                                   mt-1
+
+                                   text-white
+                                   dark:text-white">
+
+                            Travel Beyond
+
+                        </span>
+
+                    </span>
+
+                </a>
+
+
+                <!-- DESCRIPTION -->
+
+                <p
+                    class="mt-6
+                           max-w-md
+
+                           text-sm
+                           sm:text-base
+
+                           leading-7
+
+                           text-white
+                           dark:text-white">
+
+                    Thoughtfully planned journeys,
+                    unforgettable destinations and
+                    experiences made around the way
+                    you love to travel.
+
+                </p>
+
+
+                <!-- ================================================= -->
+                <!-- SOCIAL ICONS -->
+                <!-- ================================================= -->
+
+                <div
+                    class="flex
+                           items-center
+                           gap-3
+                           mt-6">
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+
+                        class="w-11
+                               h-11
+                               rounded-full
+
+                               border
+                               border-white/25
+
+                               bg-white/10
+                               dark:bg-sand/5
+
+                               flex
+                               items-center
+                               justify-center
+
+                               text-white
+                               dark:text-white
+
+                               hover:bg-white
+                               hover:text-[#E77B5D]
+
+                               dark:hover:bg-white
+                               dark:hover:text-black
+
+                               hover:-translate-y-1
+
+                               transition-all
+                               duration-300">
+
+                        <i
+                            class="fa-brands
+                                   fa-instagram
+                                   text-lg">
+                        </i>
+
+                    </a>
+
+
+                    <!-- FACEBOOK -->
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+
+                        class="w-11
+                               h-11
+                               rounded-full
+
+                               border
+                               border-white/25
+
+                               bg-white/10
+                               dark:bg-white/5
+
+                               flex
+                               items-center
+                               justify-center
+
+                               text-white
+                               dark:text-white
+
+                               hover:bg-white
+                               hover:text-[#E77B5D]
+
+                               dark:hover:bg-white
+                               dark:hover:text-black
+
+                               hover:-translate-y-1
+
+                               transition-all
+                               duration-300">
+
+                        <i
+                            class="fa-brands
+                                   fa-facebook-f
+                                   text-lg">
+                        </i>
+
+                    </a>
+
+
+                    <!-- X -->
+
+                    <a
+                        href="#"
+                        aria-label="X"
+
+                        class="w-11
+                               h-11
+                               rounded-full
+
+                               border
+                               border-white/25
+
+                               bg-white/10
+                               dark:bg-white/5
+
+                               flex
+                               items-center
+                               justify-center
+
+                               text-white
+                               dark:text-white
+
+                               hover:bg-white
+                               hover:text-[#E77B5D]
+
+                               dark:hover:bg-white
+                               dark:hover:text-black
+
+                               hover:-translate-y-1
+
+                               transition-all
+                               duration-300">
+
+                        <i
+                            class="fa-brands
+                                   fa-x-twitter
+                                   text-lg">
+                        </i>
+
+                    </a>
+
+
+                    <!-- YOUTUBE -->
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+
+                        class="w-11
+                               h-11
+                               rounded-full
+
+                               border
+                               border-white/25
+
+                               bg-white/10
+                               dark:bg-white/5
+
+                               flex
+                               items-center
+                               justify-center
+
+                               text-white
+                               dark:text-white
+
+                               hover:bg-white
+                               hover:text-[#E77B5D]
+
+                               dark:hover:bg-white
+                               dark:hover:text-black
+
+                               hover:-translate-y-1
+
+                               transition-all
+                               duration-300">
+
+                        <i
+                            class="fa-brands
+                                   fa-youtube
+                                   text-lg">
+                        </i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- EXPLORE -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-2">
+
+
+                <p
+                    class="text-[15px]
+                           uppercase
+                           tracking-[.25em]
+                           font-bold
+
+                           text-white
+                           dark:text-white
+
+                           mb-5">
+
+                    Explore
+
+                </p>
+
+
+                <ul
+                    class="space-y-3.5">
+
+
+                    <li>
+
+                        <a
+                            href="destinations.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Destinations
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="packages.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Packages
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="customize-trip.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Customize Trip
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="visa-assistance.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Visa Assistance
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="contact.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- COMPANY -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-2">
+
+
+                <p
+                    class="text-[15px]
+                           uppercase
+                           tracking-[.25em]
+                           font-bold
+
+                           text-white
+                           dark:text-white
+
+                           mb-5">
+
+                    Company
+
+                </p>
+
+
+                <ul
+                    class="space-y-3.5">
+
+
+                    <li>
+
+                        <a
+                            
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            About Wanderly
+
+                        </a>
+
+                    </li>
+
+
+                    
+
+
+                    <li>
+
+                        <a
+                            href="dashboard.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            My Trips
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="login.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Login
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- CONTACT -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-3">
+
+
+                <p
+                    class="text-[15px]
+                           uppercase
+                           tracking-[.25em]
+                           font-bold
+
+                           text-white
+                           dark:text-white
+
+                           mb-5">
+
+                    Get in touch
+
+                </p>
+
+
+                <div
+                    class="space-y-4">
+
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="mailto:hello@wanderly.com"
+
+                        class="flex
+                               items-center
+                               gap-3
+                               group">
+
+
+                        <span
+                            class="w-9
+                                   h-9
+                                   rounded-full
+
+                                   bg-white/10
+                                   dark:bg-white/5
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   shrink-0
+
+                                   text-white
+                                   dark:text-white
+
+                                   group-hover:bg-white
+                                   group-hover:text-[#E77B5D]
+
+                                   dark:group-hover:bg-white
+                                   dark:group-hover:text-black
+
+                                   transition-all">
+
+                            <i
+                                class="fa-regular
+                                       fa-envelope
+                                       text-sm">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-sm
+
+                                   text-white
+                                   dark:text-white
+
+                                   group-hover:text-white">
+
+                            hello@wanderly.com
+
+                        </span>
+
+                    </a>
+
+
+                    <!-- PHONE -->
+
+                    <a
+                        href="tel:+919876543210"
+
+                        class="flex
+                               items-center
+                               gap-3
+                               group">
+
+
+                        <span
+                            class="w-9
+                                   h-9
+                                   rounded-full
+
+                                   bg-white/10
+                                   dark:bg-white/5
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   shrink-0
+
+                                   text-white
+                                   dark:text-white
+
+                                   group-hover:bg-white
+                                   group-hover:text-[#E77B5D]
+
+                                   dark:group-hover:bg-white
+                                   dark:group-hover:text-black
+
+                                   transition-all">
+
+                            <i
+                                class="fa-solid
+                                       fa-phone
+                                       text-sm">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-sm
+
+                                   text-white
+                                   dark:text-white">
+
+                            +91 98765 43210
+
+                        </span>
+
+                    </a>
+
+
+                    <!-- LOCATION -->
+
+                    <div
+                        class="flex
+                               items-start
+                               gap-3">
+
+
+                        <span
+                            class="w-9
+                                   h-9
+                                   rounded-full
+
+                                   bg-white/10
+                                   dark:bg-white/5
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   shrink-0
+
+                                   text-white
+                                   dark:text-white">
+
+                            <i
+                                class="fa-solid
+                                       fa-location-dot
+                                       text-sm">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-sm
+                                   leading-6
+
+                                   text-white
+                                   dark:text-white">
+
+                            Chennai, Tamil Nadu<br>
+
+                            India
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- CTA AREA -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-14
+                   lg:mt-16
+
+                   pt-7
+
+                   border-t
+                   border-white/20
+
+                   flex
+                   flex-col
+                   lg:flex-row
+
+                   lg:items-center
+                   lg:justify-between
+
+                   gap-6">
+
+
+            <!-- CTA TEXT -->
+
+            <div>
+
+                <p
+                    class="font-display
+                           text-3xl
+                           sm:text-4xl
+
+                           text-white
+                           dark:text-white">
+
+                    Ready to go somewhere?
+
+                </p>
+
+
+                <p
+                    class="text-sm
+                           text-white
+                           dark:text-white
+
+                           mt-2">
+
+                    Let Wanderly plan your next adventure.
+
+                </p>
+
+            </div>
+
+
+            <!-- CTA BUTTON -->
+
+            <a
+                href="customize-trip.html"
+
+                class="group
+
+                       inline-flex
+                       items-center
+                       justify-between
+
+                       gap-5
+
+                       px-5
+                       py-3.5
+
+                       rounded-full
+
+                       bg-white
+                       dark:bg-white
+
+                       text-[#17211B]
+                       dark:text-black
+
+                       text-sm
+                       font-bold
+
+                       hover:bg-[#17211B]
+
+                       dark:hover:bg-[#E77B5D]
+                       dark:hover:text-white
+
+                       hover:text-white
+
+                       transition-all
+                       duration-300">
+
+
+                <span>
+                    Plan My Trip
+                </span>
+
+
+                <span
+                    class="w-8
+                           h-8
+
+                           rounded-full
+
+                           bg-[#E77B5D]
+
+                           text-white
+
+                           flex
+                           items-center
+                           justify-center">
+
+
+                    <i
+                        class="fa-solid
+                               fa-arrow-up-right
+
+                               text-xs
+
+                               transition-transform
+
+                               group-hover:translate-x-1
+                               group-hover:-translate-y-1">
+                    </i>
+
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM FOOTER -->
+        <!-- NO EXTRA BOTTOM GAP -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-7
+
+                   pt-5
+                   pb-5
+
+                   border-t
+                   border-white/20
+
+                   flex
+                   flex-col
+                   sm:flex-row
+
+                   items-start
+                   sm:items-center
+
+                   justify-between
+
+                   gap-3">
+
+
+            <!-- COPYRIGHT -->
+
+            <p
+                class="text-[11px]
+
+                       text-white
+                       dark:text-white">
+
+                © 2026 Wanderly.
+                All rights reserved.
+
+            </p>
+
+
+            <!-- LEGAL -->
+
+            <div
+                class="flex
+                       flex-wrap
+
+                       items-center
+
+                       gap-x-5
+                       gap-y-2">
+
+
+                <a
+                   
+
+                    class="text-[11px]
+
+                           text-white
+                           dark:text-white
+
+                           hover:text-white
+
+                           transition-colors">
+
+                    Privacy Policy
+
+                </a>
+
+
+                <a
+                   
+
+                    class="text-[11px]
+
+                           text-white
+                           dark:text-white
+
+                           hover:text-white
+
+                           transition-colors">
+
+                    Terms & Conditions
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+    
+<script src="../assets/js/script.js"></script>
+</body>
+
+</html>
+
+

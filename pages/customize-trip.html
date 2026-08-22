@@ -1,0 +1,6657 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Wanderly — Travel Agency</title>
+
+<link 
+    rel="icon" 
+    type="image/svg+xml" 
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23E77B5D'/%3E%3Cpath d='M65 30L55 55L30 65L40 40Z' fill='white'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E">
+
+    <!-- ========================================================= -->
+    <!-- TAILWIND CSS -->
+    <!-- ========================================================= -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+
+        tailwind.config = {
+
+            darkMode: "class",
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        ink: "#17211B",
+                        moss: "#49634F",
+                        sand: "#F4EBDD",
+                        coral: "#E77B5D",
+                        night: "#0D1511"
+
+                    },
+
+                    fontFamily: {
+
+                        display: [
+                            '"DM Serif Display"',
+                            "serif"
+                        ],
+
+                        sans: [
+                            '"Manrope"',
+                            "sans-serif"
+                        ]
+
+                    }
+
+                }
+
+            }
+
+        };
+
+    </script>
+
+
+    <!-- ========================================================= -->
+    <!-- GOOGLE FONTS -->
+    <!-- ========================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- ========================================================= -->
+    <!-- LUCIDE ICONS -->
+    <!-- ========================================================= -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <!-- ========================================================= -->
+    <!-- CUSTOM CSS -->
+    <!-- ========================================================= -->
+
+    
+</head>
+
+
+<body
+    class="bg-[#FBF8F2]
+           text-ink
+
+           dark:bg-night
+           dark:text-white
+
+           transition-colors
+           duration-300">
+
+
+           <!-- ========================================================= -->
+<!-- WANDERLY PAGE LOADER -->
+<!-- ========================================================= -->
+
+<div
+    id="pageLoader"
+    class="fixed
+           inset-0
+           z-[99999]
+
+           flex
+           items-center
+           justify-center
+
+           bg-[#E77B5D]
+
+           transition-opacity
+           duration-700">
+
+    <div class="text-center">
+
+        <!-- LOGO -->
+        <div
+            class="relative
+                   mx-auto
+                   w-20
+                   h-20
+
+                   rounded-full
+
+                   bg-white
+                   text-[#17211B]
+
+                   flex
+                   items-center
+                   justify-center
+
+                   shadow-2xl">
+
+            <i
+                data-lucide="compass"
+                class="w-9
+                       h-9
+                       animate-spin">
+            </i>
+
+        </div>
+
+
+        <!-- BRAND -->
+        <h1
+            class="font-display
+                   text-4xl
+                   text-white
+
+                   mt-6">
+
+            Wanderly
+
+        </h1>
+
+
+        <!-- LOADING TEXT -->
+        <p
+            class="mt-2
+
+                   text-[10px]
+
+                   uppercase
+                   tracking-[.35em]
+
+                   text-white/70">
+
+            Travel Beyond
+
+        </p>
+
+
+        <!-- LOADING LINE -->
+        <div
+            class="mt-7
+                   w-40
+                   h-[2px]
+
+                   mx-auto
+
+                   bg-white/20
+                   overflow-hidden
+                   rounded-full">
+
+            <span
+                class="block
+                       h-full
+                       w-1/2
+
+                       bg-white
+
+                       rounded-full
+
+                       animate-loader">
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- ========================================================= -->
+    <!-- HEADER -->
+    <!-- ========================================================= -->
+
+    <header
+        id="siteHeader"
+
+        class="fixed
+               top-0
+               left-0
+               right-0
+
+               z-[1000]
+
+               px-4
+               sm:px-6
+               lg:px-8
+
+               py-4
+               lg:py-5
+
+               bg-[#FBF8F2]/95
+               dark:bg-night/95
+
+               backdrop-blur-xl
+
+               border-b
+               border-black/[0.06]
+               dark:border-white/[0.08]">
+
+
+        <div
+            class="max-w-[1500px]
+                   mx-auto
+
+                   flex
+                   items-center
+                   justify-between
+
+                   gap-3
+                   sm:gap-4
+                   lg:gap-6">
+
+
+            <!-- ================================================= -->
+            <!-- LOGO -->
+            <!-- ================================================= -->
+
+            <a
+                href="../index.html"
+
+                class="group
+                       flex
+                       items-center
+                       gap-2.5
+                       sm:gap-3
+
+                       shrink-0">
+
+
+                <!-- LOGO ICON -->
+
+                <span
+                    class="relative
+
+                           flex
+                           items-center
+                           justify-center
+
+                           w-10
+                           h-10
+                           sm:w-11
+                           sm:h-11
+
+                           rounded-full
+
+                           bg-ink
+                           dark:bg-sand
+
+                           text-white
+                           dark:text-ink
+
+                           overflow-hidden
+                           shrink-0">
+
+                    <i
+                        data-lucide="compass"
+
+                        class="w-5
+                               h-5
+
+                               transition-transform
+                               duration-500
+
+                               group-hover:rotate-180">
+                    </i>
+
+                    <span
+                        class="absolute
+
+                               w-1.5
+                               h-1.5
+
+                               rounded-full
+
+                               bg-coral
+
+                               top-2
+                               right-2">
+                    </span>
+
+                </span>
+
+
+                <!-- LOGO TEXT -->
+
+                <span
+                    class="mobile-logo-text
+                           block">
+
+                    <span
+                        class="block
+
+                               font-display
+
+                               text-[21px]
+                               sm:text-2xl
+
+                               tracking-tight
+
+                               leading-none
+
+                               whitespace-nowrap">
+
+                        Wanderly
+
+                    </span>
+
+
+                    <span
+                        class="block
+
+                               text-[9px]
+                               sm:text-[10px]
+
+                               uppercase
+
+                               tracking-[.25em]
+
+                               text-ink/90
+                               dark:text-white
+
+                               font-semibold
+
+                               mt-1
+
+                               whitespace-nowrap">
+
+                        Travel Beyond
+
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <!-- ================================================= -->
+            <!-- DESKTOP NAV -->
+            <!-- ================================================= -->
+
+            <nav
+                class="hidden
+                       xl:flex
+
+                       items-center
+                       justify-center
+
+                       gap-0.5">
+
+
+                <!-- HOME -->
+
+                <div
+                    class="home-dropdown-wrapper
+                           relative">
+
+                    <button
+                        type="button"
+
+                        class="nav-link
+                               active
+
+                               relative
+
+                               flex
+                               items-center
+                               gap-1
+
+                               px-4
+                               py-2.5
+
+                               text-[13px]
+                               font-semibold
+
+                               tracking-wide
+
+                               hover:text-coral
+
+                               transition-colors
+                               duration-300">
+
+                        Home
+
+                        <i
+                            data-lucide="chevron-down"
+
+                            class="w-3.5
+                                   h-3.5">
+                        </i>
+
+                    </button>
+
+
+                    <!-- HOME DROPDOWN -->
+
+                    <div
+                        class="home-dropdown
+
+                               absolute
+
+                               top-full
+
+                               start-1/2
+
+                               mt-4
+
+                               w-[520px]
+
+                               p-4
+
+                               rounded-[1.75rem]
+
+                               bg-white
+                               dark:bg-[#152019]
+
+                               border
+                               border-black/[0.07]
+                               dark:border-white/[0.08]
+
+                               shadow-[0_25px_80px_rgba(0,0,0,.15)]">
+
+                        <div
+                            class="grid
+                                   grid-cols-2
+
+                                   gap-3">
+
+
+                            <!-- HOME 1 -->
+
+                            <a
+                                href="../index.html"
+
+                                class="group
+
+                                       relative
+
+                                       h-64
+
+                                       overflow-hidden
+
+                                       rounded-[1.35rem]
+
+                                       bg-ink">
+
+                                <img
+                                    src="../assets/images/p1.jpg"
+
+                                    alt="Home 1"
+
+                                    class="absolute
+                                           inset-0
+
+                                           w-full
+                                           h-full
+
+                                           object-cover
+
+                                           transition
+                                           duration-700
+
+                                           group-hover:scale-110">
+
+                                <div
+                                    class="absolute
+                                           inset-0
+
+                                           bg-gradient-to-t
+                                           from-black/85
+                                           via-black/20
+                                           to-transparent">
+                                </div>
+
+
+                                <div
+                                    class="absolute
+                                           top-4
+                                           start-4">
+
+                                    <span
+                                        class="px-2.5
+                                               py-1
+
+                                               rounded-full
+
+                                               bg-white/15
+
+                                               backdrop-blur-md
+
+                                               text-white
+
+                                               text-[9px]
+
+                                               uppercase
+
+                                               tracking-[.18em]">
+
+                                        Version 01
+
+                                    </span>
+
+                                </div>
+
+
+                                <div
+                                    class="absolute
+
+                                           bottom-5
+                                           start-5
+                                           end-5
+
+                                           text-white">
+
+                                    <p
+                                        class="text-[10px]
+
+                                               uppercase
+
+                                               tracking-[.2em]
+
+                                               opacity-60">
+
+                                        Cinematic
+
+                                    </p>
+
+
+                                    <div
+                                        class="flex
+                                               items-end
+                                               justify-between
+                                               gap-3">
+
+                                        <h3
+                                            class="font-display
+                                                   text-2xl">
+
+                                            Home 1
+
+                                        </h3>
+
+
+                                        <span
+                                            class="w-9
+                                                   h-9
+
+                                                   rounded-full
+
+                                                   bg-white
+                                                   text-ink
+
+                                                   flex
+                                                   items-center
+                                                   justify-center
+
+                                                   transition-transform
+                                                   duration-300
+
+                                                   group-hover:-translate-y-1
+                                                   group-hover:translate-x-1">
+
+                                            <i
+                                                data-lucide="arrow-up-right"
+
+                                                class="w-4
+                                                       h-4">
+                                            </i>
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </a>
+
+
+                            <!-- HOME 2 -->
+
+                            <a
+                                href="home2.html"
+
+                                class="group
+
+                                       relative
+
+                                       h-64
+
+                                       overflow-hidden
+
+                                       rounded-[1.35rem]
+
+                                       bg-moss">
+
+                                <img
+                                    src="../assets/images/p2.jpg"
+
+                                    alt="Home 2"
+
+                                    class="absolute
+                                           inset-0
+
+                                           w-full
+                                           h-full
+
+                                           object-cover
+
+                                           transition
+                                           duration-700
+
+                                           group-hover:scale-110">
+
+
+                                <div
+                                    class="absolute
+                                           inset-0
+
+                                           bg-gradient-to-t
+                                           from-black/85
+                                           via-black/20
+                                           to-transparent">
+                                </div>
+
+
+                                <div
+                                    class="absolute
+                                           top-4
+                                           start-4">
+
+                                    <span
+                                        class="px-2.5
+                                               py-1
+
+                                               rounded-full
+
+                                               bg-white/15
+
+                                               backdrop-blur-md
+
+                                               text-white
+
+                                               text-[9px]
+
+                                               uppercase
+
+                                               tracking-[.18em]">
+
+                                        Version 02
+
+                                    </span>
+
+                                </div>
+
+
+                                <div
+                                    class="absolute
+
+                                           bottom-5
+                                           start-5
+                                           end-5
+
+                                           text-white">
+
+                                    <p
+                                        class="text-[10px]
+
+                                               uppercase
+
+                                               tracking-[.2em]
+
+                                               opacity-60">
+
+                                        Editorial
+
+                                    </p>
+
+
+                                    <div
+                                        class="flex
+                                               items-end
+                                               justify-between
+                                               gap-3">
+
+                                        <h3
+                                            class="font-display
+                                                   text-2xl">
+
+                                            Home 2
+
+                                        </h3>
+
+
+                                        <span
+                                            class="w-9
+                                                   h-9
+
+                                                   rounded-full
+
+                                                   bg-white
+                                                   text-ink
+
+                                                   flex
+                                                   items-center
+                                                   justify-center
+
+                                                   transition-transform
+                                                   duration-300
+
+                                                   group-hover:-translate-y-1
+                                                   group-hover:translate-x-1">
+
+                                            <i
+                                                data-lucide="arrow-up-right"
+
+                                                class="w-4
+                                                       h-4">
+                                            </i>
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DESTINATIONS -->
+
+                <a
+                    href="destinations.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Destinations
+
+                </a>
+
+
+                <!-- PACKAGES -->
+
+                <a
+                    href="packages.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Packages
+
+                </a>
+
+
+                <!-- CUSTOMIZE -->
+
+                <a
+                    href="customize-trip.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Customize Trip
+
+                </a>
+
+
+                <!-- VISA -->
+
+                <a
+                    href="visa-assistance.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Visa Assistance
+
+                </a>
+
+
+                <!-- INSURANCE -->
+
+                <a
+                    href="contact.html"
+
+                    class="nav-link
+                           relative
+
+                           px-4
+                           py-2.5
+
+                           text-[13px]
+                           font-semibold
+
+                           tracking-wide
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                   Contact
+                </a>
+
+            </nav>
+
+
+            <!-- ================================================= -->
+            <!-- DESKTOP ACTIONS -->
+            <!-- ================================================= -->
+
+            <div
+                class="hidden
+                       xl:flex
+
+                       items-center
+                       gap-2">
+
+
+                <!-- MY TRIPS -->
+
+                <a
+                    href="dashboard.html"
+
+                    class="group
+
+                           flex
+                           items-center
+                           gap-2
+
+                           px-3.5
+                           py-2.5
+
+                           rounded-full
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           hover:border-coral
+
+                           transition-all">
+
+                    <i
+                        data-lucide="briefcase-business"
+
+                        class="w-4
+                               h-4
+
+                               group-hover:text-coral">
+                    </i>
+
+                    <span
+                        class="text-xs
+                               font-semibold">
+
+                        My Trips
+
+                    </span>
+
+                </a>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+
+                    class="px-4
+                           py-2.5
+
+                           text-xs
+                           font-bold
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Login
+
+                </a>
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    id="themeToggle"
+                    type="button"
+
+                    aria-label="Toggle dark mode"
+
+                    class="w-10
+                           h-10
+
+                           rounded-full
+
+                           flex
+                           items-center
+                           justify-center
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           hover:bg-ink
+                           hover:text-white
+
+                           dark:hover:bg-sand
+                           dark:hover:text-ink
+
+                           transition-all">
+
+                    <i
+                        id="themeIcon"
+                        data-lucide="moon"
+
+                        class="w-4
+                               h-4">
+                    </i>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    id="rtlToggle"
+                    type="button"
+
+                    aria-label="Toggle RTL direction"
+
+                    class="h-10
+                           px-3
+
+                           rounded-full
+
+                           flex
+                           items-center
+                           justify-center
+
+                           gap-1.5
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           hover:bg-ink
+                           hover:text-white
+
+                           dark:hover:bg-sand
+                           dark:hover:text-ink
+
+                           transition-all">
+
+                    <span
+                        id="rtlArrow"
+
+                        class="text-sm
+                               font-bold">
+
+                        →
+
+                    </span>
+
+                    <span
+                        class="text-[11px]
+                               font-bold">
+
+                        RTL
+
+                    </span>
+
+                </button>
+
+
+                <!-- CTA -->
+
+                <a
+                    href="customize-trip.html"
+
+                    class="group
+
+                           relative
+                           overflow-hidden
+
+                           flex
+                           items-center
+                           gap-2
+
+                           px-5
+                           py-3
+
+                           rounded-full
+
+                           bg-coral
+
+                           text-white
+
+                           text-xs
+                           font-bold
+
+                           shadow-lg
+                           shadow-coral/20
+
+                           hover:-translate-y-0.5
+
+                           transition-all">
+
+                    <span
+                        class="relative z-10">
+
+                        Plan My Trip
+
+                    </span>
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="relative
+                               z-10
+
+                               w-4
+                               h-4
+
+                               transition-transform
+
+                               group-hover:translate-x-1
+                               group-hover:-translate-y-1">
+                    </i>
+
+                    <span
+                        class="absolute
+                               inset-0
+
+                               bg-ink
+
+                               translate-y-full
+
+                               group-hover:translate-y-0
+
+                               transition-transform
+                               duration-500">
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE MENU BUTTON -->
+            <!-- ================================================= -->
+
+            <div
+                class="flex
+                       xl:hidden
+
+                       items-center
+
+                       shrink-0">
+
+                <button
+                    id="menuToggle"
+                    type="button"
+
+                    aria-label="Open menu"
+                    aria-expanded="false"
+
+                    class="w-10
+                           h-10
+                           sm:w-11
+                           sm:h-11
+
+                           rounded-full
+
+                           flex
+                           items-center
+                           justify-center
+
+                           bg-ink
+                           dark:bg-sand
+
+                           text-white
+                           dark:text-ink
+
+                           shrink-0
+
+                           transition-transform
+                           duration-300
+
+                           active:scale-95">
+
+                    <i
+                        id="menuIcon"
+                        data-lucide="menu"
+
+                        class="w-5
+                               h-5">
+                    </i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================================= -->
+    <!-- MOBILE MENU -->
+    <!-- ========================================================= -->
+
+    <div
+        id="mobileMenu"
+
+        class="fixed
+               inset-0
+
+               z-[950]
+
+               bg-[#FBF8F2]
+               dark:bg-night
+
+               overflow-y-auto">
+
+
+        <div
+            class="min-h-full
+
+                   max-w-3xl
+                   mx-auto
+
+                   px-5
+                   sm:px-8
+
+                   pt-[92px]
+                   sm:pt-[100px]
+
+                   pb-8">
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE NAV -->
+            <!-- ================================================= -->
+
+            <nav
+                class="mt-1">
+
+
+                <!-- HOME -->
+
+                <button
+                    id="mobileHomeToggle"
+                    type="button"
+
+                    class="mobile-link
+
+                           w-full
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           text-start">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]">
+
+                        Home
+
+                    </span>
+
+
+                    <span
+                        class="w-9
+                               h-9
+
+                               rounded-full
+
+                               border
+                               border-black/10
+                               dark:border-white/10
+
+                               flex
+                               items-center
+                               justify-center">
+
+                        <i
+                            id="homeChevron"
+                            data-lucide="plus"
+
+                            class="w-4
+                                   h-4">
+                        </i>
+
+                    </span>
+
+                </button>
+
+
+                <!-- HOME CHILDREN -->
+
+                <div
+                    id="mobileHomePanel"
+
+                    class="ps-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10">
+
+
+                    <!-- HOME 1 -->
+
+                    <a
+                        href="..//index.html"
+
+                        class="flex
+                               items-center
+                               justify-between
+
+                               py-3.5">
+
+                        <span
+                            class="flex
+                                   items-center
+                                   gap-3">
+
+                            <span
+                                class="w-1.5
+                                       h-1.5
+
+                                       rounded-full
+
+                                       bg-coral">
+                            </span>
+
+                            <span
+                                class="text-sm
+                                       font-semibold">
+
+                                Home 1
+
+                            </span>
+
+                        </span>
+
+                        <i
+                            data-lucide="arrow-up-right"
+
+                            class="w-4
+                                   h-4
+                                   text-coral">
+                        </i>
+
+                    </a>
+
+
+                    <!-- HOME 2 -->
+
+                    <a
+                        href="home2.html"
+
+                        class="flex
+                               items-center
+                               justify-between
+
+                               py-3.5">
+
+                        <span
+                            class="flex
+                                   items-center
+                                   gap-3">
+
+                            <span
+                                class="w-1.5
+                                       h-1.5
+
+                                       rounded-full
+
+                                       bg-coral">
+                            </span>
+
+                            <span
+                                class="text-sm
+                                       font-semibold">
+
+                                Home 2
+
+                            </span>
+
+                        </span>
+
+                        <i
+                            data-lucide="arrow-up-right"
+
+                            class="w-4
+                                   h-4
+                                   text-coral">
+                        </i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- DESTINATIONS -->
+
+                <a
+                    href="destinations.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Destinations
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral
+
+                               transition-transform
+
+                               group-hover:-translate-y-1
+                               group-hover:translate-x-1">
+                    </i>
+
+                </a>
+
+
+                <!-- PACKAGES -->
+
+                <a
+                    href="packages.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Packages
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral">
+                    </i>
+
+                </a>
+
+
+                <!-- CUSTOMIZE -->
+
+                <a
+                    href="customize-trip.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Customize Trip
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral">
+                    </i>
+
+                </a>
+
+
+                <!-- VISA -->
+
+                <a
+                    href="visa-assistance.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Visa Assistance
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral">
+                    </i>
+
+                </a>
+
+
+                <!-- TRAVEL INSURANCE -->
+
+                <a
+                    href="contact.html"
+
+                    class="mobile-link
+
+                           flex
+                           items-center
+                           justify-between
+
+                           py-4
+
+                           border-b
+                           border-black/10
+                           dark:border-white/10
+
+                           group">
+
+                    <span
+                        class="font-display
+
+                               text-[25px]
+                               sm:text-[28px]
+
+                               group-hover:text-coral
+
+                               transition-colors">
+
+                        Contact
+
+                    </span>
+
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5
+
+                               text-coral">
+                    </i>
+
+                </a>
+
+            </nav>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE SETTINGS -->
+            <!-- ================================================= -->
+
+            <div
+                class="mt-6
+
+                       grid
+                       grid-cols-1
+                       sm:grid-cols-2
+
+                       gap-3">
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    id="mobileThemeToggle"
+                    type="button"
+
+                    class="mobile-setting
+                           group
+
+                           min-h-[58px]
+
+                           flex
+                           items-center
+                           justify-between
+
+                           px-4
+
+                           rounded-2xl
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           bg-white/50
+                           dark:bg-white/[0.03]
+
+                           hover:bg-ink
+                           hover:text-white
+
+                           dark:hover:bg-sand
+                           dark:hover:text-ink">
+
+
+                    <span
+                        class="flex
+                               items-center
+                               gap-3">
+
+                        <span
+                            class="w-8
+                                   h-8
+
+                                   rounded-full
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   bg-ink/5
+                                   dark:bg-white/10">
+
+                            <i
+                                id="mobileThemeIcon"
+                                data-lucide="moon"
+
+                                class="w-4
+                                       h-4">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-[11px]
+                                   font-bold
+
+                                   uppercase
+
+                                   tracking-[.12em]">
+
+                            Theme
+
+                        </span>
+
+                    </span>
+
+
+                    <span
+                        class="text-[9px]
+
+                               uppercase
+
+                               tracking-[.1em]
+
+                               opacity-50">
+
+                        Dark / Light
+
+                    </span>
+
+                </button>
+
+
+                <!-- RTL -->
+
+                <button
+                    id="mobileRtlToggle"
+                    type="button"
+
+                    class="mobile-setting
+                           group
+
+                           min-h-[58px]
+
+                           flex
+                           items-center
+                           justify-between
+
+                           px-4
+
+                           rounded-2xl
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           bg-white/50
+                           dark:bg-white/[0.03]
+
+                           hover:bg-ink
+                           hover:text-white
+
+                           dark:hover:bg-sand
+                           dark:hover:text-ink">
+
+
+                    <span
+                        class="flex
+                               items-center
+                               gap-3">
+
+                        <span
+                            class="w-8
+                                   h-8
+
+                                   rounded-full
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   bg-ink/5
+                                   dark:bg-white/10">
+
+                            <span
+                                id="mobileRtlArrow"
+
+                                class="text-base
+                                       font-bold
+                                       leading-none">
+
+                                →
+
+                            </span>
+
+                        </span>
+
+
+                        <span
+                            class="text-[11px]
+                                   font-bold
+
+                                   uppercase
+
+                                   tracking-[.12em]">
+
+                            RTL
+
+                        </span>
+
+                    </span>
+
+
+                    <span
+                        class="text-[9px]
+
+                               uppercase
+
+                               tracking-[.1em]
+
+                               opacity-50">
+
+                        Direction
+
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE ACTIONS -->
+            <!-- ================================================= -->
+
+            <div
+                class="mt-3
+
+                       grid
+                       grid-cols-2
+
+                       gap-3">
+
+
+                <!-- MY TRIPS -->
+
+                <a
+                    href="dashboard.html"
+
+                    class="flex
+                           items-center
+                           justify-center
+                           gap-2
+
+                           rounded-2xl
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           py-3.5
+
+                           text-xs
+                           font-bold
+
+                           hover:border-coral
+
+                           transition-colors">
+
+                    <i
+                        data-lucide="briefcase-business"
+
+                        class="w-4
+                               h-4">
+                    </i>
+
+                    My Trips
+
+                </a>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+
+                    class="flex
+                           items-center
+                           justify-center
+                           gap-2
+
+                           rounded-2xl
+
+                           border
+                           border-black/10
+                           dark:border-white/10
+
+                           py-3.5
+
+                           text-xs
+                           font-bold
+
+                           hover:border-coral
+
+                           transition-colors">
+
+                    <i
+                        data-lucide="user-round"
+
+                        class="w-4
+                               h-4">
+                    </i>
+
+                    Login
+
+                </a>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE CTA -->
+            <!-- ================================================= -->
+
+            <a
+                href="customize-trip.html"
+
+                class="mt-3
+
+                       flex
+                       items-center
+                       justify-between
+
+                       rounded-2xl
+
+                       bg-coral
+
+                       text-white
+
+                       p-4
+
+                       group
+
+                       overflow-hidden
+
+                       relative">
+
+
+                <div
+                    class="relative z-10">
+
+                    <p
+                        class="text-[9px]
+
+                               uppercase
+
+                               tracking-[.22em]
+
+                               opacity-70">
+
+                        Start planning
+
+                    </p>
+
+
+                    <p
+                        class="font-display
+
+                               text-xl
+                               sm:text-2xl
+
+                               mt-1">
+
+                        Plan My Trip
+
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="relative z-10
+
+                           w-10
+                           h-10
+
+                           rounded-full
+
+                           bg-white/15
+
+                           flex
+                           items-center
+                           justify-center">
+
+                    <i
+                        data-lucide="arrow-up-right"
+
+                        class="w-5
+                               h-5">
+                    </i>
+
+                </span>
+
+
+                <span
+                    class="absolute
+                           inset-0
+
+                           bg-ink
+
+                           translate-y-full
+
+                           group-hover:translate-y-0
+
+                           transition-transform
+                           duration-500">
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- CUSTOMIZE TRIP — PAGE CONTENT -->
+    <!-- ========================================================= -->
+
+    <main class="pt-24">
+
+        <!-- ============================================================= -->
+<!-- 01. HERO — editorial trip canvas / new container model -->
+<!-- ============================================================= -->
+
+<section
+    class="relative overflow-hidden
+           bg-[#F5F1EA]
+           dark:bg-[#0B0B0B]
+           py-16 sm:py-20 lg:py-28">
+
+    <!-- Decorative background -->
+    <div
+        class="absolute top-0 right-0
+               w-[420px] h-[420px]
+               rounded-full
+               bg-coral/10
+               blur-3xl
+               pointer-events-none">
+    </div>
+
+    <div
+        class="absolute bottom-0 left-0
+               w-[300px] h-[300px]
+               rounded-full
+               bg-orange-200/20
+               dark:bg-coral/5
+               blur-3xl
+               pointer-events-none">
+    </div>
+
+    <div
+        class="relative
+               max-w-[1600px]
+               mx-auto
+               px-5 sm:px-8 lg:px-12 xl:px-16">
+
+        <!-- ===================================================== -->
+        <!-- TOP INTRO -->
+        <!-- ===================================================== -->
+
+        <div
+            class="max-w-4xl
+                   mx-auto
+                   text-center">
+
+            <div
+                class="inline-flex
+                       items-center
+                       gap-2
+                       px-4 py-2
+                       rounded-full
+                       bg-white
+                       dark:bg-white/[0.06]
+                       border border-black/5
+                       dark:border-white/10
+                       shadow-sm">
+
+                <span
+                    class="w-2 h-2
+                           rounded-full
+                           bg-coral
+                           animate-pulse">
+                </span>
+
+                <span
+                    class="text-[10px] sm:text-xs
+                           font-bold
+                           uppercase
+                           tracking-[0.25em]
+                           text-ink
+                           dark:text-white">
+
+                    Bespoke Travel Planning
+
+                </span>
+
+            </div>
+
+
+            <h1
+                class="font-display
+                       text-5xl
+                       sm:text-6xl
+                       lg:text-7xl
+                       xl:text-[88px]
+                       leading-[0.95]
+                       tracking-tight
+                       mt-7
+                       text-ink
+                       dark:text-white">
+
+                Your next journey
+                <span class="text-coral">
+                    starts here.
+                </span>
+
+            </h1>
+
+
+            <p
+                class="max-w-2xl
+                       mx-auto
+                       mt-7
+                       text-base
+                       sm:text-lg
+                       lg:text-xl
+                       leading-relaxed
+                       text-ink
+                       dark:text-white">
+
+                Share your ideas, interests and travel style.
+                We'll shape them into a journey designed
+                entirely around you.
+
+            </p>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- MAIN TRIP BUILDER CANVAS -->
+        <!-- ===================================================== -->
+
+        <div
+            id="trip-form"
+            class="relative
+                   mt-14
+                   lg:mt-20">
+
+            <!-- Large container -->
+
+            <div
+                class="relative
+                       rounded-[2rem]
+                       sm:rounded-[2.5rem]
+                       bg-white
+                       dark:bg-[#121212]
+                       border border-black/[0.06]
+                       dark:border-white/10
+                       shadow-[0_30px_100px_rgba(0,0,0,0.10)]
+                       overflow-hidden">
+
+                <!-- ================================================= -->
+                <!-- HEADER STRIP -->
+                <!-- ================================================= -->
+
+                <div
+                    class="px-6 sm:px-8 lg:px-10
+                           py-5
+                           border-b
+                           border-black/[0.06]
+                           dark:border-white/10
+                           flex
+                           flex-col
+                           sm:flex-row
+                           sm:items-center
+                           sm:justify-between
+                           gap-4">
+
+                    <div>
+
+                        <p
+                            class="text-[10px]
+                                   uppercase
+                                   tracking-[0.22em]
+                                   font-bold
+                                   text-ink
+                                   dark:text-white">
+
+                            Build your journey
+
+                        </p>
+
+                        <p
+                            class="mt-1
+                                   text-sm
+                                   font-semibold
+                                   text-ink
+                                   dark:text-white">
+
+                            Start with the places you dream about.
+
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="flex items-center gap-2
+                               text-xs
+                               text-ink
+                               dark:text-white">
+
+                        <i
+                            data-lucide="sparkles"
+                            class="w-4 h-4 text-coral">
+                        </i>
+
+                        Designed around you
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================================================= -->
+                <!-- CONTENT -->
+                <!-- ================================================= -->
+
+                <div
+                    class="grid
+                           lg:grid-cols-[1fr_1.15fr]
+                           min-h-[520px]">
+
+
+                    <!-- ============================================= -->
+                    <!-- LEFT — FORM -->
+                    <!-- ============================================= -->
+
+                    <div
+                        class="p-6
+                               sm:p-8
+                               lg:p-10
+                               xl:p-12">
+
+                        <div
+                            class="grid
+                                   sm:grid-cols-2
+                                   gap-4">
+
+                            <!-- Destination -->
+
+                            <div
+                                class="sm:col-span-2
+                                       group
+                                       rounded-2xl
+                                       border
+                                       border-black/[0.07]
+                                       dark:border-white/10
+                                       bg-[#FAF8F4]
+                                       dark:bg-white/[0.035]
+                                       p-5
+                                       hover:border-coral/40
+                                       transition-all
+                                       duration-300">
+
+                                <div
+                                    class="flex items-center
+                                           justify-between">
+
+                                    <div
+                                        class="flex items-center
+                                               gap-3">
+
+                                        <span
+                                            class="w-10 h-10
+                                                   rounded-xl
+                                                   bg-coral/10
+                                                   text-coral
+                                                   flex
+                                                   items-center
+                                                   justify-center">
+
+                                            <i
+                                                data-lucide="map-pin"
+                                                class="w-4 h-4">
+                                            </i>
+
+                                        </span>
+
+                                        <div>
+
+                                            <p
+                                                class="text-[10px]
+                                                       uppercase
+                                                       tracking-[0.18em]
+                                                       font-bold
+                                                       text-ink
+                                                       dark:text-white">
+
+                                                Destination
+
+                                            </p>
+
+                                            <p
+                                                class="mt-1
+                                                       text-sm
+                                                       font-semibold
+                                                       text-ink
+                                                       dark:text-white">
+
+                                                Where do you want to go?
+
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                    <i
+                                        data-lucide="chevron-right"
+                                        class="w-4 h-4
+                                               text-ink
+                                               dark:text-white
+                                               group-hover:text-coral
+                                               group-hover:translate-x-1
+                                               transition-all">
+                                    </i>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Dates -->
+
+                            <div
+                                class="rounded-2xl
+                                       border
+                                       border-black/[0.07]
+                                       dark:border-white/10
+                                       bg-[#FAF8F4]
+                                       dark:bg-white/[0.035]
+                                       p-5
+                                       hover:border-coral/40
+                                       transition-all
+                                       duration-300">
+
+                                <div
+                                    class="flex items-center gap-3">
+
+                                    <span
+                                        class="w-10 h-10
+                                               rounded-xl
+                                               bg-coral/10
+                                               text-coral
+                                               flex
+                                               items-center
+                                               justify-center">
+
+                                        <i
+                                            data-lucide="calendar-days"
+                                            class="w-4 h-4">
+                                        </i>
+
+                                    </span>
+
+                                    <div>
+
+                                        <p
+                                            class="text-[10px]
+                                                   uppercase
+                                                   tracking-[0.18em]
+                                                   font-bold
+                                                   text-ink
+                                                   dark:text-white">
+
+                                            Dates
+
+                                        </p>
+
+                                        <p
+                                            class="mt-1
+                                                   text-sm
+                                                   font-semibold
+                                                   text-ink
+                                                   dark:text-white">
+
+                                            Flexible
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Travelers -->
+
+                            <div
+                                class="rounded-2xl
+                                       border
+                                       border-black/[0.07]
+                                       dark:border-white/10
+                                       bg-[#FAF8F4]
+                                       dark:bg-white/[0.035]
+                                       p-5
+                                       hover:border-coral/40
+                                       transition-all
+                                       duration-300">
+
+                                <div
+                                    class="flex items-center gap-3">
+
+                                    <span
+                                        class="w-10 h-10
+                                               rounded-xl
+                                               bg-coral/10
+                                               text-coral
+                                               flex
+                                               items-center
+                                               justify-center">
+
+                                        <i
+                                            data-lucide="users"
+                                            class="w-4 h-4">
+                                        </i>
+
+                                    </span>
+
+                                    <div>
+
+                                        <p
+                                            class="text-[10px]
+                                                   uppercase
+                                                   tracking-[0.18em]
+                                                   font-bold
+                                                   text-ink
+                                                   dark:text-white">
+
+                                            Travelers
+
+                                        </p>
+
+                                        <p
+                                            class="mt-1
+                                                   text-sm
+                                                   font-semibold
+                                                   text-ink
+                                                   dark:text-white">
+
+                                            2 People
+
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Travel Style -->
+
+                            <div
+                                class="sm:col-span-2
+                                       rounded-2xl
+                                       border
+                                       border-black/[0.07]
+                                       dark:border-white/10
+                                       bg-[#FAF8F4]
+                                       dark:bg-white/[0.035]
+                                       p-5">
+
+                                <div
+                                    class="flex
+                                           flex-col
+                                           sm:flex-row
+                                           sm:items-center
+                                           sm:justify-between
+                                           gap-5">
+
+                                    <div
+                                        class="flex items-center gap-3">
+
+                                        <span
+                                            class="w-10 h-10
+                                                   rounded-xl
+                                                   bg-coral/10
+                                                   text-coral
+                                                   flex
+                                                   items-center
+                                                   justify-center">
+
+                                            <i
+                                                data-lucide="compass"
+                                                class="w-4 h-4">
+                                            </i>
+
+                                        </span>
+
+                                        <div>
+
+                                            <p
+                                                class="text-[10px]
+                                                       uppercase
+                                                       tracking-[0.18em]
+                                                       font-bold
+                                                       text-ink
+                                                       dark:text-white">
+
+                                                Travel style
+
+                                            </p>
+
+                                            <p
+                                                class="mt-1
+                                                       text-sm
+                                                       font-semibold
+                                                       text-ink
+                                                       dark:text-white">
+
+                                                What feels like you?
+
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="flex flex-wrap gap-2">
+
+                                        <span
+                                            class="px-3 py-2
+                                                   rounded-full
+                                                   bg-ink
+                                                   text-white
+                                                   text-xs
+                                                   font-semibold">
+
+                                            Slow
+
+                                        </span>
+
+                                        <span
+                                            class="px-3 py-2
+                                                   rounded-full
+                                                   bg-white
+                                                   dark:bg-white/10
+                                                   border
+                                                   border-black/10
+                                                   dark:border-white/10
+                                                   text-xs
+                                                   font-semibold">
+
+                                            Culture
+
+                                        </span>
+
+                                        <span
+                                            class="px-3 py-2
+                                                   rounded-full
+                                                   bg-white
+                                                   dark:bg-white/10
+                                                   border
+                                                   border-black/10
+                                                   dark:border-white/10
+                                                   text-xs
+                                                   font-semibold">
+
+                                            Food
+
+                                        </span>
+
+                                        <span
+                                            class="px-3 py-2
+                                                   rounded-full
+                                                   bg-white
+                                                   dark:bg-white/10
+                                                   border
+                                                   border-black/10
+                                                   dark:border-white/10
+                                                   text-xs
+                                                   font-semibold">
+
+                                            Nature
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CTA -->
+
+                        <div
+                            class="mt-6
+                                   flex
+                                   flex-col
+                                   sm:flex-row
+                                   sm:items-center
+                                   gap-4">
+
+                            <a
+                                href="#"
+                                class="group
+                                       inline-flex
+                                       items-center
+                                       justify-center
+                                       gap-3
+                                       px-7
+                                       py-4
+                                       rounded-full
+                                       bg-ink
+                                       dark:bg-coral
+                                       text-white
+                                       text-sm
+                                       font-bold
+                                       hover:bg-coral
+                                       dark:hover:bg-white
+                                       dark:hover:text-ink
+                                       transition-all
+                                       duration-300">
+
+                                Start Designing
+
+                                <i
+                                    data-lucide="arrow-up-right"
+                                    class="w-4 h-4
+                                           group-hover:translate-x-1
+                                           group-hover:-translate-y-1
+                                           transition-transform">
+                                </i>
+
+                            </a>
+
+                            <span
+                                class="text-xs
+                                       text-ink
+                                       dark:text-white">
+
+                                Takes less than 2 minutes
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ============================================= -->
+                    <!-- RIGHT — VISUAL JOURNEY PANEL -->
+                    <!-- ============================================= -->
+
+                    <div
+                        class="relative
+                               min-h-[420px]
+                               lg:min-h-full
+                               overflow-hidden
+                               bg-[#DED8CE]
+                               dark:bg-[#181818]">
+
+                        <!-- Image -->
+
+                        <img
+                            src="../assets/images/p70.jpg"
+                            alt="Travel destination"
+                            class="absolute
+                                   inset-0
+                                   w-full
+                                   h-full
+                                   object-cover
+                                   scale-105
+                                   hover:scale-100
+                                   transition-transform
+                                   duration-[1200ms]">
+
+                        <!-- Overlay -->
+
+                        <div
+                            class="absolute
+                                   inset-0
+                                   bg-gradient-to-t
+                                   from-black/75
+                                   via-black/20
+                                   to-transparent">
+                        </div>
+
+
+                        <!-- Floating destination card -->
+
+                        <div
+                            class="absolute
+                                   left-5
+                                   sm:left-8
+                                   bottom-5
+                                   sm:bottom-8
+                                   max-w-[300px]
+                                   rounded-2xl
+                                   bg-white/95
+                                   dark:bg-black/75
+                                   backdrop-blur-xl
+                                   border
+                                   border-white/30
+                                   dark:border-white/10
+                                   p-5
+                                   shadow-2xl">
+
+                            <div
+                                class="flex
+                                       items-center
+                                       justify-between
+                                       gap-5">
+
+                                <div>
+
+                                    <p
+                                        class="text-[10px]
+                                               uppercase
+                                               tracking-[0.2em]
+                                               font-bold
+                                               text-ink
+                                               dark:text-white">
+
+                                        Inspiration
+
+                                    </p>
+
+                                    <h3
+                                        class="font-display
+                                               text-2xl
+                                               mt-1
+                                               text-ink
+                                               dark:text-white">
+
+                                        Kyoto, Japan
+
+                                    </h3>
+
+                                </div>
+
+                                <span
+                                    class="w-10 h-10
+                                           rounded-full
+                                           bg-coral
+                                           text-white
+                                           flex
+                                           items-center
+                                           justify-center">
+
+                                    <i
+                                        data-lucide="arrow-up-right"
+                                        class="w-4 h-4">
+                                    </i>
+
+                                </span>
+
+                            </div>
+
+                            <div
+                                class="flex
+                                       items-center
+                                       gap-4
+                                       mt-4
+                                       text-xs
+                                       text-ink
+                                       dark:text-white">
+
+                                <span class="flex items-center gap-1.5">
+
+                                    <i
+                                        data-lucide="sun"
+                                        class="w-3.5 h-3.5">
+                                    </i>
+
+                                    9 days
+
+                                </span>
+
+                                <span class="flex items-center gap-1.5">
+
+                                    <i
+                                        data-lucide="coffee"
+                                        class="w-3.5 h-3.5">
+                                    </i>
+
+                                    Slow travel
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Vertical label -->
+
+                        <div
+                            class="absolute
+                                   right-5
+                                   top-6
+                                   sm:right-8
+                                   sm:top-8
+                                   [writing-mode:vertical-rl]
+                                   text-[10px]
+                                   uppercase
+                                   tracking-[0.3em]
+                                   font-bold
+                                   text-white">
+
+                            JOURNEYS MADE PERSONAL
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- BOTTOM TRUST LINE -->
+        <!-- ===================================================== -->
+
+        <div
+            class="mt-7
+                   flex
+                   flex-wrap
+                   justify-center
+                   items-center
+                   gap-x-7
+                   gap-y-3
+                   text-xs
+                   text-ink
+                   dark:text-white">
+
+            <span class="flex items-center gap-2">
+
+                <i
+                    data-lucide="check-circle-2"
+                    class="w-4 h-4 text-coral">
+                </i>
+
+                No fixed packages
+
+            </span>
+
+            <span class="hidden sm:block w-1 h-1 rounded-full bg-ink dark:bg-white"></span>
+
+            <span class="flex items-center gap-2">
+
+                <i
+                    data-lucide="user-round-check"
+                    class="w-4 h-4 text-coral">
+                </i>
+
+                Personal trip designer
+
+            </span>
+
+            <span class="hidden sm:block w-1 h-1 rounded-full bg-ink dark:bg-white"></span>
+
+            <span class="flex items-center gap-2">
+
+                <i
+                    data-lucide="clock-3"
+                    class="w-4 h-4 text-coral">
+                </i>
+
+                Response within 24h
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+        
+
+
+<!-- ============================================================= -->
+<!-- 1B. INSPIRATION — EDITORIAL DESTINATION GRID -->
+<!-- ============================================================= -->
+
+<section
+    class="relative
+           py-20 sm:py-24 lg:py-32
+           bg-[#F6F3EE]
+           dark:bg-[#0B0B0B]
+           overflow-hidden">
+
+    <!-- Decorative Element -->
+
+    <div
+        class="absolute
+               -top-24
+               -right-24
+               w-72 h-72
+               rounded-full
+               bg-coral/10
+               blur-3xl
+               pointer-events-none">
+    </div>
+
+
+    <div
+        class="max-w-[1500px]
+               mx-auto
+               px-5 sm:px-8 lg:px-12">
+
+
+        <!-- ===================================================== -->
+        <!-- SECTION INTRO -->
+        <!-- ===================================================== -->
+
+        <div
+            class="grid
+                   lg:grid-cols-[0.8fr_1.2fr]
+                   gap-8
+                   lg:gap-16
+                   items-end">
+
+            <div>
+
+                <span
+                    class="inline-flex
+                           items-center
+                           gap-2
+                           text-coral
+                           text-[11px]
+                           font-bold
+                           uppercase
+                           tracking-[.28em]">
+
+                    <span
+                        class="w-7 h-px
+                               bg-coral">
+                    </span>
+
+                    Inspiration
+
+                </span>
+
+
+                <h2
+                    class="font-display
+                           text-4xl
+                           sm:text-5xl
+                           lg:text-6xl
+                           leading-[1]
+                           mt-5
+                           max-w-xl
+                           text-ink
+                           dark:text-white">
+
+                    Somewhere out there
+                    <span class="text-coral italic">
+                        is waiting.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div
+                class="lg:max-w-md
+                       lg:ml-auto">
+
+                <p
+                    class="text-sm
+                           sm:text-base
+                           leading-relaxed
+                           text-ink
+                           dark:text-white">
+
+                    Let a destination spark the idea.
+                    From slow coastal mornings to mountain
+                    adventures, discover places worth building
+                    your next journey around.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- DESTINATION SHOWCASE -->
+        <!-- ===================================================== -->
+
+        <div
+            class="grid
+                   lg:grid-cols-[1.15fr_0.85fr]
+                   gap-5
+                   mt-12
+                   lg:mt-16">
+
+
+            <!-- ================================================= -->
+            <!-- FEATURED DESTINATION -->
+            <!-- ================================================= -->
+
+            <a
+                href="destinations.html"
+                class="group
+                       relative
+                       min-h-[480px]
+                       sm:min-h-[580px]
+                       lg:min-h-[650px]
+                       rounded-[2rem]
+                       overflow-hidden
+                       block">
+
+                <img
+                    src="../assets/images/p71.jpg"
+                    alt="Amalfi Coast, Italy"
+                    class="absolute
+                           inset-0
+                           w-full h-full
+                           object-cover
+                           transition-transform
+                           duration-[1200ms]
+                           group-hover:scale-105">
+
+
+                <!-- Overlay -->
+
+                <div
+                    class="absolute
+                           inset-0
+                           bg-gradient-to-t
+                           from-black/80
+                           via-black/20
+                           to-transparent">
+                </div>
+
+
+                <!-- Top Label -->
+
+                <div
+                    class="absolute
+                           top-6
+                           left-6
+                           sm:top-8
+                           sm:left-8">
+
+                    <span
+                        class="inline-flex
+                               items-center
+                               gap-2
+                               px-3 py-1.5
+                               rounded-full
+                               bg-white/15
+                               backdrop-blur-md
+                               border
+                               border-white/20
+                               text-[10px]
+                               uppercase
+                               tracking-[.2em]
+                               font-bold
+                               text-white">
+
+                        Featured
+
+                    </span>
+
+                </div>
+
+
+                <!-- Content -->
+
+                <div
+                    class="absolute
+                           left-6
+                           right-6
+                           bottom-6
+                           sm:left-8
+                           sm:right-8
+                           sm:bottom-8
+                           text-white">
+
+                    <p
+                        class="text-[11px]
+                               uppercase
+                               tracking-[.25em]
+                               font-bold
+                               text-white">
+
+                        Italy
+
+                    </p>
+
+
+                    <div
+                        class="flex
+                               items-end
+                               justify-between
+                               gap-5
+                               mt-2">
+
+                        <h3
+                            class="font-display
+                                   text-4xl
+                                   sm:text-5xl
+                                   lg:text-6xl
+                                   italic">
+
+                            Amalfi Coast
+
+                        </h3>
+
+
+                        <span
+                            class="shrink-0
+                                   w-12 h-12
+                                   rounded-full
+                                   bg-white
+                                   text-ink
+                                   flex
+                                   items-center
+                                   justify-center
+                                   group-hover:bg-coral
+                                   group-hover:text-white
+                                   transition-colors">
+
+                            <i
+                                data-lucide="arrow-up-right"
+                                class="w-5 h-5
+                                       group-hover:translate-x-0.5
+                                       group-hover:-translate-y-0.5
+                                       transition-transform">
+                            </i>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- ================================================= -->
+            <!-- SIDE DESTINATIONS -->
+            <!-- ================================================= -->
+
+            <div
+                class="grid
+                       sm:grid-cols-2
+                       lg:grid-cols-1
+                       gap-5">
+
+
+                <!-- Kyoto -->
+
+                <a
+                    href="destinations.html"
+                    class="group
+                           relative
+                           min-h-[300px]
+                           sm:min-h-[360px]
+                           lg:min-h-[312px]
+                           rounded-[2rem]
+                           overflow-hidden">
+
+                    <img
+                        src="../assets/images/p72.jpg"
+                        alt="Kyoto, Japan"
+                        class="absolute
+                               inset-0
+                               w-full h-full
+                               object-cover
+                               transition-transform
+                               duration-1000
+                               group-hover:scale-105">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-gradient-to-t
+                               from-black/75
+                               via-black/10
+                               to-transparent">
+                    </div>
+
+
+                    <div
+                        class="absolute
+                               left-6
+                               right-6
+                               bottom-6
+                               flex
+                               items-end
+                               justify-between
+                               gap-4
+                               text-white">
+
+                        <div>
+
+                            <p
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.22em]
+                                       font-bold
+                                       text-white">
+
+                                Japan
+
+                            </p>
+
+                            <h3
+                                class="font-display
+                                       text-3xl
+                                       sm:text-4xl
+                                       italic
+                                       mt-1">
+
+                                Kyoto
+
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="w-10 h-10
+                                   rounded-full
+                                   bg-white/15
+                                   backdrop-blur-md
+                                   border
+                                   border-white/20
+                                   flex
+                                   items-center
+                                   justify-center
+                                   group-hover:bg-coral
+                                   group-hover:border-coral
+                                   transition-all">
+
+                            <i
+                                data-lucide="arrow-up-right"
+                                class="w-4 h-4">
+                            </i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Patagonia -->
+
+                <a
+                    href="destinations.html"
+                    class="group
+                           relative
+                           min-h-[300px]
+                           sm:min-h-[360px]
+                           lg:min-h-[312px]
+                           rounded-[2rem]
+                           overflow-hidden">
+
+                    <img
+                        src="../assets/images/p73.jpg"
+                        alt="Patagonia, Chile"
+                        class="absolute
+                               inset-0
+                               w-full h-full
+                               object-cover
+                               transition-transform
+                               duration-1000
+                               group-hover:scale-105">
+
+
+                    <div
+                        class="absolute
+                               inset-0
+                               bg-gradient-to-t
+                               from-black/75
+                               via-black/10
+                               to-transparent">
+                    </div>
+
+
+                    <div
+                        class="absolute
+                               left-6
+                               right-6
+                               bottom-6
+                               flex
+                               items-end
+                               justify-between
+                               gap-4
+                               text-white">
+
+                        <div>
+
+                            <p
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.22em]
+                                       font-bold
+                                       text-white">
+
+                                Chile
+
+                            </p>
+
+                            <h3
+                                class="font-display
+                                       text-3xl
+                                       sm:text-4xl
+                                       italic
+                                       mt-1">
+
+                                Patagonia
+
+                            </h3>
+
+                        </div>
+
+
+                        <span
+                            class="w-10 h-10
+                                   rounded-full
+                                   bg-white/15
+                                   backdrop-blur-md
+                                   border
+                                   border-white/20
+                                   flex
+                                   items-center
+                                   justify-center
+                                   group-hover:bg-coral
+                                   group-hover:border-coral
+                                   transition-all">
+
+                            <i
+                                data-lucide="arrow-up-right"
+                                class="w-4 h-4">
+                            </i>
+
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- BOTTOM NAVIGATION -->
+        <!-- ===================================================== -->
+
+        <div
+            class="mt-7
+                   flex
+                   items-center
+                   justify-between
+                   gap-5
+                   border-t
+                   border-black/[0.08]
+                   dark:border-white/10
+                   pt-5">
+
+            <span
+                class="flex
+                       items-center
+                       gap-2
+                       text-[10px]
+                       sm:text-[11px]
+                       uppercase
+                       tracking-[.2em]
+                       font-bold
+                       text-ink
+                       dark:text-white">
+
+                <i
+                    data-lucide="mouse-pointer-2"
+                    class="w-3.5 h-3.5">
+                </i>
+
+                Explore destinations
+
+            </span>
+
+
+            <a
+                href="destinations.html"
+                class="group
+                       inline-flex
+                       items-center
+                       gap-2
+                       text-xs
+                       sm:text-sm
+                       font-bold
+                       text-ink
+                       dark:text-white
+                       hover:text-coral
+                       transition-colors">
+
+                View all destinations
+
+                <i
+                    data-lucide="arrow-right"
+                    class="w-4 h-4
+                           group-hover:translate-x-1
+                           transition-transform">
+                </i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ============================================================= -->
+<!-- 2. TRUST / CREDIBILITY — LIGHT PREMIUM MODEL -->
+<!-- ============================================================= -->
+
+<section
+    class="relative
+           overflow-hidden
+           bg-[#F4EFE7]
+           dark:bg-[#171513]
+           py-16
+           sm:py-20
+           lg:py-24">
+
+    <!-- ========================================================= -->
+    <!-- DECORATIVE BACKGROUND -->
+    <!-- ========================================================= -->
+
+    <div
+        class="absolute
+               -top-32
+               -right-32
+               w-[420px]
+               h-[420px]
+               rounded-full
+               bg-coral/10
+               blur-3xl
+               pointer-events-none">
+    </div>
+
+    <div
+        class="absolute
+               -bottom-32
+               -left-32
+               w-[360px]
+               h-[360px]
+               rounded-full
+               bg-[#D9C8B5]/20
+               dark:bg-coral/5
+               blur-3xl
+               pointer-events-none">
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- MAIN CONTAINER -->
+    <!-- ========================================================= -->
+
+    <div
+        class="relative
+               max-w-[1500px]
+               mx-auto
+               px-5
+               sm:px-8
+               lg:px-12">
+
+
+        <!-- ===================================================== -->
+        <!-- TOP INTRO -->
+        <!-- ===================================================== -->
+
+        <div
+            class="grid
+                   lg:grid-cols-[1fr_auto]
+                   gap-8
+                   items-end
+                   pb-10
+                   lg:pb-12
+                   border-b
+                   border-black/[0.08]
+                   dark:border-white/10">
+
+            <!-- Heading -->
+
+            <div>
+
+                <p
+                    class="text-[10px]
+                           sm:text-xs
+                           uppercase
+                           tracking-[.3em]
+                           font-bold
+                           text-coral">
+
+                    Why travelers choose us
+
+                </p>
+
+
+                <h2
+                    class="font-display
+                           text-3xl
+                           sm:text-4xl
+                           lg:text-5xl
+                           leading-tight
+                           text-ink
+                           dark:text-white
+                           mt-4
+                           max-w-2xl">
+
+                    Thoughtful planning.
+                    <span
+                        class="text-ink
+                               dark:text-white">
+
+                        Remarkable journeys.
+
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <!-- Description -->
+
+            <p
+                class="max-w-sm
+                       text-sm
+                       leading-relaxed
+                       text-ink
+                       dark:text-white">
+
+                Every detail is considered before
+                you take the first step.
+
+            </p>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- CREDIBILITY ITEMS -->
+        <!-- ===================================================== -->
+
+        <div
+            class="grid
+                   md:grid-cols-3
+                   divide-y
+                   md:divide-y-0
+                   md:divide-x
+                   divide-black/[0.08]
+                   dark:divide-white/10">
+
+
+            <!-- ================================================= -->
+            <!-- ITEM 01 -->
+            <!-- ================================================= -->
+
+            <div
+                class="group
+                       py-8
+                       md:py-10
+                       md:pr-8
+                       lg:pr-12">
+
+                <div
+                    class="flex
+                           items-start
+                           justify-between
+                           gap-5">
+
+                    <!-- Icon -->
+
+                    <span
+                        class="w-11
+                               h-11
+                               rounded-full
+                               border
+                               border-black/10
+                               dark:border-white/10
+                               bg-white/50
+                               dark:bg-white/5
+                               flex
+                               items-center
+                               justify-center
+                               text-coral
+                               group-hover:bg-coral
+                               group-hover:text-white
+                               group-hover:border-coral
+                               transition-all
+                               duration-300">
+
+                        <i
+                            data-lucide="globe-2"
+                            class="w-5 h-5">
+                        </i>
+
+                    </span>
+
+
+                    <!-- Number -->
+
+                    <span
+                        class="font-display
+                               text-4xl
+                               sm:text-5xl
+                               text-ink
+                               dark:text-white">
+
+                        72+
+
+                    </span>
+
+                </div>
+
+
+                <h3
+                    class="text-base
+                           font-bold
+                           text-ink
+                           dark:text-white
+                           mt-7">
+
+                    Countries explored
+
+                </h3>
+
+
+                <p
+                    class="text-sm
+                           leading-relaxed
+                           text-ink
+                           dark:text-white
+                           mt-2
+                           max-w-xs">
+
+                    From iconic destinations to
+                    places most travelers overlook.
+
+                </p>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- ITEM 02 -->
+            <!-- ================================================= -->
+
+            <div
+                class="group
+                       py-8
+                       md:py-10
+                       md:px-8
+                       lg:px-12">
+
+                <div
+                    class="flex
+                           items-start
+                           justify-between
+                           gap-5">
+
+                    <!-- Icon -->
+
+                    <span
+                        class="w-11
+                               h-11
+                               rounded-full
+                               border
+                               border-black/10
+                               dark:border-white/10
+                               bg-white/50
+                               dark:bg-white/5
+                               flex
+                               items-center
+                               justify-center
+                               text-coral
+                               group-hover:bg-coral
+                               group-hover:text-white
+                               group-hover:border-coral
+                               transition-all
+                               duration-300">
+
+                        <i
+                            data-lucide="route"
+                            class="w-5 h-5">
+                        </i>
+
+                    </span>
+
+
+                    <!-- Number -->
+
+                    <span
+                        class="font-display
+                               text-4xl
+                               sm:text-5xl
+                               text-ink
+                               dark:text-white">
+
+                        100%
+
+                    </span>
+
+                </div>
+
+
+                <h3
+                    class="text-base
+                           font-bold
+                           text-ink
+                           dark:text-white
+                           mt-7">
+
+                    Made around you
+
+                </h3>
+
+
+                <p
+                    class="text-sm
+                           leading-relaxed
+                           text-black
+                           dark:text-white
+                           mt-2
+                           max-w-xs">
+
+                    No fixed packages. Every itinerary
+                    is shaped around your travel style.
+
+                </p>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- ITEM 03 -->
+            <!-- ================================================= -->
+
+            <div
+                class="group
+                       py-8
+                       md:py-10
+                       md:pl-8
+                       lg:pl-12">
+
+                <div
+                    class="flex
+                           items-start
+                           justify-between
+                           gap-5">
+
+                    <!-- Icon -->
+
+                    <span
+                        class="w-11
+                               h-11
+                               rounded-full
+                               border
+                               border-black/10
+                               dark:border-white/10
+                               bg-white/50
+                               dark:bg-white/5
+                               flex
+                               items-center
+                               justify-center
+                               text-coral
+                               group-hover:bg-coral
+                               group-hover:text-white
+                               group-hover:border-coral
+                               transition-all
+                               duration-300">
+
+                        <i
+                            data-lucide="heart-handshake"
+                            class="w-5 h-5">
+                        </i>
+
+                    </span>
+
+
+                    <!-- Number -->
+
+                    <span
+                        class="font-display
+                               text-4xl
+                               sm:text-5xl
+                               text-ink
+                               dark:text-white">
+
+                        4.9
+
+                    </span>
+
+                </div>
+
+
+                <h3
+                    class="text-base
+                           font-bold
+                           text-ink
+                           dark:text-white
+                           mt-7">
+
+                    Traveler satisfaction
+
+                </h3>
+
+
+                <p
+                    class="text-sm
+                           leading-relaxed
+                           text-black
+                           dark:text-white
+                           mt-2
+                           max-w-xs">
+
+                    Highly rated by travelers who
+                    value meaningful experiences.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- BOTTOM MICRO STAT -->
+        <!-- ===================================================== -->
+
+        <div
+            class="mt-6
+                   pt-6
+                   border-t
+                   border-black/[0.08]
+                   dark:border-white/10
+                   flex
+                   flex-wrap
+                   items-center
+                   justify-between
+                   gap-4">
+
+
+            <!-- Left -->
+
+            <span
+                class="flex
+                       items-center
+                       gap-2
+                       text-[10px]
+                       sm:text-xs
+                       uppercase
+                       tracking-[.2em]
+                       font-bold
+                       text-black
+                       dark:text-white">
+
+                <span
+                    class="w-2
+                           h-2
+                           rounded-full
+                           bg-coral
+                           animate-pulse">
+                </span>
+
+                Independent travel planning
+
+            </span>
+
+
+            <!-- Right -->
+
+            <span
+                class="text-xs
+                       text-black
+                       dark:text-white">
+
+                Built for curious travelers
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============================================================= -->
+<!-- 3. HOW IT WORKS — EDITORIAL ROADMAP -->
+<!-- Completely different layout -->
+<!-- ============================================================= -->
+
+<section
+    id="trip-form"
+    class="relative
+           overflow-hidden
+           bg-[#F8F5F0]
+           dark:bg-[#0C0C0B]
+           py-20
+           sm:py-24
+           lg:py-32">
+
+    <!-- ========================================================= -->
+    <!-- BACKGROUND DETAIL -->
+    <!-- ========================================================= -->
+
+    <div
+        class="absolute
+               right-[-120px]
+               top-[20%]
+               w-[360px]
+               h-[360px]
+               rounded-full
+               bg-coral/10
+               blur-3xl
+               pointer-events-none">
+    </div>
+
+
+    <div
+        class="max-w-[1500px]
+               mx-auto
+               px-5
+               sm:px-8
+               lg:px-12">
+
+
+        <!-- ===================================================== -->
+        <!-- INTRO -->
+        <!-- ===================================================== -->
+
+        <div
+            class="flex
+                   flex-col
+                   lg:flex-row
+                   lg:items-end
+                   lg:justify-between
+                   gap-8">
+
+            <div>
+
+                <p
+                    class="text-[10px]
+                           sm:text-xs
+                           uppercase
+                           tracking-[.3em]
+                           font-bold
+                           text-coral">
+
+                    Your journey begins
+
+                </p>
+
+
+                <h2
+                    class="font-display
+                           text-4xl
+                           sm:text-5xl
+                           lg:text-7xl
+                           leading-[.95]
+                           mt-5
+                           text-ink
+                           dark:text-white
+                           max-w-3xl">
+
+                    A simpler way to
+                    <span class="text-coral italic">
+                        travel well.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div
+                class="max-w-sm
+                       lg:pb-2">
+
+                <p
+                    class="text-sm
+                           sm:text-base
+                           leading-relaxed
+                           text-black
+                           dark:text-white">
+
+                    From the first conversation to the moment
+                    you leave home, we take care of the details
+                    that make a journey feel effortless.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- ROADMAP -->
+        <!-- ===================================================== -->
+
+        <div
+            class="relative
+                   mt-16
+                   sm:mt-20
+                   lg:mt-24">
+
+
+            <!-- ================================================= -->
+            <!-- STEP 01 -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       min-h-[260px]
+                       sm:min-h-[300px]
+                       lg:min-h-[330px]
+                       border-t
+                       border-black/[0.08]
+                       dark:border-white/10
+                       flex
+                       items-center
+                       group">
+
+                <!-- Large number -->
+
+                <div
+                    class="absolute
+                           left-0
+                           top-1/2
+                           -translate-y-1/2
+                           font-display
+                           text-[120px]
+                           sm:text-[170px]
+                           lg:text-[210px]
+                           leading-none
+                           text-black/[0.035]
+                           dark:text-white/[0.035]
+                           select-none">
+
+                    01
+
+                </div>
+
+
+                <!-- Content -->
+
+                <div
+                    class="relative
+                           z-10
+                           w-full
+                           grid
+                           lg:grid-cols-[0.7fr_1fr]
+                           gap-8
+                           lg:gap-20
+                           items-center
+                           pl-0
+                           lg:pl-20">
+
+                    <div>
+
+                        <span
+                            class="inline-flex
+                                   items-center
+                                   gap-2
+                                   text-[10px]
+                                   uppercase
+                                   tracking-[.25em]
+                                   font-bold
+                                   text-coral">
+
+                            <span
+                                class="w-6
+                                       h-px
+                                       bg-coral">
+                            </span>
+
+                            Start
+
+                        </span>
+
+
+                        <h3
+                            class="font-display
+                                   text-3xl
+                                   sm:text-4xl
+                                   lg:text-5xl
+                                   mt-4
+                                   text-ink
+                                   dark:text-white">
+
+                            Bring us your idea
+
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        class="lg:max-w-xl">
+
+                        <p
+                            class="text-base
+                                   sm:text-lg
+                                   leading-relaxed
+                                   text-black
+                                   dark:text-white">
+
+                            You don't need a perfect plan.
+                            Tell us the destination you're thinking about,
+                            the dates you have in mind, or simply the feeling
+                            you want from your next escape.
+
+                        </p>
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-3
+                                   mt-6
+                                   text-xs
+                                   font-bold
+                                   text-black
+                                   dark:text-white">
+
+                            <span
+                                class="w-8
+                                       h-8
+                                       rounded-full
+                                       bg-coral/10
+                                       text-coral
+                                       flex
+                                       items-center
+                                       justify-center">
+
+                                <i
+                                    data-lucide="message-square"
+                                    class="w-3.5 h-3.5">
+                                </i>
+
+                            </span>
+
+                            Tell us what matters to you
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- STEP 02 -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       min-h-[260px]
+                       sm:min-h-[300px]
+                       lg:min-h-[330px]
+                       border-t
+                       border-black/[0.08]
+                       dark:border-white/10
+                       flex
+                       items-center
+                       group">
+
+                <div
+                    class="absolute
+                           left-0
+                           top-1/2
+                           -translate-y-1/2
+                           font-display
+                           text-[120px]
+                           sm:text-[170px]
+                           lg:text-[210px]
+                           leading-none
+                           text-black/[0.035]
+                           dark:text-white/[0.035]
+                           select-none">
+
+                    02
+
+                </div>
+
+
+                <div
+                    class="relative
+                           z-10
+                           w-full
+                           grid
+                           lg:grid-cols-[0.7fr_1fr]
+                           gap-8
+                           lg:gap-20
+                           items-center
+                           pl-0
+                           lg:pl-20">
+
+                    <div>
+
+                        <span
+                            class="inline-flex
+                                   items-center
+                                   gap-2
+                                   text-[10px]
+                                   uppercase
+                                   tracking-[.25em]
+                                   font-bold
+                                   text-coral">
+
+                            <span
+                                class="w-6
+                                       h-px
+                                       bg-coral">
+                            </span>
+
+                            Shape
+
+                        </span>
+
+
+                        <h3
+                            class="font-display
+                                   text-3xl
+                                   sm:text-4xl
+                                   lg:text-5xl
+                                   mt-4
+                                   text-ink
+                                   dark:text-white">
+
+                            We connect the dots
+
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        class="lg:max-w-xl">
+
+                        <p
+                            class="text-base
+                                   sm:text-lg
+                                   leading-relaxed
+                                   text-black
+                                   dark:text-white">
+
+                            Your trip designer turns those ideas into
+                            a thoughtful route — choosing places to stay,
+                            experiences to enjoy and moments worth slowing
+                            down for.
+
+                        </p>
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-3
+                                   mt-6
+                                   text-xs
+                                   font-bold
+                                   text-black
+                                   dark:text-white">
+
+                            <span
+                                class="w-8
+                                       h-8
+                                       rounded-full
+                                       bg-coral/10
+                                       text-coral
+                                       flex
+                                       items-center
+                                       justify-center">
+
+                                <i
+                                    data-lucide="route"
+                                    class="w-3.5 h-3.5">
+                                </i>
+
+                            </span>
+
+                            A route built around you
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- STEP 03 -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       min-h-[260px]
+                       sm:min-h-[300px]
+                       lg:min-h-[330px]
+                       border-t
+                       border-black/[0.08]
+                       dark:border-white/10
+                       flex
+                       items-center
+                       group">
+
+                <div
+                    class="absolute
+                           left-0
+                           top-1/2
+                           -translate-y-1/2
+                           font-display
+                           text-[120px]
+                           sm:text-[170px]
+                           lg:text-[210px]
+                           leading-none
+                           text-black/[0.035]
+                           dark:text-white/[0.035]
+                           select-none">
+
+                    03
+
+                </div>
+
+
+                <div
+                    class="relative
+                           z-10
+                           w-full
+                           grid
+                           lg:grid-cols-[0.7fr_1fr]
+                           gap-8
+                           lg:gap-20
+                           items-center
+                           pl-0
+                           lg:pl-20">
+
+                    <div>
+
+                        <span
+                            class="inline-flex
+                                   items-center
+                                   gap-2
+                                   text-[10px]
+                                   uppercase
+                                   tracking-[.25em]
+                                   font-bold
+                                   text-coral">
+
+                            <span
+                                class="w-6
+                                       h-px
+                                       bg-coral">
+                            </span>
+
+                            Refine
+
+                        </span>
+
+
+                        <h3
+                            class="font-display
+                                   text-3xl
+                                   sm:text-4xl
+                                   lg:text-5xl
+                                   mt-4
+                                   text-ink
+                                   dark:text-white">
+
+                            Make every detail yours
+
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        class="lg:max-w-xl">
+
+                        <p
+                            class="text-base
+                                   sm:text-lg
+                                   leading-relaxed
+                                   text-black
+                                   dark:text-white">
+
+                            Nothing is locked until it feels right.
+                            Change the pace, switch experiences,
+                            add a hidden spot or simply take more
+                            time somewhere you love.
+
+                        </p>
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-3
+                                   mt-6
+                                   text-xs
+                                   font-bold
+                                   text-black
+                                   dark:text-white">
+
+                            <span
+                                class="w-8
+                                       h-8
+                                       rounded-full
+                                       bg-coral/10
+                                       text-coral
+                                       flex
+                                       items-center
+                                       justify-center">
+
+                                <i
+                                    data-lucide="sliders-horizontal"
+                                    class="w-3.5 h-3.5">
+                                </i>
+
+                            </span>
+
+                            Refine without compromise
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- STEP 04 -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       min-h-[280px]
+                       sm:min-h-[320px]
+                       lg:min-h-[350px]
+                       border-t
+                       border-b
+                       border-black/[0.08]
+                       dark:border-white/10
+                       flex
+                       items-center
+                       group">
+
+                <div
+                    class="absolute
+                           left-0
+                           top-1/2
+                           -translate-y-1/2
+                           font-display
+                           text-[120px]
+                           sm:text-[170px]
+                           lg:text-[210px]
+                           leading-none
+                           text-coral/[0.08]
+                           select-none">
+
+                    04
+
+                </div>
+
+
+                <div
+                    class="relative
+                           z-10
+                           w-full
+                           grid
+                           lg:grid-cols-[0.7fr_1fr]
+                           gap-8
+                           lg:gap-20
+                           items-center
+                           pl-0
+                           lg:pl-20">
+
+                    <div>
+
+                        <span
+                            class="inline-flex
+                                   items-center
+                                   gap-2
+                                   text-[10px]
+                                   uppercase
+                                   tracking-[.25em]
+                                   font-bold
+                                   text-coral">
+
+                            <span
+                                class="w-6
+                                       h-px
+                                       bg-coral">
+                            </span>
+
+                            Go
+
+                        </span>
+
+
+                        <h3
+                            class="font-display
+                                   text-3xl
+                                   sm:text-4xl
+                                   lg:text-5xl
+                                   mt-4
+                                   text-ink
+                                   dark:text-white">
+
+                            Leave the planning behind
+
+                        </h3>
+
+                    </div>
+
+
+                    <div
+                        class="lg:max-w-xl">
+
+                        <p
+                            class="text-base
+                                   sm:text-lg
+                                   leading-relaxed
+                                   text-black
+                                   dark:text-white">
+
+                            Once everything is ready, you receive
+                            your complete itinerary and support for
+                            the journey ahead. All that's left is
+                            to go.
+
+                        </p>
+
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-3
+                                   mt-6
+                                   text-xs
+                                   font-bold
+                                   text-coral">
+
+                            <span
+                                class="w-8
+                                       h-8
+                                       rounded-full
+                                       bg-coral
+                                       text-white
+                                       flex
+                                       items-center
+                                       justify-center">
+
+                                <i
+                                    data-lucide="plane-takeoff"
+                                    class="w-3.5 h-3.5">
+                                </i>
+
+                            </span>
+
+                            Your journey starts now
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- FOOTER LINE -->
+        <!-- ===================================================== -->
+
+        <div
+            class="flex
+                   flex-col
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-4
+                   mt-8">
+
+            <p
+                class="text-xs
+                       text-black
+                       dark:text-white">
+
+                No fixed packages. No rushed decisions.
+
+            </p>
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-2
+                       text-[10px]
+                       uppercase
+                       tracking-[.2em]
+                       font-bold
+                       text-black
+                       dark:text-white">
+
+                <span
+                    class="w-2
+                           h-2
+                           rounded-full
+                           bg-coral">
+                </span>
+
+                Personal travel planning
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ============================================================= -->
+<!-- 4. CUSTOMIZE BY — TRIP DNA -->
+<!-- PREMIUM WARM LIGHT VERSION -->
+<!-- ============================================================= -->
+
+<section
+    class="relative
+           overflow-hidden
+           bg-[#F3EDE4]
+           dark:bg-[#E8E0D5]
+           py-20
+           sm:py-24
+           lg:py-32">
+
+    <!-- ========================================================= -->
+    <!-- BACKGROUND DETAILS -->
+    <!-- ========================================================= -->
+
+    <div
+        class="absolute
+               -top-40
+               -left-40
+               w-[500px]
+               h-[500px]
+               rounded-full
+               bg-coral/10
+               blur-3xl
+               pointer-events-none">
+    </div>
+
+    <div
+        class="absolute
+               -bottom-40
+               -right-40
+               w-[500px]
+               h-[500px]
+               rounded-full
+               bg-[#D8C7B5]/30
+               blur-3xl
+               pointer-events-none">
+    </div>
+
+
+    <!-- ========================================================= -->
+    <!-- MAIN -->
+    <!-- ========================================================= -->
+
+    <div
+        class="relative
+               max-w-[1500px]
+               mx-auto
+               px-5
+               sm:px-8
+               lg:px-12">
+
+
+        <!-- ===================================================== -->
+        <!-- HEADER -->
+        <!-- ===================================================== -->
+
+        <div
+            class="grid
+                   lg:grid-cols-[1fr_auto]
+                   gap-8
+                   items-end">
+
+            <div>
+
+                <p
+                    class="text-[10px]
+                           sm:text-xs
+                           uppercase
+                           tracking-[.3em]
+                           font-bold
+                           text-coral">
+
+                    Built around you
+
+                </p>
+
+
+                <h2
+                    class="font-display
+                           text-4xl
+                           sm:text-5xl
+                           lg:text-7xl
+                           leading-[.95]
+                           mt-5
+                           text-[#171513]
+                           dark:text-[#171513]
+                           max-w-3xl">
+
+                    Your trip has its own
+
+                    <span class="text-coral italic">
+                        DNA.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <p
+                class="max-w-sm
+                       text-sm
+                       leading-relaxed
+                       text-black
+                       dark:text-white
+                       lg:pb-2">
+
+                Change the ingredients.
+                Keep the feeling. Build a journey that
+                could only belong to you.
+
+            </p>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- TRIP DNA AREA -->
+        <!-- ===================================================== -->
+
+        <div
+            class="relative
+                   mt-16
+                   sm:mt-20
+                   lg:mt-24
+                   min-h-[620px]
+                   lg:min-h-[560px]">
+
+
+            <!-- ================================================= -->
+            <!-- CENTRAL VISUAL -->
+            <!-- ================================================= -->
+
+            <div
+                class="absolute
+                       left-1/2
+                       top-1/2
+                       -translate-x-1/2
+                       -translate-y-1/2
+                       hidden
+                       lg:flex
+                       w-[390px]
+                       h-[390px]
+                       rounded-full
+                       border
+                       border-[#171513]/10
+                       items-center
+                       justify-center">
+
+
+                <div
+                    class="absolute
+                           inset-8
+                           rounded-full
+                           border
+                           border-coral/20">
+                </div>
+
+
+                <div
+                    class="absolute
+                           inset-20
+                           rounded-full
+                           bg-coral/[0.08]
+                           blur-2xl">
+                </div>
+
+
+                <div
+                    class="relative
+                           z-10
+                           text-center">
+
+                    <span
+                        class="text-[10px]
+                               uppercase
+                               tracking-[.3em]
+                               font-bold
+                               text-black">
+
+                        Your perfect mix
+
+                    </span>
+
+
+                    <div
+                        class="font-display
+                               text-7xl
+                               text-[#171513]
+                               mt-3">
+
+                        04
+
+                    </div>
+
+
+                    <p
+                        class="font-display
+                               text-2xl
+                               text-coral
+                               italic">
+
+                        choices
+
+                    </p>
+
+
+                    <div
+                        class="flex
+                               justify-center
+                               gap-2
+                               mt-6">
+
+                        <span
+                            class="w-2
+                                   h-2
+                                   rounded-full
+                                   bg-coral">
+                        </span>
+
+                        <span
+                            class="w-2
+                                   h-2
+                                   rounded-full
+                                   bg-[#171513]/15">
+                        </span>
+
+                        <span
+                            class="w-2
+                                   h-2
+                                   rounded-full
+                                   bg-[#171513]/15">
+                        </span>
+
+                        <span
+                            class="w-2
+                                   h-2
+                                   rounded-full
+                                   bg-[#171513]/15">
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- MOBILE LABEL -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:hidden
+                       text-center
+                       mb-10">
+
+                <span
+                    class="text-[10px]
+                           uppercase
+                           tracking-[.3em]
+                           text-black
+                           font-bold">
+
+                    Four things shape your trip
+
+                </span>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- 01 DESTINATION -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       lg:absolute
+                       lg:left-0
+                       lg:top-0
+                       w-full
+                       lg:w-[330px]
+                       group">
+
+                <div
+                    class="flex
+                           items-start
+                           gap-5
+                           lg:block">
+
+                    <div
+                        class="shrink-0
+                               w-14
+                               h-14
+                               rounded-full
+                               border
+                               border-coral/30
+                               bg-white/60
+                               text-coral
+                               flex
+                               items-center
+                               justify-center
+                               group-hover:bg-coral
+                               group-hover:text-white
+                               transition-all
+                               duration-300">
+
+                        <i
+                            data-lucide="map-pin"
+                            class="w-5 h-5">
+                        </i>
+
+                    </div>
+
+
+                    <div
+                        class="lg:mt-5">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-3">
+
+                            <span
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.25em]
+                                       text-coral
+                                       font-bold">
+
+                                01
+
+                            </span>
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-[#171513]/15">
+                            </span>
+
+                            <span
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.2em]
+                                       text-black">
+
+                                Where
+
+                            </span>
+
+                        </div>
+
+
+                        <h3
+                            class="font-display
+                                   text-3xl
+                                   text-[#171513]
+                                   mt-2">
+
+                            Destination
+
+                        </h3>
+
+
+                        <p
+                            class="text-sm
+                                   leading-relaxed
+                                   text-black
+                                   mt-2
+                                   max-w-xs">
+
+                            One country, several cities,
+                            or a route completely off
+                            the usual path.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- 02 DURATION -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       mt-10
+                       lg:mt-0
+                       lg:absolute
+                       lg:right-0
+                       lg:top-0
+                       w-full
+                       lg:w-[330px]
+                       group">
+
+                <div
+                    class="flex
+                           items-start
+                           gap-5
+                           lg:block">
+
+                    <div
+                        class="shrink-0
+                               w-14
+                               h-14
+                               rounded-full
+                               border
+                               border-[#171513]/10
+                               bg-white/50
+                               text-[#171513]/60
+                               flex
+                               items-center
+                               justify-center
+                               group-hover:border-coral
+                               group-hover:text-coral
+                               transition-all
+                               duration-300">
+
+                        <i
+                            data-lucide="calendar-days"
+                            class="w-5 h-5">
+                        </i>
+
+                    </div>
+
+
+                    <div
+                        class="lg:mt-5">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-3">
+
+                            <span
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.25em]
+                                       text-coral
+                                       font-bold">
+
+                                02
+
+                            </span>
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-[#171513]/15">
+                            </span>
+
+                            <span
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.2em]
+                                       text-black">
+
+                                When
+
+                            </span>
+
+                        </div>
+
+
+                        <h3
+                            class="font-display
+                                   text-3xl
+                                   text-[#171513]
+                                   mt-2">
+
+                            Duration
+
+                        </h3>
+
+
+                        <p
+                            class="text-sm
+                                   leading-relaxed
+                                   text-black
+                                   mt-2
+                                   max-w-xs">
+
+                            A long weekend, a two-week escape,
+                            or enough time to forget what day
+                            it is.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- 03 BUDGET -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       mt-10
+                       lg:mt-0
+                       lg:absolute
+                       lg:left-0
+                       lg:bottom-0
+                       w-full
+                       lg:w-[330px]
+                       group">
+
+                <div
+                    class="flex
+                           items-start
+                           gap-5
+                           lg:block">
+
+                    <div
+                        class="shrink-0
+                               w-14
+                               h-14
+                               rounded-full
+                               border
+                               border-[#171513]/10
+                               bg-white/50
+                               text-[#171513]/60
+                               flex
+                               items-center
+                               justify-center
+                               group-hover:border-coral
+                               group-hover:text-coral
+                               transition-all
+                               duration-300">
+
+                        <i
+                            data-lucide="wallet"
+                            class="w-5 h-5">
+                        </i>
+
+                    </div>
+
+
+                    <div
+                        class="lg:mt-5">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-3">
+
+                            <span
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.25em]
+                                       text-coral
+                                       font-bold">
+
+                                03
+
+                            </span>
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-[#171513]/15">
+                            </span>
+
+                            <span
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.2em]
+                                       text-black">
+
+                                Spend
+
+                            </span>
+
+                        </div>
+
+
+                        <h3
+                            class="font-display
+                                   text-3xl
+                                   text-black
+                                   mt-2">
+
+                            Budget
+
+                        </h3>
+
+
+                        <p
+                            class="text-sm
+                                   leading-relaxed
+                                   text-black
+                                   mt-2
+                                   max-w-xs">
+
+                            Smart and simple or beautifully
+                            indulgent — we design within
+                            your comfort zone.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- 04 TRAVEL STYLE -->
+            <!-- ================================================= -->
+
+            <div
+                class="relative
+                       mt-10
+                       lg:mt-0
+                       lg:absolute
+                       lg:right-0
+                       lg:bottom-0
+                       w-full
+                       lg:w-[330px]
+                       group">
+
+                <div
+                    class="flex
+                           items-start
+                           gap-5
+                           lg:block">
+
+                    <div
+                        class="shrink-0
+                               w-14
+                               h-14
+                               rounded-full
+                               border
+                               border-[#171513]/10
+                               bg-white/50
+                               text-[#171513]
+                               flex
+                               items-center
+                               justify-center
+                               group-hover:border-coral
+                               group-hover:text-coral
+                               transition-all
+                               duration-300">
+
+                        <i
+                            data-lucide="sparkles"
+                            class="w-5 h-5">
+                        </i>
+
+                    </div>
+
+
+                    <div
+                        class="lg:mt-5">
+
+                        <div
+                            class="flex
+                                   items-center
+                                   gap-3">
+
+                            <span
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.25em]
+                                       text-coral
+                                       font-bold">
+
+                                04
+
+                            </span>
+
+                            <span
+                                class="h-px
+                                       w-8
+                                       bg-[#171513]/15">
+                            </span>
+
+                            <span
+                                class="text-[10px]
+                                       uppercase
+                                       tracking-[.2em]
+                                       text-black">
+
+                                Feel
+
+                            </span>
+
+                        </div>
+
+
+                        <h3
+                            class="font-display
+                                   text-3xl
+                                   text-[#171513]
+                                   mt-2">
+
+                            Travel Style
+
+                        </h3>
+
+
+                        <p
+                            class="text-sm
+                                   leading-relaxed
+                                   text-black
+                                   mt-2
+                                   max-w-xs">
+
+                            Slow mornings, wild adventures,
+                            local culture, wellness, food —
+                            make the journey feel like you.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===================================================== -->
+        <!-- BOTTOM -->
+        <!-- ===================================================== -->
+
+        <div
+            class="mt-12
+                   lg:mt-4
+                   pt-8
+                   border-t
+                   border-[#171513]/10
+                   flex
+                   flex-col
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between
+                   gap-5">
+
+            <p
+                class="font-display
+                       text-xl
+                       sm:text-2xl
+                       text-[#171513]">
+
+                No two trips should look alike.
+
+            </p>
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-3
+                       text-[10px]
+                       uppercase
+                       tracking-[.2em]
+                       font-bold
+                       text-[#171513]">
+
+                <span
+                    class="w-2
+                           h-2
+                           rounded-full
+                           bg-coral">
+                </span>
+
+                100% custom built
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ============================================================= -->
+        <!-- 5. TESTIMONIAL SPOTLIGHT -->
+        <!-- ============================================================= -->
+        <section class="px-5 sm:px-8 lg:px-8 py-20 sm:py-28">
+
+            <div class="max-w-4xl mx-auto text-center">
+
+                <i data-lucide="quote" class="w-9 h-9 text-coral/40 mx-auto"></i>
+
+                <p class="font-display text-2xl sm:text-4xl leading-snug mt-6">
+                    They didn't just book a trip — they translated a vague idea about
+                    "somewhere quiet in the mountains" into the exact ten days we needed.
+                </p>
+
+                <div class="flex items-center justify-center gap-4 mt-8">
+                    <span class="w-11 h-11 rounded-full bg-ink dark:bg-white text-white dark:text-ink flex items-center justify-center font-display text-sm">RM</span>
+                    <div class="text-left">
+                        <p class="text-sm font-bold">Radhika Menon</p>
+                        <p class="text-xs text-black dark:text-white">Custom trip to the Dolomites, Italy</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        <!-- ============================================================= -->
+        <!-- 9. MEET YOUR TRIP DESIGNERS -->
+        <!-- ============================================================= -->
+        <section class="px-5 sm:px-8 lg:px-8 py-20 sm:py-28 bg-[#F3EDE4]">
+
+            <div class="max-w-[1500px] mx-auto">
+
+                <div class="max-w-xl mx-auto text-center">
+                    <p class="text-xs uppercase tracking-[.3em] text-coral font-bold">Who You'll Work With</p>
+                    <h2 class="font-display text-3xl sm:text-5xl mt-4">Meet a few trip designers.</h2>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-6 mt-14">
+
+                    <div class="text-center">
+                        <span class="w-20 h-20 rounded-full bg-ink dark:bg-white text-white dark:text-ink flex items-center justify-center font-display text-2xl mx-auto">AK</span>
+                        <h3 class="font-bold mt-5">Aravind Kumar</h3>
+                        <p class="text-xs text-coral font-bold uppercase tracking-wide mt-1">Southeast Asia &amp; Japan</p>
+                        <p class="text-sm text-black dark:text-white mt-3 max-w-[16rem] mx-auto leading-relaxed">Eight years routing slow, food-first itineraries across the region.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <span class="w-20 h-20 rounded-full bg-ink dark:bg-white text-white dark:text-ink flex items-center justify-center font-display text-2xl mx-auto">SN</span>
+                        <h3 class="font-bold mt-5">Sara Nair</h3>
+                        <p class="text-xs text-coral font-bold uppercase tracking-wide mt-1">Europe &amp; the Mediterranean</p>
+                        <p class="text-sm text-black dark:text-white mt-3 max-w-[16rem] mx-auto leading-relaxed">Specializes in multi-country rail routes and family-paced trips.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <span class="w-20 h-20 rounded-full bg-ink dark:bg-white text-white dark:text-ink flex items-center justify-center font-display text-2xl mx-auto">RV</span>
+                        <h3 class="font-bold mt-5">Rohan Verma</h3>
+                        <p class="text-xs text-coral font-bold uppercase tracking-wide mt-1">Adventure &amp; Remote Trails</p>
+                        <p class="text-sm text-black dark:text-white mt-3 max-w-[16rem] mx-auto leading-relaxed">Builds treks and off-grid routes with safety margins built in.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+
+    </main>
+
+
+
+
+
+
+<!-- ========================================================= -->
+<!-- FONT AWESOME -->
+<!-- ========================================================= -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<!-- ========================================================= -->
+<!-- WANDERLY FOOTER -->
+<!-- ========================================================= -->
+
+<!-- FONT AWESOME -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<!-- ========================================================= -->
+<!-- WANDERLY FOOTER -->
+<!-- ========================================================= -->
+
+<footer
+    class="relative
+           overflow-hidden
+
+           bg-[#E77B5D]
+           dark:bg-black
+
+           text-white
+           dark:text-white
+
+           transition-colors
+           duration-500">
+
+
+    <!-- ===================================================== -->
+    <!-- DECORATIVE BACKGROUND -->
+    <!-- ===================================================== -->
+
+    <div
+        class="absolute
+               -top-32
+               -right-32
+               w-80
+               h-80
+               rounded-full
+
+               bg-white/10
+               dark:bg-white/5
+
+               pointer-events-none">
+    </div>
+
+
+    <div
+        class="absolute
+               -bottom-40
+               -left-40
+               w-96
+               h-96
+               rounded-full
+
+               bg-black/10
+               dark:bg-white/5
+
+               pointer-events-none">
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- MAIN CONTAINER -->
+    <!-- ===================================================== -->
+
+    <div
+        class="relative
+               max-w-[1500px]
+               mx-auto
+
+               px-5
+               sm:px-8
+               lg:px-12
+
+               pt-14
+               sm:pt-16
+               lg:pt-20
+
+               pb-0">
+
+
+        <!-- ================================================= -->
+        <!-- FOOTER TOP GRID -->
+        <!-- ================================================= -->
+
+        <div
+            class="grid
+                   grid-cols-1
+                   sm:grid-cols-2
+                   lg:grid-cols-12
+
+                   gap-10
+                   lg:gap-12">
+
+
+            <!-- ================================================= -->
+            <!-- BRAND -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-5">
+
+
+                <!-- LOGO -->
+
+                <a
+                    href="../index.html"
+
+                    class="inline-flex
+                           items-center
+                           gap-3
+                           group">
+
+
+                    <!-- LOGO ICON -->
+
+                    <span
+                        class="relative w-12
+                               h-12
+                               rounded-full
+
+                               bg-white
+                               dark:bg-ink
+
+                               text-[#17211B]
+                               dark:text-black
+
+                               flex
+                               items-center
+                               justify-center
+
+                               shrink-0
+
+                               transition-transform
+                               duration-500
+
+                               group-hover:rotate-180">
+
+                        <i data-lucide="compass" class="w-5 h-5"></i>
+                        <span class="absolute top-2 right-2 h-1.5 w-1.5 rounded-full bg-coral"></span>
+
+                    </span>
+
+
+                    <!-- LOGO TEXT -->
+
+                    <span>
+
+                        <span
+                            class="block
+                                   font-display
+                                   text-3xl
+                                   leading-none
+
+                                   text-white
+                                   dark:text-white">
+
+                            Wanderly
+
+                        </span>
+
+
+                        <span
+                            class="block
+                                   text-[9px]
+                                   uppercase
+                                   tracking-[.28em]
+                                   font-bold
+                                   mt-1
+
+                                   text-white
+                                   dark:text-white">
+
+                            Travel Beyond
+
+                        </span>
+
+                    </span>
+
+                </a>
+
+
+                <!-- DESCRIPTION -->
+
+                <p
+                    class="mt-6
+                           max-w-md
+
+                           text-sm
+                           sm:text-base
+
+                           leading-7
+
+                           text-white
+                           dark:text-white">
+
+                    Thoughtfully planned journeys,
+                    unforgettable destinations and
+                    experiences made around the way
+                    you love to travel.
+
+                </p>
+
+
+                <!-- ================================================= -->
+                <!-- SOCIAL ICONS -->
+                <!-- ================================================= -->
+
+                <div
+                    class="flex
+                           items-center
+                           gap-3
+                           mt-6">
+
+
+                    <!-- INSTAGRAM -->
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+
+                        class="w-11
+                               h-11
+                               rounded-full
+
+                               border
+                               border-white/25
+
+                               bg-white/10
+                               dark:bg-sand/5
+
+                               flex
+                               items-center
+                               justify-center
+
+                               text-white
+                               dark:text-white
+
+                               hover:bg-white
+                               hover:text-[#E77B5D]
+
+                               dark:hover:bg-white
+                               dark:hover:text-black
+
+                               hover:-translate-y-1
+
+                               transition-all
+                               duration-300">
+
+                        <i
+                            class="fa-brands
+                                   fa-instagram
+                                   text-lg">
+                        </i>
+
+                    </a>
+
+
+                    <!-- FACEBOOK -->
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+
+                        class="w-11
+                               h-11
+                               rounded-full
+
+                               border
+                               border-white/25
+
+                               bg-white/10
+                               dark:bg-white/5
+
+                               flex
+                               items-center
+                               justify-center
+
+                               text-white
+                               dark:text-white
+
+                               hover:bg-white
+                               hover:text-[#E77B5D]
+
+                               dark:hover:bg-white
+                               dark:hover:text-black
+
+                               hover:-translate-y-1
+
+                               transition-all
+                               duration-300">
+
+                        <i
+                            class="fa-brands
+                                   fa-facebook-f
+                                   text-lg">
+                        </i>
+
+                    </a>
+
+
+                    <!-- X -->
+
+                    <a
+                        href="#"
+                        aria-label="X"
+
+                        class="w-11
+                               h-11
+                               rounded-full
+
+                               border
+                               border-white/25
+
+                               bg-white/10
+                               dark:bg-white/5
+
+                               flex
+                               items-center
+                               justify-center
+
+                               text-white
+                               dark:text-white
+
+                               hover:bg-white
+                               hover:text-[#E77B5D]
+
+                               dark:hover:bg-white
+                               dark:hover:text-black
+
+                               hover:-translate-y-1
+
+                               transition-all
+                               duration-300">
+
+                        <i
+                            class="fa-brands
+                                   fa-x-twitter
+                                   text-lg">
+                        </i>
+
+                    </a>
+
+
+                    <!-- YOUTUBE -->
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+
+                        class="w-11
+                               h-11
+                               rounded-full
+
+                               border
+                               border-white/25
+
+                               bg-white/10
+                               dark:bg-white/5
+
+                               flex
+                               items-center
+                               justify-center
+
+                               text-white
+                               dark:text-white
+
+                               hover:bg-white
+                               hover:text-[#E77B5D]
+
+                               dark:hover:bg-white
+                               dark:hover:text-black
+
+                               hover:-translate-y-1
+
+                               transition-all
+                               duration-300">
+
+                        <i
+                            class="fa-brands
+                                   fa-youtube
+                                   text-lg">
+                        </i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- EXPLORE -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-2">
+
+
+                <p
+                    class="text-[15px]
+                           uppercase
+                           tracking-[.25em]
+                           font-bold
+
+                           text-white
+                           dark:text-white
+
+                           mb-5">
+
+                    Explore
+
+                </p>
+
+
+                <ul
+                    class="space-y-3.5">
+
+
+                    <li>
+
+                        <a
+                            href="destinations.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Destinations
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="packages.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Packages
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="customize-trip.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Customize Trip
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="visa-assistance.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Visa Assistance
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="contact.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- COMPANY -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-2">
+
+
+                <p
+                    class="text-[15px]
+                           uppercase
+                           tracking-[.25em]
+                           font-bold
+
+                           text-white
+                           dark:text-white
+
+                           mb-5">
+
+                    Company
+
+                </p>
+
+
+                <ul
+                    class="space-y-3.5">
+
+
+                    <li>
+
+                        <a
+                            
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            About Wanderly
+
+                        </a>
+
+                    </li>
+
+
+                    
+
+
+                    <li>
+
+                        <a
+                            href="dashboard.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            My Trips
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            href="login.html"
+
+                            class="text-sm
+                                   text-white
+                                   dark:text-white
+
+                                   hover:text-white
+
+                                   transition-colors">
+
+                            Login
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- CONTACT -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-3">
+
+
+                <p
+                    class="text-[15px]
+                           uppercase
+                           tracking-[.25em]
+                           font-bold
+
+                           text-white
+                           dark:text-white
+
+                           mb-5">
+
+                    Get in touch
+
+                </p>
+
+
+                <div
+                    class="space-y-4">
+
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="mailto:hello@wanderly.com"
+
+                        class="flex
+                               items-center
+                               gap-3
+                               group">
+
+
+                        <span
+                            class="w-9
+                                   h-9
+                                   rounded-full
+
+                                   bg-white/10
+                                   dark:bg-white/5
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   shrink-0
+
+                                   text-white
+                                   dark:text-white
+
+                                   group-hover:bg-white
+                                   group-hover:text-[#E77B5D]
+
+                                   dark:group-hover:bg-white
+                                   dark:group-hover:text-black
+
+                                   transition-all">
+
+                            <i
+                                class="fa-regular
+                                       fa-envelope
+                                       text-sm">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-sm
+
+                                   text-white
+                                   dark:text-white
+
+                                   group-hover:text-white">
+
+                            hello@wanderly.com
+
+                        </span>
+
+                    </a>
+
+
+                    <!-- PHONE -->
+
+                    <a
+                        href="tel:+919876543210"
+
+                        class="flex
+                               items-center
+                               gap-3
+                               group">
+
+
+                        <span
+                            class="w-9
+                                   h-9
+                                   rounded-full
+
+                                   bg-white/10
+                                   dark:bg-white/5
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   shrink-0
+
+                                   text-white
+                                   dark:text-white
+
+                                   group-hover:bg-white
+                                   group-hover:text-[#E77B5D]
+
+                                   dark:group-hover:bg-white
+                                   dark:group-hover:text-black
+
+                                   transition-all">
+
+                            <i
+                                class="fa-solid
+                                       fa-phone
+                                       text-sm">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-sm
+
+                                   text-white
+                                   dark:text-white">
+
+                            +91 98765 43210
+
+                        </span>
+
+                    </a>
+
+
+                    <!-- LOCATION -->
+
+                    <div
+                        class="flex
+                               items-start
+                               gap-3">
+
+
+                        <span
+                            class="w-9
+                                   h-9
+                                   rounded-full
+
+                                   bg-white/10
+                                   dark:bg-white/5
+
+                                   flex
+                                   items-center
+                                   justify-center
+
+                                   shrink-0
+
+                                   text-white
+                                   dark:text-white">
+
+                            <i
+                                class="fa-solid
+                                       fa-location-dot
+                                       text-sm">
+                            </i>
+
+                        </span>
+
+
+                        <span
+                            class="text-sm
+                                   leading-6
+
+                                   text-white
+                                   dark:text-white">
+
+                            Chennai, Tamil Nadu<br>
+
+                            India
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- CTA AREA -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-14
+                   lg:mt-16
+
+                   pt-7
+
+                   border-t
+                   border-white/20
+
+                   flex
+                   flex-col
+                   lg:flex-row
+
+                   lg:items-center
+                   lg:justify-between
+
+                   gap-6">
+
+
+            <!-- CTA TEXT -->
+
+            <div>
+
+                <p
+                    class="font-display
+                           text-3xl
+                           sm:text-4xl
+
+                           text-white
+                           dark:text-white">
+
+                    Ready to go somewhere?
+
+                </p>
+
+
+                <p
+                    class="text-sm
+                           text-white
+                           dark:text-white
+
+                           mt-2">
+
+                    Let Wanderly plan your next adventure.
+
+                </p>
+
+            </div>
+
+
+            <!-- CTA BUTTON -->
+
+            <a
+                href="customize-trip.html"
+
+                class="group
+
+                       inline-flex
+                       items-center
+                       justify-between
+
+                       gap-5
+
+                       px-5
+                       py-3.5
+
+                       rounded-full
+
+                       bg-white
+                       dark:bg-white
+
+                       text-[#17211B]
+                       dark:text-black
+
+                       text-sm
+                       font-bold
+
+                       hover:bg-[#17211B]
+
+                       dark:hover:bg-[#E77B5D]
+                       dark:hover:text-white
+
+                       hover:text-white
+
+                       transition-all
+                       duration-300">
+
+
+                <span>
+                    Plan My Trip
+                </span>
+
+
+                <span
+                    class="w-8
+                           h-8
+
+                           rounded-full
+
+                           bg-[#E77B5D]
+
+                           text-white
+
+                           flex
+                           items-center
+                           justify-center">
+
+
+                    <i
+                        class="fa-solid
+                               fa-arrow-up-right
+
+                               text-xs
+
+                               transition-transform
+
+                               group-hover:translate-x-1
+                               group-hover:-translate-y-1">
+                    </i>
+
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM FOOTER -->
+        <!-- NO EXTRA BOTTOM GAP -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-7
+
+                   pt-5
+                   pb-5
+
+                   border-t
+                   border-white/20
+
+                   flex
+                   flex-col
+                   sm:flex-row
+
+                   items-start
+                   sm:items-center
+
+                   justify-between
+
+                   gap-3">
+
+
+            <!-- COPYRIGHT -->
+
+            <p
+                class="text-[11px]
+
+                       text-white
+                       dark:text-white">
+
+                © 2026 Wanderly.
+                All rights reserved.
+
+            </p>
+
+
+            <!-- LEGAL -->
+
+            <div
+                class="flex
+                       flex-wrap
+
+                       items-center
+
+                       gap-x-5
+                       gap-y-2">
+
+
+                <a
+                   
+
+                    class="text-[11px]
+
+                           text-white
+                           dark:text-white
+
+                           hover:text-white
+
+                           transition-colors">
+
+                    Privacy Policy
+
+                </a>
+
+
+                <a
+                   
+
+                    class="text-[11px]
+
+                           text-white
+                           dark:text-white
+
+                           hover:text-white
+
+                           transition-colors">
+
+                    Terms & Conditions
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+    <script>
+        (() => {
+            const track = document.getElementById('inspoTrack');
+            const counter = document.getElementById('inspoCounter');
+            if (!track || !counter) return;
+            const cards = Array.from(track.children);
+            const pad = n => String(n).padStart(2, '0');
+            const updateCounter = () => {
+                const trackCenter = track.scrollLeft + track.clientWidth / 2;
+                let closest = 0;
+                let closestDist = Infinity;
+                cards.forEach((card, i) => {
+                    const cardCenter = card.offsetLeft + card.clientWidth / 2;
+                    const dist = Math.abs(cardCenter - trackCenter);
+                    if (dist < closestDist) { closestDist = dist; closest = i; }
+                });
+                counter.textContent = `${pad(closest + 1)} / ${pad(cards.length)}`;
+            };
+            track.addEventListener('scroll', () => requestAnimationFrame(updateCounter), { passive: true });
+            updateCounter();
+        })();
+    </script>
+<script src="../assets/js/script.js"></script>
+</body>
+
+</html>
