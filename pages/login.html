@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login — Wanderly</title>
+    <link 
+    rel="icon" 
+    type="image/svg+xml" 
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23E77B5D'/%3E%3Cpath d='M65 30L55 55L30 65L40 40Z' fill='white'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { darkMode: "class", theme: { extend: { colors: { ink: "#17211B", coral: "#E77B5D", night: "#0D1511" }, fontFamily: { display: ["DM Serif Display", "serif"], sans: ["Manrope", "sans-serif"] } } } };
@@ -16,7 +21,7 @@
 </head>
 <body class="min-h-screen bg-[#FBF8F2] font-sans text-ink transition-colors duration-300 dark:bg-night dark:text-white">
     <main class="grid min-h-screen lg:grid-cols-2">
-        <section class="relative hidden overflow-hidden bg-ink p-12 text-white lg:flex lg:flex-col lg:justify-between">
+        <section class="relative hidden overflow-hidden bg-ink p-12 text-white lg:flex lg:flex-col lg:justify-between  dark:bg-black">
             <img src="../assets/images/p88.jpg" alt="Travel destination" class="absolute inset-0 h-full w-full object-cover opacity-20">
             <div class="absolute inset-0 bg-gradient-to-br from-[#17211B]/20 via-[#17211B]/20 to-[#E77B5D]/20"></div>
             <a href="../index.html" class="relative z-10 flex w-fit items-center gap-3" aria-label="Go to Wanderly home">
@@ -31,7 +36,7 @@
             <p class="relative z-10 text-sm text-white">Personalized trips. Unforgettable stories.</p>
         </section>
 
-        <section class="relative flex items-center justify-center px-5 py-10 sm:px-8">
+        <section class="relative flex items-center justify-center px-5 py-10 sm:px-8 dark:bg-black dark:text-white">
             <div class="absolute right-5 top-5 flex items-center gap-2.5 sm:right-8 sm:top-8">
                 <a href="../index.html" class="mr-1 text-sm font-bold hover:text-coral">← Back home</a>
                 <button id="rtlToggle" type="button" aria-label="Toggle RTL direction" class="flex h-11 items-center gap-1.5 rounded-full border border-black/10 px-3.5 text-xs font-bold transition hover:bg-ink hover:text-white dark:border-white/15 dark:hover:bg-white dark:hover:text-ink"><span id="rtlArrow" class="text-sm">→</span><span>RTL</span></button>
