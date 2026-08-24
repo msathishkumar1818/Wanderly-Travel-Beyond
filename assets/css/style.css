@@ -492,8 +492,20 @@ a svg {
     vertical-align: middle;
 }
 
-#siteHeader button {
+/* Keep the brand and controls on the same visual baseline.  The earlier
+   minimum height overrode the mobile menu button's explicit 40px size. */
+#siteHeader > div {
     min-height: 2.75rem;
+}
+
+#siteHeader button {
+    min-height: 0;
+}
+
+#siteHeader > div > a:first-child,
+#siteHeader > div > .xl\:flex,
+#siteHeader > div > .xl\:hidden {
+    align-items: center;
 }
 
 @media (max-width: 1279px) {
@@ -3726,4 +3738,342 @@ html[dir="rtl"] #mobileMenu {
         }
 
     }
+
+
+
+
+
+    
+/* <!-- ========================================================= -->
+<!-- DESTINATION ANIMATIONS -->
+<!-- ========================================================= -->
+
+ */
+
+@keyframes destFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes destReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ========================================================= */
+/* HORIZONTAL SCROLLER */
+/* ========================================================= */
+
+/*
+   IMPORTANT:
+   scroll-snap completely removed.
+   This prevents the slider from sticking.
+*/
+
+#destinationSlider {
+
+    scrollbar-width: none;
+
+    scroll-snap-type: none;
+
+    scroll-behavior: auto;
+
+    overscroll-behavior-x: contain;
+
+    touch-action: pan-x pan-y;
+
+}
+
+
+#destinationSlider::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+/* ========================================================= */
+/* NORMAL CURSOR */
+/* ========================================================= */
+
+#destinationSlider,
+#destinationSlider *,
+#destinationSlider img {
+
+    cursor: default !important;
+
+}
+
+
+/* ========================================================= */
+/* IMAGE */
+/* ========================================================= */
+
+#destinationSlider img {
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+    pointer-events: none;
+
+}
+
+
+/* ========================================================= */
+/* CARD PERFORMANCE */
+/* ========================================================= */
+
+.destination-card {
+
+    flex-shrink: 0;
+
+    will-change: transform;
+
+}
+
+
+/* ========================================================= */
+/* REDUCED MOTION */
+/* ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .destination-card img {
+
+        transition: none !important;
+
+    }
+
+}
+
+
+
+
+
+/* 
+<!-- ========================================================= -->
+<!-- PACKAGE SECTION — NORMAL CURSOR FIX -->
+<!-- ========================================================= --> */
+
+    /* ===================================================== */
+    /* NORMAL ARROW CURSOR EVERYWHERE */
+    /* ===================================================== */
+
+    #packageSelector,
+    #packageSelector *,
+    #packageSelector button,
+    #packageSelector img {
+        cursor: default !important;
+    }
+
+
+    /* ===================================================== */
+    /* REMOVE BUTTON DEFAULT POINTER */
+    /* ===================================================== */
+
+    #packageSelector button {
+        cursor: default !important;
+    }
+
+
+    /* ===================================================== */
+    /* IMAGE SHOULD NOT DRAG */
+    /* ===================================================== */
+
+    #packageSelector img {
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+
+    /* ===================================================== */
+    /* KEEP HOVER ANIMATIONS WORKING */
+    /* ===================================================== */
+
+    #packageSelector .package-name {
+        transition:
+            transform 500ms ease,
+            color 500ms ease;
+    }
+
+
+    #packageSelector .package-arrow {
+        transition:
+            transform 500ms ease,
+            opacity 500ms ease;
+    }
+
+
+    /* ===================================================== */
+    /* BUTTON FOCUS */
+    /* ===================================================== */
+
+    #packageSelector button:focus {
+        outline: none;
+    }
+
+
+    /* ===================================================== */
+    /* REDUCED MOTION */
+    /* ===================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        #packageSelector .package-name,
+        #packageSelector .package-arrow,
+        #packageSelector img {
+            transition: none !important;
+        }
+
+    }
+
+
+
+
+
+
+
+
+    /* <!-- ========================================================= -->
+<!-- NORMAL CURSOR — NO HAND / POINTER -->
+<!-- ========================================================= --> */
+
+
+
+#packageExperience,
+#packageExperience *,
+#packageExperience button,
+#packageExperience .experience-option,
+#packageExperience .experience-title,
+#packageExperience .experience-arrow {
+    cursor: default !important;
+}
+
+
+/* Prevent image dragging */
+
+#packageExperience img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* Prevent accidental text selection on selector */
+
+#packageExperience .experience-option {
+    user-select: none;
+}
+
+
+/* Keep buttons visually clean */
+
+#packageExperience button {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #packageExperience .experience-title,
+    #packageExperience .experience-arrow,
+    #packageExperience #experienceImage {
+        transition: none !important;
+    }
+
+}
+
+
+
+
+
+
+
+/* ========================================================= */
+/* DESTINATION CARDS — NORMAL ARROW CURSOR */
+/* ========================================================= */
+
+.destination-card,
+.destination-card *,
+.destination-card img,
+.destination-card span,
+.destination-card h3,
+.destination-card p,
+.destination-card i {
+    cursor: default !important;
+}
+
+
+/* Prevent image dragging */
+
+.destination-card img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+/* Keep text from accidental selection */
+
+.destination-card {
+    user-select: none;
+}
+
+
+/* ========================================================= */
+/* KEEP HOVER ANIMATION */
+/* ========================================================= */
+
+.destination-card img {
+    transition:
+        transform 1000ms ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.10);
+}
+
+
+/* Arrow circle rotation still works */
+
+.destination-card:hover span {
+    /* Do not affect cursor */
+}
+
+
+/* ========================================================= */
+/* ACCESSIBILITY */
+/* ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .destination-card img,
+    .destination-card span {
+        transition: none !important;
+    }
+
+}
 

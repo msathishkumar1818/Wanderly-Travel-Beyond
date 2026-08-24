@@ -2569,20 +2569,27 @@
 <!-- ========================================================= -->
 <!-- DESTINATIONS — SECTION 02 -->
 <!-- PREMIUM DESTINATION FILM STRIP -->
+<!-- CONTINUOUS HORIZONTAL SCROLL VERSION -->
 <!-- ========================================================= -->
 
 <section
-    class="relative overflow-hidden
+    class="relative
+           overflow-hidden
            bg-[#F1ECE4]
-           py-24 sm:py-28 lg:py-20
+           py-24
            text-[#171615]
+           sm:py-28
+           lg:py-20
            dark:bg-black
            dark:text-white">
+
 
     <div
         class="mx-auto
                max-w-[1500px]
-               px-5 sm:px-8 lg:px-12">
+               px-5
+               sm:px-8
+               lg:px-12">
 
 
         <!-- ================================================= -->
@@ -2595,6 +2602,9 @@
                    gap-8
                    lg:grid-cols-12
                    lg:items-end">
+
+
+            <!-- TITLE -->
 
             <div class="lg:col-span-8">
 
@@ -2677,8 +2687,10 @@
         </div>
 
 
+
         <!-- ================================================= -->
         <!-- DESTINATION HORIZONTAL SLIDER -->
+        <!-- NO SNAP — CONTINUOUS SCROLL -->
         <!-- ================================================= -->
 
         <div
@@ -2690,17 +2702,8 @@
                    overflow-x-auto
                    overflow-y-hidden
                    pb-8
-                   snap-x
-                   snap-mandatory
                    lg:gap-6
-                   cursor-grab
-                   active:cursor-grabbing
-                   select-none"
-            style="
-                scroll-behavior: smooth;
-                -webkit-overflow-scrolling: touch;
-            ">
-
+                   select-none">
 
             <!-- ================================================= -->
             <!-- CARD 01 -->
@@ -2711,7 +2714,6 @@
                        group
                        relative
                        min-w-[82vw]
-                       snap-center
                        overflow-hidden
                        sm:min-w-[55vw]
                        lg:min-w-[390px]
@@ -2736,8 +2738,6 @@
                                group-hover:scale-110">
 
 
-                    <!-- Overlay -->
-
                     <div
                         class="absolute
                                inset-0
@@ -2747,8 +2747,6 @@
                                to-transparent">
                     </div>
 
-
-                    <!-- Number -->
 
                     <span
                         class="absolute
@@ -2762,8 +2760,6 @@
 
                     </span>
 
-
-                    <!-- Content -->
 
                     <div
                         class="absolute
@@ -2837,6 +2833,7 @@
             </article>
 
 
+
             <!-- ================================================= -->
             <!-- CARD 02 -->
             <!-- ================================================= -->
@@ -2846,7 +2843,6 @@
                        group
                        relative
                        min-w-[82vw]
-                       snap-center
                        overflow-hidden
                        sm:min-w-[55vw]
                        lg:min-w-[390px]
@@ -2966,6 +2962,7 @@
             </article>
 
 
+
             <!-- ================================================= -->
             <!-- CARD 03 -->
             <!-- ================================================= -->
@@ -2975,7 +2972,6 @@
                        group
                        relative
                        min-w-[82vw]
-                       snap-center
                        overflow-hidden
                        sm:min-w-[55vw]
                        lg:min-w-[390px]
@@ -3095,6 +3091,7 @@
             </article>
 
 
+
             <!-- ================================================= -->
             <!-- CARD 04 -->
             <!-- ================================================= -->
@@ -3104,7 +3101,6 @@
                        group
                        relative
                        min-w-[82vw]
-                       snap-center
                        overflow-hidden
                        sm:min-w-[55vw]
                        lg:min-w-[390px]
@@ -3224,6 +3220,7 @@
             </article>
 
 
+
             <!-- ================================================= -->
             <!-- CARD 05 -->
             <!-- ================================================= -->
@@ -3233,7 +3230,6 @@
                        group
                        relative
                        min-w-[82vw]
-                       snap-center
                        overflow-hidden
                        sm:min-w-[55vw]
                        lg:min-w-[390px]
@@ -3354,74 +3350,68 @@
 
         </div>
 
-<!-- ================================================= -->
-<!-- SCROLL INDICATOR -->
-<!-- ================================================= -->
-
-<button
-    type="button"
-    id="dragExploreBtn"
-    class="mt-4
-           flex
-           w-full
-           cursor-pointer
-           items-center
-           justify-between
-           text-left
-           transition-opacity
-           duration-300
-           hover:opacity-70">
-
-    <div
-        class="flex
-               items-center
-               gap-3">
-
-        <span
-            class="text-[9px]
-                   uppercase
-                   tracking-[0.25em]
-                   text-black
-                   dark:text-white">
-
-           
-Explore below
-
-        </span>
-
-        <span
-            class="animate-pulse
-                   text-sm
-                   text-[#A7613F]">
-
-            →
-
-        </span>
-
-    </div>
 
 
-    <span
-        class="font-serif
-               text-lg
-               italic
-               text-black
-               dark:text-white">
+        <!-- ================================================= -->
+        <!-- SCROLL INDICATOR -->
+        <!-- ================================================= -->
 
-        05 / 12
+        <div
+            class="mt-4
+                   flex
+                   w-full
+                   items-center
+                   justify-between">
 
-    </span>
+            <div
+                class="flex
+                       items-center
+                       gap-3">
 
-</button>
+                <span
+                    class="text-[9px]
+                           uppercase
+                           tracking-[0.25em]
+                           text-black
+                           dark:text-white">
 
+                    Explore below
+
+                </span>
+
+                <span
+                    class="animate-pulse
+                           text-sm
+                           text-[#A7613F]">
+
+                    →
+
+                </span>
+
+            </div>
+
+
+            <span
+                class="font-serif
+                       text-lg
+                       italic
+                       text-black
+                       dark:text-white">
+
+                05 / 12
+
+            </span>
+
+        </div>
 
 
     </div>
-
-
-    
 
 </section>
+
+
+
+
 
 
 
@@ -5328,21 +5318,27 @@ Explore below
 <!-- ========================================================= -->
 <!-- DESTINATIONS PAGE — SECTION 06 -->
 <!-- THE WORLD IS WAITING -->
+<!-- NORMAL CURSOR VERSION -->
 <!-- ========================================================= -->
 
 <section
     id="worldWaiting"
-    class="relative overflow-hidden
+    class="relative
+           overflow-hidden
            bg-[#F6F3EC]
-           py-24 sm:py-32 lg:py-40
+           py-24
            text-[#171B19]
+           sm:py-32
+           lg:py-40
            dark:bg-black
            dark:text-white">
 
     <div
         class="mx-auto
                max-w-[1500px]
-               px-5 sm:px-8 lg:px-12">
+               px-5
+               sm:px-8
+               lg:px-12">
 
 
         <!-- ================================================= -->
@@ -5395,6 +5391,7 @@ Explore below
                        lg:text-[5rem]">
 
                 Go where the
+
                 <span
                     class="font-serif
                            italic
@@ -5431,8 +5428,8 @@ Explore below
             <!-- ================================================= -->
 
             <div
-                class="lg:col-span-5
-                       order-2
+                class="order-2
+                       lg:col-span-5
                        lg:order-1">
 
 
@@ -5440,10 +5437,12 @@ Explore below
                     class="destination-selector
                            border-t
                            border-[#171B19]/10
-                           dark:border-white">
+                           dark:border-white/10">
 
 
+                    <!-- ================================================= -->
                     <!-- DESTINATION 01 -->
+                    <!-- ================================================= -->
 
                     <button
                         type="button"
@@ -5456,12 +5455,14 @@ Explore below
                                group
                                flex
                                w-full
+                               cursor-default
                                items-center
                                justify-between
                                border-b
                                border-[#171B19]/10
                                py-6
                                text-left
+                               outline-none
                                dark:border-white/10">
 
                         <div
@@ -5511,7 +5512,9 @@ Explore below
 
 
 
+                    <!-- ================================================= -->
                     <!-- DESTINATION 02 -->
+                    <!-- ================================================= -->
 
                     <button
                         type="button"
@@ -5523,12 +5526,14 @@ Explore below
                                group
                                flex
                                w-full
+                               cursor-default
                                items-center
                                justify-between
                                border-b
                                border-[#171B19]/10
                                py-6
                                text-left
+                               outline-none
                                dark:border-white/10">
 
                         <div
@@ -5578,7 +5583,9 @@ Explore below
 
 
 
+                    <!-- ================================================= -->
                     <!-- DESTINATION 03 -->
+                    <!-- ================================================= -->
 
                     <button
                         type="button"
@@ -5590,12 +5597,14 @@ Explore below
                                group
                                flex
                                w-full
+                               cursor-default
                                items-center
                                justify-between
                                border-b
                                border-[#171B19]/10
                                py-6
                                text-left
+                               outline-none
                                dark:border-white/10">
 
                         <div
@@ -5645,7 +5654,9 @@ Explore below
 
 
 
+                    <!-- ================================================= -->
                     <!-- DESTINATION 04 -->
+                    <!-- ================================================= -->
 
                     <button
                         type="button"
@@ -5657,12 +5668,14 @@ Explore below
                                group
                                flex
                                w-full
+                               cursor-default
                                items-center
                                justify-between
                                border-b
                                border-[#171B19]/10
                                py-6
                                text-left
+                               outline-none
                                dark:border-white/10">
 
                         <div
@@ -5712,7 +5725,9 @@ Explore below
 
 
 
+                    <!-- ================================================= -->
                     <!-- DESTINATION 05 -->
+                    <!-- ================================================= -->
 
                     <button
                         type="button"
@@ -5724,12 +5739,14 @@ Explore below
                                group
                                flex
                                w-full
+                               cursor-default
                                items-center
                                justify-between
                                border-b
                                border-[#171B19]/10
                                py-6
                                text-left
+                               outline-none
                                dark:border-white/10">
 
                         <div
@@ -5780,7 +5797,10 @@ Explore below
                 </div>
 
 
+
+                <!-- ================================================= -->
                 <!-- SMALL NOTE -->
+                <!-- ================================================= -->
 
                 <div
                     class="mt-8
@@ -5819,18 +5839,21 @@ Explore below
 
             <div
                 class="world-visual
-                       order-1
-                       lg:order-2
-                       lg:col-span-7
                        relative
+                       order-1
                        flex
                        min-h-[480px]
+                       cursor-default
                        items-center
                        justify-center
+                       lg:order-2
+                       lg:col-span-7
                        sm:min-h-[600px]">
 
 
-                <!-- Decorative Circle -->
+                <!-- ================================================= -->
+                <!-- DECORATIVE CIRCLE -->
+                <!-- ================================================= -->
 
                 <div
                     class="absolute
@@ -5839,20 +5862,24 @@ Explore below
                            rounded-full
                            border
                            border-[#171B19]/10
+                           dark:border-white/10
                            sm:h-[500px]
                            sm:w-[500px]
                            lg:h-[620px]
-                           lg:w-[620px]
-                           dark:border-white/10">
+                           lg:w-[620px]">
                 </div>
 
 
-                <!-- Image -->
+
+                <!-- ================================================= -->
+                <!-- IMAGE -->
+                <!-- ================================================= -->
 
                 <div
                     class="relative
                            h-[300px]
                            w-[300px]
+                           cursor-default
                            overflow-hidden
                            rounded-full
                            shadow-2xl
@@ -5868,12 +5895,15 @@ Explore below
                         draggable="false"
                         class="h-full
                                w-full
+                               select-none
                                object-cover
                                transition-all
-                               duration-700">
+                               duration-700
+                               pointer-events-none">
 
                     <div
-                        class="absolute
+                        class="pointer-events-none
+                               absolute
                                inset-0
                                bg-black/10">
                     </div>
@@ -5881,10 +5911,14 @@ Explore below
                 </div>
 
 
+
+                <!-- ================================================= -->
                 <!-- LOCATION INFO -->
+                <!-- ================================================= -->
 
                 <div
-                    class="absolute
+                    class="pointer-events-none
+                           absolute
                            bottom-4
                            left-0
                            right-0
@@ -5955,10 +5989,14 @@ Explore below
                 </div>
 
 
+
+                <!-- ================================================= -->
                 <!-- COORDINATES -->
+                <!-- ================================================= -->
 
                 <span
-                    class="absolute
+                    class="pointer-events-none
+                           absolute
                            right-2
                            top-8
                            hidden
@@ -5975,10 +6013,14 @@ Explore below
                 </span>
 
 
-                <!-- Floating Dot -->
+
+                <!-- ================================================= -->
+                <!-- FLOATING DOT -->
+                <!-- ================================================= -->
 
                 <span
-                    class="absolute
+                    class="pointer-events-none
+                           absolute
                            left-[10%]
                            top-[20%]
                            h-2
@@ -6042,7 +6084,310 @@ Explore below
 
 
 
+<!-- ========================================================= -->
+<!-- DESTINATION STYLES -->
+<!-- ========================================================= -->
 
+<style>
+
+/* ========================================================= */
+/* NORMAL CURSOR EVERYWHERE */
+/* ========================================================= */
+
+#worldWaiting,
+#worldWaiting *,
+#worldWaiting button,
+#worldWaiting img {
+
+    cursor: default !important;
+
+}
+
+
+/* ========================================================= */
+/* REMOVE IMAGE DRAGGING */
+/* ========================================================= */
+
+#worldWaiting img {
+
+    -webkit-user-drag: none;
+    user-select: none;
+
+}
+
+
+/* ========================================================= */
+/* BUTTON FOCUS */
+/* ========================================================= */
+
+#worldWaiting button:focus {
+
+    outline: none;
+
+}
+
+
+/* ========================================================= */
+/* DESTINATION ACTIVE STATE */
+/* ========================================================= */
+
+.world-destination.active
+.destination-name {
+
+    transform: translateX(6px);
+
+}
+
+
+.world-destination.active
+.destination-arrow {
+
+    opacity: 1;
+
+}
+
+
+/* ========================================================= */
+/* HOVER NAME */
+/* ========================================================= */
+
+.world-destination:hover
+.destination-name {
+
+    transform: translateX(6px);
+
+}
+
+
+.world-destination
+.destination-name {
+
+    transition:
+        transform 500ms ease;
+
+}
+
+
+/* ========================================================= */
+/* NUMBER TRANSITION */
+/* ========================================================= */
+
+.world-destination
+.destination-number {
+
+    transition:
+        opacity 400ms ease,
+        transform 400ms ease;
+
+}
+
+
+.world-destination:hover
+.destination-number {
+
+    transform: translateX(3px);
+
+}
+
+
+/* ========================================================= */
+/* IMAGE PERFORMANCE */
+/* ========================================================= */
+
+#worldDestinationImage {
+
+    will-change: opacity,
+                 transform;
+
+}
+
+
+/* ========================================================= */
+/* REDUCED MOTION */
+/* ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .world-destination
+    .destination-name {
+
+        transition: none !important;
+
+    }
+
+    #worldDestinationImage {
+
+        transition: none !important;
+
+    }
+
+}
+
+</style>
+
+
+
+<!-- ========================================================= -->
+<!-- DESTINATION INTERACTION -->
+<!-- ========================================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const destinations =
+            document.querySelectorAll(
+                "#worldWaiting .world-destination"
+            );
+
+        const image =
+            document.getElementById(
+                "worldDestinationImage"
+            );
+
+        const place =
+            document.getElementById(
+                "worldDestinationPlace"
+            );
+
+        const country =
+            document.getElementById(
+                "worldDestinationCountry"
+            );
+
+        const number =
+            document.getElementById(
+                "worldDestinationNumber"
+            );
+
+
+        if (
+            !destinations.length ||
+            !image ||
+            !place ||
+            !country ||
+            !number
+        ) {
+
+            return;
+
+        }
+
+
+        /* ===================================================== */
+        /* CHANGE DESTINATION */
+        /* ===================================================== */
+
+        function changeDestination(item) {
+
+            const newImage =
+                item.dataset.image;
+
+            const newPlace =
+                item.dataset.place;
+
+            const newCountry =
+                item.dataset.country;
+
+            const newNumber =
+                item.dataset.number;
+
+
+            /* Active state */
+
+            destinations.forEach(
+                function (destination) {
+
+                    destination.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            item.classList.add(
+                "active"
+            );
+
+
+            /* Image fade */
+
+            image.style.opacity = "0";
+            image.style.transform =
+                "scale(1.04)";
+
+
+            setTimeout(
+                function () {
+
+                    image.src = newImage;
+                    image.alt = newPlace;
+
+                    place.textContent =
+                        newPlace;
+
+                    country.textContent =
+                        newCountry;
+
+                    number.textContent =
+                        newNumber;
+
+
+                    requestAnimationFrame(
+                        function () {
+
+                            image.style.opacity =
+                                "1";
+
+                            image.style.transform =
+                                "scale(1)";
+
+                        }
+                    );
+
+                },
+                250
+            );
+
+        }
+
+
+        /* ===================================================== */
+        /* CLICK + HOVER */
+/* ===================================================== */
+
+        destinations.forEach(
+            function (item) {
+
+                item.addEventListener(
+                    "mouseenter",
+                    function () {
+
+                        changeDestination(item);
+
+                    }
+                );
+
+
+                item.addEventListener(
+                    "click",
+                    function () {
+
+                        changeDestination(item);
+
+                    }
+                );
+
+            }
+        );
+
+    }
+);
+
+</script>
 
 
     

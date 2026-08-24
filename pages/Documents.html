@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Overview — Wanderly Dashboard</title>
+    <title>Documents — Wanderly Dashboard</title>
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23E77B5D'/%3E%3Cpath d='M65 30L55 55L30 65L40 40Z' fill='white'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E">
 
@@ -1940,20 +1940,15 @@
                         class="flex items-center
                                justify-between
                                rounded-2xl
-                               bg-[#1C1C1A]
                                px-5 py-4
                                text-sm
-                               text-white
-                               dark:bg-white
-                               dark:text-black">
+                               transition
+                               hover:bg-black/[0.04]
+                               dark:hover:bg-white/[0.05]">
 
                         <span>Overview</span>
 
-                        <i
-                            class="fa-solid
-                                   fa-arrow-right
-                                   text-[10px]">
-                        </i>
+                        
 
                     </a>
 
@@ -2017,21 +2012,20 @@
                         class="flex items-center
                                justify-between
                                rounded-2xl
+                               bg-[#1C1C1A]
                                px-5 py-4
                                text-sm
-                               transition
-                               hover:bg-black/[0.04]
-                               dark:hover:bg-white/[0.05]">
+                               text-white
+                               dark:bg-white
+                               dark:text-black">
 
                         <span>Documents</span>
 
-                        <span
-                            class="text-[10px]
-                                   opacity-40">
-
-                            04
-
-                        </span>
+                        <i
+                            class="fa-solid
+                                   fa-arrow-right
+                                   text-[10px]">
+                        </i>
 
                     </a>
 
@@ -2165,7 +2159,7 @@
                                text-black
                                dark:text-white">
 
-                        Overview
+                        Documents
 
                     </span>
 
@@ -2192,428 +2186,128 @@
                 </div>
 
 
-               
 
             </div>
 
 
+            <!-- ================================================= -->
+            
             <!-- ================================================= -->
             <!-- WELCOME -->
             <!-- ================================================= -->
 
             <div class="pt-10 sm:pt-14">
 
-                <p
-                    class="text-[10px]
-                           uppercase
-                           tracking-[0.3em]
-                           text-[#8B6F47]
-                           dark:text-[#C8A878]">
-
-                    Your travel space
-
+                <p class="text-[10px] uppercase tracking-[0.3em] text-[#8B6F47] dark:text-[#C8A878]">
+                    Travel paperwork
                 </p>
 
-
-                <h1
-                    class="mt-4
-                           text-4xl
-                           font-light
-                           tracking-[-0.05em]
-                           sm:text-5xl
-                           lg:text-6xl">
-
-                    Good afternoon,
-
-                    <span
-                        class="font-serif
-                               italic
-                               text-[#8B6F47]
-                               dark:text-[#C8A878]">
-
-                        Sathish.
-
-                    </span>
-
+                <h1 class="mt-4 text-4xl font-light tracking-[-0.05em] sm:text-5xl lg:text-6xl">
+                    Everything for your trip,
+                    <span class="font-serif italic text-[#8B6F47] dark:text-[#C8A878]">ready to go.</span>
                 </h1>
 
-
-                <p
-                    class="mt-5
-                           max-w-xl
-                           text-sm
-                           leading-7
-                           text-black
-                           dark:text-white">
-
-                    Your next escape is getting closer.
-                    Everything you need for your journey
-                    is waiting right here.
-
+                <p class="mt-5 max-w-xl text-sm leading-7 text-black dark:text-white">
+                    Four documents on file for your upcoming journey. Download or update any of them below.
                 </p>
 
             </div>
 
-
             <!-- ================================================= -->
-            <!-- NEXT TRIP CARD -->
+            <!-- DOCUMENTS LIST -->
             <!-- ================================================= -->
 
-            <div
-                class="group relative
-                       mt-12
-                       min-h-[430px]
-                       overflow-hidden
-                       rounded-[2rem]">
+            <div class="mt-12 space-y-4">
 
-                <!-- IMAGE -->
-
-                <img
-                    src="../assets/images/p91.jpg"
-                    alt="Bali Indonesia"
-                    draggable="false"
-                    class="absolute inset-0
-                           h-full w-full
-                           object-cover
-                           transition-transform
-                           duration-[1500ms]
-                           group-hover:scale-105">
-
-
-                <!-- OVERLAY -->
-
-                <div
-                    class="absolute inset-0
-                           bg-gradient-to-t
-                           from-black/90
-                           via-black/40
-                           to-black/10">
-                </div>
-
-
-                <!-- TOP -->
-
-                <div
-                    class="absolute
-                           left-6 right-6 top-6
-                           flex
-                           items-center
-                           justify-between
-                           text-white
-                           sm:left-10
-                           sm:right-10
-                           sm:top-10">
-
-                    <span
-                        class="rounded-full
-                               border border-white/20
-                               bg-white/10
-                               px-4 py-2
-                               text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               backdrop-blur-md">
-
-                        Upcoming Journey
-
-                    </span>
-
-
-                    <span
-                        class="text-[10px]
-                               uppercase
-                               tracking-[0.2em]
-                               text-white">
-
-                        01 / 01
-
-                    </span>
-
-                </div>
-
-
-                <!-- CONTENT -->
-
-                <div
-                    class="absolute
-                           bottom-0
-                           left-0 right-0
-                           p-6
-                           text-white
-                           sm:p-10
-                           lg:p-12">
-
-
-                    <p
-                        class="text-[10px]
-                               uppercase
-                               tracking-[0.35em]
-                               text-white">
-
-                        Bali · Indonesia
-
-                    </p>
-
-
-                    <div
-                        class="mt-4
-                               flex
-                               flex-col
-                               justify-between
-                               gap-6
-                               md:flex-row
-                               md:items-end">
-
-
+                <div class="flex items-center justify-between gap-4 rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                    <div class="flex items-center gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F4EBDD] text-[#E77B5D] dark:bg-white/5">
+                            <i class="fa-solid fa-passport"></i>
+                        </span>
                         <div>
-
-                            <h2
-                                class="font-serif
-                                       text-5xl
-                                       italic
-                                       sm:text-6xl
-                                       lg:text-7xl">
-
-                                18 Days
-
-                            </h2>
-
-                            <p
-                                class="mt-2
-                                       text-xs
-                                       uppercase
-                                       tracking-[0.22em]
-                                       text-white">
-
-                                Until your escape begins
-
-                            </p>
-
+                            <p class="text-sm font-medium">Passport</p>
+                            <p class="mt-1 text-xs text-black/60 dark:text-white/60">Valid until Mar 2031</p>
                         </div>
-
-
-                        <div
-                            class="border-l
-                                   border-white/20
-                                   pl-5
-                                   md:pl-7">
-
-                            <p
-                                class="text-[9px]
-                                       uppercase
-                                       tracking-[0.25em]
-                                       text-white">
-
-                                Travel dates
-
-                            </p>
-
-                            <p
-                                class="mt-2
-                                       text-sm">
-
-                                12 — 20 September 2026
-
-                            </p>
-
-                        </div>
-
                     </div>
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full bg-[#EEF5EE] px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-moss dark:bg-white/10 dark:text-white">
+                            Verified
+                        </span>
+                        <button type="button" aria-label="Download document"
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 transition hover:bg-black hover:text-white dark:border-white/10 dark:hover:bg-white dark:hover:text-black">
+                            <i class="fa-solid fa-download text-xs"></i>
+                        </button>
+                    </div>
+                </div>
 
+
+                <div class="flex items-center justify-between gap-4 rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                    <div class="flex items-center gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F4EBDD] text-[#E77B5D] dark:bg-white/5">
+                            <i class="fa-solid fa-stamp"></i>
+                        </span>
+                        <div>
+                            <p class="text-sm font-medium">Visa — Indonesia</p>
+                            <p class="mt-1 text-xs text-black/60 dark:text-white/60">Single entry, 30 days</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full bg-[#EEF5EE] px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-moss dark:bg-white/10 dark:text-white">
+                            Verified
+                        </span>
+                        <button type="button" aria-label="Download document"
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 transition hover:bg-black hover:text-white dark:border-white/10 dark:hover:bg-white dark:hover:text-black">
+                            <i class="fa-solid fa-download text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center justify-between gap-4 rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                    <div class="flex items-center gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F4EBDD] text-[#E77B5D] dark:bg-white/5">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </span>
+                        <div>
+                            <p class="text-sm font-medium">Travel Insurance</p>
+                            <p class="mt-1 text-xs text-black/60 dark:text-white/60">Covers 12 Sep — 20 Sep 2026</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full bg-[#EEF5EE] px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-moss dark:bg-white/10 dark:text-white">
+                            Active
+                        </span>
+                        <button type="button" aria-label="Download document"
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 transition hover:bg-black hover:text-white dark:border-white/10 dark:hover:bg-white dark:hover:text-black">
+                            <i class="fa-solid fa-download text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="flex items-center justify-between gap-4 rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                    <div class="flex items-center gap-4">
+                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F4EBDD] text-[#E77B5D] dark:bg-white/5">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </span>
+                        <div>
+                            <p class="text-sm font-medium">Flight Ticket</p>
+                            <p class="mt-1 text-xs text-black/60 dark:text-white/60">Bali Explorer package</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="rounded-full bg-[#EEF5EE] px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-moss dark:bg-white/10 dark:text-white">
+                            Ready
+                        </span>
+                        <button type="button" aria-label="Download document"
+                            class="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 transition hover:bg-black hover:text-white dark:border-white/10 dark:hover:bg-white dark:hover:text-black">
+                            <i class="fa-solid fa-download text-xs"></i>
+                        </button>
+                    </div>
                 </div>
 
             </div>
-
-
-            <!-- ================================================= -->
-            <!-- STATS -->
-            <!-- ================================================= -->
-
-            <div
-                class="mt-8
-                       grid
-                       grid-cols-1
-                       gap-4
-                       sm:grid-cols-3">
-
-
-                <!-- STAT 01 -->
-
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
-
-                    <p
-                        class="text-[11px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
-
-                        Upcoming
-
-                    </p>
-
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                01
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Trip planned
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-solid
-                                   fa-plane
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
-
-                </div>
-
-
-                <!-- STAT 02 -->
-
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
-
-                    <p
-                        class="text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
-
-                        Saved
-
-                    </p>
-
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                06
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Places saved
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-regular
-                                   fa-heart
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
-
-                </div>
-
-
-                <!-- STAT 03 -->
-
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
-
-                    <p
-                        class="text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
-
-                        Documents
-
-                    </p>
-
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                04
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Ready to go
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-regular
-                                   fa-folder
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </main>
+</main>
 
     </div>
 

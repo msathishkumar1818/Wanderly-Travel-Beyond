@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Overview — Wanderly Dashboard</title>
+    <title>Profile — Wanderly Dashboard</title>
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23E77B5D'/%3E%3Cpath d='M65 30L55 55L30 65L40 40Z' fill='white'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E">
 
@@ -1940,20 +1940,15 @@
                         class="flex items-center
                                justify-between
                                rounded-2xl
-                               bg-[#1C1C1A]
                                px-5 py-4
                                text-sm
-                               text-white
-                               dark:bg-white
-                               dark:text-black">
+                               transition
+                               hover:bg-black/[0.04]
+                               dark:hover:bg-white/[0.05]">
 
                         <span>Overview</span>
 
-                        <i
-                            class="fa-solid
-                                   fa-arrow-right
-                                   text-[10px]">
-                        </i>
+                        
 
                     </a>
 
@@ -2063,15 +2058,20 @@
                         class="flex items-center
                                justify-between
                                rounded-2xl
+                               bg-[#1C1C1A]
                                px-5 py-4
                                text-sm
-                               transition
-                               hover:bg-black/[0.04]
-                               dark:hover:bg-white/[0.05]">
+                               text-white
+                               dark:bg-white
+                               dark:text-black">
 
                         <span>Profile</span>
 
-                        
+                        <i
+                            class="fa-solid
+                                   fa-arrow-right
+                                   text-[10px]">
+                        </i>
 
                     </a>
 
@@ -2165,7 +2165,7 @@
                                text-black
                                dark:text-white">
 
-                        Overview
+                        Profile
 
                     </span>
 
@@ -2192,429 +2192,1146 @@
                 </div>
 
 
-               
+                
 
             </div>
 
 
+            <!-- ================================================= -->
+            
             <!-- ================================================= -->
             <!-- WELCOME -->
             <!-- ================================================= -->
 
             <div class="pt-10 sm:pt-14">
 
-                <p
-                    class="text-[10px]
-                           uppercase
-                           tracking-[0.3em]
-                           text-[#8B6F47]
-                           dark:text-[#C8A878]">
-
-                    Your travel space
-
+                <p class="text-[10px] uppercase tracking-[0.3em] text-[#8B6F47] dark:text-[#C8A878]">
+                    Account settings
                 </p>
 
-
-                <h1
-                    class="mt-4
-                           text-4xl
-                           font-light
-                           tracking-[-0.05em]
-                           sm:text-5xl
-                           lg:text-6xl">
-
-                    Good afternoon,
-
-                    <span
-                        class="font-serif
-                               italic
-                               text-[#8B6F47]
-                               dark:text-[#C8A878]">
-
-                        Sathish.
-
-                    </span>
-
+                <h1 class="mt-4 text-4xl font-light tracking-[-0.05em] sm:text-5xl lg:text-6xl">
+                    Your profile,
+                    <span class="font-serif italic text-[#8B6F47] dark:text-[#C8A878]">Sathish.</span>
                 </h1>
 
-
-                <p
-                    class="mt-5
-                           max-w-xl
-                           text-sm
-                           leading-7
-                           text-black
-                           dark:text-white">
-
-                    Your next escape is getting closer.
-                    Everything you need for your journey
-                    is waiting right here.
-
+                <p class="mt-5 max-w-xl text-sm leading-7 text-black dark:text-white">
+                    Keep your details up to date so booking confirmations and travel documents reach you without a hitch.
                 </p>
 
             </div>
 
+            <!-- ================================================= -->
+<!-- PROFILE CARD -->
+<!-- ================================================= -->
 
-            <!-- ================================================= -->
-            <!-- NEXT TRIP CARD -->
-            <!-- ================================================= -->
+<div
+    class="mt-12
+           grid
+           grid-cols-1
+           gap-6
+           lg:grid-cols-3">
+
+    <!-- ================================================= -->
+    <!-- LEFT PROFILE CARD -->
+    <!-- ================================================= -->
+
+    <div
+        class="rounded-[1.5rem]
+               border
+               border-black/10
+               bg-white
+               p-6
+               text-center
+               dark:border-white/10
+               dark:bg-[#111]
+               lg:col-span-1">
+
+
+        <!-- PROFILE IMAGE -->
+
+        <div
+            class="relative
+                   mx-auto
+                   flex
+                   h-24
+                   w-24
+                   items-center
+                   justify-center
+                   overflow-hidden
+                   rounded-full
+                   bg-[#D8CFC2]
+                   text-xl
+                   font-semibold
+                   dark:bg-[#222]">
+
+
+            <!-- INITIALS -->
+
+            <span
+                id="profileInitials">
+
+                SK
+
+            </span>
+
+
+            <!-- UPLOADED IMAGE -->
+
+            <img
+                id="profileImagePreview"
+                src=""
+                alt="Profile"
+                class="absolute
+                       inset-0
+                       hidden
+                       h-full
+                       w-full
+                       object-cover">
+
+
+        </div>
+
+
+        <!-- HIDDEN FILE INPUT -->
+
+        <input
+            type="file"
+            id="profileImageInput"
+            accept="image/*"
+            class="hidden">
+
+
+        <!-- NAME -->
+
+        <p
+            id="profileCardName"
+            class="mt-4
+                   text-base
+                   font-medium">
+
+            Sathish
+
+        </p>
+
+
+        <!-- ROLE -->
+
+        <p
+            class="text-[11px]
+                   uppercase
+                   tracking-wider
+                   text-black/60
+                   dark:text-white/60">
+
+            Traveller
+
+        </p>
+
+
+        <!-- CHANGE PHOTO -->
+
+        <button
+            type="button"
+            id="changePhotoBtn"
+            class="mt-6
+                   w-full
+                   rounded-full
+                   bg-[#17211B]
+                   px-5
+                   py-3
+                   text-xs
+                   font-bold
+                   text-white
+                   transition
+                   hover:bg-[#E77B5D]
+                   dark:bg-white
+                   dark:text-black">
+
+            Change Photo
+
+        </button>
+
+
+        <!-- LOGOUT -->
+
+        <button
+            type="button"
+            id="logoutBtn"
+            class="mt-3
+                   w-full
+                   rounded-full
+                   border
+                   border-black/10
+                   px-5
+                   py-3
+                   text-xs
+                   font-bold
+                   transition
+                   hover:bg-black
+                   hover:text-white
+                   dark:border-white/10
+                   dark:hover:bg-white
+                   dark:hover:text-black">
+
+            Log Out
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================================================= -->
+    <!-- PROFILE INFORMATION -->
+    <!-- ================================================= -->
+
+    <div
+        class="rounded-[1.5rem]
+               border
+               border-black/10
+               bg-white
+               p-6
+               dark:border-white/10
+               dark:bg-[#111]
+               lg:col-span-2">
+
+
+        <!-- ================================================= -->
+        <!-- FULL NAME -->
+        <!-- ================================================= -->
+
+        <div
+            class="flex
+                   items-center
+                   justify-between
+                   gap-4
+                   border-b
+                   border-black/10
+                   py-4
+                   dark:border-white/10">
+
 
             <div
-                class="group relative
-                       mt-12
-                       min-h-[430px]
-                       overflow-hidden
-                       rounded-[2rem]">
-
-                <!-- IMAGE -->
-
-                <img
-                    src="../assets/images/p91.jpg"
-                    alt="Bali Indonesia"
-                    draggable="false"
-                    class="absolute inset-0
-                           h-full w-full
-                           object-cover
-                           transition-transform
-                           duration-[1500ms]
-                           group-hover:scale-105">
+                class="flex
+                       items-center
+                       gap-4">
 
 
-                <!-- OVERLAY -->
-
-                <div
-                    class="absolute inset-0
-                           bg-gradient-to-t
-                           from-black/90
-                           via-black/40
-                           to-black/10">
-                </div>
-
-
-                <!-- TOP -->
-
-                <div
-                    class="absolute
-                           left-6 right-6 top-6
-                           flex
+                <span
+                    class="flex
+                           h-10
+                           w-10
+                           shrink-0
                            items-center
-                           justify-between
-                           text-white
-                           sm:left-10
-                           sm:right-10
-                           sm:top-10">
+                           justify-center
+                           rounded-full
+                           bg-[#F4EBDD]
+                           text-[#E77B5D]
+                           dark:bg-white/5">
 
-                    <span
-                        class="rounded-full
-                               border border-white/20
-                               bg-white/10
-                               px-4 py-2
-                               text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               backdrop-blur-md">
+                    <i
+                        class="fa-solid
+                               fa-user
+                               text-sm">
+                    </i>
 
-                        Upcoming Journey
-
-                    </span>
+                </span>
 
 
-                    <span
+                <div>
+
+                    <p
                         class="text-[10px]
                                uppercase
                                tracking-[0.2em]
-                               text-white">
+                               text-black/50
+                               dark:text-white/50">
 
-                        01 / 01
+                        Full Name
 
-                    </span>
+                    </p>
+
+
+                    <p
+                        id="profileFullName"
+                        class="mt-1
+                               text-sm
+                               font-medium">
+
+                        Sathish Kumar
+
+                    </p>
 
                 </div>
 
+            </div>
 
-                <!-- CONTENT -->
 
-                <div
-                    class="absolute
-                           bottom-0
-                           left-0 right-0
-                           p-6
-                           text-white
-                           sm:p-10
-                           lg:p-12">
+            <button
+                type="button"
+                data-edit="fullName"
+                class="edit-profile-btn
+                       text-xs
+                       font-semibold
+                       text-[#E77B5D]
+                       hover:underline">
 
+                Edit
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- EMAIL -->
+        <!-- ================================================= -->
+
+        <div
+            class="flex
+                   items-center
+                   justify-between
+                   gap-4
+                   border-b
+                   border-black/10
+                   py-4
+                   dark:border-white/10">
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-4">
+
+
+                <span
+                    class="flex
+                           h-10
+                           w-10
+                           shrink-0
+                           items-center
+                           justify-center
+                           rounded-full
+                           bg-[#F4EBDD]
+                           text-[#E77B5D]
+                           dark:bg-white/5">
+
+                    <i
+                        class="fa-solid
+                               fa-envelope
+                               text-sm">
+                    </i>
+
+                </span>
+
+
+                <div>
 
                     <p
                         class="text-[10px]
                                uppercase
-                               tracking-[0.35em]
-                               text-white">
+                               tracking-[0.2em]
+                               text-black/50
+                               dark:text-white/50">
 
-                        Bali · Indonesia
+                        Email
 
                     </p>
 
 
-                    <div
-                        class="mt-4
-                               flex
-                               flex-col
-                               justify-between
-                               gap-6
-                               md:flex-row
-                               md:items-end">
+                    <p
+                        id="profileEmail"
+                        class="mt-1
+                               text-sm
+                               font-medium">
 
+                        sathish@example.com
 
-                        <div>
-
-                            <h2
-                                class="font-serif
-                                       text-5xl
-                                       italic
-                                       sm:text-6xl
-                                       lg:text-7xl">
-
-                                18 Days
-
-                            </h2>
-
-                            <p
-                                class="mt-2
-                                       text-xs
-                                       uppercase
-                                       tracking-[0.22em]
-                                       text-white">
-
-                                Until your escape begins
-
-                            </p>
-
-                        </div>
-
-
-                        <div
-                            class="border-l
-                                   border-white/20
-                                   pl-5
-                                   md:pl-7">
-
-                            <p
-                                class="text-[9px]
-                                       uppercase
-                                       tracking-[0.25em]
-                                       text-white">
-
-                                Travel dates
-
-                            </p>
-
-                            <p
-                                class="mt-2
-                                       text-sm">
-
-                                12 — 20 September 2026
-
-                            </p>
-
-                        </div>
-
-                    </div>
+                    </p>
 
                 </div>
 
             </div>
 
 
-            <!-- ================================================= -->
-            <!-- STATS -->
-            <!-- ================================================= -->
+            <button
+                type="button"
+                data-edit="email"
+                class="edit-profile-btn
+                       text-xs
+                       font-semibold
+                       text-[#E77B5D]
+                       hover:underline">
+
+                Edit
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- PHONE -->
+        <!-- ================================================= -->
+
+        <div
+            class="flex
+                   items-center
+                   justify-between
+                   gap-4
+                   border-b
+                   border-black/10
+                   py-4
+                   dark:border-white/10">
+
 
             <div
-                class="mt-8
-                       grid
-                       grid-cols-1
-                       gap-4
-                       sm:grid-cols-3">
+                class="flex
+                       items-center
+                       gap-4">
 
 
-                <!-- STAT 01 -->
+                <span
+                    class="flex
+                           h-10
+                           w-10
+                           shrink-0
+                           items-center
+                           justify-center
+                           rounded-full
+                           bg-[#F4EBDD]
+                           text-[#E77B5D]
+                           dark:bg-white/5">
 
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
+                    <i
+                        class="fa-solid
+                               fa-phone
+                               text-sm">
+                    </i>
+
+                </span>
+
+
+                <div>
 
                     <p
-                        class="text-[11px]
+                        class="text-[10px]
                                uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
+                               tracking-[0.2em]
+                               text-black/50
+                               dark:text-white/50">
 
-                        Upcoming
+                        Phone
 
                     </p>
 
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                01
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Trip planned
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-solid
-                                   fa-plane
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
-
-                </div>
-
-
-                <!-- STAT 02 -->
-
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
 
                     <p
-                        class="text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
+                        id="profilePhone"
+                        class="mt-1
+                               text-sm
+                               font-medium">
 
-                        Saved
-
-                    </p>
-
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                06
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Places saved
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-regular
-                                   fa-heart
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
-
-                </div>
-
-
-                <!-- STAT 03 -->
-
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
-
-                    <p
-                        class="text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
-
-                        Documents
+                        +91 98765 43210
 
                     </p>
-
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                04
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Ready to go
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-regular
-                                   fa-folder
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
 
                 </div>
 
             </div>
 
 
-        </main>
+            <button
+                type="button"
+                data-edit="phone"
+                class="edit-profile-btn
+                       text-xs
+                       font-semibold
+                       text-[#E77B5D]
+                       hover:underline">
 
+                Edit
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- LOCATION -->
+        <!-- ================================================= -->
+
+        <div
+            class="flex
+                   items-center
+                   justify-between
+                   gap-4
+                   border-b
+                   border-black/10
+                   py-4
+                   dark:border-white/10">
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-4">
+
+
+                <span
+                    class="flex
+                           h-10
+                           w-10
+                           shrink-0
+                           items-center
+                           justify-center
+                           rounded-full
+                           bg-[#F4EBDD]
+                           text-[#E77B5D]
+                           dark:bg-white/5">
+
+                    <i
+                        class="fa-solid
+                               fa-location-dot
+                               text-sm">
+                    </i>
+
+                </span>
+
+
+                <div>
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[0.2em]
+                               text-black/50
+                               dark:text-white/50">
+
+                        Location
+
+                    </p>
+
+
+                    <p
+                        id="profileLocation"
+                        class="mt-1
+                               text-sm
+                               font-medium">
+
+                        Chennai, Tamil Nadu, India
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                data-edit="location"
+                class="edit-profile-btn
+                       text-xs
+                       font-semibold
+                       text-[#E77B5D]
+                       hover:underline">
+
+                Edit
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- PASSPORT -->
+        <!-- ================================================= -->
+
+        <div
+            class="flex
+                   items-center
+                   justify-between
+                   gap-4
+                   py-4">
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-4">
+
+
+                <span
+                    class="flex
+                           h-10
+                           w-10
+                           shrink-0
+                           items-center
+                           justify-center
+                           rounded-full
+                           bg-[#F4EBDD]
+                           text-[#E77B5D]
+                           dark:bg-white/5">
+
+                    <i
+                        class="fa-solid
+                               fa-passport
+                               text-sm">
+                    </i>
+
+                </span>
+
+
+                <div>
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[0.2em]
+                               text-black/50
+                               dark:text-white/50">
+
+                        Passport No.
+
+                    </p>
+
+
+                    <p
+                        id="profilePassport"
+                        class="mt-1
+                               text-sm
+                               font-medium">
+
+                        •••• •••• 3021
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                data-edit="passport"
+                class="edit-profile-btn
+                       text-xs
+                       font-semibold
+                       text-[#E77B5D]
+                       hover:underline">
+
+                Edit
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* ============================================= */
+    /* PROFILE FIELD CONFIG */
+    /* ============================================= */
+
+    const profileFields = {
+
+        fullName: {
+            element: "profileFullName",
+            title: "Edit Full Name"
+        },
+
+        email: {
+            element: "profileEmail",
+            title: "Edit Email Address"
+        },
+
+        phone: {
+            element: "profilePhone",
+            title: "Edit Phone Number"
+        },
+
+        location: {
+            element: "profileLocation",
+            title: "Edit Location"
+        },
+
+        passport: {
+            element: "profilePassport",
+            title: "Edit Passport Number"
+        }
+
+    };
+
+
+    /* ============================================= */
+    /* LOAD SAVED PROFILE DATA */
+    /* ============================================= */
+
+    Object.keys(profileFields).forEach(function (field) {
+
+        const savedValue =
+            localStorage.getItem(
+                "wanderly_profile_" + field
+            );
+
+
+        if (!savedValue) return;
+
+
+        const element =
+            document.getElementById(
+                profileFields[field].element
+            );
+
+
+        if (!element) return;
+
+
+        /* PASSPORT MASK */
+
+        if (field === "passport") {
+
+            const cleanValue =
+                savedValue
+                    .replace(/\s/g, "");
+
+
+            const lastFour =
+                cleanValue.slice(-4);
+
+
+            element.textContent =
+                "•••• •••• " + lastFour;
+
+        }
+
+        else {
+
+            element.textContent =
+                savedValue;
+
+        }
+
+    });
+
+
+    /* ============================================= */
+    /* UPDATE PROFILE CARD NAME */
+    /* ============================================= */
+
+    function updateProfileCardName() {
+
+        const fullName =
+            document
+                .getElementById("profileFullName")
+                .textContent
+                .trim();
+
+
+        const firstName =
+            fullName.split(" ")[0];
+
+
+        const initials =
+            fullName
+                .split(" ")
+                .map(function (name) {
+
+                    return name.charAt(0);
+
+                })
+                .join("")
+                .substring(0, 2)
+                .toUpperCase();
+
+
+        document
+            .getElementById("profileCardName")
+            .textContent = firstName;
+
+
+        document
+            .getElementById("profileInitials")
+            .textContent = initials;
+
+    }
+
+
+    updateProfileCardName();
+
+
+    /* ============================================= */
+    /* EDIT PROFILE BUTTON */
+    /* ============================================= */
+
+    const editButtons =
+        document.querySelectorAll(
+            ".edit-profile-btn"
+        );
+
+
+    editButtons.forEach(function (button) {
+
+
+        button.addEventListener(
+            "click",
+            function () {
+
+
+                const field =
+                    button.dataset.edit;
+
+
+                const config =
+                    profileFields[field];
+
+
+                if (!config) return;
+
+
+                const element =
+                    document.getElementById(
+                        config.element
+                    );
+
+
+                if (!element) return;
+
+
+                let currentValue =
+                    element.textContent.trim();
+
+
+                /* REMOVE PASSPORT MASK */
+
+                if (field === "passport") {
+
+                    const savedPassport =
+                        localStorage.getItem(
+                            "wanderly_profile_passport"
+                        );
+
+
+                    currentValue =
+                        savedPassport || "";
+
+                }
+
+
+                /* PROMPT */
+
+                const newValue =
+                    prompt(
+                        config.title,
+                        currentValue
+                    );
+
+
+                /* CANCEL */
+
+                if (
+                    newValue === null ||
+                    newValue.trim() === ""
+                ) {
+
+                    return;
+
+                }
+
+
+                const cleanValue =
+                    newValue.trim();
+
+
+                /* SAVE */
+
+                localStorage.setItem(
+                    "wanderly_profile_" + field,
+                    cleanValue
+                );
+
+
+                /* UPDATE PASSPORT */
+
+                if (field === "passport") {
+
+
+                    const cleanPassport =
+                        cleanValue.replace(/\s/g, "");
+
+
+                    const lastFour =
+                        cleanPassport.slice(-4);
+
+
+                    element.textContent =
+                        "•••• •••• " + lastFour;
+
+                }
+
+
+                /* UPDATE NORMAL FIELD */
+
+                else {
+
+                    element.textContent =
+                        cleanValue;
+
+                }
+
+
+                /* UPDATE NAME */
+
+                if (field === "fullName") {
+
+                    updateProfileCardName();
+
+                }
+
+
+            }
+        );
+
+
+    });
+
+
+    /* ============================================= */
+    /* CHANGE PHOTO */
+    /* ============================================= */
+
+    const changePhotoBtn =
+        document.getElementById(
+            "changePhotoBtn"
+        );
+
+
+    const profileImageInput =
+        document.getElementById(
+            "profileImageInput"
+        );
+
+
+    const profileImagePreview =
+        document.getElementById(
+            "profileImagePreview"
+        );
+
+
+    const profileInitials =
+        document.getElementById(
+            "profileInitials"
+        );
+
+
+    /* OPEN FILE SELECTOR */
+
+    changePhotoBtn.addEventListener(
+        "click",
+        function () {
+
+            profileImageInput.click();
+
+        }
+    );
+
+
+    /* LOAD SAVED PHOTO */
+
+    const savedProfileImage =
+        localStorage.getItem(
+            "wanderly_profile_image"
+        );
+
+
+    if (savedProfileImage) {
+
+        profileImagePreview.src =
+            savedProfileImage;
+
+
+        profileImagePreview.classList.remove(
+            "hidden"
+        );
+
+
+        profileInitials.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    /* IMAGE CHANGE */
+
+    profileImageInput.addEventListener(
+        "change",
+        function () {
+
+
+            const file =
+                profileImageInput.files[0];
+
+
+            if (!file) return;
+
+
+            /* FILE TYPE CHECK */
+
+            if (
+                !file.type.startsWith("image/")
+            ) {
+
+                alert(
+                    "Please select a valid image."
+                );
+
+                return;
+
+            }
+
+
+            /* FILE SIZE CHECK */
+
+            if (
+                file.size >
+                2 * 1024 * 1024
+            ) {
+
+                alert(
+                    "Please select an image under 2MB."
+                );
+
+                return;
+
+            }
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                function (event) {
+
+
+                    const imageData =
+                        event.target.result;
+
+
+                    /* UPDATE IMAGE */
+
+                    profileImagePreview.src =
+                        imageData;
+
+
+                    profileImagePreview.classList.remove(
+                        "hidden"
+                    );
+
+
+                    profileInitials.classList.add(
+                        "hidden"
+                    );
+
+
+                    /* SAVE IMAGE */
+
+                    localStorage.setItem(
+                        "wanderly_profile_image",
+                        imageData
+                    );
+
+
+                };
+
+
+            reader.readAsDataURL(file);
+
+
+        }
+    );
+
+
+    /* ============================================= */
+    /* LOGOUT */
+    /* ============================================= */
+
+    const logoutBtn =
+        document.getElementById(
+            "logoutBtn"
+        );
+
+
+    logoutBtn.addEventListener(
+        "click",
+        function () {
+
+
+            const confirmLogout =
+                confirm(
+                    "Are you sure you want to log out?"
+                );
+
+
+            if (!confirmLogout) {
+
+                return;
+
+            }
+
+
+            /* ========================================= */
+            /* REMOVE LOGIN SESSION */
+            /* ========================================= */
+
+            localStorage.removeItem(
+                "wanderly_user"
+            );
+
+
+            localStorage.removeItem(
+                "wanderly_token"
+            );
+
+
+            localStorage.removeItem(
+                "wanderly_isLoggedIn"
+            );
+
+
+            /* ========================================= */
+            /* REDIRECT TO LOGIN PAGE */
+            /* ========================================= */
+
+            window.location.href =
+                "../pages/login.html";
+
+
+        }
+    );
+
+
+});
+
+</script>
     </div>
 
 </section>

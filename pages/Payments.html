@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Overview — Wanderly Dashboard</title>
+    <title>Payments — Wanderly Dashboard</title>
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23E77B5D'/%3E%3Cpath d='M65 30L55 55L30 65L40 40Z' fill='white'/%3E%3Ccircle cx='50' cy='50' r='5' fill='white'/%3E%3C/svg%3E">
 
@@ -1940,20 +1940,15 @@
                         class="flex items-center
                                justify-between
                                rounded-2xl
-                               bg-[#1C1C1A]
                                px-5 py-4
                                text-sm
-                               text-white
-                               dark:bg-white
-                               dark:text-black">
+                               transition
+                               hover:bg-black/[0.04]
+                               dark:hover:bg-white/[0.05]">
 
                         <span>Overview</span>
 
-                        <i
-                            class="fa-solid
-                                   fa-arrow-right
-                                   text-[10px]">
-                        </i>
+                        
 
                     </a>
 
@@ -2043,15 +2038,20 @@
                         class="flex items-center
                                justify-between
                                rounded-2xl
+                               bg-[#1C1C1A]
                                px-5 py-4
                                text-sm
-                               transition
-                               hover:bg-black/[0.04]
-                               dark:hover:bg-white/[0.05]">
+                               text-white
+                               dark:bg-white
+                               dark:text-black">
 
                         <span>Payments</span>
 
-                        
+                        <i
+                            class="fa-solid
+                                   fa-arrow-right
+                                   text-[10px]">
+                        </i>
 
                     </a>
 
@@ -2165,7 +2165,7 @@
                                text-black
                                dark:text-white">
 
-                        Overview
+                        Payments
 
                     </span>
 
@@ -2192,428 +2192,132 @@
                 </div>
 
 
-               
+                
 
             </div>
 
 
+            <!-- ================================================= -->
+            
             <!-- ================================================= -->
             <!-- WELCOME -->
             <!-- ================================================= -->
 
             <div class="pt-10 sm:pt-14">
 
-                <p
-                    class="text-[10px]
-                           uppercase
-                           tracking-[0.3em]
-                           text-[#8B6F47]
-                           dark:text-[#C8A878]">
-
-                    Your travel space
-
+                <p class="text-[10px] uppercase tracking-[0.3em] text-[#8B6F47] dark:text-[#C8A878]">
+                    Billing & payments
                 </p>
 
-
-                <h1
-                    class="mt-4
-                           text-4xl
-                           font-light
-                           tracking-[-0.05em]
-                           sm:text-5xl
-                           lg:text-6xl">
-
-                    Good afternoon,
-
-                    <span
-                        class="font-serif
-                               italic
-                               text-[#8B6F47]
-                               dark:text-[#C8A878]">
-
-                        Sathish.
-
-                    </span>
-
+                <h1 class="mt-4 text-4xl font-light tracking-[-0.05em] sm:text-5xl lg:text-6xl">
+                    Your payment
+                    <span class="font-serif italic text-[#8B6F47] dark:text-[#C8A878]">history.</span>
                 </h1>
 
-
-                <p
-                    class="mt-5
-                           max-w-xl
-                           text-sm
-                           leading-7
-                           text-black
-                           dark:text-white">
-
-                    Your next escape is getting closer.
-                    Everything you need for your journey
-                    is waiting right here.
-
+                <p class="mt-5 max-w-xl text-sm leading-7 text-black dark:text-white">
+                    A record of what you've paid so far, plus the card we'll use for your next booking.
                 </p>
 
             </div>
-
-
-            <!-- ================================================= -->
-            <!-- NEXT TRIP CARD -->
-            <!-- ================================================= -->
-
-            <div
-                class="group relative
-                       mt-12
-                       min-h-[430px]
-                       overflow-hidden
-                       rounded-[2rem]">
-
-                <!-- IMAGE -->
-
-                <img
-                    src="../assets/images/p91.jpg"
-                    alt="Bali Indonesia"
-                    draggable="false"
-                    class="absolute inset-0
-                           h-full w-full
-                           object-cover
-                           transition-transform
-                           duration-[1500ms]
-                           group-hover:scale-105">
-
-
-                <!-- OVERLAY -->
-
-                <div
-                    class="absolute inset-0
-                           bg-gradient-to-t
-                           from-black/90
-                           via-black/40
-                           to-black/10">
-                </div>
-
-
-                <!-- TOP -->
-
-                <div
-                    class="absolute
-                           left-6 right-6 top-6
-                           flex
-                           items-center
-                           justify-between
-                           text-white
-                           sm:left-10
-                           sm:right-10
-                           sm:top-10">
-
-                    <span
-                        class="rounded-full
-                               border border-white/20
-                               bg-white/10
-                               px-4 py-2
-                               text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               backdrop-blur-md">
-
-                        Upcoming Journey
-
-                    </span>
-
-
-                    <span
-                        class="text-[10px]
-                               uppercase
-                               tracking-[0.2em]
-                               text-white">
-
-                        01 / 01
-
-                    </span>
-
-                </div>
-
-
-                <!-- CONTENT -->
-
-                <div
-                    class="absolute
-                           bottom-0
-                           left-0 right-0
-                           p-6
-                           text-white
-                           sm:p-10
-                           lg:p-12">
-
-
-                    <p
-                        class="text-[10px]
-                               uppercase
-                               tracking-[0.35em]
-                               text-white">
-
-                        Bali · Indonesia
-
-                    </p>
-
-
-                    <div
-                        class="mt-4
-                               flex
-                               flex-col
-                               justify-between
-                               gap-6
-                               md:flex-row
-                               md:items-end">
-
-
-                        <div>
-
-                            <h2
-                                class="font-serif
-                                       text-5xl
-                                       italic
-                                       sm:text-6xl
-                                       lg:text-7xl">
-
-                                18 Days
-
-                            </h2>
-
-                            <p
-                                class="mt-2
-                                       text-xs
-                                       uppercase
-                                       tracking-[0.22em]
-                                       text-white">
-
-                                Until your escape begins
-
-                            </p>
-
-                        </div>
-
-
-                        <div
-                            class="border-l
-                                   border-white/20
-                                   pl-5
-                                   md:pl-7">
-
-                            <p
-                                class="text-[9px]
-                                       uppercase
-                                       tracking-[0.25em]
-                                       text-white">
-
-                                Travel dates
-
-                            </p>
-
-                            <p
-                                class="mt-2
-                                       text-sm">
-
-                                12 — 20 September 2026
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
 
             <!-- ================================================= -->
             <!-- STATS -->
             <!-- ================================================= -->
 
-            <div
-                class="mt-8
-                       grid
-                       grid-cols-1
-                       gap-4
-                       sm:grid-cols-3">
+            <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
 
-
-                <!-- STAT 01 -->
-
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
-
-                    <p
-                        class="text-[11px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
-
-                        Upcoming
-
-                    </p>
-
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                01
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Trip planned
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-solid
-                                   fa-plane
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
-
+                <div class="rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                    <p class="text-[11px] uppercase tracking-[0.25em] text-black dark:text-white">Total Spent</p>
+                    <p class="mt-6 font-serif text-4xl italic">₹1,84,000</p>
                 </div>
 
-
-                <!-- STAT 02 -->
-
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
-
-                    <p
-                        class="text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
-
-                        Saved
-
-                    </p>
-
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                06
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Places saved
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-regular
-                                   fa-heart
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
-
+                <div class="rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                    <p class="text-[9px] uppercase tracking-[0.25em] text-black dark:text-white">Last Payment</p>
+                    <p class="mt-6 font-serif text-4xl italic">₹92,000</p>
+                    <p class="mt-1 text-xs text-black/60 dark:text-white/60">14 Aug 2026</p>
                 </div>
 
-
-                <!-- STAT 03 -->
-
-                <div
-                    class="rounded-[1.5rem]
-                           border border-black/10
-                           bg-white
-                           p-6
-                           dark:border-white/10
-                           dark:bg-[#111]">
-
-                    <p
-                        class="text-[9px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-black
-                               dark:text-white">
-
-                        Documents
-
-                    </p>
-
-                    <div
-                        class="mt-6
-                               flex
-                               items-end
-                               justify-between">
-
-                        <div>
-
-                            <p
-                                class="font-serif
-                                       text-5xl
-                                       italic">
-
-                                04
-
-                            </p>
-
-                            <p class="mt-1 text-xs">
-
-                                Ready to go
-
-                            </p>
-
-                        </div>
-
-                        <i
-                            class="fa-regular
-                                   fa-folder
-                                   text-xl
-                                   text-[#E77B5D]">
-                        </i>
-
-                    </div>
-
+                <div class="rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                    <p class="text-[9px] uppercase tracking-[0.25em] text-black dark:text-white">Saved Cards</p>
+                    <p class="mt-6 font-serif text-4xl italic">01</p>
                 </div>
 
             </div>
 
+            <!-- ================================================= -->
+            <!-- TRANSACTIONS -->
+            <!-- ================================================= -->
 
-        </main>
+            <div class="mt-10">
+                <p class="text-[11px] uppercase tracking-[0.25em] text-black dark:text-white">Recent Transactions</p>
+
+                <div class="mt-5 space-y-4">
+
+                    <div class="flex items-center justify-between gap-4 rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                        <div class="flex items-center gap-4">
+                            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F4EBDD] text-[#E77B5D] dark:bg-white/5">
+                                <i class="fa-solid fa-plane"></i>
+                            </span>
+                            <div>
+                                <p class="text-sm font-medium">Bali Explorer — Booking Deposit</p>
+                                <p class="mt-1 text-xs text-black/60 dark:text-white/60">14 Aug 2026 · Visa •••• 4821</p>
+                            </div>
+                        </div>
+                        <p class="text-sm font-semibold">₹92,000</p>
+                    </div>
+
+                    <div class="flex items-center justify-between gap-4 rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                        <div class="flex items-center gap-4">
+                            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F4EBDD] text-[#E77B5D] dark:bg-white/5">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </span>
+                            <div>
+                                <p class="text-sm font-medium">Travel Insurance — Bali Trip</p>
+                                <p class="mt-1 text-xs text-black/60 dark:text-white/60">2 Aug 2026 · Visa •••• 4821</p>
+                            </div>
+                        </div>
+                        <p class="text-sm font-semibold">₹4,500</p>
+                    </div>
+
+                    <div class="flex items-center justify-between gap-4 rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                        <div class="flex items-center gap-4">
+                            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#F4EBDD] text-[#E77B5D] dark:bg-white/5">
+                                <i class="fa-solid fa-passport"></i>
+                            </span>
+                            <div>
+                                <p class="text-sm font-medium">Visa Assistance — Indonesia</p>
+                                <p class="mt-1 text-xs text-black/60 dark:text-white/60">28 Jul 2026 · Visa •••• 4821</p>
+                            </div>
+                        </div>
+                        <p class="text-sm font-semibold">₹3,500</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================================================= -->
+            <!-- PAYMENT METHOD -->
+            <!-- ================================================= -->
+
+            <div class="mt-10">
+                <p class="text-[11px] uppercase tracking-[0.25em] text-black dark:text-white">Payment Method</p>
+
+                <div class="mt-5 flex items-center justify-between gap-4 rounded-[1.5rem] border border-black/10 bg-white p-6 dark:border-white/10 dark:bg-[#111]">
+                    <div class="flex items-center gap-4">
+                        <span class="flex h-12 w-16 shrink-0 items-center justify-center rounded-xl bg-ink text-white dark:bg-white dark:text-black">
+                            <i class="fa-brands fa-cc-visa text-xl"></i>
+                        </span>
+                        <div>
+                            <p class="text-sm font-medium">Visa •••• 4821</p>
+                            <p class="mt-1 text-xs text-black/60 dark:text-white/60">Expires 09/29</p>
+                        </div>
+                    </div>
+                    <button type="button" class="rounded-full border border-black/10 px-4 py-2 text-xs font-semibold transition hover:bg-black hover:text-white dark:border-white/10 dark:hover:bg-white dark:hover:text-black">
+                        Manage
+                    </button>
+                </div>
+            </div>
+</main>
 
     </div>
 
