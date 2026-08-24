@@ -3529,3 +3529,201 @@ html[dir="rtl"] #mobileMenu {
     }
 
 
+
+
+
+    
+/* <!-- ========================================================= -->
+<!-- ANIMATION -->
+<!-- ========================================================= --> */
+
+
+
+    /* --------------------------------------------------------- */
+    /* HEADER REVEAL */
+    /* --------------------------------------------------------- */
+
+    #destinationStories .destination-header {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+
+        transition:
+            opacity 900ms ease,
+            transform 1000ms
+            cubic-bezier(.22,1,.36,1);
+
+    }
+
+
+    #destinationStories.is-visible .destination-header {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+
+
+    /* --------------------------------------------------------- */
+    /* DESTINATION REVEAL */
+    /* --------------------------------------------------------- */
+
+    #destinationStories .destination-reveal {
+
+        opacity: 0;
+
+        transform:
+            translateY(60px);
+
+        transition:
+            opacity 900ms ease,
+            transform 1100ms
+            cubic-bezier(.22,1,.36,1);
+
+    }
+
+
+    #destinationStories.is-visible
+    .destination-reveal {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    /* --------------------------------------------------------- */
+    /* STAGGER */
+    /* --------------------------------------------------------- */
+
+    #destinationStories
+    .destination-reveal:nth-child(1) {
+
+        transition-delay:
+            120ms;
+
+    }
+
+
+    #destinationStories
+    .destination-reveal:nth-child(2) {
+
+        transition-delay:
+            280ms;
+
+    }
+
+
+    #destinationStories
+    .destination-reveal:nth-child(3) {
+
+        transition-delay:
+            440ms;
+
+    }
+
+
+    #destinationStories
+    .destination-reveal:nth-child(4) {
+
+        transition-delay:
+            600ms;
+
+    }
+
+
+
+    /* --------------------------------------------------------- */
+    /* IMAGE REVEAL */
+    /* --------------------------------------------------------- */
+
+    #destinationStories
+    .destination-image {
+
+        transform:
+            scale(1.08);
+
+        transition:
+            transform 1500ms
+            cubic-bezier(.22,1,.36,1);
+
+    }
+
+
+    #destinationStories.is-visible
+    .destination-reveal
+    .destination-image {
+
+        transform:
+            scale(1);
+
+    }
+
+
+    /* --------------------------------------------------------- */
+    /* HOVER IMAGE */
+    /* --------------------------------------------------------- */
+
+    #destinationStories
+    .destination-reveal:hover
+    .destination-image {
+
+        transform:
+            scale(1.06);
+
+    }
+
+
+
+    /* --------------------------------------------------------- */
+    /* IMAGE BOX */
+    /* --------------------------------------------------------- */
+
+    #destinationStories
+    .destination-image-box {
+
+        isolation: isolate;
+
+    }
+
+
+
+    /* --------------------------------------------------------- */
+    /* REDUCED MOTION */
+    /* --------------------------------------------------------- */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        #destinationStories
+        .destination-header,
+
+        #destinationStories
+        .destination-reveal {
+
+            opacity: 1;
+
+            transform: none;
+
+            transition: none;
+
+        }
+
+
+        #destinationStories
+        .destination-image {
+
+            transform: none;
+
+            transition: none;
+
+        }
+
+    }
+

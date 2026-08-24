@@ -4332,3 +4332,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+
+
+// <!-- ========================================================= -->
+// <!-- SCROLL OBSERVER -->
+// <!-- ========================================================= -->
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const section =
+            document.getElementById(
+                "destinationStories"
+            );
+
+
+        if (!section) return;
+
+
+        /* ----------------------------------------------------- */
+        /* INTERSECTION OBSERVER */
+        /* ----------------------------------------------------- */
+
+        const observer =
+            new IntersectionObserver(
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                section.classList.add(
+                                    "is-visible"
+                                );
+
+                                observer.unobserve(
+                                    section
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.08
+                }
+            );
+
+
+        observer.observe(section);
+
+    }
+);
+
+
+
