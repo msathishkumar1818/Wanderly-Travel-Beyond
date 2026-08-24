@@ -2141,8 +2141,8 @@
             <h1
                 class="font-display
                        text-5xl
-                       sm:text-6xl
-                       lg:text-7xl
+                       sm:text-5xl
+                       lg:text-5xl
                        xl:text-[88px]
                        leading-[0.95]
                        tracking-tight
@@ -2933,83 +2933,110 @@
 
 
 <!-- ============================================================= -->
-<!-- 1B. INSPIRATION — EDITORIAL DESTINATION GRID -->
+<!-- INSPIRATION — JOURNEY EDITORIAL STRIP -->
+<!-- COMPLETELY NEW LAYOUT -->
 <!-- ============================================================= -->
 
 <section
     class="relative
-           py-20 sm:py-24 lg:py-32
-           bg-[#F6F3EE]
-           dark:bg-[#0B0B0B]
-           overflow-hidden">
+           overflow-hidden
+           bg-[#EEE9E1]
+           py-20
+           sm:py-24
+           lg:py-28
+           dark:bg-[#080808]">
 
-    <!-- Decorative Element -->
+    <!-- BACKGROUND TYPOGRAPHY -->
 
     <div
-        class="absolute
-               -top-24
-               -right-24
-               w-72 h-72
-               rounded-full
-               bg-coral/10
-               blur-3xl
-               pointer-events-none">
+        class="pointer-events-none
+               absolute
+               left-0
+               top-20
+               select-none
+               whitespace-nowrap
+               font-serif
+               text-[18vw]
+               italic
+               leading-none
+               text-black/[0.025]
+               dark:text-white/[0.025]">
+
+        JOURNEYS
+
     </div>
 
 
     <div
-        class="max-w-[1500px]
+        class="relative
+               z-10
                mx-auto
-               px-5 sm:px-8 lg:px-12">
+               max-w-[1500px]
+               px-5
+               sm:px-8
+               lg:px-12">
 
 
-        <!-- ===================================================== -->
-        <!-- SECTION INTRO -->
-        <!-- ===================================================== -->
+        <!-- ================================================= -->
+        <!-- TOP EDITORIAL -->
+        <!-- ================================================= -->
 
         <div
             class="grid
-                   lg:grid-cols-[0.8fr_1.2fr]
-                   gap-8
-                   lg:gap-16
-                   items-end">
+                   grid-cols-1
+                   gap-10
+                   border-b
+                   border-black/10
+                   pb-12
+                   lg:grid-cols-12
+                   lg:items-end
+                   dark:border-white/10">
 
-            <div>
 
-                <span
-                    class="inline-flex
-                           items-center
-                           gap-2
-                           text-coral
-                           text-[11px]
-                           font-bold
+            <!-- LEFT -->
+
+            <div
+                class="lg:col-span-3">
+
+                <p
+                    class="text-[10px]
                            uppercase
-                           tracking-[.28em]">
+                           tracking-[0.35em]
+                           text-[#A7613F]
+                           dark:text-[#D9A07B]">
 
-                    <span
-                        class="w-7 h-px
-                               bg-coral">
-                    </span>
+                    02 / Travel inspiration
 
-                    Inspiration
+                </p>
 
-                </span>
+            </div>
 
+
+            <!-- CENTER -->
+
+            <div
+                class="lg:col-span-6">
 
                 <h2
-                    class="font-display
-                           text-4xl
-                           sm:text-5xl
-                           lg:text-6xl
-                           leading-[1]
-                           mt-5
-                           max-w-xl
-                           text-ink
+                    class="text-5xl
+                           font-light
+                           leading-[0.9]
+                           tracking-[-0.055em]
+                           text-[#1C1A17]
+                           sm:text-6xl
+                           lg:text-5xl
                            dark:text-white">
 
-                    Somewhere out there
-                    <span class="text-coral italic">
-                        is waiting.
+                    Find a place
+
+                    <span
+                        class="font-serif
+                               italic
+                               text-[#A7613F]
+                               dark:text-[#D9A07B]">
+
+                        worth leaving for.
+
                     </span>
 
                 </h2>
@@ -3017,21 +3044,20 @@
             </div>
 
 
+            <!-- RIGHT -->
+
             <div
-                class="lg:max-w-md
-                       lg:ml-auto">
+                class="lg:col-span-3">
 
                 <p
-                    class="text-sm
-                           sm:text-base
-                           leading-relaxed
-                           text-ink
+                    class="max-w-xs
+                           text-sm
+                           leading-7
+                           text-black
                            dark:text-white">
 
-                    Let a destination spark the idea.
-                    From slow coastal mornings to mountain
-                    adventures, discover places worth building
-                    your next journey around.
+                    A collection of journeys for people
+                    who prefer stories over schedules.
 
                 </p>
 
@@ -3040,436 +3066,504 @@
         </div>
 
 
-        <!-- ===================================================== -->
-        <!-- DESTINATION SHOWCASE -->
-        <!-- ===================================================== -->
+
+        <!-- ================================================= -->
+        <!-- JOURNEY LIST -->
+        <!-- ================================================= -->
 
         <div
-            class="grid
-                   lg:grid-cols-[1.15fr_0.85fr]
-                   gap-5
-                   mt-12
-                   lg:mt-16">
+            class="mt-6">
 
 
             <!-- ================================================= -->
-            <!-- FEATURED DESTINATION -->
+            <!-- JOURNEY 01 -->
             <!-- ================================================= -->
 
-            <a
-                href="destinations.html"
+            <article
                 class="group
-                       relative
-                       min-h-[480px]
-                       sm:min-h-[580px]
-                       lg:min-h-[650px]
-                       rounded-[2rem]
-                       overflow-hidden
-                       block">
-
-                <img
-                    src="../assets/images/p71.jpg"
-                    alt="Amalfi Coast, Italy"
-                    class="absolute
-                           inset-0
-                           w-full h-full
-                           object-cover
-                           transition-transform
-                           duration-[1200ms]
-                           group-hover:scale-105">
+                       grid
+                       grid-cols-1
+                       gap-6
+                       border-b
+                       border-black/10
+                       py-8
+                       transition-all
+                       duration-700
+                       lg:grid-cols-12
+                       lg:items-center
+                       lg:gap-10
+                       dark:border-white/10">
 
 
-                <!-- Overlay -->
+                <!-- NUMBER -->
 
                 <div
-                    class="absolute
-                           inset-0
-                           bg-gradient-to-t
-                           from-black/80
-                           via-black/20
-                           to-transparent">
-                </div>
-
-
-                <!-- Top Label -->
-
-                <div
-                    class="absolute
-                           top-6
-                           left-6
-                           sm:top-8
-                           sm:left-8">
+                    class="lg:col-span-1">
 
                     <span
-                        class="inline-flex
-                               items-center
-                               gap-2
-                               px-3 py-1.5
-                               rounded-full
-                               bg-white/15
-                               backdrop-blur-md
-                               border
-                               border-white/20
-                               text-[10px]
-                               uppercase
-                               tracking-[.2em]
-                               font-bold
-                               text-white">
+                        class="font-serif
+                               text-2xl
+                               italic
+                               text-[#A7613F]">
 
-                        Featured
+                        01
 
                     </span>
 
                 </div>
 
 
-                <!-- Content -->
+                <!-- IMAGE -->
 
                 <div
-                    class="absolute
-                           left-6
-                           right-6
-                           bottom-6
-                           sm:left-8
-                           sm:right-8
-                           sm:bottom-8
-                           text-white">
+                    class="relative
+                           h-[220px]
+                           overflow-hidden
+                           sm:h-[280px]
+                           lg:col-span-3
+                           lg:h-[230px]">
+
+                    <img
+                        src="../assets/images/p71.jpg"
+                        alt="Amalfi Coast"
+                        class="h-full
+                               w-full
+                               object-cover
+                               transition-transform
+                               duration-[1200ms]
+                               ease-out
+                               group-hover:scale-110">
+
+                </div>
+
+
+                <!-- TITLE -->
+
+                <div
+                    class="lg:col-span-4">
 
                     <p
                         class="text-[11px]
                                uppercase
-                               tracking-[.25em]
-                               font-bold
-                               text-white">
+                               tracking-[0.3em]
+                               text-[#A7613F]
+                               dark:text-[#D9A07B]">
 
-                        Italy
+                        Italy / Mediterranean
 
                     </p>
 
 
-                    <div
-                        class="flex
-                               items-end
-                               justify-between
-                               gap-5
-                               mt-2">
+                    <h3
+                        class="mt-3
+                               text-4xl
+                               font-light
+                               tracking-[-0.04em]
+                               text-[#1C1A17]
+                               sm:text-5xl
+                               dark:text-white">
 
-                        <h3
-                            class="font-display
-                                   text-4xl
-                                   sm:text-5xl
-                                   lg:text-6xl
-                                   italic">
+                        Amalfi Coast
 
-                            Amalfi Coast
-
-                        </h3>
-
-
-                        <span
-                            class="shrink-0
-                                   w-12 h-12
-                                   rounded-full
-                                   bg-white
-                                   text-ink
-                                   flex
-                                   items-center
-                                   justify-center
-                                   group-hover:bg-coral
-                                   group-hover:text-white
-                                   transition-colors">
-
-                            <i
-                                data-lucide="arrow-up-right"
-                                class="w-5 h-5
-                                       group-hover:translate-x-0.5
-                                       group-hover:-translate-y-0.5
-                                       transition-transform">
-                            </i>
-
-                        </span>
-
-                    </div>
+                    </h3>
 
                 </div>
 
-            </a>
+
+                <!-- DESCRIPTION -->
+
+                <div
+                    class="lg:col-span-3">
+
+                    <p
+                        class="text-sm
+                               leading-7
+                               text-black
+                               dark:text-white">
+
+                        Sun-washed villages,
+                        dramatic coastlines and long
+                        lunches beside the sea.
+
+                    </p>
+
+                </div>
+
+
+                <!-- ARROW -->
+
+                <div
+                    class="flex
+                           justify-start
+                           lg:col-span-1
+                           lg:justify-end">
+
+                    <span
+                        class="flex
+                               h-12
+                               w-12
+                               items-center
+                               justify-center
+                               rounded-full
+                               border
+                               border-black/15
+                               text-lg
+                               transition-all
+                               duration-500
+                               group-hover:rotate-45
+                               group-hover:border-[#A7613F]
+                               group-hover:bg-[#A7613F]
+                               group-hover:text-white
+                               dark:border-white/15">
+
+                        ↗
+
+                    </span>
+
+                </div>
+
+            </article>
+
 
 
             <!-- ================================================= -->
-            <!-- SIDE DESTINATIONS -->
+            <!-- JOURNEY 02 -->
             <!-- ================================================= -->
 
-            <div
-                class="grid
-                       sm:grid-cols-2
-                       lg:grid-cols-1
-                       gap-5">
+            <article
+                class="group
+                       grid
+                       grid-cols-1
+                       gap-6
+                       border-b
+                       border-black/10
+                       py-8
+                       transition-all
+                       duration-700
+                       lg:grid-cols-12
+                       lg:items-center
+                       lg:gap-10
+                       dark:border-white/10">
 
 
-                <!-- Kyoto -->
+                <div
+                    class="lg:col-span-1">
 
-                <a
-                    href="destinations.html"
-                    class="group
-                           relative
-                           min-h-[300px]
-                           sm:min-h-[360px]
-                           lg:min-h-[312px]
-                           rounded-[2rem]
-                           overflow-hidden">
+                    <span
+                        class="font-serif
+                               text-2xl
+                               italic
+                               text-[#A7613F]">
+
+                        02
+
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="relative
+                           h-[220px]
+                           overflow-hidden
+                           sm:h-[280px]
+                           lg:col-span-3
+                           lg:h-[230px]">
 
                     <img
                         src="../assets/images/p72.jpg"
-                        alt="Kyoto, Japan"
-                        class="absolute
-                               inset-0
-                               w-full h-full
+                        alt="Kyoto"
+                        class="h-full
+                               w-full
                                object-cover
                                transition-transform
-                               duration-1000
-                               group-hover:scale-105">
+                               duration-[1200ms]
+                               ease-out
+                               group-hover:scale-110">
+
+                </div>
 
 
-                    <div
-                        class="absolute
-                               inset-0
-                               bg-gradient-to-t
-                               from-black/75
-                               via-black/10
-                               to-transparent">
-                    </div>
+                <div
+                    class="lg:col-span-4">
+
+                    <p
+                        class="text-[11px]
+                               uppercase
+                               tracking-[0.3em]
+                               text-[#A7613F]
+                               dark:text-[#D9A07B]">
+
+                        Japan / Culture
+
+                    </p>
 
 
-                    <div
-                        class="absolute
-                               left-6
-                               right-6
-                               bottom-6
-                               flex
-                               items-end
-                               justify-between
-                               gap-4
-                               text-white">
+                    <h3
+                        class="mt-3
+                               text-4xl
+                               font-light
+                               tracking-[-0.04em]
+                               text-[#1C1A17]
+                               sm:text-5xl
+                               dark:text-white">
 
-                        <div>
+                        Kyoto
 
-                            <p
-                                class="text-[10px]
-                                       uppercase
-                                       tracking-[.22em]
-                                       font-bold
-                                       text-white">
+                    </h3>
 
-                                Japan
-
-                            </p>
-
-                            <h3
-                                class="font-display
-                                       text-3xl
-                                       sm:text-4xl
-                                       italic
-                                       mt-1">
-
-                                Kyoto
-
-                            </h3>
-
-                        </div>
+                </div>
 
 
-                        <span
-                            class="w-10 h-10
-                                   rounded-full
-                                   bg-white/15
-                                   backdrop-blur-md
-                                   border
-                                   border-white/20
-                                   flex
-                                   items-center
-                                   justify-center
-                                   group-hover:bg-coral
-                                   group-hover:border-coral
-                                   transition-all">
+                <div
+                    class="lg:col-span-3">
 
-                            <i
-                                data-lucide="arrow-up-right"
-                                class="w-4 h-4">
-                            </i>
+                    <p
+                        class="text-sm
+                               leading-7
+                               text-black
+                               dark:text-white">
 
-                        </span>
+                        Quiet temples, lantern-lit streets
+                        and traditions that still shape
+                        everyday life.
 
-                    </div>
+                    </p>
 
-                </a>
+                </div>
 
 
-                <!-- Patagonia -->
+                <div
+                    class="flex
+                           justify-start
+                           lg:col-span-1
+                           lg:justify-end">
 
-                <a
-                    href="destinations.html"
-                    class="group
-                           relative
-                           min-h-[300px]
-                           sm:min-h-[360px]
-                           lg:min-h-[312px]
-                           rounded-[2rem]
-                           overflow-hidden">
+                    <span
+                        class="flex
+                               h-12
+                               w-12
+                               items-center
+                               justify-center
+                               rounded-full
+                               border
+                               border-black/15
+                               text-lg
+                               transition-all
+                               duration-500
+                               group-hover:rotate-45
+                               group-hover:border-[#A7613F]
+                               group-hover:bg-[#A7613F]
+                               group-hover:text-white
+                               dark:border-white/15">
+
+                        ↗
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ================================================= -->
+            <!-- JOURNEY 03 -->
+            <!-- ================================================= -->
+
+            <article
+                class="group
+                       grid
+                       grid-cols-1
+                       gap-6
+                       border-b
+                       border-black/10
+                       py-8
+                       transition-all
+                       duration-700
+                       lg:grid-cols-12
+                       lg:items-center
+                       lg:gap-10
+                       dark:border-white/10">
+
+
+                <div
+                    class="lg:col-span-1">
+
+                    <span
+                        class="font-serif
+                               text-2xl
+                               italic
+                               text-[#A7613F]">
+
+                        03
+
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="relative
+                           h-[220px]
+                           overflow-hidden
+                           sm:h-[280px]
+                           lg:col-span-3
+                           lg:h-[230px]">
 
                     <img
                         src="../assets/images/p73.jpg"
-                        alt="Patagonia, Chile"
-                        class="absolute
-                               inset-0
-                               w-full h-full
+                        alt="Patagonia"
+                        class="h-full
+                               w-full
                                object-cover
                                transition-transform
-                               duration-1000
-                               group-hover:scale-105">
+                               duration-[1200ms]
+                               ease-out
+                               group-hover:scale-110">
+
+                </div>
 
 
-                    <div
-                        class="absolute
-                               inset-0
-                               bg-gradient-to-t
-                               from-black/75
-                               via-black/10
-                               to-transparent">
-                    </div>
+                <div
+                    class="lg:col-span-4">
+
+                    <p
+                        class="text-[11px]
+                               uppercase
+                               tracking-[0.3em]
+                               text-[#A7613F]
+                               dark:text-[#D9A07B]">
+
+                        Chile / Wilderness
+
+                    </p>
 
 
-                    <div
-                        class="absolute
-                               left-6
-                               right-6
-                               bottom-6
-                               flex
-                               items-end
-                               justify-between
-                               gap-4
-                               text-white">
+                    <h3
+                        class="mt-3
+                               text-4xl
+                               font-light
+                               tracking-[-0.04em]
+                               text-[#1C1A17]
+                               sm:text-5xl
+                               dark:text-white">
 
-                        <div>
+                        Patagonia
 
-                            <p
-                                class="text-[10px]
-                                       uppercase
-                                       tracking-[.22em]
-                                       font-bold
-                                       text-white">
+                    </h3>
 
-                                Chile
-
-                            </p>
-
-                            <h3
-                                class="font-display
-                                       text-3xl
-                                       sm:text-4xl
-                                       italic
-                                       mt-1">
-
-                                Patagonia
-
-                            </h3>
-
-                        </div>
+                </div>
 
 
-                        <span
-                            class="w-10 h-10
-                                   rounded-full
-                                   bg-white/15
-                                   backdrop-blur-md
-                                   border
-                                   border-white/20
-                                   flex
-                                   items-center
-                                   justify-center
-                                   group-hover:bg-coral
-                                   group-hover:border-coral
-                                   transition-all">
+                <div
+                    class="lg:col-span-3">
 
-                            <i
-                                data-lucide="arrow-up-right"
-                                class="w-4 h-4">
-                            </i>
+                    <p
+                        class="text-sm
+                               leading-7
+                               text-black
+                               dark:text-white">
 
-                        </span>
+                        Vast landscapes, silent glaciers
+                        and a feeling of being far
+                        from everything.
 
-                    </div>
+                    </p>
 
-                </a>
+                </div>
+
+
+                <div
+                    class="flex
+                           justify-start
+                           lg:col-span-1
+                           lg:justify-end">
+
+                    <span
+                        class="flex
+                               h-12
+                               w-12
+                               items-center
+                               justify-center
+                               rounded-full
+                               border
+                               border-black/15
+                               text-lg
+                               transition-all
+                               duration-500
+                               group-hover:rotate-45
+                               group-hover:border-[#A7613F]
+                               group-hover:bg-[#A7613F]
+                               group-hover:text-white
+                               dark:border-white/15">
+
+                        ↗
+
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM MESSAGE -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-12
+                   flex
+                   flex-col
+                   gap-6
+                   sm:flex-row
+                   sm:items-center
+                   sm:justify-between">
+
+
+            <p
+                class="text-[10px]
+                       uppercase
+                       tracking-[0.3em]
+                       text-black
+                       dark:text-white">
+
+                Three places. Countless stories.
+
+            </p>
+
+
+            <div
+                class="flex
+                       items-center
+                       gap-4">
+
+                <span
+                    class="h-px
+                           w-12
+                           bg-[#A7613F]">
+                </span>
+
+
+                <span
+                    class="font-serif
+                           text-xl
+                           italic
+                           text-[#A7613F]
+                           dark:text-[#D9A07B]">
+
+                    Where will you go next?
+
+                </span>
 
             </div>
 
         </div>
 
-
-        <!-- ===================================================== -->
-        <!-- BOTTOM NAVIGATION -->
-        <!-- ===================================================== -->
-
-        <div
-            class="mt-7
-                   flex
-                   items-center
-                   justify-between
-                   gap-5
-                   border-t
-                   border-black/[0.08]
-                   dark:border-white/10
-                   pt-5">
-
-            <span
-                class="flex
-                       items-center
-                       gap-2
-                       text-[10px]
-                       sm:text-[11px]
-                       uppercase
-                       tracking-[.2em]
-                       font-bold
-                       text-ink
-                       dark:text-white">
-
-                <i
-                    data-lucide="mouse-pointer-2"
-                    class="w-3.5 h-3.5">
-                </i>
-
-                Explore destinations
-
-            </span>
-
-
-            <a
-                href="destinations.html"
-                class="group
-                       inline-flex
-                       items-center
-                       gap-2
-                       text-xs
-                       sm:text-sm
-                       font-bold
-                       text-ink
-                       dark:text-white
-                       hover:text-coral
-                       transition-colors">
-
-                View all destinations
-
-                <i
-                    data-lucide="arrow-right"
-                    class="w-4 h-4
-                           group-hover:translate-x-1
-                           transition-transform">
-                </i>
-
-            </a>
-
-        </div>
 
     </div>
 
@@ -3483,7 +3577,7 @@
     class="relative
            overflow-hidden
            bg-[#F4EFE7]
-           dark:bg-[#171513]
+           dark:bg-black
            py-16
            sm:py-20
            lg:py-24">
@@ -3962,7 +4056,7 @@
     class="relative
            overflow-hidden
            bg-[#F8F5F0]
-           dark:bg-[#0C0C0B]
+           dark:bg-black
            py-20
            sm:py-24
            lg:py-32">
@@ -4023,7 +4117,7 @@
                     class="font-display
                            text-4xl
                            sm:text-5xl
-                           lg:text-7xl
+                           lg:text-5xl
                            leading-[.95]
                            mt-5
                            text-ink
@@ -4782,7 +4876,7 @@
                     class="font-display
                            text-4xl
                            sm:text-5xl
-                           lg:text-7xl
+                           lg:text-5xl
                            leading-[.95]
                            mt-5
                            text-[#171513]

@@ -4057,3 +4057,278 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
             
+
+
+
+                
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const scrollBtn =
+            document.getElementById("scrollExploreBtn");
+
+        if (scrollBtn) {
+
+            scrollBtn.addEventListener("click", function () {
+
+                const currentSection =
+                    scrollBtn.closest("section");
+
+                if (currentSection) {
+
+                    const nextSection =
+                        currentSection.nextElementSibling;
+
+                    if (nextSection) {
+
+                        nextSection.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+
+                }
+
+            });
+
+        }
+
+    });
+
+
+
+
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+    const exploreBtn =
+        document.getElementById("dragExploreBtn");
+
+    if (exploreBtn) {
+
+        exploreBtn.addEventListener("click", function () {
+
+            const currentSection =
+                exploreBtn.closest("section");
+
+            if (currentSection) {
+
+                const nextSection =
+                    currentSection.nextElementSibling;
+
+                if (nextSection) {
+
+                    nextSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+
+        });
+
+    }
+
+});
+
+
+
+
+// <!-- ========================================================= -->
+// <!-- SCROLL OBSERVER -->
+// <!-- ========================================================= -->
+
+
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const section =
+            document.getElementById(
+                "destinationStories"
+            );
+
+
+        if (!section) return;
+
+
+        const observer =
+            new IntersectionObserver(
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                !entry.isIntersecting
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            section.classList.add(
+                                "is-visible"
+                            );
+
+
+                            observer.unobserve(
+                                section
+                            );
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.08
+                }
+            );
+
+
+        observer.observe(section);
+
+    }
+);
+
+
+
+
+
+// <!-- ========================================================= -->
+// <!-- MARQUEE JAVASCRIPT -->
+// <!-- ========================================================= -->
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const marquee =
+        document.getElementById(
+            "wanderlyMarquee"
+        );
+
+    const track =
+        document.getElementById(
+            "wanderlyMarqueeTrack"
+        );
+
+    if (!marquee || !track) return;
+
+
+    let position = 0;
+
+    let speed = 0.45;
+
+    let paused = false;
+
+    let firstGroupWidth = 0;
+
+
+    /* ----------------------------------------------------- */
+    /* FIND FIRST GROUP WIDTH */
+    /* ----------------------------------------------------- */
+
+    function calculateWidth() {
+
+        const firstGroup =
+            track.children[0];
+
+        if (!firstGroup) return;
+
+        firstGroupWidth =
+            firstGroup.offsetWidth;
+
+    }
+
+
+    /* ----------------------------------------------------- */
+    /* INITIAL CALCULATION */
+    /* ----------------------------------------------------- */
+
+    calculateWidth();
+
+
+    window.addEventListener(
+        "resize",
+        calculateWidth
+    );
+
+
+    /* ----------------------------------------------------- */
+    /* HOVER PAUSE */
+    /* ----------------------------------------------------- */
+
+    marquee.addEventListener(
+        "mouseenter",
+        function () {
+
+            paused = true;
+
+        }
+    );
+
+
+    marquee.addEventListener(
+        "mouseleave",
+        function () {
+
+            paused = false;
+
+        }
+    );
+
+
+    /* ----------------------------------------------------- */
+    /* ANIMATION */
+    /* ----------------------------------------------------- */
+
+    function animate() {
+
+        if (!paused && firstGroupWidth > 0) {
+
+            position -= speed;
+
+
+            /*
+             * When first group completely
+             * leaves the screen, reset position.
+             */
+
+            if (
+                Math.abs(position)
+                >= firstGroupWidth
+            ) {
+
+                position = 0;
+
+            }
+
+
+            track.style.transform =
+                "translate3d("
+                + position
+                + "px, 0, 0)";
+
+        }
+
+
+        requestAnimationFrame(
+            animate
+        );
+
+    }
+
+
+    /* ----------------------------------------------------- */
+    /* START */
+    /* ----------------------------------------------------- */
+
+    animate();
+
+});
+

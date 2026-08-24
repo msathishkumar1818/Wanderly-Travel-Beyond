@@ -1952,7 +1952,7 @@
                        xs:text-4xl
                        sm:text-6xl
                        md:text-5xl
-                       lg:text-[7.5rem]
+                       lg:text-[5.5rem]
                        leading-[.9]
                        sm:leading-[.86]
                        tracking-[-0.045em]
@@ -5811,397 +5811,742 @@
 
 
         <!-- ========================================================= -->
-        <!-- 07. TRAVEL STORIES -->
-        <!-- ========================================================= -->
+<!-- 07. TRAVEL STORIES — EDITORIAL JOURNAL STYLE -->
+<!-- ========================================================= -->
 
-        <section class="relative overflow-hidden
-           bg-[#F6F1EA]
-           dark:bg-[#0A0A0A]
-           py-20 sm:py-24 lg:py-32">
+<section
+    class="relative
+           overflow-hidden
+           bg-[#EDE8DF]
+           py-24
+           sm:py-28
+           lg:py-32
+           dark:bg-[#0B0B0B]">
 
-            <div class="max-w-[1500px]
+
+    <!-- ===================================================== -->
+    <!-- BACKGROUND DECORATION -->
+    <!-- ===================================================== -->
+
+    <div
+        class="pointer-events-none
+               absolute
+               -right-32
+               top-10
+               font-serif
+               text-[14rem]
+               italic
+               leading-none
+               text-black/[0.035]
+               dark:text-white/[0.025]
+               sm:text-[18rem]">
+
+        Journal
+
+    </div>
+
+
+    <div
+        class="relative
+               z-10
                mx-auto
-               px-5 sm:px-8 lg:px-12">
+               max-w-[1500px]
+               px-5
+               sm:px-8
+               lg:px-12">
 
-                <!-- ================================================= -->
-                <!-- HEADER -->
-                <!-- ================================================= -->
 
-                <div class="flex flex-col
-                   lg:flex-row
+        <!-- ================================================= -->
+        <!-- TOP HEADER -->
+        <!-- ================================================= -->
+
+        <div
+            class="grid
+                   grid-cols-1
+                   gap-10
+                   border-b
+                   border-black/10
+                   pb-10
+                   lg:grid-cols-12
                    lg:items-end
-                   lg:justify-between
-                   gap-8
-                   mb-12 lg:mb-16">
-
-                    <div class="max-w-2xl">
-
-                        <span class="inline-flex items-center gap-2
-                           text-[11px] sm:text-xs
-                           uppercase
-                           tracking-[0.25em]
-                           font-semibold
-                           text-[#8B6F47]
-                           dark:text-[#C8A878]">
-
-                            <span class="w-8 h-px
-                               bg-[#8B6F47]
-                               dark:bg-[#C8A878]">
-                            </span>
-
-                            Wanderly Journal
-
-                        </span>
+                   dark:border-white/10">
 
 
-                        <h2 class="mt-4
-                           text-4xl sm:text-5xl lg:text-6xl
-                           font-semibold
-                           tracking-[-0.04em]
-                           leading-[0.95]
-                           text-[#1C1C1A]
+            <!-- LEFT -->
+
+            <div
+                class="lg:col-span-8">
+
+                <div
+                    class="flex
+                           items-center
+                           gap-4">
+
+                    <span
+                        class="h-px
+                               w-10
+                               bg-[#A7613F]">
+                    </span>
+
+                    <p
+                        class="text-[10px]
+                               uppercase
+                               tracking-[0.35em]
+                               text-black
+                               dark:text-white">
+
+                        Wanderly Journal
+
+                    </p>
+
+                </div>
+
+
+                <h2
+                    class="mt-7
+                           max-w-4xl
+                           text-5xl
+                           font-light
+                           leading-[0.9]
+                           tracking-[-0.06em]
+                           text-black
+                           sm:text-6xl
+                           lg:text-7xl
                            dark:text-white">
 
-                            Travel
-                            <span class="font-light italic
-                               text-[#8B6F47]
-                               dark:text-[#C8A878]">
+                    Stories from
 
-                                Stories
+                    <span
+                        class="font-serif
+                               italic
+                               text-[#A7613F]">
 
-                            </span>
+                        the road.
 
-                        </h2>
+                    </span>
+
+                </h2>
+
+            </div>
 
 
-                        <p class="mt-5
-                           max-w-xl
-                           text-sm sm:text-base
+            <!-- RIGHT -->
+
+            <div
+                class="lg:col-span-4
+                       lg:pb-2">
+
+                <p
+                    class="max-w-sm
+                           text-sm
                            leading-7
                            text-black
                            dark:text-white">
 
-                            Stories, ideas, and inspiration from places
-                            worth discovering.
+                    Notes from slow mornings, unexpected
+                    turns and the places that stay with us
+                    long after the journey ends.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- STORIES CONTENT -->
+        <!-- ================================================= -->
+
+        <div
+            class="mt-14
+                   grid
+                   grid-cols-1
+                   gap-14
+                   lg:mt-20
+                   lg:grid-cols-12
+                   lg:gap-16">
+
+
+            <!-- ================================================= -->
+            <!-- FEATURED EDITORIAL STORY -->
+            <!-- ================================================= -->
+
+            <article
+                class="group
+                       lg:col-span-5">
+
+
+                <!-- IMAGE -->
+
+                <div
+                    class="relative
+                           overflow-hidden
+                           bg-[#D6CDC1]">
+
+                    <img
+                        src="../assets/images/p19.jpg"
+                        alt="Travel story"
+                        draggable="false"
+                        class="h-[400px]
+                               w-full
+                               object-cover
+                               transition-transform
+                               duration-[1400ms]
+                               ease-out
+                               group-hover:scale-105
+                               sm:h-[520px]
+                               lg:h-[620px]">
+
+
+                    <!-- IMAGE LABEL -->
+
+                    <div
+                        class="absolute
+                               bottom-0
+                               left-0
+                               bg-[#EDE8DF]
+                               px-6
+                               py-4
+                               dark:bg-[#0B0B0B]">
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.3em]
+                                   text-black
+                                   dark:text-white">
+
+                            Featured story
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div
+                    class="pt-8">
+
+
+                    <div
+                        class="flex
+                               items-center
+                               justify-between
+                               gap-4">
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.3em]
+                                   text-[#A7613F]">
+
+                            Bali / Indonesia
+
+                        </span>
+
+
+                        <span
+                            class="text-[10px]
+                                   text-black/60
+                                   dark:text-white/60">
+
+                            06 min read
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        class="mt-5
+                               max-w-lg
+                               text-4xl
+                               font-light
+                               leading-[0.95]
+                               tracking-[-0.05em]
+                               text-black
+                               transition-colors
+                               duration-500
+                               group-hover:text-[#A7613F]
+                               sm:text-5xl
+                               dark:text-white">
+
+                        The places we find
+
+                        <span
+                            class="font-serif
+                                   italic">
+
+                            when we stop looking.
+
+                        </span>
+
+                    </h3>
+
+
+                    <p
+                        class="mt-5
+                               max-w-md
+                               text-sm
+                               leading-7
+                               text-black
+                               dark:text-white">
+
+                        Beyond the familiar beaches and busy streets,
+                        there is another side of Bali — quieter,
+                        slower and beautifully unexpected.
+
+                    </p>
+
+
+                    <div
+                        class="mt-8
+                               flex
+                               items-center
+                               gap-4">
+
+                        <span
+                            class="text-[10px]
+                                   uppercase
+                                   tracking-[0.25em]
+                                   text-black
+                                   dark:text-white">
+
+                            Read story
+
+                        </span>
+
+
+                        <span
+                            class="flex
+                                   h-9
+                                   w-9
+                                   items-center
+                                   justify-center
+                                   rounded-full
+                                   border
+                                   border-black/15
+                                   text-sm
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-2
+                                   group-hover:bg-[#A7613F]
+                                   group-hover:text-white
+                                   dark:border-white/15">
+
+                            →
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ================================================= -->
+            <!-- STORY LIST -->
+            <!-- ================================================= -->
+
+            <div
+                class="lg:col-span-7">
+
+
+                <!-- ================================================= -->
+                <!-- STORY 01 -->
+                <!-- ================================================= -->
+
+                <article
+                    class="group
+                           grid
+                           grid-cols-1
+                           gap-7
+                           border-t
+                           border-black/10
+                           py-8
+                           sm:grid-cols-[100px_1fr_170px]
+                           sm:items-center
+                           dark:border-white/10">
+
+
+                    <!-- NUMBER -->
+
+                    <div>
+
+                        <span
+                            class="font-serif
+                                   text-3xl
+                                   italic
+                                   text-[#A7613F]">
+
+                            01
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- CONTENT -->
+
+                    <div>
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.28em]
+                                   text-black/60
+                                   dark:text-white/60">
+
+                            Adventure / Switzerland
+
+                        </span>
+
+
+                        <h3
+                            class="mt-3
+                                   text-2xl
+                                   font-light
+                                   tracking-[-0.035em]
+                                   text-black
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-2
+                                   group-hover:text-[#A7613F]
+                                   sm:text-3xl
+                                   dark:text-white">
+
+                            Where the mountains
+                            slow everything down.
+
+                        </h3>
+
+
+                        <p
+                            class="mt-3
+                                   max-w-xl
+                                   text-sm
+                                   leading-6
+                                   text-black
+                                   dark:text-white">
+
+                            A journey through alpine villages,
+                            winding roads and the silence between peaks.
 
                         </p>
 
                     </div>
 
 
-                    <a class="group
-                       inline-flex
-                       items-center
-                       gap-3
-                       self-start
-                       lg:self-auto
-                       text-sm
-                       font-medium
-                       text-[#1C1C1A]
-                       dark:text-white">
+                    <!-- IMAGE -->
 
+                    <div
+                        class="relative
+                               h-[180px]
+                               overflow-hidden
+                               sm:h-[150px]">
 
+                        <img
+                            src="../assets/images/p20.jpg"
+                            alt="Swiss Alps"
+                            draggable="false"
+                            class="h-full
+                                   w-full
+                                   object-cover
+                                   transition-transform
+                                   duration-700
+                                   group-hover:scale-110">
 
+                    </div>
 
-                    </a>
+                </article>
 
-                </div>
 
 
                 <!-- ================================================= -->
-                <!-- STORIES GRID -->
+                <!-- STORY 02 -->
                 <!-- ================================================= -->
 
-                <div class="grid
-                   grid-cols-1
-                   lg:grid-cols-12
-                   gap-6 lg:gap-8">
+                <article
+                    class="group
+                           grid
+                           grid-cols-1
+                           gap-7
+                           border-t
+                           border-black/10
+                           py-8
+                           sm:grid-cols-[100px_1fr_170px]
+                           sm:items-center
+                           dark:border-white/10">
 
 
-                    <!-- ================================================= -->
-                    <!-- FEATURED STORY -->
-                    <!-- ================================================= -->
+                    <div>
 
-                    <article class="group
-                       relative
-                       lg:col-span-7
-                       min-h-[500px]
-                       sm:min-h-[600px]
-                       lg:min-h-[650px]
-                       overflow-hidden
-                       rounded-[2rem]">
+                        <span
+                            class="font-serif
+                                   text-3xl
+                                   italic
+                                   text-[#A7613F]">
 
-                        <img src="../assets/images/p19.jpg" alt="Discovering the hidden beauty of Bali" class="absolute inset-0
-                           w-full h-full
-                           object-cover
-                           transition-transform
-                           duration-[1200ms]
-                           group-hover:scale-105">
+                            02
 
-                        <div class="absolute inset-0
-                           bg-gradient-to-t
-                           from-black/80
-                           via-black/25
-                           to-transparent">
-                        </div>
+                        </span>
+
+                    </div>
 
 
-                        <!-- CATEGORY -->
+                    <div>
 
-                        <span class="absolute
-                           top-6 left-6
-                           rounded-full
-                           bg-white/90
-                           dark:bg-black/70
-                           backdrop-blur-md
-                           px-4 py-2
-                           text-[10px]
-                           uppercase
-                           tracking-[0.18em]
-                           font-semibold
-                           text-[#292722]
-                           dark:text-white">
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.28em]
+                                   text-black/60
+                                   dark:text-white/60">
 
-                            Destination Guide
+                            Slow travel / Maldives
 
                         </span>
 
 
-                        <!-- CONTENT -->
+                        <h3
+                            class="mt-3
+                                   text-2xl
+                                   font-light
+                                   tracking-[-0.035em]
+                                   text-black
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-2
+                                   group-hover:text-[#A7613F]
+                                   sm:text-3xl
+                                   dark:text-white">
 
-                        <div class="absolute
-                           bottom-0 left-0 right-0
-                           p-6 sm:p-8 lg:p-10
-                           text-white">
+                            Learning how to do
 
-                            <div class="flex flex-wrap
+                            <span
+                                class="font-serif
+                                       italic">
+
+                                absolutely nothing.
+
+                            </span>
+
+                        </h3>
+
+
+                        <p
+                            class="mt-3
+                                   max-w-xl
+                                   text-sm
+                                   leading-6
+                                   text-black
+                                   dark:text-white">
+
+                            A few days with no plans, no alarms
+                            and nowhere else to be.
+
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="relative
+                               h-[180px]
+                               overflow-hidden
+                               sm:h-[150px]">
+
+                        <img
+                            src="../assets/images/p21.jpg"
+                            alt="Maldives"
+                            draggable="false"
+                            class="h-full
+                                   w-full
+                                   object-cover
+                                   transition-transform
+                                   duration-700
+                                   group-hover:scale-110">
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================================================= -->
+                <!-- STORY 03 -->
+                <!-- ================================================= -->
+
+                <article
+                    class="group
+                           grid
+                           grid-cols-1
+                           gap-7
+                           border-y
+                           border-black/10
+                           py-8
+                           sm:grid-cols-[100px_1fr_170px]
+                           sm:items-center
+                           dark:border-white/10">
+
+
+                    <div>
+
+                        <span
+                            class="font-serif
+                                   text-3xl
+                                   italic
+                                   text-[#A7613F]">
+
+                            03
+
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <span
+                            class="text-[9px]
+                                   uppercase
+                                   tracking-[0.28em]
+                                   text-black/60
+                                   dark:text-white/60">
+
+                            Culture / Japan
+
+                        </span>
+
+
+                        <h3
+                            class="mt-3
+                                   text-2xl
+                                   font-light
+                                   tracking-[-0.035em]
+                                   text-black
+                                   transition-all
+                                   duration-500
+                                   group-hover:translate-x-2
+                                   group-hover:text-[#A7613F]
+                                   sm:text-3xl
+                                   dark:text-white">
+
+                            Getting lost in the
+
+                            <span
+                                class="font-serif
+                                       italic">
+
+                                right direction.
+
+                            </span>
+
+                        </h3>
+
+
+                        <p
+                            class="mt-3
+                                   max-w-xl
+                                   text-sm
+                                   leading-6
+                                   text-black
+                                   dark:text-white">
+
+                            Old streets, tiny cafés and moments
+                            that never make it into a travel guide.
+
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="relative
+                               h-[180px]
+                               overflow-hidden
+                               sm:h-[150px]">
+
+                        <img
+                            src="../assets/images/p22.jpg"
+                            alt="Japan travel"
+                            draggable="false"
+                            class="h-full
+                                   w-full
+                                   object-cover
+                                   transition-transform
+                                   duration-700
+                                   group-hover:scale-110">
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ================================================= -->
+                <!-- JOURNAL NOTE -->
+                <!-- ================================================= -->
+
+                <div
+                    class="mt-12
+                           flex
+                           flex-col
+                           gap-6
+                           border-b
+                           border-black/10
+                           pb-8
+                           sm:flex-row
+                           sm:items-center
+                           sm:justify-between
+                           dark:border-white/10">
+
+
+                    <p
+                        class="max-w-md
+                               font-serif
+                               text-2xl
+                               italic
+                               leading-snug
+                               text-black
+                               sm:text-3xl
+                               dark:text-white">
+
+                        The best stories usually begin
+                        when the plan changes.
+
+                    </p>
+
+
+                    <div
+                        class="flex
+                               shrink-0
                                items-center
-                               gap-3
-                               text-[11px]
-                               uppercase
-                               tracking-[0.12em]
-                               text-white">
+                               gap-4">
 
-                                <span>Bali, Indonesia</span>
-
-                                <span class="h-1 w-1 rounded-full bg-white/50"></span>
-
-                                <span>6 min read</span>
-
-                            </div>
+                        <span
+                            class="h-px
+                                   w-12
+                                   bg-[#A7613F]">
+                        </span>
 
 
-                            <h3 class="mt-4
-                               max-w-2xl
-                               text-3xl sm:text-4xl lg:text-5xl
-                               font-semibold
-                               leading-[1]
-                               tracking-[-0.04em]">
-
-                                Finding the
-                                <span class="font-light italic">
-                                    soul
-                                </span>
-                                of Bali
-
-                            </h3>
-
-
-                            <p class="mt-4
-                               max-w-xl
-                               text-sm
-                               leading-6
-                               text-white">
-
-                                From quiet rice terraces to hidden beaches,
-                                discover a slower and more authentic side of Bali.
-
-                            </p>
-
-
-
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- ================================================= -->
-                    <!-- RIGHT STORIES -->
-                    <!-- ================================================= -->
-
-                    <div class="lg:col-span-5
-                       grid
-                       grid-cols-1
-                       sm:grid-cols-2
-                       lg:grid-cols-1
-                       gap-6 lg:gap-8">
-
-
-                        <!-- ================================================= -->
-                        <!-- STORY 02 -->
-                        <!-- ================================================= -->
-
-                        <article class="group
-                           grid
-                           grid-cols-1
-                           sm:grid-cols-2
-                           lg:grid-cols-2
-                           overflow-hidden
-                           rounded-[2rem]
-                           bg-white
-                           dark:bg-[#151515]
-                           border
-                           border-black/5
-                           dark:border-white/10">
-
-                            <div class="relative
-                               h-[260px]
-                               sm:h-full
-                               min-h-[260px]
-                               overflow-hidden">
-
-                                <img src="../assets/images/p20.jpg" alt="Swiss Alps travel story" class="absolute inset-0
-                                   w-full h-full
-                                   object-cover
-                                   transition-transform
-                                   duration-700
-                                   group-hover:scale-105">
-
-                            </div>
-
-
-                            <div class="p-6
-                               flex
-                               flex-col
-                               justify-center">
-
-                                <span class="text-[10px]
+                        <span
+                            class="text-[9px]
                                    uppercase
-                                   tracking-[0.18em]
-                                   font-semibold
-                                   text-[#8B6F47]
-                                   dark:text-[#C8A878]">
+                                   tracking-[0.3em]
+                                   text-[#A7613F]">
 
-                                    Adventure
+                            Wanderly stories
 
-                                </span>
-
-
-                                <h3 class="mt-3
-                                   text-xl sm:text-2xl
-                                   font-semibold
-                                   leading-tight
-                                   tracking-[-0.03em]
-                                   text-[#1C1C1A]
-                                   dark:text-white">
-
-                                    A journey through
-                                    the Swiss Alps
-
-                                </h3>
-
-
-                                <p class="mt-3
-                                   text-sm
-                                   leading-6
-                                   text-black
-                                   dark:text-white">
-
-                                    Mountain trails, alpine villages,
-                                    and unforgettable views.
-
-                                </p>
-
-
-
-                            </div>
-
-                        </article>
-
-
-
-                        <!-- ================================================= -->
-                        <!-- STORY 03 -->
-                        <!-- ================================================= -->
-
-                        <article class="group
-                           grid
-                           grid-cols-1
-                           sm:grid-cols-2
-                           lg:grid-cols-2
-                           overflow-hidden
-                           rounded-[2rem]
-                           bg-white
-                           dark:bg-[#151515]
-                           border
-                           border-black/5
-                           dark:border-white/10">
-
-                            <div class="relative
-                               h-[260px]
-                               sm:h-full
-                               min-h-[260px]
-                               overflow-hidden">
-
-                                <img src="../assets/images/p21.jpg" alt="Maldives travel story" class="absolute inset-0
-                                   w-full h-full
-                                   object-cover
-                                   transition-transform
-                                   duration-700
-                                   group-hover:scale-105">
-
-                            </div>
-
-
-                            <div class="p-6
-                               flex
-                               flex-col
-                               justify-center">
-
-                                <span class="text-[10px]
-                                   uppercase
-                                   tracking-[0.18em]
-                                   font-semibold
-                                   text-[#8B6F47]
-                                   dark:text-[#C8A878]">
-
-                                    Inspiration
-
-                                </span>
-
-
-                                <h3 class="mt-3
-                                   text-xl sm:text-2xl
-                                   font-semibold
-                                   leading-tight
-                                   tracking-[-0.03em]
-                                   text-[#1C1C1A]
-                                   dark:text-white">
-
-                                    Slow mornings
-                                    in the Maldives
-
-                                </h3>
-
-
-                                <p class="mt-3
-                                   text-sm
-                                   leading-6
-                                   text-black
-                                   dark:text-white">
-
-                                    Why sometimes the best holiday
-                                    is the one where you do nothing.
-
-                                </p>
-
-
-
-
-                            </div>
-
-                        </article>
+                        </span>
 
                     </div>
 
@@ -6209,11 +6554,288 @@
 
             </div>
 
-        </section>
+        </div>
+
+
+<!-- ========================================================= -->
+<!-- WANDERLY — INFINITE TRAVEL MARQUEE -->
+<!-- ========================================================= -->
+
+<div
+    id="wanderlyMarquee"
+    class="relative
+           mt-24
+           w-full
+           overflow-hidden
+           border-y
+           border-black/10
+           py-6
+           dark:border-white/10">
+
+    <!-- LEFT FADE -->
+
+    <div
+        class="pointer-events-none
+               absolute
+               inset-y-0
+               left-0
+               z-10
+               w-16
+               bg-gradient-to-r
+               from-[#F4EBDD]
+               to-transparent
+               dark:from-[#0D1511]">
+    </div>
+
+
+    <!-- RIGHT FADE -->
+
+    <div
+        class="pointer-events-none
+               absolute
+               inset-y-0
+               right-0
+               z-10
+               w-16
+               bg-gradient-to-l
+               from-[#F4EBDD]
+               to-transparent
+               dark:from-[#0D1511]">
+    </div>
+
+
+    <!-- TRACK -->
+
+    <div
+        id="wanderlyMarqueeTrack"
+        class="flex
+               w-max
+               items-center
+               select-none">
+
+        <!-- GROUP 01 -->
+
+        <div
+            class="flex
+                   shrink-0
+                   items-center
+                   gap-8
+                   pr-8
+                   whitespace-nowrap">
+
+            <span
+                class="font-serif
+                       text-3xl
+                       italic
+                       text-[#17211B]
+                       sm:text-4xl
+                       lg:text-5xl
+                       dark:text-white">
+
+                Go somewhere new
+
+            </span>
+
+
+            <span
+                class="text-xl
+                       text-[#E77B5D]
+                       sm:text-2xl">
+
+                ✦
+
+            </span>
+
+
+            <span
+                class="font-serif
+                       text-3xl
+                       italic
+                       text-[#17211B]
+                       sm:text-4xl
+                       lg:text-5xl
+                       dark:text-white">
+
+                Stay a little longer
+
+            </span>
+
+
+            <span
+                class="text-xl
+                       text-[#E77B5D]
+                       sm:text-2xl">
+
+                ✦
+
+            </span>
+
+
+            <span
+                class="font-serif
+                       text-3xl
+                       italic
+                       text-[#17211B]
+                       sm:text-4xl
+                       lg:text-5xl
+                       dark:text-white">
+
+                Collect stories
+
+            </span>
+
+
+            <span
+                class="text-xl
+                       text-[#E77B5D]
+                       sm:text-2xl">
+
+                ✦
+
+            </span>
+
+
+            <span
+                class="font-serif
+                       text-3xl
+                       italic
+                       text-[#17211B]
+                       sm:text-4xl
+                       lg:text-5xl
+                       dark:text-white">
+
+                Travel differently
+
+            </span>
+
+
+            <span
+                class="text-xl
+                       text-[#E77B5D]
+                       sm:text-2xl">
+
+                ✦
+
+            </span>
+
+        </div>
+
+
+        <!-- GROUP 02 -->
+
+        <div
+            class="flex
+                   shrink-0
+                   items-center
+                   gap-8
+                   pr-8
+                   whitespace-nowrap"
+            aria-hidden="true">
+
+            <span
+                class="font-serif
+                       text-3xl
+                       italic
+                       text-[#17211B]
+                       sm:text-4xl
+                       lg:text-5xl
+                       dark:text-white">
+
+                Go somewhere new
+
+            </span>
+
+
+            <span
+                class="text-xl
+                       text-[#E77B5D]
+                       sm:text-2xl">
+
+                ✦
+
+            </span>
+
+
+            <span
+                class="font-serif
+                       text-3xl
+                       italic
+                       text-[#17211B]
+                       sm:text-4xl
+                       lg:text-5xl
+                       dark:text-white">
+
+                Stay a little longer
+
+            </span>
+
+
+            <span
+                class="text-xl
+                       text-[#E77B5D]
+                       sm:text-2xl">
+
+                ✦
+
+            </span>
+
+
+            <span
+                class="font-serif
+                       text-3xl
+                       italic
+                       text-[#17211B]
+                       sm:text-4xl
+                       lg:text-5xl
+                       dark:text-white">
+
+                Collect stories
+
+            </span>
+
+
+            <span
+                class="text-xl
+                       text-[#E77B5D]
+                       sm:text-2xl">
+
+                ✦
+
+            </span>
+
+
+            <span
+                class="font-serif
+                       text-3xl
+                       italic
+                       text-[#17211B]
+                       sm:text-4xl
+                       lg:text-5xl
+                       dark:text-white">
+
+                Travel differently
+
+            </span>
+
+
+            <span
+                class="text-xl
+                       text-[#E77B5D]
+                       sm:text-2xl">
+
+                ✦
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 
-
+</section>
 
 
 
