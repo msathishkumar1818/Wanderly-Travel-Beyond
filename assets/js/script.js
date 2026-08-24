@@ -5028,3 +5028,501 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+
+
+// <!-- ================================================= -->
+// <!-- JAVASCRIPT -->
+// <!-- ================================================= -->
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* ============================================= */
+    /* PROFILE FIELD CONFIG */
+    /* ============================================= */
+
+    const profileFields = {
+
+        fullName: {
+            element: "profileFullName",
+            title: "Edit Full Name"
+        },
+
+        email: {
+            element: "profileEmail",
+            title: "Edit Email Address"
+        },
+
+        phone: {
+            element: "profilePhone",
+            title: "Edit Phone Number"
+        },
+
+        location: {
+            element: "profileLocation",
+            title: "Edit Location"
+        },
+
+        passport: {
+            element: "profilePassport",
+            title: "Edit Passport Number"
+        }
+
+    };
+
+
+    /* ============================================= */
+    /* LOAD SAVED PROFILE DATA */
+    /* ============================================= */
+
+    Object.keys(profileFields).forEach(function (field) {
+
+        const savedValue =
+            localStorage.getItem(
+                "wanderly_profile_" + field
+            );
+
+
+        if (!savedValue) return;
+
+
+        const element =
+            document.getElementById(
+                profileFields[field].element
+            );
+
+
+        if (!element) return;
+
+
+        /* PASSPORT MASK */
+
+        if (field === "passport") {
+
+            const cleanValue =
+                savedValue
+                    .replace(/\s/g, "");
+
+
+            const lastFour =
+                cleanValue.slice(-4);
+
+
+            element.textContent =
+                "•••• •••• " + lastFour;
+
+        }
+
+        else {
+
+            element.textContent =
+                savedValue;
+
+        }
+
+    });
+
+
+    /* ============================================= */
+    /* UPDATE PROFILE CARD NAME */
+    /* ============================================= */
+
+    function updateProfileCardName() {
+
+        const fullName =
+            document
+                .getElementById("profileFullName")
+                .textContent
+                .trim();
+
+
+        const firstName =
+            fullName.split(" ")[0];
+
+
+        const initials =
+            fullName
+                .split(" ")
+                .map(function (name) {
+
+                    return name.charAt(0);
+
+                })
+                .join("")
+                .substring(0, 2)
+                .toUpperCase();
+
+
+        document
+            .getElementById("profileCardName")
+            .textContent = firstName;
+
+
+        document
+            .getElementById("profileInitials")
+            .textContent = initials;
+
+    }
+
+
+    updateProfileCardName();
+
+
+    /* ============================================= */
+    /* EDIT PROFILE BUTTON */
+    /* ============================================= */
+
+    const editButtons =
+        document.querySelectorAll(
+            ".edit-profile-btn"
+        );
+
+
+    editButtons.forEach(function (button) {
+
+
+        button.addEventListener(
+            "click",
+            function () {
+
+
+                const field =
+                    button.dataset.edit;
+
+
+                const config =
+                    profileFields[field];
+
+
+                if (!config) return;
+
+
+                const element =
+                    document.getElementById(
+                        config.element
+                    );
+
+
+                if (!element) return;
+
+
+                let currentValue =
+                    element.textContent.trim();
+
+
+                /* REMOVE PASSPORT MASK */
+
+                if (field === "passport") {
+
+                    const savedPassport =
+                        localStorage.getItem(
+                            "wanderly_profile_passport"
+                        );
+
+
+                    currentValue =
+                        savedPassport || "";
+
+                }
+
+
+                /* PROMPT */
+
+                const newValue =
+                    prompt(
+                        config.title,
+                        currentValue
+                    );
+
+
+                /* CANCEL */
+
+                if (
+                    newValue === null ||
+                    newValue.trim() === ""
+                ) {
+
+                    return;
+
+                }
+
+
+                const cleanValue =
+                    newValue.trim();
+
+
+                /* SAVE */
+
+                localStorage.setItem(
+                    "wanderly_profile_" + field,
+                    cleanValue
+                );
+
+
+                /* UPDATE PASSPORT */
+
+                if (field === "passport") {
+
+
+                    const cleanPassport =
+                        cleanValue.replace(/\s/g, "");
+
+
+                    const lastFour =
+                        cleanPassport.slice(-4);
+
+
+                    element.textContent =
+                        "•••• •••• " + lastFour;
+
+                }
+
+
+                /* UPDATE NORMAL FIELD */
+
+                else {
+
+                    element.textContent =
+                        cleanValue;
+
+                }
+
+
+                /* UPDATE NAME */
+
+                if (field === "fullName") {
+
+                    updateProfileCardName();
+
+                }
+
+
+            }
+        );
+
+
+    });
+
+
+    /* ============================================= */
+    /* CHANGE PHOTO */
+    /* ============================================= */
+
+    const changePhotoBtn =
+        document.getElementById(
+            "changePhotoBtn"
+        );
+
+
+    const profileImageInput =
+        document.getElementById(
+            "profileImageInput"
+        );
+
+
+    const profileImagePreview =
+        document.getElementById(
+            "profileImagePreview"
+        );
+
+
+    const profileInitials =
+        document.getElementById(
+            "profileInitials"
+        );
+
+
+    /* OPEN FILE SELECTOR */
+
+    changePhotoBtn.addEventListener(
+        "click",
+        function () {
+
+            profileImageInput.click();
+
+        }
+    );
+
+
+    /* LOAD SAVED PHOTO */
+
+    const savedProfileImage =
+        localStorage.getItem(
+            "wanderly_profile_image"
+        );
+
+
+    if (savedProfileImage) {
+
+        profileImagePreview.src =
+            savedProfileImage;
+
+
+        profileImagePreview.classList.remove(
+            "hidden"
+        );
+
+
+        profileInitials.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+    /* IMAGE CHANGE */
+
+    profileImageInput.addEventListener(
+        "change",
+        function () {
+
+
+            const file =
+                profileImageInput.files[0];
+
+
+            if (!file) return;
+
+
+            /* FILE TYPE CHECK */
+
+            if (
+                !file.type.startsWith("image/")
+            ) {
+
+                alert(
+                    "Please select a valid image."
+                );
+
+                return;
+
+            }
+
+
+            /* FILE SIZE CHECK */
+
+            if (
+                file.size >
+                2 * 1024 * 1024
+            ) {
+
+                alert(
+                    "Please select an image under 2MB."
+                );
+
+                return;
+
+            }
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                function (event) {
+
+
+                    const imageData =
+                        event.target.result;
+
+
+                    /* UPDATE IMAGE */
+
+                    profileImagePreview.src =
+                        imageData;
+
+
+                    profileImagePreview.classList.remove(
+                        "hidden"
+                    );
+
+
+                    profileInitials.classList.add(
+                        "hidden"
+                    );
+
+
+                    /* SAVE IMAGE */
+
+                    localStorage.setItem(
+                        "wanderly_profile_image",
+                        imageData
+                    );
+
+
+                };
+
+
+            reader.readAsDataURL(file);
+
+
+        }
+    );
+
+
+    /* ============================================= */
+    /* LOGOUT */
+    /* ============================================= */
+
+    const logoutBtn =
+        document.getElementById(
+            "logoutBtn"
+        );
+
+
+    logoutBtn.addEventListener(
+        "click",
+        function () {
+
+
+            const confirmLogout =
+                confirm(
+                    "Are you sure you want to log out?"
+                );
+
+
+            if (!confirmLogout) {
+
+                return;
+
+            }
+
+
+            /* ========================================= */
+            /* REMOVE LOGIN SESSION */
+            /* ========================================= */
+
+            localStorage.removeItem(
+                "wanderly_user"
+            );
+
+
+            localStorage.removeItem(
+                "wanderly_token"
+            );
+
+
+            localStorage.removeItem(
+                "wanderly_isLoggedIn"
+            );
+
+
+            /* ========================================= */
+            /* REDIRECT TO LOGIN PAGE */
+            /* ========================================= */
+
+            window.location.href =
+                "../pages/login.html";
+
+
+        }
+    );
+
+
+});
+
+
