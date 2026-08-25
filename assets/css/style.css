@@ -19,10 +19,22 @@
         }
 
 
+        :root {
+            --page-container-width: 1280px;
+        }
+
+
         #siteHeader > div {
             width: 100%;
-            max-width: 1500px;
+            max-width: var(--page-container-width);
             margin-inline: auto;
+        }
+
+
+        /* Keep the header and every standard page section on one shared grid. */
+        main .max-w-\[1500px\],
+        main .max-w-\[1600px\] {
+            max-width: var(--page-container-width) !important;
         }
 
 
@@ -177,7 +189,7 @@
 
 
         body.dashboard-page > main.pt-24 > section > .relative.z-10 {
-            max-width: 1500px;
+            max-width: var(--page-container-width);
             margin-inline: auto;
         }
 
