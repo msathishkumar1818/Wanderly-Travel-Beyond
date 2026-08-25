@@ -51,9 +51,7 @@
         }
 
 
-        body.dashboard-page #siteHeader nav,
-        body.dashboard-page #menuToggle,
-        body.dashboard-page #mobileMenu {
+        body.dashboard-page #siteHeader nav {
             display: none !important;
         }
 
@@ -170,6 +168,127 @@
         body.dashboard-page .dashboard-sidebar-logout:hover {
             color: #E77B5D;
             border-color: #E77B5D;
+        }
+
+
+        /* Mobile dashboard navigation must stay inside the viewport. */
+        @media (max-width: 1023px) {
+            /* Desktop sidebar is not repeated above dashboard content on mobile. */
+            body.dashboard-page aside {
+                display: none;
+            }
+
+
+            body.dashboard-page nav[aria-label="Dashboard navigation"] {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                overflow: visible;
+                padding-bottom: 0;
+            }
+
+
+            body.dashboard-page nav[aria-label="Dashboard navigation"] a {
+                display: flex;
+                min-width: 0;
+                justify-content: center;
+                padding-inline: .75rem;
+                white-space: nowrap;
+            }
+
+
+            /* The menu drawer contains the dashboard sidebar on mobile. */
+            body.dashboard-page #mobileMenu > div > :not(.dashboard-mobile-sidebar) {
+                display: none !important;
+            }
+
+
+            /* The dashboard link is supplied by the sidebar list; hide the old action copy. */
+            body.dashboard-page #mobileMenu .my-trips-link {
+                display: none !important;
+            }
+
+
+            body.dashboard-page .dashboard-mobile-sidebar {
+                display: block;
+                padding: 1.25rem 0;
+            }
+
+
+            body.dashboard-page .dashboard-mobile-sidebar nav {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr);
+                gap: .65rem;
+                margin-top: 1rem;
+            }
+
+
+            body.dashboard-page .dashboard-mobile-sidebar a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 0;
+                min-height: 2.75rem;
+                padding: .65rem;
+                border: 1px solid rgba(0, 0, 0, .1);
+                border-radius: .8rem;
+                font-size: .78rem;
+                font-weight: 700;
+                text-align: center;
+            }
+
+
+            body.dashboard-page .dashboard-mobile-sidebar a:hover,
+            body.dashboard-page .dashboard-mobile-sidebar a[aria-current="page"] {
+                border-color: #E77B5D;
+                background: rgba(231, 123, 93, .1);
+                color: #E77B5D;
+            }
+
+
+            body.dashboard-page .dashboard-mobile-sidebar .dashboard-mobile-logout {
+                gap: .6rem;
+                margin-top: .4rem;
+            }
+
+
+            body.dashboard-page .dashboard-mobile-sidebar .dashboard-mobile-setting {
+                gap: .65rem;
+                justify-content: flex-start;
+                color: inherit;
+                background: transparent;
+                cursor: pointer;
+            }
+        }
+
+
+        /* Keep the mobile header compact: profile remains available in its menu. */
+        @media (max-width: 639px) {
+            body.dashboard-page #siteHeader > div {
+                gap: .5rem;
+                min-width: 0;
+            }
+
+
+            body.dashboard-page #siteHeader > div > a {
+                min-width: 0;
+            }
+
+
+            body.dashboard-page #siteHeader .mobile-logo-text {
+                min-width: 0;
+            }
+
+
+            body.dashboard-page #siteHeader .mobile-logo-text > span:first-child {
+                font-size: 1.25rem;
+            }
+
+
+            body.dashboard-page #siteHeader #themeToggle,
+            body.dashboard-page #siteHeader #rtlToggle,
+            body.dashboard-page #siteHeader .dashboard-header-login {
+                display: none !important;
+            }
         }
 
 

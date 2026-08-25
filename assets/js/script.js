@@ -122,6 +122,34 @@
                     });
                 }
             });
+
+            /* Place the dashboard destination with the primary desktop navigation. */
+            const dashboardLink = header.querySelector('a[href$="dashboard.html"]');
+            const desktopNav = header.querySelector("nav");
+            if (dashboardLink && desktopNav && dashboardLink.parentElement !== desktopNav) {
+                dashboardLink.className = "nav-link relative px-4 py-2.5 text-[13px] font-semibold tracking-wide hover:text-coral transition-colors";
+                dashboardLink.textContent = "Dashboard";
+                dashboardLink.setAttribute("aria-label", "Open dashboard");
+                desktopNav.appendChild(dashboardLink);
+            }
+
+            /* On public-page mobile menus, Dashboard belongs in the link list,
+               not in the separate action-button row. */
+            const mobileMenu = document.getElementById("mobileMenu");
+            if (!document.body.classList.contains("dashboard-page") && mobileMenu) {
+                const mobileDashboardLink = mobileMenu.querySelector(".my-trips-link");
+                const mobileNav = mobileMenu.querySelector("nav");
+                if (mobileDashboardLink && mobileNav) {
+                    const mobileActions = mobileDashboardLink.parentElement;
+                    mobileDashboardLink.className = "mobile-link flex items-center justify-between py-4 border-b border-black/10 dark:border-white/10";
+                    mobileDashboardLink.innerHTML = '<span class="font-display text-[25px] sm:text-[28px]">Dashboard</span><i data-lucide="arrow-up-right" class="w-4 h-4 text-coral"></i>';
+                    mobileNav.appendChild(mobileDashboardLink);
+
+                    if (mobileActions && mobileActions.children.length === 1) {
+                        mobileActions.style.gridTemplateColumns = "minmax(0, 1fr)";
+                    }
+                }
+            }
         }
 
         document.addEventListener("DOMContentLoaded", () => {
