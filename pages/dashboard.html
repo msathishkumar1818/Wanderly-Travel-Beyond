@@ -1828,7 +1828,7 @@
 
 <section
     id="wanderlyDashboard"
-    class="relative min-h-screen overflow-hidden
+    class="relative min-h-screen
            bg-[#F6F1EA]
            text-[#1C1C1A]
            dark:bg-[#0A0A0A]
@@ -1857,10 +1857,9 @@
 
     <div
         class="relative z-10
-               mx-auto
                flex
                min-h-screen
-               max-w-[1600px]
+               w-full
                flex-col
                lg:flex-row">
 
@@ -1878,6 +1877,7 @@
                    dark:border-white/10
                    dark:bg-[#111111]
                    lg:w-[280px]
+                   lg:shrink-0
                    lg:border-b-0
                    lg:border-r
                    lg:px-10
@@ -2164,6 +2164,7 @@
 
         <main
             class="flex-1
+                   min-w-0
                    px-5 py-10
                    sm:px-8
                    sm:py-12

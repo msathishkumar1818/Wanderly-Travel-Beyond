@@ -13,7 +13,6 @@
             lucide.createIcons();
         }
 
-
         /* Keep the page usable even if a third-party resource is slow. */
         function hidePageLoader() {
             const pageLoader = document.getElementById("pageLoader");
@@ -85,6 +84,49 @@
                 link.classList.toggle("is-current", isCurrent);
                 link.toggleAttribute("aria-current", isCurrent);
             });
+
+            /* Dashboard sidebar and navigation active state */
+            if (document.body.classList.contains("dashboard-page")) {
+                const asideNavLinks = document.querySelectorAll("aside nav a");
+                asideNavLinks.forEach(link => {
+                    const linkPage = new URL(link.href, window.location.href).pathname.split("/").pop();
+                    const isCurrent = linkPage === currentPage;
+                    if (isCurrent) {
+                        link.className = "flex items-center justify-between rounded-2xl bg-[#1C1C1A] px-5 py-4 text-sm text-white dark:bg-white dark:text-black";
+                        link.setAttribute("aria-current", "page");
+                        if (!link.querySelector(".fa-arrow-right")) {
+                            const countSpan = link.querySelector(".opacity-40");
+                            if (countSpan) countSpan.remove();
+                            const arrow = document.createElement("i");
+                            arrow.className = "fa-solid fa-arrow-right text-[10px]";
+                            link.appendChild(arrow);
+                        }
+                    } else {
+                        link.className = "flex items-center justify-between rounded-2xl px-5 py-4 text-sm transition hover:bg-black/[0.04] dark:hover:bg-white/[0.05]";
+                        link.removeAttribute("aria-current");
+                        const arrow = link.querySelector(".fa-arrow-right");
+                        if (arrow) arrow.remove();
+                    }
+                });
+
+                const mobileDashLinks = document.querySelectorAll('nav[aria-label="Dashboard navigation"] a');
+                mobileDashLinks.forEach(link => {
+                    const linkPage = new URL(link.href, window.location.href).pathname.split("/").pop();
+                    const isCurrent = linkPage === currentPage;
+                    if (isCurrent) {
+                        link.className = "shrink-0 rounded-full bg-[#1C1C1A] px-4 py-2 text-xs font-semibold text-white dark:bg-white dark:text-black";
+                        link.setAttribute("aria-current", "page");
+                    } else {
+                        link.className = "shrink-0 rounded-full border border-black/10 px-4 py-2 text-xs font-semibold dark:border-white/15";
+                        link.removeAttribute("aria-current");
+                    }
+                });
+
+                document.querySelectorAll(".dashboard-mobile-sidebar a").forEach(link => {
+                    const linkPage = new URL(link.href, window.location.href).pathname.split("/").pop();
+                    link.toggleAttribute("aria-current", linkPage === currentPage);
+                });
+            }
         }
 
         function configureHeaderActions() {
