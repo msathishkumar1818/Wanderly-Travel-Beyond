@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -49,6 +49,11 @@
                             "serif"
                         ],
 
+                        serif: [
+                            '"DM Serif Display"',
+                            "serif"
+                        ],
+
                         sans: [
                             '"Manrope"',
                             "sans-serif"
@@ -79,7 +84,7 @@
         crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
 <link rel="stylesheet" href="../assets/css/style.css">
@@ -2072,13 +2077,45 @@
             </p>
         </div>
 
-        <!-- 4 STRUCTURED HOLIDAY PACKAGE CARDS GRID -->
-        <div class="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
+        <!-- INTERACTIVE CATEGORY FILTER TABS -->
+        <div class="mt-8 sm:mt-10 flex flex-wrap items-center gap-2.5 sm:gap-3">
+            <button
+                type="button"
+                data-filter="all"
+                class="package-filter-btn inline-flex items-center gap-2 rounded-full bg-[#E77B5D] px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md transition-all">
+                <span>All Packages</span>
+                <span class="rounded-full bg-white/20 px-2 py-0.5 text-[10px]">6</span>
+            </button>
+            <button
+                type="button"
+                data-filter="domestic"
+                class="package-filter-btn inline-flex items-center gap-2 rounded-full bg-white dark:bg-[#1c1c1c] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white border border-black/10 dark:border-white/10 hover:border-[#E77B5D] hover:text-[#E77B5D] transition-all">
+                <span>Domestic / India</span>
+                <span class="rounded-full bg-black/5 dark:bg-white/10 px-2 py-0.5 text-[10px]">3</span>
+            </button>
+            <button
+                type="button"
+                data-filter="international"
+                class="package-filter-btn inline-flex items-center gap-2 rounded-full bg-white dark:bg-[#1c1c1c] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white border border-black/10 dark:border-white/10 hover:border-[#E77B5D] hover:text-[#E77B5D] transition-all">
+                <span>International</span>
+                <span class="rounded-full bg-black/5 dark:bg-white/10 px-2 py-0.5 text-[10px]">3</span>
+            </button>
+            <button
+                type="button"
+                data-filter="romance"
+                class="package-filter-btn inline-flex items-center gap-2 rounded-full bg-white dark:bg-[#1c1c1c] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white border border-black/10 dark:border-white/10 hover:border-[#E77B5D] hover:text-[#E77B5D] transition-all">
+                <span>Romance / Honeymoon</span>
+                <span class="rounded-full bg-black/5 dark:bg-white/10 px-2 py-0.5 text-[10px]">3</span>
+            </button>
+        </div>
 
-            <!-- PACKAGE 01: ESSENTIAL (KERALA) -->
-            <div class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+        <!-- 6 STRUCTURED HOLIDAY PACKAGE CARDS GRID -->
+        <div id="packagesContainer" class="mt-10 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
+
+            <!-- PACKAGE 01: KERALA -->
+            <div data-category="domestic romance" class="package-card group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                 <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
-                    <img src="../assets/images/p53.jpg" alt="Kerala Essential Holiday Package" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <img src="../assets/images/p53.jpg" alt="Essential Kerala Backwaters & Houseboat Serenity" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
                     <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
@@ -2109,17 +2146,17 @@
                     <div>
                         <div class="flex items-center justify-between">
                             <h2 class="text-2xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
-                                Essential Kerala Backwaters & Heritage
+                                Essential Kerala Backwaters & Houseboat Serenity
                             </h2>
                         </div>
                         <p class="mt-3 text-sm leading-relaxed text-[#171717] font-medium dark:text-stone-100">
-                            A beautifully balanced escape combining tranquil backwaters, palm-fringed private houseboats, and slow-paced wellness.
+                            A serene coastal escape weaving through Alleppey's palm-fringed backwaters, luxury heritage resorts, private houseboats, and authentic Ayurvedic wellness.
                         </p>
 
-                        <!-- INCLUSIONS LIST -->
+                        <!-- INCLUSIONS LIST (4 KEY INCLUSIONS) -->
                         <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
                             <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
-                                Package Inclusions:
+                                4 Key Package Inclusions:
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#171717] font-medium dark:text-stone-100">
                                 <div class="flex items-center gap-2">
@@ -2129,10 +2166,10 @@
                                     <span class="text-emerald-500 font-bold">&#10003;</span> Daily Breakfast & Traditional Dinners
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> Private AC Chauffeur throughout
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Dedicated AC Private Chauffeur
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> Sunset Cruise & Ayurvedic Spa Session
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Alleppey Sunset Canoe & Spa
                                 </div>
                             </div>
                         </div>
@@ -2152,10 +2189,10 @@
                 </div>
             </div>
 
-            <!-- PACKAGE 02: SIGNATURE (RAJASTHAN) -->
-            <div class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+            <!-- PACKAGE 02: RAJASTHAN -->
+            <div data-category="domestic" class="package-card group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                 <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
-                    <img src="../assets/images/p54.jpg" alt="Rajasthan Signature Holiday Package" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <img src="../assets/images/p54.jpg" alt="Signature Rajasthan Palaces & Fortresses" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
                     <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
@@ -2177,7 +2214,7 @@
                             <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">&#8377;72,000</p>
                         </div>
                         <span class="text-xs text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-md">
-                            Palaces & guided walks
+                            Palaces & fortresses
                         </span>
                     </div>
                 </div>
@@ -2190,26 +2227,26 @@
                             </h2>
                         </div>
                         <p class="mt-3 text-sm leading-relaxed text-[#171717] font-medium dark:text-stone-100">
-                            A rich royal journey combining Jaipur, Jodhpur, and Udaipur, featuring palace stays, historic fort walks, and private dining.
+                            A majestic royal journey traversing Jaipur, Jodhpur, and Udaipur, featuring restored palace residences, hilltop fort historian walks, and private desert hospitality.
                         </p>
 
-                        <!-- INCLUSIONS LIST -->
+                        <!-- INCLUSIONS LIST (4 KEY INCLUSIONS) -->
                         <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
                             <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
-                                Package Inclusions:
+                                4 Key Package Inclusions:
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#171717] font-medium dark:text-stone-100">
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> Historic Palace & Heritage Haveli Stays
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Restored Royal Haveli & Palace Suites
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> Private Historian Guide for all Forts
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> Exclusive Sunset Boat Ride on Lake Pichola
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Royal Thali & Courtyard Breakfasts
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <span class="text-emerald-500 font-bold">&#10003;</span> Dedicated Chauffeur in Premium SUV
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Pichola Sunset Cruise & Amber Fort Walk
                                 </div>
                             </div>
                         </div>
@@ -2229,10 +2266,10 @@
                 </div>
             </div>
 
-            <!-- PACKAGE 03: PRIVATE (HIMALAYAS) -->
-            <div class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+            <!-- PACKAGE 03: HIMALAYAS -->
+            <div data-category="domestic" class="package-card group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                 <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
-                    <img src="../assets/images/p55.jpg" alt="Himalayan Sanctuary Holiday Package" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <img src="../assets/images/p55.jpg" alt="Private Himalayan Sanctuary & High Peaks" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
                     <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
@@ -2267,26 +2304,26 @@
                             </h2>
                         </div>
                         <p class="mt-3 text-sm leading-relaxed text-[#171717] font-medium dark:text-stone-100">
-                            An exclusive mountain retreat designed for complete tranquility, luxury chalet living, alpine stargazing, and private trail treks.
+                            An exclusive high-altitude retreat designed for deep tranquility, alpine cedar chalets, crisp mountain air, pristine valley trails, and open-hearth fires.
                         </p>
 
-                        <!-- INCLUSIONS LIST -->
+                        <!-- INCLUSIONS LIST (4 KEY INCLUSIONS) -->
                         <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
                             <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
-                                Package Inclusions:
+                                4 Key Package Inclusions:
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#171717] font-medium dark:text-stone-100">
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> Luxury Boutique Mountain Chalet Stays
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Luxury Boutique Alpine Chalet Lodges
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> Private Certified Alpine Trek Guide
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Farm-to-Table Mountain Fare Dinners
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> High-Altitude Stargazing & Chef Dinners
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> 4x4 Mountain SUV with Driver Guide
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> 4x4 Mountain Transfer & National Park Permits
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Certified Alpine Trek & Stargazing
                                 </div>
                             </div>
                         </div>
@@ -2306,32 +2343,32 @@
                 </div>
             </div>
 
-            <!-- PACKAGE 04: BESPOKE (CUSTOM EXPEDITIONS) -->
-            <div class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+            <!-- PACKAGE 04: BALI -->
+            <div data-category="international romance" class="package-card group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                 <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
-                    <img src="../assets/images/p56.jpg" alt="Bespoke Custom World Holiday Package" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <img src="../assets/images/p7.jpg" alt="Bali Tropical Villa & Island Romance" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
                     
                     <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
                         <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white border border-white/20">
-                            Worldwide Any Destination
+                            Bali, Indonesia
                         </span>
-                        <span class="rounded-full bg-purple-600 px-2.5 py-0.5 text-xs font-bold text-white">
-                            Bespoke Tier
+                        <span class="rounded-full bg-rose-600 px-2.5 py-0.5 text-xs font-bold text-white">
+                            Romance Tier
                         </span>
                     </div>
 
-                    <div class="absolute top-4 right-4 rounded-full bg-purple-700/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white shadow-sm">
-                        10+ Days / Custom
+                    <div class="absolute top-4 right-4 rounded-full bg-rose-700/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white shadow-sm">
+                        06 Days / 05 Nights
                     </div>
 
                     <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between text-white">
                         <div>
-                            <span class="text-[11px] uppercase tracking-wider text-white/80">Investment</span>
-                            <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Tailored Quote</p>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Starting price per person</span>
+                            <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">&#8377;64,000</p>
                         </div>
                         <span class="text-xs text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-md">
-                            100% Made to measure
+                            Private pool villa
                         </span>
                     </div>
                 </div>
@@ -2340,30 +2377,30 @@
                     <div>
                         <div class="flex items-center justify-between">
                             <h2 class="text-2xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
-                                Bespoke World Expeditions & VIP Care
+                                Bali Tropical Villa & Island Romance
                             </h2>
                         </div>
                         <p class="mt-3 text-sm leading-relaxed text-[#171717] font-medium dark:text-stone-100">
-                            Completely customized to your vision. Choose dates, multi-country routes, 5-star villas, private air charters, and rare experiences.
+                            An idyllic island sanctuary combining Ubud's lush jungle valley pool villas with Nusa Dua's turquoise beachfront, cliffside sunsets, and Balinese floral therapies.
                         </p>
 
-                        <!-- INCLUSIONS LIST -->
+                        <!-- INCLUSIONS LIST (4 KEY INCLUSIONS) -->
                         <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
                             <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
-                                Package Inclusions:
+                                4 Key Package Inclusions:
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#171717] font-medium dark:text-stone-100">
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> 1-on-1 Dedicated Senior Travel Designer
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Private Pool Valley Villa & Beach Suite
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> 5-Star Luxury & Private Villa Reservations
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Floating Champagne Breakfast & Beach Dinner
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> Private Chauffeurs & Airport VIP Fast-Track
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Dedicated English-Speaking Chauffeur
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-emerald-500 font-bold">&#10003;</span> 24/7 Global On-Trip Concierge Support
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Uluwatu Sunset Tour & Couple's Spa
                                 </div>
                             </div>
                         </div>
@@ -2371,19 +2408,223 @@
 
                     <!-- DUAL CTAS -->
                     <div class="mt-8 pt-5 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-3">
-                        <a href="trip-details.html?pkg=bespoke" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 dark:bg-[#252525] px-5 py-3 text-xs font-bold text-[#171717] dark:text-white hover:bg-stone-200 dark:hover:bg-[#303030] transition-colors">
+                        <a href="trip-details.html?pkg=bali" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 dark:bg-[#252525] px-5 py-3 text-xs font-bold text-[#171717] dark:text-white hover:bg-stone-200 dark:hover:bg-[#303030] transition-colors">
                             <span>View Details</span>
                             <i data-lucide="info" class="h-3.5 w-3.5"></i>
                         </a>
-                        <a href="customize-trip.html?pkg=bespoke" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#E77B5D] px-5 py-3 text-xs font-bold text-white hover:bg-[#d36446] shadow-sm transition-colors">
-                            <span>Plan Bespoke Trip</span>
-                            <i data-lucide="sparkles" class="h-3.5 w-3.5"></i>
+                        <a href="customize-trip.html?pkg=bali" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#E77B5D] px-5 py-3 text-xs font-bold text-white hover:bg-[#d36446] shadow-sm transition-colors">
+                            <span>Book / Customize</span>
+                            <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PACKAGE 05: SWISS ALPS -->
+            <div data-category="international" class="package-card group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p8.jpg" alt="Swiss Alps & Scenic Glacier Panoramas" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                    
+                    <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white border border-white/20">
+                            Swiss Alps, Switzerland
+                        </span>
+                        <span class="rounded-full bg-sky-600 px-2.5 py-0.5 text-xs font-bold text-white">
+                            Alpine Tier
+                        </span>
+                    </div>
+
+                    <div class="absolute top-4 right-4 rounded-full bg-sky-700/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white shadow-sm">
+                        08 Days / 07 Nights
+                    </div>
+
+                    <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between text-white">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Starting price per person</span>
+                            <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">&#8377;1,85,000</p>
+                        </div>
+                        <span class="text-xs text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                            Glacier express & pass
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-1 flex-col justify-between p-6 sm:p-8">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                Swiss Alps & Scenic Glacier Panoramas
+                            </h2>
+                        </div>
+                        <p class="mt-3 text-sm leading-relaxed text-[#171717] font-medium dark:text-stone-100">
+                            Breathtaking alpine splendor spanning Zermatt, Interlaken, and Lucerne with first-class scenic glacier rail journeys, Matterhorn vistas, and boutique Swiss chalets.
+                        </p>
+
+                        <!-- INCLUSIONS LIST (4 KEY INCLUSIONS) -->
+                        <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
+                                4 Key Package Inclusions:
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#171717] font-medium dark:text-stone-100">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> 5-Star Alpine Spa Resort & Matterhorn Suite
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Artisanal Buffet & Mountain-Top Dining
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> 1st-Class Swiss Pass & Station Transfers
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Glacier 3000 Walk & Jungfraujoch Rail
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DUAL CTAS -->
+                    <div class="mt-8 pt-5 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-3">
+                        <a href="trip-details.html?pkg=swiss" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 dark:bg-[#252525] px-5 py-3 text-xs font-bold text-[#171717] dark:text-white hover:bg-stone-200 dark:hover:bg-[#303030] transition-colors">
+                            <span>View Details</span>
+                            <i data-lucide="info" class="h-3.5 w-3.5"></i>
+                        </a>
+                        <a href="customize-trip.html?pkg=swiss" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#E77B5D] px-5 py-3 text-xs font-bold text-white hover:bg-[#d36446] shadow-sm transition-colors">
+                            <span>Book / Customize</span>
+                            <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PACKAGE 06: AMALFI COAST -->
+            <div data-category="international romance" class="package-card group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p28.jpg" alt="Amalfi Coast & Capri Mediterranean Escape" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                    
+                    <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white border border-white/20">
+                            Amalfi Coast, Italy
+                        </span>
+                        <span class="rounded-full bg-[#E77B5D] px-2.5 py-0.5 text-xs font-bold text-white">
+                            Signature Tier
+                        </span>
+                    </div>
+
+                    <div class="absolute top-4 right-4 rounded-full bg-orange-700/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white shadow-sm">
+                        07 Days / 06 Nights
+                    </div>
+
+                    <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between text-white">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Starting price per person</span>
+                            <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">&#8377;1,45,000</p>
+                        </div>
+                        <span class="text-xs text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                            Speedboat & cliffside stays
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-1 flex-col justify-between p-6 sm:p-8">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                Amalfi Coast & Capri Mediterranean Escape
+                            </h2>
+                        </div>
+                        <p class="mt-3 text-sm leading-relaxed text-[#171717] font-medium dark:text-stone-100">
+                            Sun-drenched Mediterranean glamour exploring Positano, Ravello, and Capri with private speedboat cruises, bougainvillea terrace suites, and coastal fine dining.
+                        </p>
+
+                        <!-- INCLUSIONS LIST (4 KEY INCLUSIONS) -->
+                        <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
+                                4 Key Package Inclusions:
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#171717] font-medium dark:text-stone-100">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Sea-Facing Cliffside Boutique Hotel
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Terrace Breakfast & Coastal Pairing Dinner
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Private Mercedes-Benz Sedan Chauffeur
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">&#10003;</span> Capri Private Speedboat & Blue Grotto
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DUAL CTAS -->
+                    <div class="mt-8 pt-5 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-3">
+                        <a href="trip-details.html?pkg=amalfi" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 dark:bg-[#252525] px-5 py-3 text-xs font-bold text-[#171717] dark:text-white hover:bg-stone-200 dark:hover:bg-[#303030] transition-colors">
+                            <span>View Details</span>
+                            <i data-lucide="info" class="h-3.5 w-3.5"></i>
+                        </a>
+                        <a href="customize-trip.html?pkg=amalfi" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#E77B5D] px-5 py-3 text-xs font-bold text-white hover:bg-[#d36446] shadow-sm transition-colors">
+                            <span>Book / Customize</span>
+                            <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const filterBtns = document.querySelectorAll('.package-filter-btn');
+                const packageCards = document.querySelectorAll('.package-card');
+
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function () {
+                        const filter = this.getAttribute('data-filter');
+
+                        // Reset all buttons to inactive state
+                        filterBtns.forEach(b => {
+                            b.classList.remove('bg-[#E77B5D]', 'text-white', 'shadow-md');
+                            b.classList.add('bg-white', 'dark:bg-[#1c1c1c]', 'text-[#171717]', 'dark:text-white', 'border', 'border-black/10', 'dark:border-white/10');
+                            const badge = b.querySelector('span:last-child');
+                            if (badge) {
+                                badge.classList.remove('bg-white/20');
+                                badge.classList.add('bg-black/5', 'dark:bg-white/10');
+                            }
+                        });
+
+                        // Set clicked button to active state
+                        this.classList.remove('bg-white', 'dark:bg-[#1c1c1c]', 'text-[#171717]', 'dark:text-white', 'border', 'border-black/10', 'dark:border-white/10');
+                        this.classList.add('bg-[#E77B5D]', 'text-white', 'shadow-md');
+                        const activeBadge = this.querySelector('span:last-child');
+                        if (activeBadge) {
+                            activeBadge.classList.remove('bg-black/5', 'dark:bg-white/10');
+                            activeBadge.classList.add('bg-white/20');
+                        }
+
+                        // Filter cards
+                        packageCards.forEach(card => {
+                            const categories = (card.getAttribute('data-category') || '').split(' ');
+                            if (filter === 'all' || categories.includes(filter)) {
+                                card.classList.remove('hidden');
+                                card.style.opacity = '0';
+                                card.style.transform = 'translateY(12px)';
+                                requestAnimationFrame(() => {
+                                    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0)';
+                                });
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
 
         <!-- BOTTOM CUSTOMIZATION HELPER BAR -->
         <div class="mt-16 flex flex-col gap-4 rounded-2xl bg-white dark:bg-[#181818] p-6 sm:p-8 border border-black/10 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between shadow-xs">

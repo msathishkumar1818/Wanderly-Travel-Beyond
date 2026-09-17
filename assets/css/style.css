@@ -474,11 +474,33 @@
             max-width: 100%;
         }
 
+        body:not(.dashboard-page) h1,
+        body:not(.dashboard-page) h2,
+        body:not(.dashboard-page) h3,
+        body:not(.dashboard-page) h4,
+        body:not(.dashboard-page) h5,
+        body:not(.dashboard-page) h6,
+        h1:not(.dashboard-page *),
+        h2:not(.dashboard-page *),
+        h3:not(.dashboard-page *),
+        h4:not(.dashboard-page *),
+        h5:not(.dashboard-page *),
+        h6:not(.dashboard-page *) {
+            font-family: "DM Serif Display", serif;
+        }
+
         .font-display,
         .font-serif {
             font-family: "DM Serif Display", serif !important;
         }
 
+        .dashboard-page h1,
+        .dashboard-page h2,
+        .dashboard-page h3,
+        .dashboard-page h4,
+        .dashboard-page h5,
+        .dashboard-page h6,
+        input, select, textarea, button, label, nav,
         .font-sans {
             font-family: "Manrope", sans-serif !important;
         }
