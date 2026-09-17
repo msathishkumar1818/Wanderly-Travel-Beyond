@@ -1,4 +1,4 @@
-// <!-- ========================================================= -->
+﻿// <!-- ========================================================= -->
 //     <!-- JAVASCRIPT -->
 //     <!-- ========================================================= -->
 
@@ -2514,7 +2514,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             "05 Days / 04 Nights",
 
                         price:
-                            "From ₹48,000",
+                            "From \u20B948,000",
 
                         description:
                             "A beautifully balanced escape for travellers who want the essentials without rushing the experience.",
@@ -2540,7 +2540,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             "07 Days / 06 Nights",
 
                         price:
-                            "From ₹72,000",
+                            "From \u20B972,000",
 
                         description:
                             "A richer journey combining iconic places, hidden corners and carefully chosen stays.",
@@ -2566,7 +2566,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             "08 Days / 07 Nights",
 
                         price:
-                            "From ₹96,000",
+                            "From \u20B996,000",
 
                         description:
                             "A private escape designed around comfort, flexibility and experiences reserved just for you.",

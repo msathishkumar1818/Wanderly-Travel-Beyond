@@ -92,7 +92,14 @@
             left: 0 !important;
             right: 0 !important;
             height: var(--dashboard-header-height, 65px) !important;
+            background-color: #F6F1EA !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
             z-index: 1000 !important;
+        }
+
+        .dark body.dashboard-page #siteHeader {
+            background-color: #0A0A0A !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
         }
 
 
@@ -347,6 +354,8 @@
                 width: 280px !important;
                 height: calc(100vh - var(--dashboard-header-height, 65px)) !important;
                 max-height: calc(100vh - var(--dashboard-header-height, 65px)) !important;
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
                 z-index: 40 !important;
                 align-self: flex-start;
                 flex-shrink: 0;
@@ -383,6 +392,7 @@
                 width: calc(100% - 280px) !important;
                 min-width: 0 !important;
                 padding-inline: 2.5rem !important;
+                padding-top: 1.5rem !important;
             }
 
             [dir="rtl"] body.dashboard-page main.flex-1 {
@@ -409,6 +419,7 @@
             max-width: 100% !important;
             width: 100% !important;
             margin-inline: 0 !important;
+            padding-top: 0 !important;
         }
 
 
@@ -427,6 +438,7 @@
                 margin-right: 0 !important;
                 width: 100% !important;
                 padding-inline: 1rem !important;
+                padding-top: 1rem !important;
             }
         }
 
@@ -434,6 +446,7 @@
         @media (min-width: 640px) and (max-width: 1023px) {
             body.dashboard-page main.flex-1 {
                 padding-inline: 1.5rem !important;
+                padding-top: 1.25rem !important;
             }
         }
 
@@ -443,11 +456,11 @@
         }
 
 
+
         /* Match the fixed header height so each hero starts immediately below it. */
         #siteHeader + main.pt-24 {
             padding-top: 4rem !important;
         }
-
 
         /* Keep grid cards, images and their shadows inside every page frame. */
         main {
@@ -456,86 +469,48 @@
             overflow-x: clip;
         }
 
-
         main > section {
             width: 100%;
             max-width: 100%;
         }
 
-
-        main .grid > * {
-            min-width: 0;
+        .font-display,
+        .font-serif {
+            font-family: "DM Serif Display", serif !important;
         }
 
-
-        .my-trips-link.is-current {
-            border-color: #E77B5D !important;
-            color: #E77B5D;
-            background: rgba(231, 123, 93, .08);
+        .font-sans {
+            font-family: "Manrope", sans-serif !important;
         }
-
-
-        .font-display {
-            font-family: "DM Serif Display", serif;
-        }
-
-
-        body.menu-open {
-            overflow: hidden;
-        }
-
-
-        /* ===================================================== */
-        /* HEADER */
-        /* ===================================================== */
 
         #siteHeader {
-
             transition:
                 background-color .35s ease,
                 box-shadow .35s ease,
                 padding .35s ease,
                 border-color .35s ease;
-
         }
-
 
         /* ===================================================== */
         /* DESKTOP HOME DROPDOWN */
         /* ===================================================== */
 
         .home-dropdown {
-
             opacity: 0;
-
             visibility: hidden;
-
-            transform:
-                translate(-50%, 15px);
-
+            transform: translate(-50%, 15px);
             transition:
                 opacity .25s ease,
                 transform .25s ease,
                 visibility .25s ease;
-
         }
 
-
-        .home-dropdown-wrapper:hover
-        .home-dropdown,
-
-        .home-dropdown-wrapper:focus-within
-        .home-dropdown {
-
+        .home-dropdown-wrapper:hover .home-dropdown,
+        .home-dropdown-wrapper:focus-within .home-dropdown {
             opacity: 1;
-
             visibility: visible;
-
-            transform:
-                translate(-50%, 0);
-
+            transform: translate(-50%, 0);
         }
-
 
         /* ===================================================== */
         /* NAV UNDERLINE */
@@ -4494,3 +4469,42 @@ html[dir="rtl"] #mobileMenu {
 
 }
 
+
+
+/* =========================================================
+   GLOBAL HIGH-CONTRAST BRIGHT TEXT RULES
+========================================================= */
+.nav-link {
+    color: #17211B !important;
+    font-weight: 600 !important;
+}
+
+.dark .nav-link {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+.nav-link:hover,
+.dark .nav-link:hover {
+    color: #E77B5D !important;
+}
+
+.nav-link.active,
+.dark .nav-link.active {
+    color: #E77B5D !important;
+}
+
+#authActionBtn {
+    color: #17211B !important;
+    font-weight: 600 !important;
+}
+
+.dark #authActionBtn {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+#authActionBtn:hover,
+.dark #authActionBtn:hover {
+    color: #E77B5D !important;
+}
