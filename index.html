@@ -840,7 +840,7 @@
 
                 <!-- MY TRIPS -->
 
-                <a href="../pages/dashboard.html" class="group
+                <a href="pages/dashboard.html" class="group
 
                            flex
                            items-center
@@ -875,51 +875,22 @@
                 </a>
 
 
-                <!-- LOGIN -->
+                <!-- THEME: LIGHT & DARK MODE -->
+                <div class="flex items-center p-0.5 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05]">
 
-                <a href="pages/login.html" class="px-4
-                           py-2.5
+                    <!-- LIGHT MODE -->
+                    <button id="lightModeBtn" type="button" aria-label="Light mode" title="Light mode"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-ink/80 dark:text-white/70 hover:text-coral transition-all">
+                        <i data-lucide="sun" class="w-4 h-4"></i>
+                    </button>
 
-                           text-xs
-                           font-bold
+                    <!-- DARK MODE -->
+                    <button id="darkModeBtn" type="button" aria-label="Dark mode" title="Dark mode"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-ink/80 dark:text-white/70 hover:text-coral transition-all">
+                        <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
+                    </button>
 
-                           hover:text-coral
-
-                           transition-colors">
-
-                    Login
-
-                </a>
-
-
-                <!-- DARK MODE -->
-
-                <button id="themeToggle" type="button" aria-label="Toggle dark mode" class="w-10
-                           h-10
-
-                           rounded-full
-
-                           flex
-                           items-center
-                           justify-center
-
-                           border
-                           border-black/10
-                           dark:border-white/10
-
-                           hover:bg-ink
-                           hover:text-white
-
-                           dark:hover:bg-sand
-                           dark:hover:text-ink
-
-                           transition-all">
-
-                    <i id="themeIcon" data-lucide="moon" class="w-4
-                               h-4">
-                    </i>
-
-                </button>
+                </div>
 
 
                 <!-- RTL -->
@@ -962,6 +933,23 @@
                     </span>
 
                 </button>
+
+
+                <!-- LOGIN -->
+
+                <a href="pages/login.html" class="px-3.5
+                           py-2.5
+
+                           text-xs
+                           font-bold
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Login
+
+                </a>
 
 
                 <!-- CTA -->
@@ -2327,8 +2315,8 @@
                    gap-4 sm:gap-5 lg:gap-6">
 
 
-                    <!-- CARD 01 -->
-                    <a href="../pages/destinations.html" class="destination-card
+                    <!-- CARD 01 - KERALA -->
+                    <a href="pages/packages.html" class="destination-card
                        group
                        relative
                        h-[430px]
@@ -2338,39 +2326,42 @@
                        rounded-[1.8rem]
                        reveal">
 
-                        <img src="../assets/images/p5.jpg" alt="Kerala" class="absolute
-                           inset-0
-                           w-full
-                           h-full
-                           object-cover
-                           transition-transform
-                           duration-1000
-                           group-hover:scale-110">
+                        <img src="assets/images/p5.jpg" alt="Kerala Backwaters" class="absolute
+                            inset-0
+                            w-full
+                            h-full
+                            object-cover
+                            transition-transform
+                            duration-1000
+                            group-hover:scale-110">
 
                         <div class="absolute
-                           inset-0
-                           bg-gradient-to-t
-                           from-black/80
-                           via-black/20
-                           to-transparent">
+                            inset-0
+                            bg-gradient-to-t
+                            from-black/60
+                            via-black/10
+                            to-transparent">
                         </div>
 
-
                         <div class="absolute
-                           top-5
-                           left-5">
+                            top-4 sm:top-5
+                            left-4 sm:left-5">
 
                             <span class="px-3
                                py-1.5
                                rounded-full
-                               bg-white/15
+                               bg-white/90
+                               dark:bg-black/75
                                backdrop-blur-md
                                border
-                               border-white/20
+                               border-black/10
+                               dark:border-white/20
                                text-[10px]
                                uppercase
                                tracking-widest
-                               text-white">
+                               font-bold
+                               text-[#17211B]
+                               dark:text-white">
 
                                 India
 
@@ -2378,60 +2369,67 @@
 
                         </div>
 
-
                         <div class="absolute
-                           inset-x-5
-                           bottom-5
-                           text-white">
+                            inset-x-3 sm:inset-x-4
+                            bottom-3 sm:bottom-4
+                            p-4 sm:p-5
+                            rounded-2xl
+                            bg-white/95
+                            dark:bg-[#151515]/95
+                            backdrop-blur-md
+                            border
+                            border-black/10
+                            dark:border-white/10
+                            shadow-xl
+                            transition-all
+                            duration-300">
 
-                            <p class="text-[10px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-white
-                               mb-2">
-
-                                Backwaters · Nature
-
-                            </p>
+                            <div class="flex items-center justify-between gap-2 mb-1">
+                                <p class="text-[10px]
+                                    uppercase
+                                    tracking-[0.22em]
+                                    font-bold
+                                    text-[#E77B5D]">
+                                    Backwaters · Nature
+                                </p>
+                                <span class="text-[11px] font-semibold text-[#17211B]/80 dark:text-white/80">
+                                    5D / 4N
+                                </span>
+                            </div>
 
                             <h3 class="font-display
-                               text-3xl
-                               sm:text-4xl">
-
+                                text-2xl
+                                sm:text-3xl
+                                text-[#17211B]
+                                dark:text-white
+                                leading-tight">
                                 Kerala
-
                             </h3>
+
+                            <p class="text-xs text-[#17211B]/80 dark:text-white/80 mt-1 line-clamp-1">
+                                Houseboat cruises & lush hill plantations
+                            </p>
 
                             <div class="flex
                                items-center
                                justify-between
-                               mt-5
-                               pt-4
+                               mt-3.5
+                               pt-3
                                border-t
-                               border-white/20">
+                               border-black/10
+                               dark:border-white/15">
 
-                                <span class="text-xs
-                                   text-white">
+                                <div>
+                                    <span class="text-[9px] uppercase tracking-wider text-[#17211B]/60 dark:text-white/60 block">From</span>
+                                    <span class="text-sm font-bold text-[#E77B5D]">₹48,000</span>
+                                </div>
 
-                                    Explore escape
-
-                                </span>
-
-                                <span class="w-9
-             h-9
-             rounded-full
-             bg-white
-             text-[#17211B]
-             flex
-             items-center
-             justify-center
-             transition-transform
-             duration-300
-             group-hover:rotate-45">
-
-    <i class="fa-solid fa-arrow-right text-xs"></i>
-
-</span>
+                                <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#17211B] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                    <span>Explore</span>
+                                    <span class="w-7 h-7 rounded-full bg-[#E77B5D] text-white flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
+                                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                    </span>
+                                </div>
 
                             </div>
 
@@ -2440,8 +2438,8 @@
                     </a>
 
 
-                    <!-- CARD 02 -->
-                    <a href="../pages/destinations.html" class="destination-card
+                    <!-- CARD 02 - RAJASTHAN -->
+                    <a href="pages/packages.html" class="destination-card
                        group
                        relative
                        h-[430px]
@@ -2451,39 +2449,42 @@
                        rounded-[1.8rem]
                        reveal">
 
-                        <img src="../assets/images/p6.jpg" alt="Rajasthan" class="absolute
-                           inset-0
-                           w-full
-                           h-full
-                           object-cover
-                           transition-transform
-                           duration-1000
-                           group-hover:scale-110">
+                        <img src="assets/images/p6.jpg" alt="Royal Rajasthan" class="absolute
+                            inset-0
+                            w-full
+                            h-full
+                            object-cover
+                            transition-transform
+                            duration-1000
+                            group-hover:scale-110">
 
                         <div class="absolute
-                           inset-0
-                           bg-gradient-to-t
-                           from-black/80
-                           via-black/20
-                           to-transparent">
+                            inset-0
+                            bg-gradient-to-t
+                            from-black/60
+                            via-black/10
+                            to-transparent">
                         </div>
 
-
                         <div class="absolute
-                           top-5
-                           left-5">
+                            top-4 sm:top-5
+                            left-4 sm:left-5">
 
                             <span class="px-3
                                py-1.5
                                rounded-full
-                               bg-white/15
+                               bg-white/90
+                               dark:bg-black/75
                                backdrop-blur-md
                                border
-                               border-white/20
+                               border-black/10
+                               dark:border-white/20
                                text-[10px]
                                uppercase
                                tracking-widest
-                               text-white">
+                               font-bold
+                               text-[#17211B]
+                               dark:text-white">
 
                                 India
 
@@ -2491,59 +2492,67 @@
 
                         </div>
 
-
                         <div class="absolute
-                           inset-x-5
-                           bottom-5
-                           text-white">
+                            inset-x-3 sm:inset-x-4
+                            bottom-3 sm:bottom-4
+                            p-4 sm:p-5
+                            rounded-2xl
+                            bg-white/95
+                            dark:bg-[#151515]/95
+                            backdrop-blur-md
+                            border
+                            border-black/10
+                            dark:border-white/10
+                            shadow-xl
+                            transition-all
+                            duration-300">
 
-                            <p class="text-[10px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-white
-                               mb-2">
-
-                                Heritage · Culture
-
-                            </p>
+                            <div class="flex items-center justify-between gap-2 mb-1">
+                                <p class="text-[10px]
+                                    uppercase
+                                    tracking-[0.22em]
+                                    font-bold
+                                    text-[#E77B5D]">
+                                    Heritage · Palaces
+                                </p>
+                                <span class="text-[11px] font-semibold text-[#17211B]/80 dark:text-white/80">
+                                    7D / 6N
+                                </span>
+                            </div>
 
                             <h3 class="font-display
-                               text-3xl
-                               sm:text-4xl">
-
+                                text-2xl
+                                sm:text-3xl
+                                text-[#17211B]
+                                dark:text-white
+                                leading-tight">
                                 Rajasthan
-
                             </h3>
+
+                            <p class="text-xs text-[#17211B]/80 dark:text-white/80 mt-1 line-clamp-1">
+                                Grand fort stays & Thar desert safaris
+                            </p>
 
                             <div class="flex
                                items-center
                                justify-between
-                               mt-5
-                               pt-4
+                               mt-3.5
+                               pt-3
                                border-t
-                               border-white/20">
+                               border-black/10
+                               dark:border-white/15">
 
-                                <span class="text-xs
-                                   text-white">
+                                <div>
+                                    <span class="text-[9px] uppercase tracking-wider text-[#17211B]/60 dark:text-white/60 block">From</span>
+                                    <span class="text-sm font-bold text-[#E77B5D]">₹72,000</span>
+                                </div>
 
-                                    Explore escape
-
-                                </span>
-<span class="w-9
-             h-9
-             rounded-full
-             bg-white
-             text-[#17211B]
-             flex
-             items-center
-             justify-center
-             transition-transform
-             duration-300
-             group-hover:rotate-45">
-
-    <i class="fa-solid fa-arrow-right text-xs"></i>
-
-</span>
+                                <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#17211B] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                    <span>Explore</span>
+                                    <span class="w-7 h-7 rounded-full bg-[#E77B5D] text-white flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
+                                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                    </span>
+                                </div>
 
                             </div>
 
@@ -2552,8 +2561,8 @@
                     </a>
 
 
-                    <!-- CARD 03 -->
-                    <a href="../pages/destinations.html" class="destination-card
+                    <!-- CARD 03 - BALI -->
+                    <a href="pages/packages.html" class="destination-card
                        group
                        relative
                        h-[430px]
@@ -2563,39 +2572,42 @@
                        rounded-[1.8rem]
                        reveal">
 
-                        <img src="../assets/images/p7.jpg" alt="Bali" class="absolute
-                           inset-0
-                           w-full
-                           h-full
-                           object-cover
-                           transition-transform
-                           duration-1000
-                           group-hover:scale-110">
+                        <img src="assets/images/p7.jpg" alt="Bali Indonesia" class="absolute
+                            inset-0
+                            w-full
+                            h-full
+                            object-cover
+                            transition-transform
+                            duration-1000
+                            group-hover:scale-110">
 
                         <div class="absolute
-                           inset-0
-                           bg-gradient-to-t
-                           from-black/80
-                           via-black/20
-                           to-transparent">
+                            inset-0
+                            bg-gradient-to-t
+                            from-black/60
+                            via-black/10
+                            to-transparent">
                         </div>
 
-
                         <div class="absolute
-                           top-5
-                           left-5">
+                            top-4 sm:top-5
+                            left-4 sm:left-5">
 
                             <span class="px-3
                                py-1.5
                                rounded-full
-                               bg-white/15
+                               bg-white/90
+                               dark:bg-black/75
                                backdrop-blur-md
                                border
-                               border-white/20
+                               border-black/10
+                               dark:border-white/20
                                text-[10px]
                                uppercase
                                tracking-widest
-                               text-white">
+                               font-bold
+                               text-[#17211B]
+                               dark:text-white">
 
                                 Indonesia
 
@@ -2603,60 +2615,67 @@
 
                         </div>
 
-
                         <div class="absolute
-                           inset-x-5
-                           bottom-5
-                           text-white">
+                            inset-x-3 sm:inset-x-4
+                            bottom-3 sm:bottom-4
+                            p-4 sm:p-5
+                            rounded-2xl
+                            bg-white/95
+                            dark:bg-[#151515]/95
+                            backdrop-blur-md
+                            border
+                            border-black/10
+                            dark:border-white/10
+                            shadow-xl
+                            transition-all
+                            duration-300">
 
-                            <p class="text-[10px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-white
-                               mb-2">
-
-                                Beaches · Wellness
-
-                            </p>
+                            <div class="flex items-center justify-between gap-2 mb-1">
+                                <p class="text-[10px]
+                                    uppercase
+                                    tracking-[0.22em]
+                                    font-bold
+                                    text-[#E77B5D]">
+                                    Beaches · Wellness
+                                </p>
+                                <span class="text-[11px] font-semibold text-[#17211B]/80 dark:text-white/80">
+                                    6D / 5N
+                                </span>
+                            </div>
 
                             <h3 class="font-display
-                               text-3xl
-                               sm:text-4xl">
-
+                                text-2xl
+                                sm:text-3xl
+                                text-[#17211B]
+                                dark:text-white
+                                leading-tight">
                                 Bali
-
                             </h3>
+
+                            <p class="text-xs text-[#17211B]/80 dark:text-white/80 mt-1 line-clamp-1">
+                                Cliffside villas & sacred temple sanctuaries
+                            </p>
 
                             <div class="flex
                                items-center
                                justify-between
-                               mt-5
-                               pt-4
+                               mt-3.5
+                               pt-3
                                border-t
-                               border-white/20">
+                               border-black/10
+                               dark:border-white/15">
 
-                                <span class="text-xs
-                                   text-white">
+                                <div>
+                                    <span class="text-[9px] uppercase tracking-wider text-[#17211B]/60 dark:text-white/60 block">From</span>
+                                    <span class="text-sm font-bold text-[#E77B5D]">₹54,000</span>
+                                </div>
 
-                                    Explore escape
-
-                                </span>
-
-                                <span class="w-9
-             h-9
-             rounded-full
-             bg-white
-             text-[#17211B]
-             flex
-             items-center
-             justify-center
-             transition-transform
-             duration-300
-             group-hover:rotate-45">
-
-    <i class="fa-solid fa-arrow-right text-xs"></i>
-
-</span>
+                                <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#17211B] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                    <span>Explore</span>
+                                    <span class="w-7 h-7 rounded-full bg-[#E77B5D] text-white flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
+                                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                    </span>
+                                </div>
 
                             </div>
 
@@ -2665,8 +2684,8 @@
                     </a>
 
 
-                    <!-- CARD 04 -->
-                    <a href="../pages/destinations.html" class="destination-card
+                    <!-- CARD 04 - SWISS ALPS -->
+                    <a href="pages/packages.html" class="destination-card
                        group
                        relative
                        h-[430px]
@@ -2676,39 +2695,42 @@
                        rounded-[1.8rem]
                        reveal">
 
-                        <img src="../assets/images/p8.jpg" alt="Swiss Alps" class="absolute
-                           inset-0
-                           w-full
-                           h-full
-                           object-cover
-                           transition-transform
-                           duration-1000
-                           group-hover:scale-110">
+                        <img src="assets/images/p8.jpg" alt="Swiss Alps" class="absolute
+                            inset-0
+                            w-full
+                            h-full
+                            object-cover
+                            transition-transform
+                            duration-1000
+                            group-hover:scale-110">
 
                         <div class="absolute
-                           inset-0
-                           bg-gradient-to-t
-                           from-black/80
-                           via-black/20
-                           to-transparent">
+                            inset-0
+                            bg-gradient-to-t
+                            from-black/60
+                            via-black/10
+                            to-transparent">
                         </div>
 
-
                         <div class="absolute
-                           top-5
-                           left-5">
+                            top-4 sm:top-5
+                            left-4 sm:left-5">
 
                             <span class="px-3
                                py-1.5
                                rounded-full
-                               bg-white/15
+                               bg-white/90
+                               dark:bg-black/75
                                backdrop-blur-md
                                border
-                               border-white/20
+                               border-black/10
+                               dark:border-white/20
                                text-[10px]
                                uppercase
                                tracking-widest
-                               text-white">
+                               font-bold
+                               text-[#17211B]
+                               dark:text-white">
 
                                 Switzerland
 
@@ -2716,60 +2738,68 @@
 
                         </div>
 
-
                         <div class="absolute
-                           inset-x-5
-                           bottom-5
-                           text-white">
+                            inset-x-3 sm:inset-x-4
+                            bottom-3 sm:bottom-4
+                            p-4 sm:p-5
+                            rounded-2xl
+                            bg-white/95
+                            dark:bg-[#151515]/95
+                            backdrop-blur-md
+                            border
+                            border-black/10
+                            dark:border-white/10
+                            shadow-xl
+                            transition-all
+                            duration-300">
 
-                            <p class="text-[10px]
-                               uppercase
-                               tracking-[0.25em]
-                               text-white
-                               mb-2">
-
-                                Mountains · Adventure
-
-                            </p>
+                            <div class="flex items-center justify-between gap-2 mb-1">
+                                <p class="text-[10px]
+                                    uppercase
+                                    tracking-[0.22em]
+                                    font-bold
+                                    text-[#E77B5D]">
+                                    Mountains · Alpine
+                                </p>
+                                <span class="text-[11px] font-semibold text-[#17211B]/80 dark:text-white/80">
+                                    8D / 7N
+                                </span>
+                            </div>
 
                             <h3 class="font-display
-                               text-3xl
-                               sm:text-4xl">
-
+                                text-2xl
+                                sm:text-3xl
+                                text-[#17211B]
+                                dark:text-white
+                                leading-tight">
                                 Swiss Alps
-
                             </h3>
+
+                            <p class="text-xs text-[#17211B]/80 dark:text-white/80 mt-1 line-clamp-1">
+                                Glacier express journeys & mountain chalets
+                            </p>
 
                             <div class="flex
                                items-center
                                justify-between
-                               mt-5
-                               pt-4
+                               mt-3.5
+                               pt-3
                                border-t
-                               border-white/20">
+                               border-black/10
+                               dark:border-white/15">
 
-                                <span class="text-xs
-                                   text-white">
+                                <div>
+                                    <span class="text-[9px] uppercase tracking-wider text-[#17211B]/60 dark:text-white/60 block">From</span>
+                                    <span class="text-sm font-bold text-[#E77B5D]">₹1,15,000</span>
+                                </div>
 
-                                    Explore escape
+                                <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#17211B] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                    <span>Explore</span>
+                                    <span class="w-7 h-7 rounded-full bg-[#E77B5D] text-white flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
+                                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                                    </span>
+                                </div>
 
-                                </span>
-
-                               <span class="w-9
-             h-9
-             rounded-full
-             bg-white
-             text-[#17211B]
-             flex
-             items-center
-             justify-center
-             transition-transform
-             duration-300
-             group-hover:rotate-45">
-
-    <i class="fa-solid fa-arrow-right text-xs"></i>
-
-</span>
                             </div>
 
                         </div>
@@ -4827,7 +4857,7 @@
                                mt-3
                                text-xs
                                text-black
-                               dark:text-white>
+                               dark:text-white">
 
                        <span class=" flex items-center gap-2">
 

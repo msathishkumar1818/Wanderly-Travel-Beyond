@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -984,64 +984,22 @@
                 </a>
 
 
-                <!-- LOGIN -->
+                <!-- THEME: LIGHT & DARK MODE -->
+                <div class="flex items-center p-0.5 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05]">
 
-                <a
-                    href="login.html"
+                    <!-- LIGHT MODE -->
+                    <button id="lightModeBtn" type="button" aria-label="Light mode" title="Light mode"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-ink/80 dark:text-white/70 hover:text-coral transition-all">
+                        <i data-lucide="sun" class="w-4 h-4"></i>
+                    </button>
 
-                    class="px-4
-                           py-2.5
+                    <!-- DARK MODE -->
+                    <button id="darkModeBtn" type="button" aria-label="Dark mode" title="Dark mode"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-ink/80 dark:text-white/70 hover:text-coral transition-all">
+                        <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
+                    </button>
 
-                           text-xs
-                           font-bold
-
-                           hover:text-coral
-
-                           transition-colors">
-
-                    Login
-
-                </a>
-
-
-                <!-- DARK MODE -->
-
-                <button
-                    id="themeToggle"
-                    type="button"
-
-                    aria-label="Toggle dark mode"
-
-                    class="w-10
-                           h-10
-
-                           rounded-full
-
-                           flex
-                           items-center
-                           justify-center
-
-                           border
-                           border-black/10
-                           dark:border-white/10
-
-                           hover:bg-ink
-                           hover:text-white
-
-                           dark:hover:bg-sand
-                           dark:hover:text-ink
-
-                           transition-all">
-
-                    <i
-                        id="themeIcon"
-                        data-lucide="moon"
-
-                        class="w-4
-                               h-4">
-                    </i>
-
-                </button>
+                </div>
 
 
                 <!-- RTL -->
@@ -1094,6 +1052,26 @@
                     </span>
 
                 </button>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+
+                    class="px-3.5
+                           py-2.5
+
+                           text-xs
+                           font-bold
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Login
+
+                </a>
 
 
                 <!-- CTA -->
@@ -2188,24 +2166,23 @@
                 <!-- Main Heading -->
 
                 <h1
-                    class="max-w-xl
-                           text-[3.2rem]
-                           leading-[0.94]
-                           tracking-[-0.055em]
-                           text-[#171717]
-                           dark:text-white
+                    class="font-display
+                           max-w-xl
+                           text-[3.1rem]
+                           xs:text-4xl
                            sm:text-6xl
-                           lg:text-[4.8rem]">
+                           lg:text-[4.8rem]
+                           leading-[.92]
+                           sm:leading-[.88]
+                           tracking-[-0.045em]
+                           text-[#171717]
+                           dark:text-white">
 
                     Your next
-                    <span
-                        class="font-serif italic
-                               font-normal">
+                    <span class="text-[#E77B5D]">
                         chapter
                     </span>
-
                     <br>
-
                     starts here.
 
                 </h1>
@@ -3237,803 +3214,303 @@
 
 
 <!-- ========================================================= -->
-<!-- HOME 2 — 03. TRAVEL BY MOOD -->
+<!-- HOME 2 - 03. TRAVEL BY MOOD -->
 <!-- ========================================================= -->
 
 <section
-    class="relative overflow-hidden
-           bg-[#F7F3EC]
-           py-24 sm:py-28 lg:py-36
-           text-[#171717]
-           dark:bg-black
-           dark:text-white">
+    id="travelByMood"
+    class="relative overflow-hidden bg-[#F7F3EC] py-20 sm:py-24 lg:py-28 text-[#171717] dark:bg-[#111111] dark:text-white transition-colors duration-300">
 
-    <div
-        class="mx-auto
-               max-w-[1500px]
-               px-5 sm:px-8 lg:px-12">
+    <div class="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
 
         <!-- ================================================= -->
         <!-- HEADER -->
         <!-- ================================================= -->
-
-        <div
-            class="flex flex-col
-                   gap-5
-                   lg:flex-row
-                   lg:items-end
-                   lg:justify-between">
-
+        <div class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
-
-                <p
-                    class="mb-5
-                           text-[10px] sm:text-xs
-                           font-medium
-                           uppercase
-                           tracking-[0.3em]
-                           text-[#A7613F]">
-
-                    03 / Travel by mood
-
-                </p>
-
-                <h2
-                    class="max-w-3xl
-                           text-4xl
-                           font-medium
-                           leading-[0.95]
-                           tracking-[-0.045em]
-                           text-[#171717]
-                           dark:text-white
-                           sm:text-5xl
-                           lg:text-6xl">
-
+                <div class="inline-flex items-center gap-2 rounded-full bg-[#E77B5D]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[#E77B5D] dark:bg-[#E77B5D]/20 mb-3">
+                    <span class="h-1.5 w-1.5 rounded-full bg-[#E77B5D]"></span>
+                    03 / Travel by Mood
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-medium leading-[1.05] tracking-tight text-[#171717] dark:text-white">
                     Where does your
-
-                    <span
-                        class="font-serif
-                               italic
-                               font-normal
-                               text-[#A7613F]">
-
-                        mood
-
-                    </span>
-
+                    <span class="italic text-[#E77B5D]">mood</span>
                     take you?
-
                 </h2>
-
             </div>
-
-
-            <p
-                class="max-w-sm
-                       text-sm
-                       leading-7
-                       text-black
-                       dark:text-white">
-
-                Forget the itinerary for a moment.
-                Start with how you want to feel,
-                and let the journey follow.
-
+            <p class="max-w-md text-sm sm:text-base leading-relaxed text-[#4b5563] dark:text-[#a1a1aa]">
+                Forget rigid itineraries for a moment. Start with how you wish to feel, and let our curated holiday packages match your state of mind.
             </p>
-
         </div>
 
-
         <!-- ================================================= -->
-        <!-- MAIN MOOD AREA -->
+        <!-- 6 CURATED MOOD CARDS GRID -->
         <!-- ================================================= -->
+        <div class="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
-        <div
-            class="relative
-                   mt-16 sm:mt-20 lg:mt-24
-                   grid
-                   grid-cols-1
-                   items-center
-                   gap-10
-                   lg:grid-cols-12
-                   lg:gap-16">
-
-
-            <!-- ================================================= -->
-            <!-- LEFT — MOOD LIST -->
-            <!-- ================================================= -->
-
-            <div
-                class="order-2
-                       lg:order-1
-                       lg:col-span-5">
-
-                <div
-                    class="border-t
-                           border-black/10
-                           dark:border-white">
-
-
-                    <!-- ================================================= -->
-                    <!-- MOOD 01 -->
-                    <!-- ================================================= -->
-
-                    <div
-                        class="group
-                               flex items-center
-                               justify-between
-                               border-b
-                               border-black/10
-                               py-6
-                               transition-all
-                               duration-300
-                               hover:px-3
-                               dark:border-white/10">
-
-                        <div
-                            class="flex items-center gap-5">
-
-                            <span
-                                class="text-[10px]
-                                       text-black
-                                       dark:text-white">
-
-                                01
-
-                            </span>
-
-
-                            <div>
-
-                                <h3
-                                    class="text-2xl
-                                           font-light
-                                           tracking-tight
-                                           text-[#171717]
-                                           transition
-                                           duration-300
-                                           group-hover:text-[#A7613F]
-                                           dark:text-white">
-
-                                    Slow & Quiet
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-black
-                                           dark:text-white">
-
-                                    Retreats · Nature · Stillness
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <span
-                            class="flex h-9 w-9
-                                   items-center justify-center
-                                   rounded-full
-                                   border
-                                   border-black/15
-                                   text-black/35
-                                   transition
-                                   duration-300
-                                   group-hover:border-[#A7613F]
-                                   group-hover:bg-[#A7613F]
-                                   group-hover:text-white
-                                   dark:border-white/15
-                                   dark:text-white">
-
-                            ↗
-
+            <!-- MOOD 01: ADVENTURE -->
+            <div class="group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p18.jpg" alt="Adventure & Mountain Expeditions" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute top-4 left-4 flex items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-[11px] font-semibold tracking-wider uppercase text-white border border-white/20">
+                            01 Â· Adventure
                         </span>
-
-                    </div>
-
-
-                    <!-- ================================================= -->
-                    <!-- MOOD 02 -->
-                    <!-- ================================================= -->
-
-                    <div
-                        class="group
-                               flex items-center
-                               justify-between
-                               border-b
-                               border-black/10
-                               py-6
-                               transition-all
-                               duration-300
-                               hover:px-3
-                               dark:border-white/10">
-
-                        <div
-                            class="flex items-center gap-5">
-
-                            <span
-                                class="text-[10px]
-                                       text-black
-                                       dark:text-white">
-
-                                02
-
-                            </span>
-
-
-                            <div>
-
-                                <h3
-                                    class="text-2xl
-                                           font-light
-                                           tracking-tight
-                                           text-[#171717]
-                                           transition
-                                           duration-300
-                                           group-hover:text-[#A7613F]
-                                           dark:text-white">
-
-                                    Wild & Free
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-black
-                                           dark:text-white">
-
-                                    Mountains · Trails · Adventure
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <span
-                            class="flex h-9 w-9
-                                   items-center justify-center
-                                   rounded-full
-                                   border
-                                   border-black/15
-                                   text-black
-                                   transition
-                                   duration-300
-                                   group-hover:border-[#A7613F]
-                                   group-hover:bg-[#A7613F]
-                                   group-hover:text-white
-                                   dark:border-white/15
-                                   dark:text-white">
-
-                            ↗
-
+                        <span class="rounded-full bg-emerald-600/90 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white">
+                            6D / 5N
                         </span>
-
                     </div>
-
-
-                    <!-- ================================================= -->
-                    <!-- MOOD 03 -->
-                    <!-- ================================================= -->
-
-                    <div
-                        class="group
-                               flex items-center
-                               justify-between
-                               border-b
-                               border-black/10
-                               py-6
-                               transition-all
-                               duration-300
-                               hover:px-3
-                               dark:border-white/10">
-
-                        <div
-                            class="flex items-center gap-5">
-
-                            <span
-                                class="text-[10px]
-                                       text-black
-                                       dark:text-white">
-
-                                03
-
-                            </span>
-
-
-                            <div>
-
-                                <h3
-                                    class="text-2xl
-                                           font-light
-                                           tracking-tight
-                                           text-[#171717]
-                                           transition
-                                           duration-300
-                                           group-hover:text-[#A7613F]
-                                           dark:text-white">
-
-                                    Taste & Culture
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-black
-                                           dark:text-white">
-
-                                    Food · Art · Local Life
-
-                                </p>
-
-                            </div>
-
+                    <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Packages starting from</span>
+                            <p class="text-2xl font-bold text-white tracking-tight">â‚¹54,000</p>
                         </div>
-
-
-                        <span
-                            class="flex h-9 w-9
-                                   items-center justify-center
-                                   rounded-full
-                                   border
-                                   border-black/15
-                                   text-black
-                                   transition
-                                   duration-300
-                                   group-hover:border-[#A7613F]
-                                   group-hover:bg-[#A7613F]
-                                   group-hover:text-white
-                                   dark:border-white/15
-                                   dark:text-white">
-
-                            ↗
-
-                        </span>
-
+                        <a href="packages.html" aria-label="Explore Adventure Packages" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition-all duration-300 group-hover:bg-[#E77B5D] group-hover:scale-110">
+                            <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                        </a>
                     </div>
-
-
-                    <!-- ================================================= -->
-                    <!-- MOOD 04 -->
-                    <!-- ================================================= -->
-
-                    <div
-                        class="group
-                               flex items-center
-                               justify-between
-                               border-b
-                               border-black/10
-                               py-6
-                               transition-all
-                               duration-300
-                               hover:px-3
-                               dark:border-white/10">
-
-                        <div
-                            class="flex items-center gap-5">
-
-                            <span
-                                class="text-[10px]
-                                       text-black
-                                       dark:text-white">
-
-                                04
-
-                            </span>
-
-
-                            <div>
-
-                                <h3
-                                    class="text-2xl
-                                           font-light
-                                           tracking-tight
-                                           text-[#171717]
-                                           transition
-                                           duration-300
-                                           group-hover:text-[#A7613F]
-                                           dark:text-white">
-
-                                    Sun & Sea
-
-                                </h3>
-
-                                <p
-                                    class="mt-1
-                                           text-xs
-                                           text-black
-                                           dark:text-white">
-
-                                    Islands · Beaches · Escape
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <span
-                            class="flex h-9 w-9
-                                   items-center justify-center
-                                   rounded-full
-                                   border
-                                   border-black/15
-                                   text-black
-                                   transition
-                                   duration-300
-                                   group-hover:border-[#A7613F]
-                                   group-hover:bg-[#A7613F]
-                                   group-hover:text-white
-                                   dark:border-white/15
-                                   dark:text-white">
-
-                            ↗
-
-                        </span>
-
-                    </div>
-
                 </div>
-
+                <div class="flex flex-1 flex-col justify-between p-6">
+                    <div>
+                        <h3 class="text-xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                            Wild Peaks & Thrill Trails
+                        </h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            High-altitude alpine treks, white-water rapids, and untamed wildlife safaris for the intrepid soul.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-[#777] dark:text-[#888]">Trekking Â· Safaris Â· Rafting</span>
+                        <a href="packages.html" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E77B5D] hover:text-[#d36446] transition-colors">
+                            Explore <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-
-            <!-- ================================================= -->
-            <!-- RIGHT — RADIAL MOOD VISUAL -->
-            <!-- ================================================= -->
-
-            <div
-                class="order-1
-                       lg:order-2
-                       lg:col-span-7">
-
-                <div
-                    class="relative
-                           mx-auto
-                           flex
-                           aspect-square
-                           max-w-[600px]
-                           items-center
-                           justify-center">
-
-
-                    <!-- ============================================= -->
-                    <!-- SOFT BACKGROUND GLOW -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="absolute
-                               h-[58%]
-                               w-[58%]
-                               rounded-full
-                               bg-[#A7613F]
-                               blur-3xl">
+            <!-- MOOD 02: RELAXATION -->
+            <div class="group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p5.jpg" alt="Relaxation & Wellness Retreats" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute top-4 left-4 flex items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-[11px] font-semibold tracking-wider uppercase text-white border border-white/20">
+                            02 Â· Relaxation
+                        </span>
+                        <span class="rounded-full bg-teal-600/90 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white">
+                            5D / 4N
+                        </span>
                     </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- OUTER RING -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="absolute
-                               inset-[4%]
-                               rounded-full
-                               border
-                               border-black
-                               dark:border-white">
+                    <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Packages starting from</span>
+                            <p class="text-2xl font-bold text-white tracking-tight">â‚¹48,000</p>
+                        </div>
+                        <a href="packages.html" aria-label="Explore Relaxation Packages" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition-all duration-300 group-hover:bg-[#E77B5D] group-hover:scale-110">
+                            <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                        </a>
                     </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- SECOND RING -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="absolute
-                               inset-[14%]
-                               rounded-full
-                               border
-                               border-dashed
-                               border-black
-                               dark:border-white">
-                    </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- INNER RING -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="absolute
-                               inset-[25%]
-                               rounded-full
-                               border
-                               border-black/10
-                               dark:border-white/10">
-                    </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- CENTER -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="relative z-10
-                               flex
-                               h-36 w-36
-                               flex-col
-                               items-center
-                               justify-center
-                               rounded-full
-                               bg-[#A7613F]
-                               text-center
-                               text-white
-                               shadow-[0_20px_60px_rgba(167,97,63,0.25)]
-                               sm:h-44
-                               sm:w-44
-                               lg:h-52
-                               lg:w-52">
-
-                        <span
-                            class="text-[9px]
-                                   uppercase
-                                   tracking-[0.25em]
-                                   text-white">
-
-                            Your journey
-
-                        </span>
-
-
-                        <span
-                            class="mt-2
-                                   max-w-[120px]
-                                   font-serif
-                                   text-2xl
-                                   italic
-                                   leading-tight
-                                   sm:text-3xl">
-
-                            Starts within
-
-                        </span>
-
-                    </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- MOOD LABEL — LEFT -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="absolute
-                               left-[1%]
-                               top-[25%]
-                               flex
-                               items-center
-                               gap-3">
-
-                        <span
-                            class="h-2 w-2
-                                   rounded-full
-                                   bg-[#A7613F]">
-                        </span>
-
-                        <span
-                            class="text-[9px]
-                                   font-medium
-                                   uppercase
-                                   tracking-[0.22em]
-                                   text-black
-                                   dark:text-white">
-
-                            Relax
-
-                        </span>
-
-                    </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- MOOD LABEL — RIGHT -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="absolute
-                               right-[1%]
-                               top-[22%]
-                               flex
-                               items-center
-                               gap-3">
-
-                        <span
-                            class="text-[9px]
-                                   font-medium
-                                   uppercase
-                                   tracking-[0.22em]
-                                   text-black
-                                   dark:text-white">
-
-                            Explore
-
-                        </span>
-
-                        <span
-                            class="h-2 w-2
-                                   rounded-full
-                                   bg-[#A7613F]">
-                        </span>
-
-                    </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- MOOD LABEL — BOTTOM LEFT -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="absolute
-                               bottom-[17%]
-                               left-[13%]
-                               flex
-                               items-center
-                               gap-3">
-
-                        <span
-                            class="h-2 w-2
-                                   rounded-full
-                                   bg-[#A7613F]">
-                        </span>
-
-                        <span
-                            class="text-[9px]
-                                   font-medium
-                                   uppercase
-                                   tracking-[0.22em]
-                                   text-black
-                                   dark:text-white">
-
-                            Discover
-
-                        </span>
-
-                    </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- MOOD LABEL — BOTTOM RIGHT -->
-                    <!-- ============================================= -->
-
-                    <div
-                        class="absolute
-                               bottom-[17%]
-                               right-[12%]
-                               flex
-                               items-center
-                               gap-3">
-
-                        <span
-                            class="text-[9px]
-                                   font-medium
-                                   uppercase
-                                   tracking-[0.22em]
-                                   text-black
-                                   dark:text-white">
-
-                            Escape
-
-                        </span>
-
-                        <span
-                            class="h-2 w-2
-                                   rounded-full
-                                   bg-[#A7613F]">
-                        </span>
-
-                    </div>
-
-
-                    <!-- ============================================= -->
-                    <!-- DECORATIVE DOTS -->
-                    <!-- ============================================= -->
-
-                    <span
-                        class="absolute
-                               left-[20%]
-                               top-[8%]
-                               h-1.5 w-1.5
-                               rounded-full
-                               bg-black/20
-                               dark:bg-white">
-                    </span>
-
-                    <span
-                        class="absolute
-                               right-[19%]
-                               bottom-[8%]
-                               h-1.5 w-1.5
-                               rounded-full
-                               bg-black/20
-                               dark:bg-white">
-                    </span>
-
-
-                    <span
-                        class="absolute
-                               left-[48%]
-                               top-[2%]
-                               h-1 w-1
-                               rounded-full
-                               bg-[#A7613F]/50">
-                    </span>
-
                 </div>
+                <div class="flex flex-1 flex-col justify-between p-6">
+                    <div>
+                        <h3 class="text-xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                            Serene Backwaters & Wellness
+                        </h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            Ayurvedic healing, tranquil palm-fringed houseboats, sunrise yoga, and slow living along calm shores.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-[#777] dark:text-[#888]">Spa Â· Houseboats Â· Yoga</span>
+                        <a href="packages.html" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E77B5D] hover:text-[#d36446] transition-colors">
+                            Explore <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- MOOD 03: ROMANCE -->
+            <div class="group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p7.jpg" alt="Romantic Villas & Honeymoons" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute top-4 left-4 flex items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-[11px] font-semibold tracking-wider uppercase text-white border border-white/20">
+                            03 Â· Romance
+                        </span>
+                        <span class="rounded-full bg-rose-600/90 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white">
+                            6D / 5N
+                        </span>
+                    </div>
+                    <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Packages starting from</span>
+                            <p class="text-2xl font-bold text-white tracking-tight">â‚¹68,000</p>
+                        </div>
+                        <a href="packages.html" aria-label="Explore Romance Packages" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition-all duration-300 group-hover:bg-[#E77B5D] group-hover:scale-110">
+                            <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-1 flex-col justify-between p-6">
+                    <div>
+                        <h3 class="text-xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                            Private Sunset Villas & Escapes
+                        </h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            Candlelit beach dining, infinity cliff villas, stargazing cruises, and bespoke couple honeymoon itineraries.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-[#777] dark:text-[#888]">Honeymoon Â· Villas Â· Sunsets</span>
+                        <a href="packages.html" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E77B5D] hover:text-[#d36446] transition-colors">
+                            Explore <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOOD 04: CULTURE -->
+            <div class="group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p6.jpg" alt="Culture & Heritage Palaces" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute top-4 left-4 flex items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-[11px] font-semibold tracking-wider uppercase text-white border border-white/20">
+                            04 Â· Culture
+                        </span>
+                        <span class="rounded-full bg-amber-600/90 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white">
+                            7D / 6N
+                        </span>
+                    </div>
+                    <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Packages starting from</span>
+                            <p class="text-2xl font-bold text-white tracking-tight">â‚¹72,000</p>
+                        </div>
+                        <a href="packages.html" aria-label="Explore Culture Packages" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition-all duration-300 group-hover:bg-[#E77B5D] group-hover:scale-110">
+                            <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-1 flex-col justify-between p-6">
+                    <div>
+                        <h3 class="text-xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                            Royal Palaces & Living History
+                        </h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            Centuries-old fortresses, royal dining, guided artisan walks, and vibrant folk heritage celebrations.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-[#777] dark:text-[#888]">Heritage Â· History Â· Culinary</span>
+                        <a href="packages.html" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E77B5D] hover:text-[#d36446] transition-colors">
+                            Explore <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOOD 05: SUN & SEA -->
+            <div class="group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p16.jpg" alt="Sun & Sea Tropical Escapes" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute top-4 left-4 flex items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-[11px] font-semibold tracking-wider uppercase text-white border border-white/20">
+                            05 Â· Sun & Sea
+                        </span>
+                        <span class="rounded-full bg-sky-600/90 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white">
+                            5D / 4N
+                        </span>
+                    </div>
+                    <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Packages starting from</span>
+                            <p class="text-2xl font-bold text-white tracking-tight">â‚¹58,000</p>
+                        </div>
+                        <a href="packages.html" aria-label="Explore Sun & Sea Packages" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition-all duration-300 group-hover:bg-[#E77B5D] group-hover:scale-110">
+                            <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-1 flex-col justify-between p-6">
+                    <div>
+                        <h3 class="text-xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                            Turquoise Lagoons & Coral Reefs
+                        </h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            Powder-white beaches, vibrant snorkeling, private catamaran sailing, and sun-drenched island hopping.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-[#777] dark:text-[#888]">Beaches Â· Snorkeling Â· Islands</span>
+                        <a href="packages.html" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E77B5D] hover:text-[#d36446] transition-colors">
+                            Explore <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOOD 06: LUXURY -->
+            <div class="group relative flex flex-col overflow-hidden rounded-2xl sm:rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p12.jpg" alt="Luxury Estates & Bespoke Hospitality" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+                    <div class="absolute top-4 left-4 flex items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-[11px] font-semibold tracking-wider uppercase text-white border border-white/20">
+                            06 Â· Luxury
+                        </span>
+                        <span class="rounded-full bg-purple-600/90 backdrop-blur-md px-2.5 py-0.5 text-[10px] font-medium text-white">
+                            8D / 7N
+                        </span>
+                    </div>
+                    <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Packages starting from</span>
+                            <p class="text-2xl font-bold text-white tracking-tight">â‚¹96,000</p>
+                        </div>
+                        <a href="packages.html" aria-label="Explore Luxury Packages" class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition-all duration-300 group-hover:bg-[#E77B5D] group-hover:scale-110">
+                            <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-1 flex-col justify-between p-6">
+                    <div>
+                        <h3 class="text-xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                            Grand Estates & Bespoke Care
+                        </h3>
+                        <p class="mt-2 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            Five-star private villas, dedicated personal chauffeurs, Michelin-starred fine dining, and bespoke concierge.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-[#777] dark:text-[#888]">5-Star Â· Chauffeur Â· Concierge</span>
+                        <a href="packages.html" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E77B5D] hover:text-[#d36446] transition-colors">
+                            Explore <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-
         <!-- ================================================= -->
-        <!-- FOOTER -->
+        <!-- FOOTER BAR -->
         <!-- ================================================= -->
-
-        <div
-            class="mt-16
-                   flex flex-col
-                   gap-4
-                   border-t
-                   border-black/10
-                   pt-6
-                   sm:flex-row
-                   sm:items-center
-                   sm:justify-between
-                   dark:border-white/10">
-
-            <span
-                class="text-[9px]
-                       uppercase
-                       tracking-[0.25em]
-                       text-black
-                       dark:text-white">
-
-                Choose a feeling. Find a place.
-
+        <div class="mt-16 flex flex-col gap-4 border-t border-black/10 dark:border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#666] dark:text-[#999]">
+                Choose a mood Â· Find your holiday package
             </span>
-
-
-            <span
-                class="font-serif
-                       text-lg
-                       italic
-                       text-black
-                       dark:text-white">
-
-                Travel is personal.
-
-            </span>
-
+            <a href="customize-trip.html" class="inline-flex items-center gap-2 text-sm font-semibold text-[#E77B5D] hover:underline">
+                <span>Want something completely custom? Plan with our experts</span>
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
         </div>
 
     </div>
-
 </section>
-
-
-
-
-        
-    
-
 <!-- ========================================================= -->
 <!-- HOME 2 — 04. FEATURED EXPERIENCES -->
 <!-- ========================================================= -->

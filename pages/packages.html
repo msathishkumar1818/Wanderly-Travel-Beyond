@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -965,64 +965,22 @@
                 </a>
 
 
-                <!-- LOGIN -->
+                <!-- THEME: LIGHT & DARK MODE -->
+                <div class="flex items-center p-0.5 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05]">
 
-                <a
-                    href="login.html"
+                    <!-- LIGHT MODE -->
+                    <button id="lightModeBtn" type="button" aria-label="Light mode" title="Light mode"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-ink/80 dark:text-white/70 hover:text-coral transition-all">
+                        <i data-lucide="sun" class="w-4 h-4"></i>
+                    </button>
 
-                    class="px-4
-                           py-2.5
+                    <!-- DARK MODE -->
+                    <button id="darkModeBtn" type="button" aria-label="Dark mode" title="Dark mode"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-ink/80 dark:text-white/70 hover:text-coral transition-all">
+                        <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
+                    </button>
 
-                           text-xs
-                           font-bold
-
-                           hover:text-coral
-
-                           transition-colors">
-
-                    Login
-
-                </a>
-
-
-                <!-- DARK MODE -->
-
-                <button
-                    id="themeToggle"
-                    type="button"
-
-                    aria-label="Toggle dark mode"
-
-                    class="w-10
-                           h-10
-
-                           rounded-full
-
-                           flex
-                           items-center
-                           justify-center
-
-                           border
-                           border-black/10
-                           dark:border-white/10
-
-                           hover:bg-ink
-                           hover:text-white
-
-                           dark:hover:bg-sand
-                           dark:hover:text-ink
-
-                           transition-all">
-
-                    <i
-                        id="themeIcon"
-                        data-lucide="moon"
-
-                        class="w-4
-                               h-4">
-                    </i>
-
-                </button>
+                </div>
 
 
                 <!-- RTL -->
@@ -1075,6 +1033,26 @@
                     </span>
 
                 </button>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+
+                    class="px-3.5
+                           py-2.5
+
+                           text-xs
+                           font-bold
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Login
+
+                </a>
 
 
                 <!-- CTA -->
@@ -2058,828 +2036,374 @@
     <!-- DEMO CONTENT -->
     <!-- ========================================================= -->
 
-    <main
-        >
+    <main class="pt-20 sm:pt-24 lg:pt-28">
 
         
 
 
 <!-- ========================================================= -->
-<!-- PACKAGES PAGE — SECTION 01 -->
-<!-- CHOOSE YOUR PACE -->
+<!-- PACKAGES PAGE - SECTION 01 -->
+<!-- CURATED HOLIDAY PACKAGE CARDS -->
 <!-- ========================================================= -->
 
 <section
-    id="packageSelector"
-    class="relative
-           min-h-screen
-           overflow-hidden
-           bg-[#F1EDE6]
-           text-[#252521]
-           dark:bg-black
-           dark:text-white">
+    id="packagesGridSection"
+    class="relative overflow-hidden bg-[#F7F4EE] py-16 sm:py-20 lg:py-24 text-[#171717] dark:bg-[#111111] dark:text-white transition-colors duration-300">
 
+    <!-- Soft background decorative glow -->
+    <div class="pointer-events-none absolute top-10 right-10 h-96 w-96 rounded-full bg-[#E77B5D]/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-10 left-10 h-80 w-80 rounded-full bg-[#49634F]/10 blur-3xl"></div>
 
-    <!-- ===================================================== -->
-    <!-- DECORATIVE BACKGROUND -->
-    <!-- ===================================================== -->
+    <div class="relative z-10 mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
 
-    <div
-        class="pointer-events-none
-               absolute
-               left-[-180px]
-               top-[25%]
-               h-[320px]
-               w-[420px]
-               rounded-full
-               border
-               border-[#6D756E]/10
-               dark:border-white/[0.04]">
-    </div>
-
-
-    <div
-        class="pointer-events-none
-               absolute
-               bottom-[-200px]
-               right-[-150px]
-               h-[500px]
-               w-[500px]
-               rounded-full
-               border
-               border-[#6D756E]/10
-               dark:border-white/[0.04]">
-    </div>
-
-
-
-    <!-- ===================================================== -->
-    <!-- MAIN -->
-    <!-- ===================================================== -->
-
-    <div
-        class="relative
-               z-10
-               mx-auto
-               flex
-               min-h-screen
-               max-w-[1600px]
-               flex-col
-               justify-between
-               px-5
-               py-8
-               sm:px-8
-               sm:py-10
-               lg:px-12
-               lg:py-12">
-
-
-        <!-- ================================================= -->
-        <!-- TOP BAR -->
-        <!-- ================================================= -->
-
-        <div
-            class="flex
-                   items-center
-                   justify-between
-                   border-b
-                   border-[#252521]/10
-                   pb-5
-                   dark:border-white/10">
-
-
-            <div
-                class="flex
-                       items-center
-                       gap-4">
-
-
-                <span
-                    class="h-1.5
-                           w-1.5
-                           rounded-full
-                           bg-[#8A7967]">
-                </span>
-
-
-                <p
-                    class="text-[13px]
-                           uppercase
-                           tracking-[0.4em]
-                           text-[#252521]
-                           dark:text-white">
-
-                    Wanderly / Packages
-
-                </p>
-
+        <!-- HEADER -->
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between border-b border-black/10 dark:border-white/10 pb-8 sm:pb-10">
+            <div>
+                <div class="inline-flex items-center gap-2 rounded-full bg-[#E77B5D]/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[#E77B5D] dark:bg-[#E77B5D]/20 mb-3">
+                    <span class="h-1.5 w-1.5 rounded-full bg-[#E77B5D]"></span>
+                    01 / The Holiday Collection Â· 2026
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-medium leading-[1.08] tracking-tight text-[#171717] dark:text-white">
+                    Curated Holiday <span class="italic text-[#E77B5D]">Packages</span>
+                </h1>
             </div>
-
-
-            <p
-                class="hidden
-                       text-[11px]
-                       uppercase
-                       tracking-[0.35em]
-                       text-black
-                       sm:block
-                       dark:text-white">
-
-                Curated journeys / 2026
-
+            <p class="max-w-md text-sm sm:text-base leading-relaxed text-[#4b5563] dark:text-[#a1a1aa]">
+                Every journey is shaped with verified boutique stays, private transfers, authentic local experiences, and 24/7 concierge support.
             </p>
-
         </div>
 
+        <!-- 4 STRUCTURED HOLIDAY PACKAGE CARDS GRID -->
+        <div class="mt-12 sm:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
 
-
-        <!-- ================================================= -->
-        <!-- CONTENT -->
-        <!-- ================================================= -->
-
-        <div
-            class="grid
-                   flex-1
-                   grid-cols-1
-                   gap-14
-                   py-16
-                   lg:grid-cols-12
-                   lg:items-center
-                   lg:gap-10
-                   lg:py-20">
-
-
-            <!-- ================================================= -->
-            <!-- LEFT TITLE -->
-            <!-- ================================================= -->
-
-            <div
-                class="lg:col-span-4">
-
-
-                <p
-                    class="text-[9px]
-                           uppercase
-                           tracking-[0.4em]
-                           text-black
-                           dark:text-white">
-
-                    01 / The collection
-
-                </p>
-
-
-                <h1
-                    class="mt-7
-                           max-w-[520px]
-                           text-[4.5rem]
-                           font-light
-                           leading-[0.84]
-                           tracking-[-0.07em]
-                           sm:text-[5.5rem]
-                           lg:text-[5rem]">
-
-                    Choose
-
-                    <span
-                        class="block
-                               font-serif
-                               italic
-                               text-[#7C877F]
-                               dark:text-[#C9B89F]">
-
-                        your pace.
-
-                    </span>
-
-                </h1>
-
-
-                <p
-                    class="mt-8
-                           max-w-[360px]
-                           text-sm
-                           leading-7
-                           text-[#252521]
-                           dark:text-white">
-
-                    Not every traveller wants the
-                    same kind of escape. Find a journey
-                    shaped around the way you want
-                    to experience the world.
-
-                </p>
-
-
-                <div
-                    class="mt-10
-                           flex
-                           items-center
-                           gap-4">
-
-
-                    <span
-                        class="h-px
-                               w-12
-                               bg-[#8A7967]">
-                    </span>
-
-
-                    <span
-                        class="text-[8px]
-                               uppercase
-                               tracking-[0.3em]
-                               text-[#252521]
-                               dark:text-white">
-
-                        Explore below
-
-                    </span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ================================================= -->
-            <!-- CENTER NAVIGATION -->
-            <!-- ================================================= -->
-
-            <div
-                class="lg:col-span-4">
-
-
-                <div
-                    id="packageOptions"
-                    class="border-t
-                           border-[#252521]/10
-                           dark:border-white/10">
-
-
-                    <!-- OPTION 01 -->
-
-                    <button
-                        type="button"
-                        data-package="essential"
-                        class="package-option
-                               active
-                               group
-                               relative
-                               flex
-                               w-full
-                               items-center
-                               justify-between
-                               border-b
-                               border-[#252521]/10
-                               py-7
-                               text-left
-                               dark:border-white/10">
-
-
-                        <div
-                            class="flex
-                                   items-center
-                                   gap-5">
-
-
-                            <span
-                                class="package-number
-                                       font-serif
-                                       text-sm
-                                       italic
-                                       text-black">
-
-                                01
-
-                            </span>
-
-
-                            <span
-                                class="package-name
-                                       text-2xl
-                                       font-light
-                                       tracking-[-0.03em]
-                                       transition-all
-                                       duration-500
-                                       group-hover:translate-x-2
-                                       group-hover:text-[#8A7967]
-                                       dark:group-hover:text-[#C9B89F]">
-
-                                Essential
-
-                            </span>
-
-                        </div>
-
-
-                        <span
-                            class="package-arrow
-                                   text-lg
-                                   text-[#252521]
-                                   transition-all
-                                   duration-500
-                                   group-hover:translate-x-1
-                                   dark:text-white">
-
-                            ↗
-
+            <!-- PACKAGE 01: ESSENTIAL (KERALA) -->
+            <div class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p53.jpg" alt="Kerala Essential Holiday Package" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                    
+                    <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white border border-white/20">
+                            Kerala, India
                         </span>
-
-                    </button>
-
-
-
-                    <!-- OPTION 02 -->
-
-                    <button
-                        type="button"
-                        data-package="signature"
-                        class="package-option
-                               group
-                               relative
-                               flex
-                               w-full
-                               items-center
-                               justify-between
-                               border-b
-                               border-[#252521]/10
-                               py-7
-                               text-left
-                               dark:border-white/10">
-
-
-                        <div
-                            class="flex
-                                   items-center
-                                   gap-5">
-
-
-                            <span
-                                class="package-number
-                                       font-serif
-                                       text-sm
-                                       italic
-                                       text-black">
-
-                                02
-
-                            </span>
-
-
-                            <span
-                                class="package-name
-                                       text-2xl
-                                       font-light
-                                       tracking-[-0.03em]
-                                       transition-all
-                                       duration-500
-                                       group-hover:translate-x-2
-                                       group-hover:text-[#8A7967]
-                                       dark:group-hover:text-[#C9B89F]">
-
-                                Signature
-
-                            </span>
-
-                        </div>
-
-
-                        <span
-                            class="package-arrow
-                                   text-lg
-                                   text-[#252521]
-                                   transition-all
-                                   duration-500
-                                   group-hover:translate-x-1
-                                   dark:text-white/20">
-
-                            ↗
-
+                        <span class="rounded-full bg-[#E77B5D] px-2.5 py-0.5 text-xs font-bold text-white">
+                            Essential Tier
                         </span>
-
-                    </button>
-
-
-
-                    <!-- OPTION 03 -->
-
-                    <button
-                        type="button"
-                        data-package="private"
-                        class="package-option
-                               group
-                               relative
-                               flex
-                               w-full
-                               items-center
-                               justify-between
-                               border-b
-                               border-[#252521]/10
-                               py-7
-                               text-left
-                               dark:border-white/10">
-
-
-                        <div
-                            class="flex
-                                   items-center
-                                   gap-5">
-
-
-                            <span
-                                class="package-number
-                                       font-serif
-                                       text-sm
-                                       italic
-                                       text-black">
-
-                                03
-
-                            </span>
-
-
-                            <span
-                                class="package-name
-                                       text-2xl
-                                       font-light
-                                       tracking-[-0.03em]
-                                       transition-all
-                                       duration-500
-                                       group-hover:translate-x-2
-                                       group-hover:text-[#8A7967]
-                                       dark:group-hover:text-[#C9B89F]">
-
-                                Private
-
-                            </span>
-
-                        </div>
-
-
-                        <span
-                            class="package-arrow
-                                   text-lg
-                                   text-[#252521]
-                                   transition-all
-                                   duration-500
-                                   group-hover:translate-x-1
-                                   dark:text-white">
-
-                            ↗
-
-                        </span>
-
-                    </button>
-
-
-
-                    <!-- OPTION 04 -->
-
-                    <button
-                        type="button"
-                        data-package="bespoke"
-                        class="package-option
-                               group
-                               relative
-                               flex
-                               w-full
-                               items-center
-                               justify-between
-                               border-b
-                               border-[#252521]/10
-                               py-7
-                               text-left
-                               dark:border-white/10">
-
-
-                        <div
-                            class="flex
-                                   items-center
-                                   gap-5">
-
-
-                            <span
-                                class="package-number
-                                       font-serif
-                                       text-sm
-                                       italic
-                                       text-black">
-
-                                04
-
-                            </span>
-
-
-                            <span
-                                class="package-name
-                                       text-2xl
-                                       font-light
-                                       tracking-[-0.03em]
-                                       transition-all
-                                       duration-500
-                                       group-hover:translate-x-2
-                                       group-hover:text-[#8A7967]
-                                       dark:group-hover:text-[#C9B89F]">
-
-                                Bespoke
-
-                            </span>
-
-                        </div>
-
-
-                        <span
-                            class="package-arrow
-                                   text-lg
-                                   text-[#252521]
-                                   transition-all
-                                   duration-500
-                                   group-hover:translate-x-1
-                                   dark:text-white">
-
-                            ↗
-
-                        </span>
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ================================================= -->
-            <!-- RIGHT DETAIL -->
-            <!-- ================================================= -->
-
-            <div
-                class="lg:col-span-4">
-
-
-                <div
-                    class="relative
-                           min-h-[420px]
-                           overflow-hidden
-                           bg-[#DDD6CB]
-                           dark:bg-[#1D211F]">
-
-
-                    <!-- IMAGE -->
-
-                    <img
-                        id="packageImage"
-                        src="../assets/images/p52.jpg"
-                        alt="Essential travel package"
-                        draggable="false"
-                        class="absolute
-                               inset-0
-                               h-full
-                               w-full
-                               object-cover
-                               opacity-90
-                               transition-all
-                               duration-700">
-
-
-                    <!-- OVERLAY -->
-
-                    <div
-                        class="absolute
-                               inset-0
-                               bg-gradient-to-t
-                               from-black/75
-                               via-black/10
-                               to-transparent">
                     </div>
 
+                    <div class="absolute top-4 right-4 rounded-full bg-teal-600/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white shadow-sm">
+                        05 Days / 04 Nights
+                    </div>
 
-
-                    <!-- CONTENT -->
-
-                    <div
-                        class="absolute
-                               inset-x-0
-                               bottom-0
-                               p-7
-                               sm:p-9">
-
-
-                        <div
-                            class="flex
-                                   items-start
-                                   justify-between
-                                   gap-5">
-
-
-                            <div>
-
-
-                                <p
-                                    id="packageDuration"
-                                    class="text-[8px]
-                                           uppercase
-                                           tracking-[0.35em]
-                                           text-white">
-
-                                    05 Days / 04 Nights
-
-                                </p>
-
-
-                                <h2
-                                    id="packageTitle"
-                                    class="mt-3
-                                           font-serif
-                                           text-4xl
-                                           italic
-                                           text-white
-                                           sm:text-5xl">
-
-                                    Essential
-
-                                </h2>
-
-                            </div>
-
-
-                            <span
-                                id="packagePrice"
-                                class="pt-1
-                                       text-xs
-                                       text-white">
-
-                                From ₹48,000
-
-                            </span>
-
+                    <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between text-white">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Starting price per person</span>
+                            <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">â‚¹48,000</p>
                         </div>
+                        <span class="text-xs text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                            All transfers included
+                        </span>
+                    </div>
+                </div>
 
-
-                        <p
-                            id="packageDescription"
-                            class="mt-5
-                                   max-w-sm
-                                   text-xs
-                                   leading-6
-                                   text-white">
-
-                            A beautifully balanced escape
-                            for travellers who want the
-                            essentials without rushing
-                            the experience.
-
+                <div class="flex flex-1 flex-col justify-between p-6 sm:p-8">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                Essential Kerala Backwaters & Heritage
+                            </h2>
+                        </div>
+                        <p class="mt-3 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            A beautifully balanced escape combining tranquil backwaters, palm-fringed private houseboats, and slow-paced wellness.
                         </p>
 
-
-                        <!-- DETAILS -->
-
-                        <div
-                            class="mt-7
-                                   flex
-                                   flex-wrap
-                                   gap-x-6
-                                   gap-y-3
-                                   border-t
-                                   border-white/15
-                                   pt-5">
-
-
-                            <span
-                                id="packagePlace"
-                                class="text-[8px]
-                                       uppercase
-                                       tracking-[0.25em]
-                                       text-white">
-
-                                Kerala
-
-                            </span>
-
-
-                            <span
-                                class="h-3
-                                       w-px
-                                       bg-white">
-                            </span>
-
-
-                            <span
-                                id="packageStyle"
-                                class="text-[8px]
-                                       uppercase
-                                       tracking-[0.25em]
-                                       text-white">
-
-                                Slow Travel
-
-                            </span>
-
-
-                            <span
-                                class="h-3
-                                       w-px
-                                       bg-white/20">
-                            </span>
-
-
-                            <span
-                                class="text-[8px]
-                                       uppercase
-                                       tracking-[0.25em]
-                                       text-white">
-
-                                Private Stay
-
-                            </span>
-
+                        <!-- INCLUSIONS LIST -->
+                        <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
+                                Package Inclusions:
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#444] dark:text-[#ccc]">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> 4-Star Heritage Resort & Houseboat
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Daily Breakfast & Traditional Dinners
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Private AC Chauffeur throughout
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Sunset Cruise & Ayurvedic Spa Session
+                                </div>
+                            </div>
                         </div>
-
                     </div>
 
+                    <!-- DUAL CTAS -->
+                    <div class="mt-8 pt-5 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-3">
+                        <a href="trip-details.html?pkg=essential" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 dark:bg-[#252525] px-5 py-3 text-xs font-bold text-[#171717] dark:text-white hover:bg-stone-200 dark:hover:bg-[#303030] transition-colors">
+                            <span>View Details</span>
+                            <i data-lucide="info" class="h-3.5 w-3.5"></i>
+                        </a>
+                        <a href="customize-trip.html?pkg=essential" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#E77B5D] px-5 py-3 text-xs font-bold text-white hover:bg-[#d36446] shadow-sm transition-colors">
+                            <span>Book / Customize</span>
+                            <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PACKAGE 02: SIGNATURE (RAJASTHAN) -->
+            <div class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p54.jpg" alt="Rajasthan Signature Holiday Package" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                    
+                    <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white border border-white/20">
+                            Rajasthan, India
+                        </span>
+                        <span class="rounded-full bg-amber-600 px-2.5 py-0.5 text-xs font-bold text-white">
+                            Signature Tier
+                        </span>
+                    </div>
+
+                    <div class="absolute top-4 right-4 rounded-full bg-amber-700/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white shadow-sm">
+                        07 Days / 06 Nights
+                    </div>
+
+                    <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between text-white">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Starting price per person</span>
+                            <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">â‚¹72,000</p>
+                        </div>
+                        <span class="text-xs text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                            Palaces & guided walks
+                        </span>
+                    </div>
                 </div>
 
+                <div class="flex flex-1 flex-col justify-between p-6 sm:p-8">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                Signature Rajasthan Palaces & Fortresses
+                            </h2>
+                        </div>
+                        <p class="mt-3 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            A rich royal journey combining Jaipur, Jodhpur, and Udaipur, featuring palace stays, historic fort walks, and private dining.
+                        </p>
+
+                        <!-- INCLUSIONS LIST -->
+                        <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
+                                Package Inclusions:
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#444] dark:text-[#ccc]">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Historic Palace & Heritage Haveli Stays
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Private Historian Guide for all Forts
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Exclusive Sunset Boat Ride on Lake Pichola
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Dedicated Chauffeur in Premium SUV
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DUAL CTAS -->
+                    <div class="mt-8 pt-5 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-3">
+                        <a href="trip-details.html?pkg=signature" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 dark:bg-[#252525] px-5 py-3 text-xs font-bold text-[#171717] dark:text-white hover:bg-stone-200 dark:hover:bg-[#303030] transition-colors">
+                            <span>View Details</span>
+                            <i data-lucide="info" class="h-3.5 w-3.5"></i>
+                        </a>
+                        <a href="customize-trip.html?pkg=signature" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#E77B5D] px-5 py-3 text-xs font-bold text-white hover:bg-[#d36446] shadow-sm transition-colors">
+                            <span>Book / Customize</span>
+                            <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PACKAGE 03: PRIVATE (HIMALAYAS) -->
+            <div class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p55.jpg" alt="Himalayan Sanctuary Holiday Package" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                    
+                    <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white border border-white/20">
+                            Himalayas, India
+                        </span>
+                        <span class="rounded-full bg-emerald-600 px-2.5 py-0.5 text-xs font-bold text-white">
+                            Private Tier
+                        </span>
+                    </div>
+
+                    <div class="absolute top-4 right-4 rounded-full bg-emerald-700/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white shadow-sm">
+                        08 Days / 07 Nights
+                    </div>
+
+                    <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between text-white">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Starting price per person</span>
+                            <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">â‚¹96,000</p>
+                        </div>
+                        <span class="text-xs text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                            Mountain chalets & guide
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-1 flex-col justify-between p-6 sm:p-8">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                Private Himalayan Sanctuary & High Peaks
+                            </h2>
+                        </div>
+                        <p class="mt-3 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            An exclusive mountain retreat designed for complete tranquility, luxury chalet living, alpine stargazing, and private trail treks.
+                        </p>
+
+                        <!-- INCLUSIONS LIST -->
+                        <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
+                                Package Inclusions:
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#444] dark:text-[#ccc]">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Luxury Boutique Mountain Chalet Stays
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Private Certified Alpine Trek Guide
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> High-Altitude Stargazing & Chef Dinners
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> 4x4 Mountain Transfer & National Park Permits
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DUAL CTAS -->
+                    <div class="mt-8 pt-5 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-3">
+                        <a href="trip-details.html?pkg=private" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 dark:bg-[#252525] px-5 py-3 text-xs font-bold text-[#171717] dark:text-white hover:bg-stone-200 dark:hover:bg-[#303030] transition-colors">
+                            <span>View Details</span>
+                            <i data-lucide="info" class="h-3.5 w-3.5"></i>
+                        </a>
+                        <a href="customize-trip.html?pkg=private" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#E77B5D] px-5 py-3 text-xs font-bold text-white hover:bg-[#d36446] shadow-sm transition-colors">
+                            <span>Book / Customize</span>
+                            <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PACKAGE 04: BESPOKE (CUSTOM EXPEDITIONS) -->
+            <div class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 dark:border-white/10 bg-white dark:bg-[#181818] shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-stone-200 dark:bg-stone-800">
+                    <img src="../assets/images/p56.jpg" alt="Bespoke Custom World Holiday Package" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                    
+                    <div class="absolute top-4 left-4 flex flex-wrap items-center gap-2">
+                        <span class="rounded-full bg-black/60 backdrop-blur-md px-3 py-1 text-xs font-semibold tracking-wider uppercase text-white border border-white/20">
+                            Worldwide Any Destination
+                        </span>
+                        <span class="rounded-full bg-purple-600 px-2.5 py-0.5 text-xs font-bold text-white">
+                            Bespoke Tier
+                        </span>
+                    </div>
+
+                    <div class="absolute top-4 right-4 rounded-full bg-purple-700/90 backdrop-blur-md px-3 py-1 text-xs font-bold text-white shadow-sm">
+                        10+ Days / Custom
+                    </div>
+
+                    <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between text-white">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-wider text-white/80">Investment</span>
+                            <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Tailored Quote</p>
+                        </div>
+                        <span class="text-xs text-white/80 bg-black/40 backdrop-blur-xs px-2.5 py-1 rounded-md">
+                            100% Made to measure
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex flex-1 flex-col justify-between p-6 sm:p-8">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-2xl font-display font-semibold text-[#171717] dark:text-white group-hover:text-[#E77B5D] transition-colors">
+                                Bespoke World Expeditions & VIP Care
+                            </h2>
+                        </div>
+                        <p class="mt-3 text-sm leading-relaxed text-[#555] dark:text-[#a1a1aa]">
+                            Completely customized to your vision. Choose dates, multi-country routes, 5-star villas, private air charters, and rare experiences.
+                        </p>
+
+                        <!-- INCLUSIONS LIST -->
+                        <div class="mt-6 space-y-2.5 rounded-2xl bg-stone-50 dark:bg-[#202020] p-4 sm:p-5 border border-black/5 dark:border-white/5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white mb-2">
+                                Package Inclusions:
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#444] dark:text-[#ccc]">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> 1-on-1 Dedicated Senior Travel Designer
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> 5-Star Luxury & Private Villa Reservations
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> Private Chauffeurs & Airport VIP Fast-Track
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-emerald-500 font-bold">âœ“</span> 24/7 Global On-Trip Concierge Support
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DUAL CTAS -->
+                    <div class="mt-8 pt-5 border-t border-black/10 dark:border-white/10 flex flex-wrap items-center gap-3">
+                        <a href="trip-details.html?pkg=bespoke" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-stone-100 dark:bg-[#252525] px-5 py-3 text-xs font-bold text-[#171717] dark:text-white hover:bg-stone-200 dark:hover:bg-[#303030] transition-colors">
+                            <span>View Details</span>
+                            <i data-lucide="info" class="h-3.5 w-3.5"></i>
+                        </a>
+                        <a href="customize-trip.html?pkg=bespoke" class="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#E77B5D] px-5 py-3 text-xs font-bold text-white hover:bg-[#d36446] shadow-sm transition-colors">
+                            <span>Plan Bespoke Trip</span>
+                            <i data-lucide="sparkles" class="h-3.5 w-3.5"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-
-
-        <!-- ================================================= -->
-        <!-- BOTTOM -->
-        <!-- ================================================= -->
-
-        <div
-            class="flex
-                   flex-col
-                   gap-5
-                   border-t
-                   border-[#252521]/10
-                   pt-6
-                   sm:flex-row
-                   sm:items-center
-                   sm:justify-between
-                   dark:border-white/10">
-
-
-            <p
-                class="text-[11px]
-                       uppercase
-                       tracking-[0.3em]
-                       text-[#252521]
-                       dark:text-white">
-
-                Every journey is carefully considered
-
-            </p>
-
-
-            <div
-                class="flex
-                       items-center
-                       gap-3">
-
-
-                <span
-                    class="font-serif
-                           text-lg
-                           italic
-                           text-black
-                           dark:text-[#C9B89F]">
-
-                    Begin somewhere beautiful.
-
-                </span>
-
-
-                <span
-                    class="text-lg
-                           text-[#8A7967]">
-
-                    →
-
-                </span>
-
+        <!-- BOTTOM CUSTOMIZATION HELPER BAR -->
+        <div class="mt-16 flex flex-col gap-4 rounded-2xl bg-white dark:bg-[#181818] p-6 sm:p-8 border border-black/10 dark:border-white/10 sm:flex-row sm:items-center sm:justify-between shadow-xs">
+            <div class="flex items-center gap-4">
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#E77B5D]/10 text-[#E77B5D]">
+                    <i data-lucide="sliders" class="h-6 w-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-[#171717] dark:text-white">Looking for something specific?</h3>
+                    <p class="text-xs sm:text-sm text-[#666] dark:text-[#999]">All packages can be customized with extra nights, flight upgrades, or dietary requests.</p>
+                </div>
             </div>
-
+            <a href="customize-trip.html" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#171717] dark:bg-white text-white dark:text-[#171717] px-6 py-3.5 text-xs font-bold uppercase tracking-wider hover:bg-[#E77B5D] dark:hover:bg-[#E77B5D] dark:hover:text-white transition-colors">
+                <span>Start Customizing</span>
+                <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </a>
         </div>
 
     </div>
-
-
-
-    
-
-    
-
 </section>
-
-
-
-
-
-
 <!-- ========================================================= -->
 <!-- PACKAGES PAGE — SECTION 02 -->
 <!-- THE JOURNEY INSIDE -->

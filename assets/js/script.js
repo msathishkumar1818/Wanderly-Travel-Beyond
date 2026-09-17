@@ -367,6 +367,22 @@
 
             updateThemeIcons();
 
+            const isDarkActive = theme === "dark";
+            document.querySelectorAll("#lightModeBtn, [data-set-theme='light']").forEach(b => {
+                if (!isDarkActive) {
+                    b.classList.add("bg-ink", "text-white");
+                } else {
+                    b.classList.remove("bg-ink", "text-white");
+                }
+            });
+            document.querySelectorAll("#darkModeBtn, [data-set-theme='dark']").forEach(b => {
+                if (isDarkActive) {
+                    b.classList.add("bg-sand", "text-ink");
+                } else {
+                    b.classList.remove("bg-sand", "text-ink");
+                }
+            });
+
         }
 
 
@@ -405,6 +421,27 @@
             );
 
         }
+
+        const lightModeBtn = document.getElementById("lightModeBtn");
+        const darkModeBtn = document.getElementById("darkModeBtn");
+
+        if (lightModeBtn) {
+            lightModeBtn.addEventListener("click", function() {
+                setTheme("light");
+            });
+        }
+
+        if (darkModeBtn) {
+            darkModeBtn.addEventListener("click", function() {
+                setTheme("dark");
+            });
+        }
+
+        document.querySelectorAll("[data-set-theme]").forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                setTheme(this.getAttribute("data-set-theme"));
+            });
+        });
 
 
         const savedTheme =
@@ -5591,8 +5628,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
     );
+});
 
 
+/* =========================================================
+   CUSTOMER JOURNEY & ICON RE-INIT
+========================================================= */
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof lucide !== "undefined" && lucide.createIcons) {
+        lucide.createIcons();
+    }
+
+    try {
+        const params = new URLSearchParams(window.location.search);
+        
+        // Contact page prefill from Visa or Insurance
+        const service = params.get("service");
+        if (service) {
+            const subjectInput = document.getElementById("subject");
+            const messageInput = document.getElementById("message");
+            if (subjectInput && !subjectInput.value) {
+                if (service === "insurance") {
+                    subjectInput.value = "Comprehensive Travel Insurance Inquiry";
+                } else if (service === "visa") {
+                    subjectInput.value = "Visa Assistance Inquiry";
+                }
+            }
+            if (messageInput && !messageInput.value) {
+                if (service === "insurance") {
+                    messageInput.value = "Hello Wanderly team, I would like to inquire about international travel insurance coverage options for my upcoming holiday.";
+                }
+            }
+        }
+
+        // Package prefill on customize-trip
+        const pkg = params.get("pkg");
+        if (pkg) {
+            const destInput = document.querySelector('input[name="destination"], #destinationInput, #destInput');
+            const pkgNames = {
+                essential: "Kerala Backwaters & Heritage (Essential)",
+                signature: "Royal Rajasthan Palaces (Signature)",
+                private: "Himalayan Sanctuary (Private)",
+                bespoke: "Custom World Expedition (Bespoke)"
+            };
+            if (destInput && pkgNames[pkg]) {
+                destInput.value = pkgNames[pkg];
+            }
+        }
+    } catch (e) {
+        // graceful fallback
+    }
 });
 
 

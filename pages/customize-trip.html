@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
@@ -964,64 +964,22 @@
                 </a>
 
 
-                <!-- LOGIN -->
+                <!-- THEME: LIGHT & DARK MODE -->
+                <div class="flex items-center p-0.5 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05]">
 
-                <a
-                    href="login.html"
+                    <!-- LIGHT MODE -->
+                    <button id="lightModeBtn" type="button" aria-label="Light mode" title="Light mode"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-ink/80 dark:text-white/70 hover:text-coral transition-all">
+                        <i data-lucide="sun" class="w-4 h-4"></i>
+                    </button>
 
-                    class="px-4
-                           py-2.5
+                    <!-- DARK MODE -->
+                    <button id="darkModeBtn" type="button" aria-label="Dark mode" title="Dark mode"
+                        class="w-8 h-8 rounded-full flex items-center justify-center text-ink/80 dark:text-white/70 hover:text-coral transition-all">
+                        <i id="themeIcon" data-lucide="moon" class="w-4 h-4"></i>
+                    </button>
 
-                           text-xs
-                           font-bold
-
-                           hover:text-coral
-
-                           transition-colors">
-
-                    Login
-
-                </a>
-
-
-                <!-- DARK MODE -->
-
-                <button
-                    id="themeToggle"
-                    type="button"
-
-                    aria-label="Toggle dark mode"
-
-                    class="w-10
-                           h-10
-
-                           rounded-full
-
-                           flex
-                           items-center
-                           justify-center
-
-                           border
-                           border-black/10
-                           dark:border-white/10
-
-                           hover:bg-ink
-                           hover:text-white
-
-                           dark:hover:bg-sand
-                           dark:hover:text-ink
-
-                           transition-all">
-
-                    <i
-                        id="themeIcon"
-                        data-lucide="moon"
-
-                        class="w-4
-                               h-4">
-                    </i>
-
-                </button>
+                </div>
 
 
                 <!-- RTL -->
@@ -1074,6 +1032,26 @@
                     </span>
 
                 </button>
+
+
+                <!-- LOGIN -->
+
+                <a
+                    href="login.html"
+
+                    class="px-3.5
+                           py-2.5
+
+                           text-xs
+                           font-bold
+
+                           hover:text-coral
+
+                           transition-colors">
+
+                    Login
+
+                </a>
 
 
                 <!-- CTA -->
@@ -2057,7 +2035,7 @@
     <!-- CUSTOMIZE TRIP — PAGE CONTENT -->
     <!-- ========================================================= -->
 
-    <main >
+    <main class="pt-20 sm:pt-24 lg:pt-28">
 
         <!-- ============================================================= -->
 <!-- 01. HERO — editorial trip canvas / new container model -->
@@ -2067,7 +2045,7 @@
     class="relative overflow-hidden
            bg-[#F5F1EA]
            dark:bg-[#0B0B0B]
-           py-16 sm:py-20 lg:py-28">
+           py-8 sm:py-12 lg:py-16">
 
     <!-- Decorative background -->
     <div
