@@ -2082,30 +2082,30 @@
             <button
                 type="button"
                 data-filter="all"
-                class="package-filter-btn inline-flex items-center gap-2 rounded-full bg-[#E77B5D] px-4 py-2 text-xs font-bold uppercase tracking-wider text-white shadow-md transition-all">
+                class="package-filter-btn active inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all">
                 <span>All Packages</span>
-                <span class="rounded-full bg-white/20 px-2 py-0.5 text-[10px]">6</span>
+                <span class="package-filter-badge rounded-full px-2 py-0.5 text-[10px]">6</span>
             </button>
             <button
                 type="button"
                 data-filter="domestic"
-                class="package-filter-btn inline-flex items-center gap-2 rounded-full bg-white dark:bg-[#1c1c1c] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white border border-black/10 dark:border-white/10 hover:border-[#E77B5D] hover:text-[#E77B5D] transition-all">
+                class="package-filter-btn inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all">
                 <span>Domestic / India</span>
-                <span class="rounded-full bg-black/5 dark:bg-white/10 px-2 py-0.5 text-[10px]">3</span>
+                <span class="package-filter-badge rounded-full px-2 py-0.5 text-[10px]">3</span>
             </button>
             <button
                 type="button"
                 data-filter="international"
-                class="package-filter-btn inline-flex items-center gap-2 rounded-full bg-white dark:bg-[#1c1c1c] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white border border-black/10 dark:border-white/10 hover:border-[#E77B5D] hover:text-[#E77B5D] transition-all">
+                class="package-filter-btn inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all">
                 <span>International</span>
-                <span class="rounded-full bg-black/5 dark:bg-white/10 px-2 py-0.5 text-[10px]">3</span>
+                <span class="package-filter-badge rounded-full px-2 py-0.5 text-[10px]">3</span>
             </button>
             <button
                 type="button"
                 data-filter="romance"
-                class="package-filter-btn inline-flex items-center gap-2 rounded-full bg-white dark:bg-[#1c1c1c] px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#171717] dark:text-white border border-black/10 dark:border-white/10 hover:border-[#E77B5D] hover:text-[#E77B5D] transition-all">
+                class="package-filter-btn inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all">
                 <span>Romance / Honeymoon</span>
-                <span class="rounded-full bg-black/5 dark:bg-white/10 px-2 py-0.5 text-[10px]">3</span>
+                <span class="package-filter-badge rounded-full px-2 py-0.5 text-[10px]">3</span>
             </button>
         </div>
 
@@ -2585,25 +2585,9 @@
                     btn.addEventListener('click', function () {
                         const filter = this.getAttribute('data-filter');
 
-                        // Reset all buttons to inactive state
-                        filterBtns.forEach(b => {
-                            b.classList.remove('bg-[#E77B5D]', 'text-white', 'shadow-md');
-                            b.classList.add('bg-white', 'dark:bg-[#1c1c1c]', 'text-[#171717]', 'dark:text-white', 'border', 'border-black/10', 'dark:border-white/10');
-                            const badge = b.querySelector('span:last-child');
-                            if (badge) {
-                                badge.classList.remove('bg-white/20');
-                                badge.classList.add('bg-black/5', 'dark:bg-white/10');
-                            }
-                        });
-
-                        // Set clicked button to active state
-                        this.classList.remove('bg-white', 'dark:bg-[#1c1c1c]', 'text-[#171717]', 'dark:text-white', 'border', 'border-black/10', 'dark:border-white/10');
-                        this.classList.add('bg-[#E77B5D]', 'text-white', 'shadow-md');
-                        const activeBadge = this.querySelector('span:last-child');
-                        if (activeBadge) {
-                            activeBadge.classList.remove('bg-black/5', 'dark:bg-white/10');
-                            activeBadge.classList.add('bg-white/20');
-                        }
+                        // Reset all buttons and set clicked button active
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
 
                         // Filter cards
                         packageCards.forEach(card => {

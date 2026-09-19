@@ -4530,3 +4530,89 @@ html[dir="rtl"] #mobileMenu {
 .dark #authActionBtn:hover {
     color: #E77B5D !important;
 }
+
+/* =========================================================
+   PACKAGES PAGE FILTER BUTTONS
+========================================================= */
+.package-filter-btn {
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Inactive button - Light mode */
+.package-filter-btn:not(.active) {
+    background-color: #ffffff !important;
+    color: #171717 !important;
+    border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.package-filter-btn:not(.active) span {
+    color: inherit !important;
+}
+
+.package-filter-btn:not(.active) .package-filter-badge {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    color: #171717 !important;
+}
+
+/* Inactive button - Dark mode */
+.dark .package-filter-btn:not(.active) {
+    background-color: #1c1c1c !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.dark .package-filter-btn:not(.active) .package-filter-badge {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+}
+
+/* Inactive button - Hover state (Both light & dark mode) */
+.package-filter-btn:not(.active):hover {
+    border-color: #E77B5D !important;
+    color: #E77B5D !important;
+}
+
+.package-filter-btn:not(.active):hover span {
+    color: #E77B5D !important;
+}
+
+.package-filter-btn:not(.active):hover .package-filter-badge {
+    background-color: rgba(231, 123, 93, 0.15) !important;
+    color: #E77B5D !important;
+}
+
+/* Active button (Both light & dark mode) */
+.package-filter-btn.active {
+    background-color: #E77B5D !important;
+    color: #ffffff !important;
+    border-color: #E77B5D !important;
+    box-shadow: 0 4px 10px rgba(231, 123, 93, 0.35) !important;
+}
+
+.package-filter-btn.active span {
+    color: #ffffff !important;
+}
+
+.package-filter-btn.active .package-filter-badge {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+}
+
+/* Active button - Hover state (Ensures text stays crystal clear white, never invisible!) */
+.package-filter-btn.active:hover {
+    background-color: #d36446 !important;
+    border-color: #d36446 !important;
+    color: #ffffff !important;
+}
+
+.package-filter-btn.active:hover span {
+    color: #ffffff !important;
+}
+
+.package-filter-btn.active:hover .package-filter-badge {
+    background-color: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+}
